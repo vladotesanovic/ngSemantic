@@ -1,4 +1,7 @@
 # Angular2 & Semantic UI kickstarter
+<p align="center">
+  <img src="https://lh6.googleusercontent.com/vcQVSLsjLyRZE1-D9TKjW3CxX9OgGkOvRksen7UovfWB5VqsVz26mGCf2PTU1yTn7jouo5YMjL1_qpU=w1511-h625" alt="Angular 2"/>
+</p>
 
 ## Dependecies
 What you need to run this app:
@@ -10,12 +13,12 @@ What you need to run this app:
 git clone https://github.com/vladotesanovic/Angular2-Semantic-UI-kickstarter.git
 cd Angular2-Semantic-UI-kickstarter
 
-# Install dependencies
+# Install dependencies ( default settings for semantic )
 npm install
 
 # Navigate to semantic folder and install it
 cd semantic
-npm build
+gulp build
 
 # go back to root directory and run local server
 cd ..
