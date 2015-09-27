@@ -8,7 +8,7 @@ What you need to run this app:
 ## Install
 ```bash
 git clone https://github.com/vladotesanovic/Angular2-Semantic-UI-kickstarter.git
-cd angular2-semantic-ui-kickstarter
+cd Angular2-Semantic-UI-kickstarter
 
 # Install dependencies
 npm install
@@ -22,5 +22,6 @@ cd ..
 gulp
 ```
 
-Browser will open app on http://localhost:3000 ( change port in gulp.js )
+Browser will open app on http://localhost:3000 ( change port in gulp.js ).
+
 Each file creation or file edit in src/ folder will trigger gulp build process, therefore there is no need for browser refresh or re-run of gulp script.
