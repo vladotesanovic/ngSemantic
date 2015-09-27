@@ -1,0 +1,54 @@
+<!-- This gonna be implemented -->
+<div class="ui grid stackable container">
+    <div class="three column row">
+        <div class="column">
+            <div class="ui vertical demo menu">
+                <div class="item">
+                    <div class="ui transparent icon input">
+                        <input type="text" [(ng-model)]="search" placeholder="Live search...">
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+                <a class="item" *ng-for="var menu of menus | arrayFilter: search"> {{menu}}</a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui list">
+                <a class="item" *ng-for="var item of items">
+                    <i class="right triangle icon"></i>
+                    <div class="content">
+                        <div class="header">{{item.header}} {{$index}}</div>
+                        <div class="description">{{item.description}}</div>
+                    </div>
+                </a>
+                <div class="ui yellow message" *ng-if="!items.length">
+                    <i class="warning sign icon"></i> Add one or more items bellow.
+                </div>
+            </div>
+            <form (ng-submit)="addTodo()" class="ui form">
+                <div class="field">
+                    <label>Header</label>
+                    <input type="text" [(ng-model)]="item.header" autofocus required placeholder="Header">
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <textarea rows="3" [(ng-model)]="item.description" autofocus required placeholder="Description"></textarea>
+                </div>
+                <button class="ui teal button" type="submit">Add</button>
+            </form>
+        </div>
+        <div class="column">
+            <form class="ui form">
+                <div class="field">
+                    <label>First Name</label>
+                    <input type="text" name="first-name" placeholder="First Name">
+                </div>
+                <div class="field">
+                    <label>Last Name</label>
+                    <input type="text" name="last-name" placeholder="Last Name">
+                </div>
+                <button class="ui button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
