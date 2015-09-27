@@ -2,6 +2,7 @@
   "name": "Angular2 Semantic UI kickstarter",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "main": "gulpfile.js",
   "scripts": {
     "test": ""
