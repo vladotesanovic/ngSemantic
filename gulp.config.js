@@ -4,7 +4,7 @@ module.exports = function() {
 
 		allTs: './src/**/*.ts',
 		typings: './typings/**/*.d.ts',
-		toOutputhPath: './client/'
+		toOutputhPath: './generated/'
 	}
 
 	return config;

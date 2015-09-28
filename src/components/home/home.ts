@@ -24,7 +24,7 @@ export class HomeComponent {
 
 	constructor() {
 		this.items = new Array<ToDo>();
-		this.menus = ["Inbox", "Inox", "Trash"];
+		this.menus = ["Rachel", "Lindsay", "Matthew", "Jenny Hess", "Veronika Ossi", "Christian Rocha", "Matt"];
 	}
 
 	addTodo() {
