@@ -1,6 +1,6 @@
 # Angular2 & Semantic UI kickstarter
 <p align="center">
-  <img src="http://i.imgur.com/SCTxyan.jpg" alt="Angular 2"/>
+  <img src="http://i.imgur.com/SCTxyan.jpg" alt="Angular 2"/><br/>
   <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a> 
 </p>
 
@@ -29,6 +29,12 @@ gulp
 Browser will open app on http://localhost:3000 ( change port in gulp.js ).
 
 Each file creation or file edit in src/ folder will trigger gulp build process, therefore there is no need for browser refresh or re-run of gulp script.
+
+## ToDo
+* More Semantic UI components
+* Describe directory structure in readme file
+* Add build task in gulp.js. ( new folder will be generated build/ ) 
+* Add tests
 
 ## Licence 
 
