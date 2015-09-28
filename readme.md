@@ -1,6 +1,7 @@
 # Angular2 & Semantic UI kickstarter
 <p align="center">
   <img src="http://i.imgur.com/SCTxyan.jpg" alt="Angular 2"/>
+  <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a> 
 </p>
 
 ## Dependecies
