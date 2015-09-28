@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require("angular2/angular2");
+var semantic_1 = require("../../directives/semantic/semantic");
 var AboutComponent = (function () {
     function AboutComponent() {
         this.text = "About us page";
@@ -20,6 +21,7 @@ var AboutComponent = (function () {
             selector: "about-component"
         }),
         angular2_1.View({
+            directives: [semantic_1.SEMANTIC_DIRECTIVES],
             templateUrl: "./templates/components/page/page.html"
         }), 
         __metadata('design:paramtypes', [])

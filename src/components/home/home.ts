@@ -2,6 +2,7 @@
 
 import { Component, View, NgFor, NgIf, FORM_DIRECTIVES } from "angular2/angular2";
 import { ArrayFilterPipe } from "../../pipes/array";
+import { SEMANTIC_DIRECTIVES } from "../../directives/semantic/semantic";
 
 class ToDo {
 	header: string;
@@ -12,7 +13,7 @@ class ToDo {
 	selector : "home-component"
 })
 @View({
-	directives: [NgFor, NgIf, FORM_DIRECTIVES],
+	directives: [NgFor, NgIf, FORM_DIRECTIVES, SEMANTIC_DIRECTIVES],
 	pipes: [ArrayFilterPipe],
 	templateUrl : "./templates/components/home/home.html"
 })
@@ -24,7 +25,7 @@ export class HomeComponent {
 
 	constructor() {
 		this.items = new Array<ToDo>();
-		this.menus = ["Rachel", "Lindsay", "Matthew", "Jenny Hess", "Veronika Ossi", "Christian Rocha", "Matt"];
+		this.menus = ["Rachel", "Lindsay", "Matthew", "Jenny Hess", "Veronika Ossi", "Christian Rocha", "Mat"];
 	}
 
 	addTodo() {

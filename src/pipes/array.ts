@@ -17,7 +17,6 @@ import { Pipe } from "angular2/angular2";
 	name: "arrayFilter"
 })
 export class ArrayFilterPipe {
-
 	private _tmp: Array<string>;
 
 	transform(array: Array<string>, text: string): Array<string> {
@@ -28,7 +27,7 @@ export class ArrayFilterPipe {
 		this._tmp = new Array<string>();
 
 		array.map((item) => {
-			if (item.toLowerCase().search(text) >= 0) {
+			if (item.toLowerCase().search(text.toString().toLowerCase()) >= 0) {
 				this._tmp.push(item);
 			}
 		});

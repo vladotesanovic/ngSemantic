@@ -14,7 +14,6 @@ var angular2_1 = require("angular2/angular2");
 var router_1 = require("angular2/router");
 var home_1 = require("../components/home/home");
 var about_1 = require("../components/about/about");
-var menu_1 = require("../components/menu/menu");
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -23,8 +22,8 @@ var AppComponent = (function () {
             selector: "app"
         }),
         angular2_1.View({
-            directives: [router_1.RouterOutlet, router_1.RouterLink, menu_1.MenuComponent],
-            templateUrl: "./templates/shared/master.html"
+            directives: [router_1.RouterOutlet, router_1.RouterLink],
+            template: "<router-outlet></router-outlet>"
         }),
         router_1.RouteConfig([
             { as: "home", component: home_1.HomeComponent, path: "/" },

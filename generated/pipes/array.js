@@ -21,7 +21,7 @@ var ArrayFilterPipe = (function () {
         }
         this._tmp = new Array();
         array.map(function (item) {
-            if (item.toLowerCase().search(text) >= 0) {
+            if (item.toLowerCase().search(text.toString().toLowerCase()) >= 0) {
                 _this._tmp.push(item);
             }
         });

@@ -12,6 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var angular2_1 = require("angular2/angular2");
 var array_1 = require("../../pipes/array");
+var semantic_1 = require("../../directives/semantic/semantic");
 var ToDo = (function () {
     function ToDo() {
     }
@@ -21,7 +22,7 @@ var HomeComponent = (function () {
     function HomeComponent() {
         this.item = new ToDo();
         this.items = new Array();
-        this.menus = ["Inbox", "Inox", "Trash"];
+        this.menus = ["Rachel", "Lindsay", "Matthew", "Jenny Hess", "Veronika Ossi", "Christian Rocha", "Mat"];
     }
     HomeComponent.prototype.addTodo = function () {
         this.items.push(this.item);
@@ -32,7 +33,7 @@ var HomeComponent = (function () {
             selector: "home-component"
         }),
         angular2_1.View({
-            directives: [angular2_1.NgFor, angular2_1.NgIf, angular2_1.FORM_DIRECTIVES],
+            directives: [angular2_1.NgFor, angular2_1.NgIf, angular2_1.FORM_DIRECTIVES, semantic_1.SEMANTIC_DIRECTIVES],
             pipes: [array_1.ArrayFilterPipe],
             templateUrl: "./templates/components/home/home.html"
         }), 
