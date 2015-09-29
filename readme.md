@@ -1,7 +1,6 @@
 [![GitHub version](https://badge.fury.io/gh/vladotesanovic%2FAngular2-Semantic-UI-kickstarter.png)](http://badge.fury.io/gh/vladotesanovic%2FAngular2-Semantic-UI-kickstarter)
 [![Dependency Status](https://david-dm.org/vladotesanovic/Angular2-Semantic-UI-kickstarter.svg)](https://david-dm.org/vladotesanovic/Angular2-Semantic-UI-kickstarter)
 
-
 # Angular2 & Semantic UI kickstarter
 <p align="center">
   <img src="http://i.imgur.com/SCTxyan.jpg" alt="Angular 2"/><br/>

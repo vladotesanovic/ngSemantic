@@ -4,7 +4,7 @@ import { Component, View } from "angular2/angular2";
 import { RouterOutlet, RouteConfig, RouterLink } from "angular2/router";
 
 import { HomeComponent } from "../components/home/home";
-import { AboutComponent } from "../components/about/about";
+import { PageComponent } from "../components/page/page";
 
 @Component({
 	selector: "app"
@@ -15,7 +15,7 @@ import { AboutComponent } from "../components/about/about";
 })
 @RouteConfig([
 	{ as: "home", component: HomeComponent, path: "/" },
-	{ as: "about", component: AboutComponent, path: "/about" }
+	{ as: "page", component: PageComponent, path: "/page/:slug" }
 ])
 
 export class AppComponent { }

@@ -8,7 +8,8 @@ export class MenuServices {
 	constructor() {
 		this.items = new Array<Object>();
 		this.setMenu({ "title": "Home", "link": "#/" });
-		this.setMenu({ "title": "About", "link": "#/about" });
+		this.setMenu({ "title": "About", "link": "#/page/about" });
+		this.setMenu({ "title": "Contact Us", "link": "#/page/contact-us" });
 	}
 	setMenu(item) {
 		this.items.push(item);
