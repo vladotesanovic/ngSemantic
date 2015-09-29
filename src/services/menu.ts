@@ -1,18 +1,26 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
-import { Injectable } from "angular2/angular2";
 
+import { Injectable } from "angular2/angular2";
+import { Http } from "angular2/http";
+
+/**
+ * Menu services "must have" items array.
+ * 
+ * [Injectable description]
+ */
 @Injectable()
 export class MenuServices {
 	private items: Array<Object>;
 
-	constructor() {
+	constructor(public http: Http) {
 		this.items = new Array<Object>();
-		this.setMenu({ "title": "Home", "link": "#/" });
-		this.setMenu({ "title": "About", "link": "#/page/about" });
-		this.setMenu({ "title": "Contact Us", "link": "#/page/contact-us" });
-	}
-	setMenu(item) {
-		this.items.push(item);
+		this.http
+			.get("./assets/data/menu.json")
+			.toRx()
+			.map(res => res.json())
+			.subscribe(res => {
+				this.items = res;
+			});
 	}
 	getMenu(): Array<Object> {
 		return this.items;

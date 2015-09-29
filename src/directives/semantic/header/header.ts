@@ -5,7 +5,7 @@ import { MenuServices } from "../../../services/menu";
 
 @Component({
 	bindings: [MenuServices],
-	properties: ["title:title"],
+	properties: ["title", "logo"],
 	selector : "header"
 })
 
@@ -17,16 +17,12 @@ import { MenuServices } from "../../../services/menu";
             <img class="logo" alt="{{title}}" src="/assets/images/semantic.png">
             <img alt="{{title}}" class="logo" src="/assets/images/angular.png">
         </a>
-        <a *ng-for="var menu of items" href="{{menu.link}}" class="item">{{menu.title}}</a>
+        <a *ng-for="var menu of menu.items" href="{{menu.link}}" class="item">{{menu.title}}</a>
     </div>
 </div>`
 })
 
-export class HeaderDirective {
+export class UIHeaderComponent {
 
-	private items: Array<Object> = new Array<Object>();
-
-	constructor(private menu: MenuServices) {
-		this.items = menu.getMenu();
-	}
+	constructor(private menu: MenuServices) {}
 }

@@ -2,7 +2,7 @@
 
 import { Component, View, NgFor, NgIf, FORM_DIRECTIVES } from "angular2/angular2";
 import { ArrayFilterPipe } from "../../pipes/array";
-import { SEMANTIC_DIRECTIVES } from "../../directives/semantic/semantic";
+import { SEMANTIC_COMPONENTS } from "../../directives/semantic/semantic";
 
 class ToDo {
 	header: string;
@@ -10,10 +10,10 @@ class ToDo {
 }
 
 @Component({
-	selector : "home-component"
+	selector : "home"
 })
 @View({
-	directives: [NgFor, NgIf, FORM_DIRECTIVES, SEMANTIC_DIRECTIVES],
+	directives: [NgFor, NgIf, FORM_DIRECTIVES, SEMANTIC_COMPONENTS],
 	pipes: [ArrayFilterPipe],
 	templateUrl : "./templates/components/home/home.html"
 })

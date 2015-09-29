@@ -1,8 +1,9 @@
 /// <reference path="../../../typings/angular2/angular2.d.ts" />
 
-import { HeaderDirective } from "./header/header";
+import { UIHeaderComponent } from "./header/header";
+import { UITableComponent } from "./table/table";
 
 // export all custom semantic ui directives to this array
-export var SEMANTIC_DIRECTIVES: Array<any> = [
-	HeaderDirective
+export var SEMANTIC_COMPONENTS: Array<any> = [
+	UIHeaderComponent, UITableComponent
 ];

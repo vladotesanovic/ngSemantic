@@ -2,15 +2,15 @@
 
 import { Component, View } from "angular2/angular2";
 import { RouteParams } from "angular2/router";
-import { SEMANTIC_DIRECTIVES } from "../../directives/semantic/semantic";
+import { SEMANTIC_COMPONENTS } from "../../directives/semantic/semantic";
 import { PageServices } from "../../services/page";
 
 @Component({
 	bindings: [PageServices],
-	selector: "page-component"
+	selector: "page"
 })
 @View({
-	directives: [SEMANTIC_DIRECTIVES],
+	directives: [SEMANTIC_COMPONENTS],
 	templateUrl: "./templates/components/page/page.html"
 })
 
