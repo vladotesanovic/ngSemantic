@@ -6,4 +6,4 @@ before_script:
   - npm install gulp-sourcemaps --save-dev
   - npm install browser-sync --save-dev
   - npm install superstatic --save-dev
-script: gulp
+script: gulp ci

@@ -55,4 +55,5 @@ gulp.task('serve', ['ts-lint', 'compile-ts'], function() {
 	
 });
 
+gulp.task('ci', ['ts-lint','compile-ts']);
 gulp.task('default', ['serve']);
