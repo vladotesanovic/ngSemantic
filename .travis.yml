@@ -1,6 +1,6 @@
 before_script:
   - npm install -g gulp
-  - npm install gulp -g
+  - npm install gulp --save-dev
   - npm install gulp-typescript -g
   - npm install gulp-tslint -g
   - npm install gulp-sourcemaps -g
