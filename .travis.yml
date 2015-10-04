@@ -4,4 +4,6 @@ before_script:
   - npm install gulp-typescript --save-dev
   - npm install gulp-tslint --save-dev
   - npm install gulp-sourcemaps --save-dev
+  - npm install browser-sync --save-dev
+  - npm install superstatic --save-dev
 script: gulp
