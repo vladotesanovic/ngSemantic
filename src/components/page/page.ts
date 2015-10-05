@@ -1,15 +1,13 @@
 /// <reference path="../../../typings/angular2/angular2.d.ts" />
 
-import { Component, View, LifecycleEvent, NgFor } from "angular2/angular2";
+import { Component, View, NgFor } from "angular2/angular2";
 import { RouteParams } from "angular2/router";
 import { SEMANTIC_COMPONENTS } from "../../directives/semantic/semantic";
 import { PageServices } from "../../services/page";
 
 @Component({
 	bindings: [PageServices],
-	lifecycle: [LifecycleEvent.OnDestroy, LifecycleEvent.OnChanges, LifecycleEvent.OnInit,
-		LifecycleEvent.AfterContentInit],
-		selector: "page"
+	selector: "page"
 })
 @View({
 	directives: [SEMANTIC_COMPONENTS, NgFor],
