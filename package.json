@@ -18,7 +18,7 @@
     "superstatic": "^2.2.1"
   },
   "dependencies": {
-    "angular2": "^2.0.0-alpha.38",
+    "angular2": "^2.0.0-alpha.39",
     "better-console": "^0.2.4",
     "del": "^2.0.2",
     "extend": "^3.0.0",

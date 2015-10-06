@@ -13,7 +13,6 @@ export class TableServices {
 		this.columns = new Array<string>();
 		this.http
 			.get("./assets/data/table.json")
-			.toRx()
 			.map(res => res.json())
 			.subscribe(res => {
 				this.items = res;

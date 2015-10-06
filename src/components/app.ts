@@ -1,7 +1,8 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
+/// <reference path="../../typings/angular2/router.d.ts" />
 
 import { Component, View } from "angular2/angular2";
-import { RouterOutlet, RouteConfig, RouterLink } from "angular2/router";
+import { ROUTER_DIRECTIVES, RouteConfig } from "angular2/router";
 
 import { HomeComponent } from "../components/home/home";
 import { PageComponent } from "../components/page/page";
@@ -10,12 +11,12 @@ import { PageComponent } from "../components/page/page";
 	selector: "app"
 })
 @View({
-	directives: [RouterOutlet, RouterLink],
+	directives: [ ROUTER_DIRECTIVES ],
 	template: "<router-outlet></router-outlet>"
 })
 @RouteConfig([
-	{ as: "home", component: HomeComponent, path: "/" },
-	{ as: "page", component: PageComponent, path: "/page/:slug" }
+	{ component: HomeComponent, path: "/" },
+	{ component: PageComponent, path: "/page/:slug" }
 ])
 
 export class AppComponent { }

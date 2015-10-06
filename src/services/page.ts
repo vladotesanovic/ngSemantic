@@ -8,7 +8,6 @@ export class PageServices {
 	constructor(public http: Http) {}
 	getPage(): any {
 		return this.http.get("./assets/data/pages.json")
-			.toRx()
 			.map(res => res.json());
 	}
 }

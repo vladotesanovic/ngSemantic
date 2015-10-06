@@ -16,7 +16,6 @@ export class MenuServices {
 		this.items = new Array<Object>();
 		this.http
 			.get("./assets/data/menu.json")
-			.toRx()
 			.map(res => res.json())
 			.subscribe(res => {
 				this.items = res;
