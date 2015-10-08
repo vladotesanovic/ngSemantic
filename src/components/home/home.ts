@@ -3,6 +3,7 @@
 import { Component, View, NgFor, NgIf, FORM_DIRECTIVES } from "angular2/angular2";
 import { ArrayFilterPipe } from "../../pipes/array";
 import { SEMANTIC_COMPONENTS } from "../../directives/semantic/semantic";
+import { MenuServices } from "../../services/menu";
 
 class ToDo {
 	header: string;
@@ -10,6 +11,7 @@ class ToDo {
 }
 
 @Component({
+	bindings: [MenuServices],
 	selector : "home"
 })
 @View({
@@ -20,12 +22,16 @@ class ToDo {
 
 export class HomeComponent {
 	items: Array<ToDo>;
-	menus: Array<string>;
+	list: Array<string>;
+	menuItems: Array<Object>;
 	item = new ToDo();
 
-	constructor() {
+	constructor(private menu: MenuServices) {
+
+		menu.getMenu().subscribe(res => this.menuItems = res.json());
+
 		this.items = new Array<ToDo>();
-		this.menus = ["Rachel", "Lindsay", "Matthew", "Jenny Hess", "Veronika Ossi", "Christian Rocha", "Mat"];
+		this.list = ["Rachel", "Lindsay", "Matthew", "Jenny Hess", "Veronika Ossi", "Christian Rocha", "Mat"];
 	}
 
 	addTodo() {

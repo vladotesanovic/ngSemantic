@@ -10,18 +10,14 @@ import { Http } from "angular2/http";
  */
 @Injectable()
 export class MenuServices {
-	private items: Array<Object>;
+	private menu;
 
 	constructor(public http: Http) {
-		this.items = new Array<Object>();
-		this.http
-			.get("./assets/data/menu.json")
-			.map(res => res.json())
-			.subscribe(res => {
-				this.items = res;
-			});
+
+		this.menu = http.request("./assets/data/menu.json");
 	}
-	getMenu(): Array<Object> {
-		return this.items;
+	getMenu(): any {
+
+		return this.menu;
 	}
 }

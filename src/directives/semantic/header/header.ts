@@ -1,28 +1,26 @@
 /// <reference path="../../../../typings/angular2/angular2.d.ts" />
 
-import { Component, View, NgFor } from "angular2/angular2";
-import { MenuServices } from "../../../services/menu";
+import { Component, View, NgFor, NgIf } from "angular2/angular2";
 
 @Component({
-	bindings: [MenuServices],
-	properties: ["title", "logo"],
+    properties: ["title", "logo", "items"],
 	selector : "header"
 })
 
 @View({
-	directives: [NgFor],
+    directives: [NgFor, NgIf],
 	template: `<div class="ui stackable menu fixed">
-    <div class="ui container">
+    <div class="ui fluid container">
         <a href="#/" class="header item">
-            <img class="logo" alt="{{title}}" src="/assets/images/semantic.png">
-            <img alt="{{title}}" class="logo" src="/assets/images/angular.png">
+            <img class="logo" alt="{{title}}" src="{{logo}}">
         </a>
-        <a *ng-for="var menu of menu.items" href="{{menu.link}}" class="item">{{menu.title}}</a>
+        <div *ng-if="items" class="left menu">
+            <a *ng-for="var menu of items" href="{{menu.link}}" class="item">{{menu.title}}</a>
+        </div>
     </div>
 </div>`
 })
 
 export class UIHeaderComponent {
-
-	constructor(private menu: MenuServices) {}
+    constructor() {}
 }
