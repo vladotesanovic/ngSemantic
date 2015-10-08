@@ -1,4 +1,4 @@
-## Angular2 Pipe list filter ( like filter in Angular 1)
+## Angular2 filter list pipe ( like filter in Angular 1)
 
 Live search on any array.
 

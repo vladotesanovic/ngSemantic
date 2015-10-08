@@ -1,6 +1,6 @@
 /// <reference path="../../../../typings/angular2/angular2.d.ts" />
 
-import { Component, View, NgFor, NgIf } from "angular2/angular2";
+import { Component, View, NgFor, NgIf, AfterViewInit } from "angular2/angular2";
 
 @Component({
     properties: ["title", "logo", "items"],
@@ -21,6 +21,8 @@ import { Component, View, NgFor, NgIf } from "angular2/angular2";
 </div>`
 })
 
-export class UIHeaderComponent {
-    constructor() {}
+export class UIHeaderComponent implements AfterViewInit {
+    afterViewInit() {
+        console.log("Now we can access to binded properties");
+    }
 }
