@@ -1,4 +1,4 @@
-/// <reference path="../../../typings/angular2/angular2.d.ts" />
+/// <reference path="../../../typings/typings.d.ts" />
 
 import { Component, View, NgFor, NgIf, FORM_DIRECTIVES } from "angular2/angular2";
 import { ArrayFilterPipe } from "../../pipes/array";

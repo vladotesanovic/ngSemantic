@@ -1,6 +1,4 @@
-/// <reference path="../typings/angular2/angular2.d.ts" />
-/// <reference path="../typings/angular2/http.d.ts" />
-/// <reference path="../typings/angular2/router.d.ts" />
+/// <reference path="../typings/typings.d.ts" />
 
 import { bootstrap, bind } from "angular2/angular2";
 import { routerBindings } from "angular2/router";
