@@ -1,17 +1,13 @@
 [{
 	"title" : "Home",
 	"link" : "#/",
-	"type" : "button",
 	"icon" : "edit",
-	"position": "left",
-	"settings": 0
+	"position": "left"
 },{
 	"title" : "About Us",
-	"type" : "link",
 	"link" : "#/page/about" 
 },
 {
 	"title" : "Contact Us",
-	"type" : "link",
 	"link" : "#/page/contact-us" 
 }]

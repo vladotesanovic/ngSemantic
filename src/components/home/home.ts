@@ -21,10 +21,10 @@ class ToDo {
 })
 
 export class HomeComponent {
-	items: Array<ToDo>;
-	list: Array<string>;
-	menuItems: Array<Object>;
-	item = new ToDo();
+	public items: Array<ToDo>;
+	public list: Array<string>;
+	public menuItems: Array<Object>;
+	public item = new ToDo();
 
 	constructor(private menu: MenuServices) {
 

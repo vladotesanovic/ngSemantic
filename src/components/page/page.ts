@@ -4,9 +4,10 @@ import { Component, View, NgFor } from "angular2/angular2";
 import { RouteParams } from "angular2/router";
 import { SEMANTIC_COMPONENTS } from "../../directives/semantic/semantic";
 import { PageServices } from "../../services/page";
+import { MenuServices } from "../../services/menu";
 
 @Component({
-	bindings: [PageServices],
+	bindings: [PageServices, MenuServices],
 	selector: "page"
 })
 @View({
@@ -17,9 +18,13 @@ import { PageServices } from "../../services/page";
 export class PageComponent {
 	public text: string;
 	public title: string;
+	public menuItems: Array<Object>;
 	public events: Array<string> = new Array<string>();
 
-	constructor(params: RouteParams, pageServ: PageServices) {
+	constructor(params: RouteParams, pageServ: PageServices, menu: MenuServices) {
+
+		menu.getMenu().subscribe(res => this.menuItems = res.json());
+
 		pageServ.getPage().subscribe(res => {
 			res.find((item) => {
 				if (item.slug === params.get("slug")) {
