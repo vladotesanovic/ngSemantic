@@ -19,18 +19,27 @@ import { Pipe } from "angular2/angular2";
 export class ArrayFilterPipe {
 	private _tmp: Array<string>;
 
-	transform(array: Array<string>, text: string): Array<string> {
-		if (typeof text === "undefined") {
+	transform(array: Array<string>, text: any): Array<string> {
+		if (typeof text === "object" && typeof text[0] === "undefined") {
 			return array;
 		}
 
 		this._tmp = new Array<string>();
-
-		array.map((item) => {
-			if (item.toLowerCase().search(text.toString().toLowerCase()) >= 0) {
-				this._tmp.push(item);
-			}
-		});
+		// 1 mean that array is flat
+		// 2 mean that we deal with array of objects
+		if (text.length === 1) {
+			array.map(item => {
+				if (item.toLowerCase().search(text.toString().toLowerCase()) >= 0) {
+					this._tmp.push(item);
+				}
+			});
+		} else {
+			array.map(item => {
+				if (item[text[0]].toLowerCase().search(text[1].toString().toLowerCase()) >= 0) {
+					this._tmp.push(item);
+				}
+			});
+		}
 
 		return this._tmp;
 	}

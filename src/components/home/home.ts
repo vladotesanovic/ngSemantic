@@ -3,7 +3,7 @@
 import { Component, View, NgFor, NgIf, FORM_DIRECTIVES } from "angular2/angular2";
 import { ArrayFilterPipe } from "../../pipes/array";
 import { SEMANTIC_COMPONENTS } from "../../directives/semantic/semantic";
-import { MenuServices } from "../../services/menu";
+import { MenuServices, MenuInterface } from "../../services/menu";
 
 class ToDo {
 	header: string;
@@ -23,7 +23,7 @@ class ToDo {
 export class HomeComponent {
 	public items: Array<ToDo>;
 	public list: Array<string>;
-	public menuItems: Array<Object>;
+	public menuItems: MenuInterface<Object>;
 	public item = new ToDo();
 
 	constructor(private menu: MenuServices) {
