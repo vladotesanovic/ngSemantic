@@ -1,9 +1,5 @@
-/// <reference path="../../../../typings/typings.d.ts" />
-
-import { Component, View } from "angular2/angular2";
+import { Component, View, Pipe } from "angular2/angular2";
 import { NgFor, NgIf} from "angular2/angular2";
-import { DebugPipe } from "../../../pipes/debug";
-import { ArrayFilterPipe } from "../../../pipes/array";
 
 @Component({
     properties: ["menu"],
@@ -16,13 +12,45 @@ import { ArrayFilterPipe } from "../../../pipes/array";
 })
 class LinkItem {}
 
+@Pipe({
+    name: "arrayFilter"
+})
+export class ArrayFilterPipe {
+    private _tmp: Array<string>;
+
+    transform(array: Array<string>, text: any): Array<string> {
+        if (typeof text === "object" && typeof text[0] === "undefined") {
+            return array;
+        }
+
+        this._tmp = new Array<string>();
+        // 1 mean that array is flat
+        // 2 mean that we deal with array of objects
+        if (text.length === 1) {
+            array.map(item => {
+                if (item.toLowerCase().search(text.toString().toLowerCase()) >= 0) {
+                    this._tmp.push(item);
+                }
+            });
+        } else {
+            array.map(item => {
+                if (item[text[0]].toLowerCase().search(text[1].toString().toLowerCase()) >= 0) {
+                    this._tmp.push(item);
+                }
+            });
+        }
+
+        return this._tmp;
+    }
+}
+
 @Component({
     properties: ["title", "logo", "items", "class"],
 	selector : "header"
 })
 @View({
     directives: [NgFor, NgIf, LinkItem],
-    pipes: [DebugPipe, ArrayFilterPipe],
+    pipes: [ArrayFilterPipe],
     template: `<div class="ui icon menu fixed {{class}}">
     <div class="ui fluid container">
         <a href="#/" class="header item">

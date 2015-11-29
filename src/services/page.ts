@@ -1,4 +1,3 @@
-/// <reference path="../../typings/angular2/angular2.d.ts" />
 import { Injectable } from "angular2/angular2";
 import { Http } from "angular2/http";
 
@@ -8,6 +7,6 @@ export class PageServices {
 	constructor(public http: Http) {}
 	getPage(): any {
 		return this.http.get("./assets/data/pages.json")
-			.map(res => res.json());
+			.map((res: any) => res.json());
 	}
 }

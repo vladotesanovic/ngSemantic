@@ -1,5 +1,3 @@
-/// <reference path="../../typings/angular2/angular2.d.ts" />
-
 import { Injectable } from "angular2/angular2";
 import { Http } from "angular2/http";
 
@@ -13,7 +11,7 @@ export class TableServices {
 		this.columns = new Array<string>();
 		this.http
 			.get("./assets/data/table.json")
-			.map(res => res.json())
+			.map((res: any) => res.json())
 			.subscribe(res => {
 				this.items = res;
 				if ( typeof this.items !== "undefined" ) {

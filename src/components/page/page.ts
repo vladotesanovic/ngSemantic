@@ -1,5 +1,3 @@
-/// <reference path="../../../typings/angular2/angular2.d.ts" />
-
 import { Component, View, NgFor } from "angular2/angular2";
 import { RouteParams } from "angular2/router";
 import { SEMANTIC_COMPONENTS } from "../../directives/semantic/semantic";

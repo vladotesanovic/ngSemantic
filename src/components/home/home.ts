@@ -1,9 +1,8 @@
-/// <reference path="../../../typings/typings.d.ts" />
-
 import { Component, View, NgFor, NgIf, FORM_DIRECTIVES } from "angular2/angular2";
 import { ArrayFilterPipe } from "../../pipes/array";
 import { SEMANTIC_COMPONENTS } from "../../directives/semantic/semantic";
 import { MenuServices, MenuInterface } from "../../services/menu";
+import { MessageService } from "../../services/message";
 
 class ToDo {
 	header: string;
@@ -11,7 +10,7 @@ class ToDo {
 }
 
 @Component({
-	bindings: [MenuServices],
+	providers: [MenuServices],
 	selector : "home"
 })
 @View({
@@ -26,7 +25,7 @@ export class HomeComponent {
 	public menuItems: MenuInterface<Object>;
 	public item = new ToDo();
 
-	constructor(private menu: MenuServices) {
+	constructor(private menu: MenuServices, public ms: MessageService) {
 
 		menu.getMenu().subscribe(res => this.menuItems = res.json());
 
@@ -37,5 +36,8 @@ export class HomeComponent {
 	addTodo() {
 		this.items.push(this.item);
 		this.item = new ToDo();
+	}
+	submitMessage() {
+		this.ms.emitMessage(new Date().toISOString());
 	}
 }
