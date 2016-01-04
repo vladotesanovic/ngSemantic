@@ -1,9 +1,3 @@
 before_script:
-  - npm install -g gulp
-  - npm install gulp --save-dev
-  - npm install gulp-typescript --save-dev
-  - npm install gulp-tslint --save-dev
-  - npm install gulp-sourcemaps --save-dev
-  - npm install browser-sync --save-dev
-  - npm install superstatic --save-dev
-script: gulp ci
+  - npm install typescript -g
+script: npm tsc
