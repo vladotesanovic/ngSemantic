@@ -21,24 +21,12 @@ cd Angular2-Semantic-UI-kickstarter
 # Install dependencies ( default settings for semantic )
 npm install
 
-# Navigate to semantic folder and install it
-cd semantic
-gulp build
+# To buil local files
+npm build
 
-# go back to root directory and run local server
-cd ..
-gulp
+# To run local server
+npm server
 ```
-
-Browser will open app on http://localhost:3000 ( change port in gulp.js ).
-
-Each file creation or file edit in src/ folder will trigger gulp build process, therefore there is no need for browser refresh or re-run of gulp script.
-
-## ToDo
-* More Semantic UI components
-* Describe directory structure in readme file
-* Add build task in gulp.js. ( new folder will be generated build/ ) 
-* Add tests
 
 ## Licence 
 

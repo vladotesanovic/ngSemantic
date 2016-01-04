@@ -1,0 +1,59 @@
+<!-- This gonna be implemented -->
+<ui-header title="Angular2 - Semantic UI" class="" logo="/assets/images/angular.png" [items]="menuItems"></ui-header>
+
+<home>
+    <ui-message></ui-message>
+    <div class="ui bim-container stackable three column grid">
+        <div class="column">
+            <h4 class="ui header">Live list</h4>
+            <div class="ui vertical demo menu" style="width: auto">
+                <div class="item">
+                    <div class="ui transparent icon input">
+                        <input type="text" [(ngModel)]="search" placeholder="Live search...">
+                        <i class="search icon"></i>
+                    </div>
+                </div>
+                <a class="item" *ngFor="var menu of list | arrayFilter: search"> {{menu}}</a>
+            </div>     
+        </div>
+        <div class="column">
+            <h4 class="ui header">ToDo List</h4>
+            <div class="ui list">
+                <a class="item" *ngFor="var item of items">
+                    <i class="right triangle icon"></i>
+                    <div class="content">
+                        <div class="header">{{item.header}} {{$index}}</div>
+                        <div class="description">{{item.description}}</div>
+                    </div>
+                </a>
+                <div class="ui yellow message" *ngIf="!items.length">
+                    <i class="warning sign icon"></i> Add one or more items bellow.
+                </div>
+            </div>
+            <form (ng-submit)="addTodo()" class="ui form">
+                <div class="field">
+                    <label>Header</label>
+                    <input type="text" [(ngModel)]="item.header" autofocus required placeholder="Header">
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <textarea rows="3" [(ngModel)]="item.description" autofocus required placeholder="Description"></textarea>
+                </div>
+                <button class="ui teal button" type="submit">Add</button>
+            </form>
+        </div>
+        <div class="column">
+            <h4>Message Service</h4>
+            <form class="ui form">
+                <button class="ui teal button" (click)="submitMessage()" type="submit">Emmit Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="ui bim-container stackable one column grid">
+        <div class="column">
+            <h4 class="ui header">Table component</h4>
+            <table></table>
+        </div>
+    </div>
+</home>
+

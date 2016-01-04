@@ -1,0 +1,41 @@
+<!-- index.html -->
+<html>
+
+<head>
+    <title>Angular2 - Semantic UI kickstarter</title>
+    <script src="vendor/system.js"></script>
+    <script src="vendor/angular2-polyfills.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- 
+    @todo resolve dependency with jQuery
+    <script src="/semantic/dist/semantic.min.js"></script> -->
+    <script>
+    //configure system loader
+    System.config({
+        defaultJSExtensions: true,
+        paths: {
+            'rxjs/operators/*' : 'vendor/rxjs/operator/*.js'
+        },
+        packages: {
+            app: {
+                format: 'register',
+                defaultExtension: 'js'
+            }
+        }
+    });
+    </script>    
+    <script src="vendor/rxjs/Rx.min.js"></script>
+    <script src="vendor/angular2.min.js"></script>
+    <script src="vendor/router.min.js"></script>
+    <script src="vendor/http.min.js"></script>
+</head>
+
+<body>
+    <app></app>
+    <script>
+        System.import('/app/bootstrap');
+    </script>
+</body>
+
+</html>

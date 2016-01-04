@@ -1,10 +1,19 @@
 {
-    "version": "1.5.3",
     "compilerOptions": {
+        "module": "system",
         "target": "es5",
-        "module": "commonjs",
+        "outDir": "build",
+        "rootDir": "./src",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "noImplicitAny": true,
         "removeComments": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true
-    }
+    },
+    "exclude": [
+        "node_modules",
+        "built/vendor/rxjs/operator",        
+        "src/vendor/rxjs/operator"
+    ]
 }
