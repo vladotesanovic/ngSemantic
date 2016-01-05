@@ -6,7 +6,7 @@
   "main": "",
   "scripts": {
     "build": "rm -rf build/app && tsc && cd src && find . -name '*.html' | cpio -pdm ../build",
-    "server": "browser-sync start --files 'build/**/*.js' --server 'build'",
+    "server": "browser-sync start --files 'build/app/**/*.js' --server 'build'",
     "compile": "tsc"
   },
   "author": "vlado.tesanovic@gmail.com",
