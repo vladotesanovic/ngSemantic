@@ -1,42 +1,29 @@
 import { Injectable } from "angular2/core";
 import { Http } from "angular2/http";
-import { Observable, Subscriber } from "rxjs/Rx";
+import { ReplaySubject, Observable } from "rxjs/Rx";
 
 /**
- * Menu services "must have" items array.
+ * Dummy service for retrieving menu in application.
  * 
- * [Injectable description]
  */
 @Injectable()
 export class MenuServices {
-	private menu: any;
-
-	constructor(public http: Http) {}
-	getMenu(): any {
-
-		return Observable.create((observer: any) => {
-		
-			observer.next([{
-				"title" : "Home",
-				"link" : "#/",
-				"icon" : "edit",
-				"position": "left",
-				"type": "link"
-			}, {
-				"title" : "About Us",
-				"link" : "#/about",
-				"position": "left",
-				"type": "link"
-			}]);
-		});
+	private _subject = new ReplaySubject(1);
+	
+	constructor(public http: Http) {
+		this.http.get("/assets/data/menu.json").subscribe(this._subject);
 	}
-}
+	
+	getMenu(): any {
+		
+		return Observable.create((observer: any) => {
 
-// this interface must be implemented
-// on items returned by getMenu() function
-export interface MenuInterface<T> {
-	title: string;
-	link: string;
-	icon?: string;
-	position?: string;
+            this._subject.subscribe((data: any) => {
+				
+                observer.next(data);
+				
+            });
+
+        });
+	}
 }

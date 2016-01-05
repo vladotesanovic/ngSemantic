@@ -1,6 +1,6 @@
 import { Component, View } from "angular2/core";
 import { RouteParams } from "angular2/router";
-import { SEMANTIC_COMPONENTS } from "../../directives/semantic/semantic";
+import { SemanticHeader } from "../../directives/semantic/semantic";
 import { PageServices } from "../../services/page";
 import { MenuServices } from "../../services/menu";
 
@@ -9,7 +9,7 @@ import { MenuServices } from "../../services/menu";
 	selector: "page"
 })
 @View({
-	directives: [SEMANTIC_COMPONENTS],
+	directives: [SemanticHeader],
 	templateUrl: "./app/components/page/page.html"
 })
 

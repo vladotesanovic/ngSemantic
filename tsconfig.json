@@ -5,8 +5,9 @@
         "outDir": "build",
         "rootDir": "./src",
         "moduleResolution": "node",
-        "sourceMap": true,
         "noImplicitAny": true,
+        "inlineSources": true,
+        "inlineSourceMap": true,
         "removeComments": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true

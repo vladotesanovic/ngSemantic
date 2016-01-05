@@ -22,10 +22,13 @@ cd Angular2-Semantic-UI-kickstarter
 npm install
 
 # To buil local files
-npm build
+npm run build
 
 # To run local server
-npm server
+npm run server
+
+# Open url
+http://localhost:3000/
 ```
 
 ## Licence 
