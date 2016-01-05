@@ -7,7 +7,7 @@ import { MessageService } from "../../../services/message";
 })
 
 @View({
-  template: `<div *ngIf="messages.length" class="ui message">
+  template: `<div *ngIf="messages.length" class="ui message info">
   <div class="header">
     Message list
   </div>
