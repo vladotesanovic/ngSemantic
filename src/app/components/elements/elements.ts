@@ -1,11 +1,11 @@
 import { Component, View } from "angular2/core";
-import { SemanticHeader } from "../../directives/semantic/semantic";
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "../../directives/semantic/semantic";
 
 @Component({
 	selector : "elements"
 })
 @View({
-	directives: [SemanticHeader],
+	directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
 	templateUrl : "./app/components/elements/elements.html"
 })
 

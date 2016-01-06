@@ -9,7 +9,7 @@
 </div>
       
 <div class="ui stripe vertical segment">
-  <div class="ui stackable very relaxed grid container">
+  <div class="ui stackable grid container">
     <div class="column">
       <br/><br/>
       <h1 class="ui header">ngSemantic</h1>
@@ -32,7 +32,8 @@
       <br/>
       <p>Tooltip is based on Semantic popup component</p>
       <button class="ui button teal" sm-dir-tooltip="Hey there. I'm tooltip">Hover me</button>
-      <button class="ui button" (click)="submitMessage($event)" sm-dir-tooltip="Emit info message">Message me</button>
+      <button class="ui button blue" (click)="submitMessage($event)" sm-dir-tooltip="Emit info message">Message me</button>
+      <a class="ui button positive" href="#/elements" sm-dir-tooltip="All defined components">All components</a>
       <p></p>
       <sm-message></sm-message>
     </div>

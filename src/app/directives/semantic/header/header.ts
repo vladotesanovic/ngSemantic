@@ -1,4 +1,4 @@
-import { Component, View, Pipe } from "angular2/core";
+import { Component, View } from "angular2/core";
 import { MenuServices } from "../../../services/menu";
 
 /**

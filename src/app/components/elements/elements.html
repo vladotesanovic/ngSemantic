@@ -1,10 +1,11 @@
-<!-- This gonna be implemented -->
 <sm-header title="Angular2 - Semantic UI" class="fixed" logo="/assets/images/angular.png"></sm-header>
 
 <div class="ui stripe vertical segment">
-  <div class="ui stackable very relaxed grid container">
+  <div class="ui stackable grid container">
     <div class="column">
+      <!-- sm-header -->
       <h1 class="ui header">sm-header</h1>
+      <p>Semantic UI menu component <i class="icon external"></i> <a href="http://semantic-ui.com/collections/menu.html" target="_blank">Semantic UI Menu</a></p>
       <sm-header title="Angular2" class="inverted teal" logo="/assets/images/semantic.png"></sm-header>
       <div class="ui form">
         <div class="field">
@@ -31,7 +32,65 @@
           </textarea>
         </div>
       </div>
+      <div class="ui divider"></div>
+      <!-- end of sm-header -->
       
+      <!-- sm-dir-tooltip -->
+      <h1 class="ui header">sm-dir-tooltip</h1>
+      <p>Semantic UI popup component <i class="icon external"></i> <a href="http://semantic-ui.com/modules/popup.html" target="_blank">Semantic UI Popup</a></p>
+      <button class="ui button" sm-dir-tooltip="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.">Hover me</button>
+      <div class="ui form">
+        <div class="field">
+          <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<button class="ui button" sm-dir-tooltip="text...">Hover me</button>
+          </textarea>
+        </div>
+      </div>
+      <div class="ui divider"></div>
+      <!-- end of sm-dir-tooltip -->
+      
+      <!-- sm-popup & sm-dir-popup -->
+      <h1 class="ui header">sm-popup & sm-dir-popup</h1>
+      <p>Semantic UI popup component <i class="icon external"></i> <a href="http://semantic-ui.com/modules/popup.html" target="_blank">Semantic UI Popup</a></p>
+      <button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'left center'}">Click me</button>
+      <sm-popup selector="my-popup">
+        <div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div></div>
+      </sm-popup>
+      
+      <div class="ui form">
+        <div class="field">
+          <textarea rows="6" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'left center'}">Click me</button>
+<sm-popup selector="my-popup">
+  text or html content...
+</sm-popup>
+          </textarea>
+        </div>
+      </div>
+      <div class="ui divider"></div>
+      <!-- sm-popup & sm-dir-popup -->
+      
+      <!-- sm-segment -->
+      <h1 class="ui header">sm-segment</h1>
+      <p>Semantic UI segment element <i class="icon external"></i> <a href="http://semantic-ui.com/elements/segment.html" target="_blank">Semantic UI Segment</a></p>
+      <sm-segment class="raised">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</sm-segment>
+      <div class="ui form">
+        <div class="field">
+          <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-segment class="raised">text....</sm-segment>
+          </textarea>
+        </div>
+      </div>
+      <br/>
+      <sm-segment class="piled">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</sm-segment>
+      <div class="ui form">
+        <div class="field">
+          <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-segment class="piled">text....</sm-segment>
+          </textarea>
+        </div>
+      </div>
+      <!-- end of sm-segment -->
     </div>
   </div>
 </div>

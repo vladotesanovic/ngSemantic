@@ -1,5 +1,4 @@
 /// <reference path="../../../../../typings/tsd.d.ts" />
-
 import { Directive, ElementRef } from "angular2/core";
 import "semantic/popup.min"
 import "semantic/transition.min"
@@ -24,7 +23,7 @@ export class SMTooltipDirective {
     constructor(public element: ElementRef) {}
 
     onMouseEnter() {
-
+        
         jQuery(this.element.nativeElement).popup({
             content : this.text,
             exclusive: true,

@@ -7,13 +7,10 @@ import { MessageService } from "../../../services/message";
 })
 
 @View({
-  template: `<div *ngIf="messages.length" class="ui message info">
-  <ul class="list">
-    <li *ngFor="#message of messages">Message: {{message}} ( message expire after 5 seconds )</li>
-  </ul>
+  template: `<div *ngFor="#message of messages" class="ui message info">
+  Message: {{message}} ( message expire after 5 seconds )
 </div>`
 })
-
 export class SemanticMessage {
   messages: Array<string> = new Array<string>();
   private LENGTH: number = 5000;
