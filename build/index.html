@@ -9,15 +9,15 @@
     
     <script src="vendor/system.js"></script>
     <script src="vendor/angular2-polyfills.min.js"></script>
-    <!-- 
-    @todo resolve dependency with jQuery
-    <script src="/semantic/dist/semantic.min.js"></script> -->
+    <script src="vendor/jquery-2.1.4.min.js"></script>
+    
     <script>
     //configure system loader
     System.config({
         defaultJSExtensions: true,
         paths: {
-            'rxjs/operators/*' : 'vendor/rxjs/operator/*.js'
+            'rxjs/operators/*' : 'vendor/rxjs/operator/*.js',
+            '': ''
         },
         packages: {
             app: {

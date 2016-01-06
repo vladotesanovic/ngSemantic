@@ -1,68 +1,34 @@
-<!-- This gonna be implemented -->
-<ui-header title="Angular2 - Semantic UI" class="fixed" logo="/assets/images/angular.png"></ui-header>
-<p><i class="icon arrow up"></i> class: icon fixed</p>
-
-<ui-header title="Angular2" class="inverted teal" logo="/assets/images/semantic.png"></ui-header>
-<p><i class="icon arrow up"></i> class: icon inverted teal</p>
-
-<ui-header title="Vertical" class="vertical"></ui-header>
-<p><i class="icon arrow up"></i> Class: vertical</p>
-
-<ui-header title="Secondary" class="secondary"></ui-header>
-<p><i class="icon arrow up"></i> class: icon inverted teal</p>
-
-<home>
-    <div class="ui bim-container stackable three column grid">
-        <div class="column">
-            <h4 class="ui header">Live list</h4>
-            <div class="ui vertical demo menu" style="width: auto">
-                <div class="item">
-                    <div class="ui transparent icon input">
-                        <input type="text" [(ngModel)]="search" placeholder="Live search...">
-                        <i class="search icon"></i>
-                    </div>
-                </div>
-                <a class="item" *ngFor="var menu of list | arrayFilter: search"> {{menu}}</a>
-            </div>     
+<ui-header title="ngSemantic" class="fixed" logo="/assets/images/angular.png"></ui-header>
+<p><i class="icon arrow up"></i> Header is based on Semanic menu element: <i class="icon external"></i> <a href="http://semantic-ui.com/collections/menu.html" target="_blank">Semantic UI Menu</a></p>
+<div class="ui form">
+  <div class="field">
+    <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<ui-header title="ngSemantic" class="fixed" logo="/assets/images/angular.png"></ui-header>
+    </textarea>
+  </div>
+</div>
+      
+<div class="ui stripe vertical segment">
+  <div class="ui stackable very relaxed grid container">
+    <div class="fourteen wide column">
+      <br/><br/>
+      <h1 class="ui header">ngSemantic</h1>
+      <p>Angular2 building blocks based on Semantic UI</p>
+      <ul class="ui list">
+        <li class="item">Angular2 <a href="https://angular.io/" target="_blank">angular.io</a></li>
+        <li class="item">Semantic UI <a href="http://semantic-ui.com/" target="_blank">semantic-ui.com</a></li>
+      </ul>
+      <br/><br/><br/>
+      <p>Loading is based on Semantic loading element: <i class="icon external"></i> <a href="http://semantic-ui.com/elements/loader.html" target="_blank">Semantic UI Loader</a></p>
+      <div class="ui form">
+        <div class="field">
+          <textarea rows="4" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<app>
+  <div class="ui active loader"></div>
+</app>
+          </textarea>
         </div>
-        <div class="column">
-            <h4 class="ui header">ToDo List</h4>
-            <div class="ui list">
-                <a class="item" *ngFor="var item of items">
-                    <i class="right triangle icon"></i>
-                    <div class="content">
-                        <div class="header">{{item.header}} {{$index}}</div>
-                        <div class="description">{{item.description}}</div>
-                    </div>
-                </a>
-                <div class="ui yellow message" *ngIf="!items.length">
-                    <i class="warning sign icon"></i> Add one or more items bellow.
-                </div>
-            </div>
-            <form (ng-submit)="addTodo()" class="ui form">
-                <div class="field">
-                    <label>Header</label>
-                    <input type="text" [(ngModel)]="item.header" autofocus required placeholder="Header">
-                </div>
-                <div class="field">
-                    <label>Description</label>
-                    <textarea rows="3" [(ngModel)]="item.description" autofocus required placeholder="Description"></textarea>
-                </div>
-                <button class="ui teal button" type="submit">Add</button>
-            </form>
-        </div>
-        <div class="column">
-            <h4>Message Service</h4>
-            <form class="ui form">
-                <button class="ui teal button" (click)="submitMessage()" type="submit">Emmit Message</button>
-            </form>
-        </div>
+      </div>
     </div>
-    <div class="ui bim-container stackable one column grid">
-        <div class="column">
-            <h4 class="ui header">Table component</h4>
-            <table></table>
-        </div>
-    </div>
-</home>
-
+  </div>
+</div>

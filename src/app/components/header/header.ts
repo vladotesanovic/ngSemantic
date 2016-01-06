@@ -6,7 +6,7 @@ import { SemanticHeader } from "../../directives/semantic/semantic";
 })
 @View({
 	directives: [SemanticHeader],
-	templateUrl : "./app/components/home/home.html"
+	templateUrl : "./app/components/header/header.html"
 })
 
-export class HomeComponent {}
+export class HeaderComponent {}

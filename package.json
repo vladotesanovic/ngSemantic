@@ -1,13 +1,12 @@
 {
-  "name": "Angular2-SemanticUI-kickstarter",
+  "name": "ngSemantic",
   "version": "1.0.0",
-  "description": "",
+  "description": "Angular2 and SemanticUI",
   "private": true,
   "main": "",
   "scripts": {
     "build": "rm -rf build/app && tsc && cd src && find . -name '*.html' | cpio -pdm ../build",
     "server": "browser-sync start --files 'build/app/**/*.js' --server 'build'",
-    "compile": "tsc",
     "postinstall": "tsc && cd src && find . -name '*.html' | cpio -pdm ../build"
   },
   "author": "vlado.tesanovic@gmail.com",
