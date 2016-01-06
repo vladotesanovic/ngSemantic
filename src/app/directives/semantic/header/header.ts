@@ -20,6 +20,14 @@ import { MenuServices } from "../../../services/menu";
         <a *ngFor="#menu of items" href="{{menu.link}}" class="item">
             <i *ngIf="menu.icon" class="{{menu.icon}} icon"></i> {{menu.title}}
         </a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
 </div>`
 })
 export class SemanticHeader {

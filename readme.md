@@ -8,7 +8,7 @@
   <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a> 
 </p>
 
-## Install
+## Development
 ```bash
 git clone https://github.com/vladotesanovic/ngSemantic.git
 cd ngSemantic
@@ -21,9 +21,6 @@ npm run build
 
 # To run local server
 npm run server
-
-# Open url
-http://localhost:3000/
 ```
 
 ## Components
@@ -31,6 +28,10 @@ http://localhost:3000/
   - sm-header
   - sm-message
   - sm-dir-tooltip
+  
+## Installable package
+
+ToDO
    
 ## Licence 
 

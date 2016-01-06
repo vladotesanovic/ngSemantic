@@ -8,11 +8,8 @@ import { MessageService } from "../../../services/message";
 
 @View({
   template: `<div *ngIf="messages.length" class="ui message info">
-  <div class="header">
-    Message list
-  </div>
   <ul class="list">
-    <li *ngFor="#message of messages">Message emitted at: {{message}} ( message expire after 5 seconds )</li>
+    <li *ngFor="#message of messages">Message: {{message}} ( message expire after 5 seconds )</li>
   </ul>
 </div>`
 })
