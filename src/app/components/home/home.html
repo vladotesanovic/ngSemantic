@@ -1,5 +1,9 @@
 <sm-header title="ngSemantic" class="fixed" logo="/assets/images/angular.png"></sm-header>
-<p><i class="icon arrow up"></i> Header is based on Semanic menu element: <i class="icon external"></i> <a href="http://semantic-ui.com/collections/menu.html" target="_blank">Semantic UI Menu</a></p>
+      
+<div class="ui stripe vertical segment">
+  <div class="ui stackable grid container">
+    <div class="column">
+      <p><i class="icon arrow up"></i> Header is based on Semanic menu element: <i class="icon external"></i> <a href="http://semantic-ui.com/collections/menu.html" target="_blank">Semantic UI Menu</a></p>
 <div class="ui form">
   <div class="field">
     <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
@@ -7,10 +11,6 @@
     </textarea>
   </div>
 </div>
-      
-<div class="ui stripe vertical segment">
-  <div class="ui stackable grid container">
-    <div class="column">
       <br/><br/>
       <h1 class="ui header">ngSemantic</h1>
       <p>Angular2 building blocks based on Semantic UI</p>
@@ -31,7 +31,7 @@
       </div>
       <br/>
       <p>Tooltip is based on Semantic popup component</p>
-      <button class="ui button teal" sm-dir-tooltip="Hey there. I'm tooltip">Hover me</button>
+      <button class="ui button teal small" sm-dir-tooltip="Hey there. I'm tooltip">Hover me</button>
       <button class="ui button blue" (click)="submitMessage($event)" sm-dir-tooltip="Emit info message">Message me</button>
       <a class="ui button positive big" href="#/elements" sm-dir-tooltip="All defined components">All components</a>
       <p></p>
