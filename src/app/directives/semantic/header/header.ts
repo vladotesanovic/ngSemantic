@@ -21,6 +21,9 @@ import { MenuServices } from "../../../services/menu";
             <i *ngIf="menu.icon" class="{{menu.icon}} icon"></i> {{menu.title}}
         </a>
         <div class="right menu">
+            <a class="item" href="https://github.com/vladotesanovic/ngSemantic" target="_blank">
+                <i class="github icon"></i> GitHub repo
+            </a>
             <div class="item">
                 <div class="ui icon input">
                     <input type="text" placeholder="Search...">
