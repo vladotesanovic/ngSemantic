@@ -10,7 +10,7 @@ import { MenuServices } from "../../../services/menu";
 @Component({
     providers: [MenuServices],
     properties: ["title", "logo", "class"],
-	selector : "ui-header"
+	selector : "sm-header"
 })
 @View({
     template: `<div class="ui menu {{class}}">

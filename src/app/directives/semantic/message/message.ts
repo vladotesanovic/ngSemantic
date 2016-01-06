@@ -3,7 +3,7 @@ import { MessageService } from "../../../services/message";
 
 @Component({
   properties: [],
-  selector: "ui-message"
+  selector: "sm-message"
 })
 
 @View({

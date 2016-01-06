@@ -8,11 +8,6 @@
   <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a> 
 </p>
 
-## Dependecies
-What you need to run this app:
-* NodeJs 
-* NPM ( Node package manager )
-
 ## Install
 ```bash
 git clone https://github.com/vladotesanovic/Angular2-Semantic-UI-kickstarter.git
@@ -31,6 +26,11 @@ npm run server
 http://localhost:3000/
 ```
 
+## Components
+
+  - sm-header
+  - sm-message
+   
 ## Licence 
 
 MIT

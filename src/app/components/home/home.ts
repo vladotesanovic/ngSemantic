@@ -1,11 +1,11 @@
 import { Component, View } from "angular2/core";
-import { SemanticHeader } from "../../directives/semantic/semantic";
+import { SemanticHeader, SMTooltipDirective } from "../../directives/semantic/semantic";
 
 @Component({
 	selector : "home"
 })
 @View({
-	directives: [SemanticHeader],
+	directives: [SemanticHeader, SMTooltipDirective],
 	templateUrl : "./app/components/home/home.html"
 })
 
