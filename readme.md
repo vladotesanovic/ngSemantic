@@ -8,6 +8,9 @@
   <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a> 
 </p>
 
+## Live demo
+<a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a> 
+
 ## Development
 ```bash
 git clone https://github.com/vladotesanovic/ngSemantic.git
@@ -27,11 +30,14 @@ npm run server
 
   - sm-header
   - sm-message
+  - sm-popup
+  - sm-segment
   - sm-dir-tooltip
+  - sm-dir-popup
   
 ## Installable package
 
-ToDO
+ToDo
    
 ## Licence 
 
