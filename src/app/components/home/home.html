@@ -6,7 +6,7 @@
       <p><i class="icon arrow up"></i> Header is based on Semanic menu element: <i class="icon external"></i> <a href="http://semantic-ui.com/collections/menu.html" target="_blank">Semantic UI Menu</a></p>
 <div class="ui form">
   <div class="field">
-    <textarea rows="3" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    <textarea rows="3" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-header title="ngSemantic" class="fixed" logo="/assets/images/angular.png"></sm-header>
     </textarea>
   </div>
@@ -14,15 +14,16 @@
       <br/><br/>
       <h1 class="ui header">ngSemantic</h1>
       <p>Angular2 building blocks based on Semantic UI</p>
-      <ul class="ui list">
+      <ul class="">
         <li class="item">Angular2 <a href="https://angular.io/" target="_blank">angular.io</a></li>
         <li class="item">Semantic UI <a href="http://semantic-ui.com/" target="_blank">semantic-ui.com</a></li>
+        <li class="item">GitHub Reository <a href="https://github.com/vladotesanovic/ngSemantic">https://github.com/vladotesanovic/ngSemantic</a> ( If you like it, give it a star <i class="icon star"></i> )</li>
       </ul>
       <br/><br/><br/>
       <p>Loading animation is based on Semantic loading element: <i class="icon external"></i> <a href="http://semantic-ui.com/elements/loader.html" target="_blank">Semantic UI Loader</a></p>
       <div class="ui form">
         <div class="field">
-          <textarea rows="4" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <app>
   <div class="ui active loader"></div>
 </app>
@@ -30,10 +31,10 @@
         </div>
       </div>
       <br/>
-      <p>Tooltip is based on Semantic popup component</p>
-      <button class="ui button teal small" sm-dir-tooltip="Hey there. I'm tooltip">Hover me</button>
-      <button class="ui button blue" (click)="submitMessage($event)" sm-dir-tooltip="Emit info message">Message me</button>
-      <a class="ui button positive big" href="#/elements" sm-dir-tooltip="All defined components">All components</a>
+      <p>Quick demos: </p>
+      <button class="ui button" sm-dir-tooltip="Hey there. I'm tooltip">Hover me</button>
+      <button class="ui button" (click)="submitMessage($event)" sm-dir-tooltip="Emit info message">Message me</button>
+      <a class="ui button positive" href="#/elements">All components</a>
       <p></p>
       <sm-message></sm-message>
     </div>

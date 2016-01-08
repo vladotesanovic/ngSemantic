@@ -2,3 +2,4 @@
 body { background-color: #EAECEC; }
 .code { background-color: #EAECEC !important; color: #008C79 !important; font-family: monospace; border: 0 !important;}
 app { display: block; padding-top: 65px !important; }
+textarea.code { resize: none !important; }

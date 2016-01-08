@@ -9,7 +9,7 @@
       <sm-header title="Angular2" class="inverted teal" logo="/assets/images/semantic.png"></sm-header>
       <div class="ui form">
         <div class="field">
-          <textarea rows="3" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <textarea rows="3" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-header title="Angular2" class="inverted teal" logo="/assets/images/semantic.png"></sm-header>
           </textarea>
         </div>
@@ -18,7 +18,7 @@
       <sm-header title="Vertical" class="vertical"></sm-header>
       <div class="ui form">
         <div class="field">
-          <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-header title="Vertical" class="vertical"></sm-header>
           </textarea>
         </div>
@@ -27,7 +27,7 @@
       <sm-header title="Secondary" class="secondary"></sm-header>
       <div class="ui form">
         <div class="field">
-          <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-header title="Secondary" class="secondary"></sm-header>
           </textarea>
         </div>
@@ -41,7 +41,7 @@
       <button class="ui button" sm-dir-tooltip="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.">Hover me</button>
       <div class="ui form">
         <div class="field">
-          <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <button class="ui button" sm-dir-tooltip="text...">Hover me</button>
           </textarea>
         </div>
@@ -52,15 +52,15 @@
       <!-- sm-popup & sm-dir-popup -->
       <h1 class="ui header">sm-popup & sm-dir-popup</h1>
       <p>Semantic UI popup component <i class="icon external"></i> <a href="http://semantic-ui.com/modules/popup.html" target="_blank">Semantic UI Popup</a></p>
-      <button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'left center'}">Click me</button>
+      <button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'right center'}">Click me</button>
       <sm-popup selector="my-popup">
         <div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div></div>
       </sm-popup>
       
       <div class="ui form">
         <div class="field">
-          <textarea rows="6" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'left center'}">Click me</button>
+          <textarea rows="6" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'right center'}">Click me</button>
 <sm-popup selector="my-popup">
   text or html content...
 </sm-popup>
@@ -76,7 +76,7 @@
       <sm-segment class="raised">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</sm-segment>
       <div class="ui form">
         <div class="field">
-          <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-segment class="raised">text....</sm-segment>
           </textarea>
         </div>
@@ -85,12 +85,51 @@
       <sm-segment class="piled">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</sm-segment>
       <div class="ui form">
         <div class="field">
-          <textarea rows="2" class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-segment class="piled">text....</sm-segment>
           </textarea>
         </div>
       </div>
+      <div class="ui divider"></div>
       <!-- end of sm-segment -->
+      
+      <!-- sm-message -->
+      <h1 class="ui header">sm-message</h1>
+      <p>Semantic UI message element <i class="icon external"></i> <a href="http://semantic-ui.com/collections/message.html" target="_blank">Semantic UI Message</a></p>
+      
+      <sm-message duration="10000"></sm-message><br/>
+      <button class="ui button" (click)="submitMessage($event, {icon: 'inbox', text: 'Icon, Icon'})">Icon message</button>
+      <button class="ui button blue" (click)="submitMessage($event, {type: 'info', text: 'Info, Info'})">Info message</button>
+      <button class="ui button red" (click)="submitMessage($event, {type: 'warning', text: 'Warning, Warning'})">Warning message</button>
+      <button class="ui button positive" (click)="submitMessage($event, {type: 'positive', text: 'Positive, Positive'})">Positive message</button>
+      <div class="ui form">
+        <div class="field">
+          <textarea rows="9" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-message duration="10000"></sm-message> // 10 seconds
+<button class="ui button" (click)="submitMessage($event, {type: 'info', icon: 'inbox', text: 'Icon, Icon'})">Icon message</button>
+<button class="ui button blue" (click)="submitMessage($event, {type: 'info', text: 'Info, Info'})">Info message</button>
+<button class="ui button red" (click)="submitMessage($event, {type: 'warning', text: 'Warning, Warning'})">Warning message</button>
+<button class="ui button positive" (click)="submitMessage($event, {type: 'positive', text: 'Positive, Positive'})">Positive message</button>
+          </textarea>
+        </div>
+      </div>
+      <div class="ui divider"></div>
+      <!-- end of sm-message -->
+      
+      <!-- sm-list -->
+      <h1 class="ui header">sm-list</h1>
+      <p>Semantic UI list element <i class="icon external"></i> <a href="http://semantic-ui.com/elements/list.html" target="_blank">Semantic UI List</a></p>
+      
+      <sm-list class="bulleted" [items]="flatArray"></sm-list>
+      
+      <div class="ui form">
+        <div class="field">
+          <textarea rows="9" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-list class="bulleted" [items]="flatArray"></sm-list>
+          </textarea>
+        </div>
+      </div>
+      <!-- end of sm-list -->
     </div>
   </div>
 </div>
