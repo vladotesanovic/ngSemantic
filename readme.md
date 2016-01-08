@@ -32,6 +32,7 @@ npm run server
   - sm-message
   - sm-popup
   - sm-segment
+  - sm-list
   - sm-dir-tooltip
   - sm-dir-popup
   
