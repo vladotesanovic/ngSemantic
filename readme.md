@@ -32,9 +32,11 @@ npm run server
   - sm-message
   - sm-popup
   - sm-segment
+  - sm-modal
   - sm-list
   - sm-dir-tooltip
   - sm-dir-popup
+  - sm-dir-modal
   
 ## Installable package
 
