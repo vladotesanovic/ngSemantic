@@ -3,7 +3,7 @@ import { Directive, ElementRef, Component, View } from "angular2/core";
 
 
 /**
- * Directive, implementation of Semantic UI popup and modal components.
+ * Directive, implementation of Semantic UI popup components.
  *
  * Object that need to be passed to this components is:
  * {

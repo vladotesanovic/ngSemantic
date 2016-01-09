@@ -43,8 +43,6 @@ export class SemanticMessage implements AfterViewInit {
     
     if (typeof this.duration !== "undefined" && Number(this.duration) >= 0) {
       this.LENGTH = Number(this.duration);
-    } else {
-      console.log("Invalid format for duration");
     }
 
   }

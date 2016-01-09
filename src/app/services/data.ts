@@ -4,10 +4,12 @@ import { Observable } from "rxjs/Rx";
 
 @Injectable()
 export class DataServices {
-	
-	constructor(public http: Http) {}
-	
+
+	constructor(public http: Http) { }
+
 	flatArray(): Observable<any> {
-		return this.http.get("/assets/data/flat.json");
+		return this.http
+			.get("/assets/data/flat.json")
+			.map((response: any) => response.json());
 	}
 }

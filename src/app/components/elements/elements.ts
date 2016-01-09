@@ -16,7 +16,7 @@ export class ElementsComponent {
 	flatArray: Array<any> = [];
 	constructor(public ms: MessageService, public ds: DataServices) {
 		ds.flatArray().subscribe((data: any) => {
-			this.flatArray = JSON.parse(data._body);
+			this.flatArray = data;
 		});
 	}
 	submitMessage(event: Event, message: Object) {

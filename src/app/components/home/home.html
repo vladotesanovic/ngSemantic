@@ -34,6 +34,9 @@
       <p>Quick demos: </p>
       <button class="ui button" sm-dir-tooltip="Hey there. I'm tooltip">Hover me</button>
       <button class="ui button" (click)="submitMessage($event)" sm-dir-tooltip="Emit info message">Message me</button>
+      <button class="ui button" [sm-dir-modal]="{selector: 'my-home-modal'}">Click me</button>
+      <sm-modal selector="my-home-modal" title="Hello from Modal" class="">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.</sm-modal>
       <a class="ui button positive" href="#/elements">All components</a>
       <p></p>
       <sm-message></sm-message>
