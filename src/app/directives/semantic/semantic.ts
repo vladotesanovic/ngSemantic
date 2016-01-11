@@ -5,6 +5,7 @@ import { SemanticPopup, SMPopupDirective } from "./popup/popup";
 import { SemanticModal, SMModalDirective } from "./modal/modal";
 import { SemanticSegment } from "./segment/segment";
 import { SemanticList } from "./list/list";
+import { SemanticTabs, SemanticTab } from "./tab/tab";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticHeader,
@@ -12,7 +13,9 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticSegment,
 	SemanticPopup,
 	SemanticList,
-	SemanticModal
+	SemanticModal,
+	SemanticTabs,
+	SemanticTab
 ];
 
 export let SEMANTIC_DIRECTIVES: Array<any> = [

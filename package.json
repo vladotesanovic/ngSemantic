@@ -5,22 +5,22 @@
   "private": true,
   "main": "",
   "scripts": {
-    "build": "rm -rf build/app && tsc && cd src && find . -name '*.html' | cpio -pdm ../build",
-    "server": "browser-sync start --files 'build/app/**/*.js' --server 'build'",
+    "build": "rm -rf build/app && tsc && tslint -c tslint.json src/app/**/*.ts && cd src && find . -name '*.html' | cpio -pdm ../build",
+    "start": "browser-sync start --files 'build/app/**/*.js' --server 'build'",
     "postinstall": "tsc && cd src && find . -name '*.html' | cpio -pdm ../build"
   },
   "author": "vlado.tesanovic@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "angular2": "^2.0.0-beta.0",
+    "angular2": "^2.0.0-beta.1",
     "browser-sync": "^2.11.0",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
     "express": "^4.13.3",
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.0",
-    "semantic-ui": "^2.1.7",
-    "systemjs": "^0.19.11",
+    "semantic-ui": "^2.1.8",
+    "systemjs": "^0.19.14",
     "typescript": "^1.7.5",
     "zone.js": "^0.5.10"
   },

@@ -23,7 +23,7 @@ npm install
 npm run build
 
 # To run local server
-npm run server
+npm start
 ```
 
 ## Components
@@ -33,6 +33,7 @@ npm run server
   - sm-popup
   - sm-segment
   - sm-modal
+  - sm-tabs & sm-tab
   - sm-list
   - sm-dir-tooltip
   - sm-dir-popup

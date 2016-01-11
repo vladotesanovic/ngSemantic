@@ -5,5 +5,6 @@ interface JQuery {
     modal(options?: any): JQuery;
     sidebar(options?: any): JQuery;
     sidebar(...options: any[]): JQuery;
+    tab(options?: any): JQuery;
     fixSidebar(): JQuery;
 }
