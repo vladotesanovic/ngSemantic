@@ -36,13 +36,17 @@
         <script src="vendor/http.min.js"></script>
     </head>
     
-    <body>
-        <app>
-            <div class="ui active loader"></div>
-        </app>
-        <script>
-            System.import('/app/bootstrap');
-        </script>
+    <body class="pushable" id="page">
+        <div class="pusher">
+            <app>
+                <div class="ui active inverted dimmer">
+                    <div class="ui text large loader">Loading</div>
+                </div>
+            </app>
+            <script>
+                System.import('/app/bootstrap');
+            </script>
+        </div>
     </body>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

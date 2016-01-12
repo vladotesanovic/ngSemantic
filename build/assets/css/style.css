@@ -1,5 +1,99 @@
 /* Custom style */
 body { background-color: #EAECEC; }
-.code { background-color: #EAECEC !important; color: #008C79 !important; font-family: monospace; border: 0 !important;}
-app { display: block; padding-top: 65px !important; }
+.code { background-color: #F5F5F5 !important; color: #008C79 !important; font-family: monospace; border: 0 !important;}
 textarea.code { resize: none !important; }
+
+/* new site */
+#page .full.height { 
+	background-color: #FFFFFF;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+#page > .pusher > .footer {
+    clear: both;
+}
+
+#page > .pusher > .footer {
+    margin: 0em;
+    border-radius: 0em;
+    padding: 4em 0em 4em 0em;
+}
+
+#page .full.height > .toc {
+    position: relative;
+    z-index: 1;
+    background-color: #1b1c1d;
+    width: 250px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+#page .full.height > .toc .ui.menu {
+    border-radius: 0;
+    border-width: 0 1px 0 0;
+    box-shadow: none;
+    margin: 0;
+    width: inherit;
+    overflow: hidden;
+    will-change: transform;
+}
+
+#page .main.container {
+    margin-right: 387px !important;
+}
+
+#page .masthead > .container, #page .main.container, #page .fixed.menu > .container {
+    margin-left: 3em !important;
+    margin-right: 3em !important;
+    width: auto !important;
+    max-width: 960px !important;
+}
+
+#page .main.container {
+    padding: 2em 0em 7em;
+}
+
+#page .fixed.menu > .container, #page .main.container, #page .masthead > .container, #page .footer > .container {
+    position: relative;
+}
+
+#page .masthead.segment {
+    position: relative;
+    z-index: 1;
+    margin: 0em;
+    min-height: 185px;
+    padding: 3em 0em;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #DDDDDD;
+    box-shadow: none;
+}
+
+#page .article {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    overflow: auto;
+    min-width: 0px;
+}
+
+#page .masthead > .container {
+    margin-right: 387px !important;
+}
+
+#page .masthead > .container, #page .main.container, #page .fixed.menu > .container {
+    margin-left: 3em !important;
+    margin-right: 3em !important;
+    width: auto !important;
+    max-width: 960px !important;
+}
+
+#page .logo { margin-left: 10px; }

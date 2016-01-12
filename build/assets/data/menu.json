@@ -3,6 +3,9 @@
 	"link" : "#/",
 	"icon" : "home"
 }, {
-	"title" : "Components",
-	"link" : "#/elements"
+	"title" : "About Us",
+	"link" : "#/"
+}, {
+	"title" : "Contact",
+	"link" : "#/"
 }]
