@@ -4,8 +4,8 @@
   "description": "Angular2 building blocks based on Semantic UI",
   "main": "",
   "scripts": {
-    "build": "rm -rf build/app && tsc && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../build",
-    "start": "browser-sync start --files 'build/app/**/*.js' --server 'build'"
+    "develop:build": "rm -rf build/app && tsc && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../build",
+    "develop:server": "browser-sync start --files 'build/app/**/*.js' --server 'build'"
   },
   "repository": {
     "type": "git",

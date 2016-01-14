@@ -20,10 +20,10 @@ cd ngSemantic
 npm install
 
 # To buil local files
-npm run build
+npm run develop:build
 
-# To run local server
-npm start
+# Local development server
+npm run develop:server
 ```
 
 ## Components
