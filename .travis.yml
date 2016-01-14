@@ -1,3 +1,4 @@
 before_script:
   - npm install typescript -g
-script: npm run tsc
+  - npm install tslint -g
+script: tslint -c tslint.json 'src/app/**/*.ts' && tsc

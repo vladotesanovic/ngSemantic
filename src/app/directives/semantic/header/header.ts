@@ -10,7 +10,7 @@ import { MenuServices } from "../../../services/menu";
 @Component({
     providers: [MenuServices],
     properties: ["title", "logo", "class"],
-	selector : "sm-header"
+    selector: "sm-header"
 })
 @View({
     template: `<div class="ui menu {{class}}">
@@ -35,10 +35,10 @@ import { MenuServices } from "../../../services/menu";
 })
 export class SemanticHeader {
     private items: Array<Object> = [];
-    
+
     constructor(private menu: MenuServices) {
-        
-		menu.getMenu().subscribe((response: any) => {
+
+        menu.getMenu().subscribe((response: any) => {
             this.items = JSON.parse(response._body);
         });
     }

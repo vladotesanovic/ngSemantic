@@ -3,17 +3,17 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "../../directives/seman
 import { MessageService } from "../../services/message";
 
 @Component({
-	selector : "home"
+	selector: "home"
 })
 @View({
 	directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
-	templateUrl : "./app/components/home/home.html"
+	templateUrl: "./app/components/home/home.html"
 })
 
 export class HomeComponent {
-	
-	constructor(public ms: MessageService) {}
-	
+
+	constructor(public ms: MessageService) { }
+
 	submitMessage() {
 		this.ms.emitMessage(new Date().toISOString());
 	}

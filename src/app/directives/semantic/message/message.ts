@@ -14,8 +14,8 @@ import { MessageService } from "../../../services/message";
 })
 export class SemanticMessage implements AfterViewInit {
   messages: Array<string> = new Array<string>();
-  private LENGTH: number = 5000;
   duration: number;
+  private LENGTH: number = 5000;
 
   constructor(public ms: MessageService) {
 
@@ -26,10 +26,10 @@ export class SemanticMessage implements AfterViewInit {
           text: data
         };
       }
-      
+
       // display message
       this.messages.push(data);
-      
+
       // remove message
       if (this.LENGTH > 0) {
         setTimeout(() => {
@@ -40,7 +40,7 @@ export class SemanticMessage implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    
+
     if (typeof this.duration !== "undefined" && Number(this.duration) >= 0) {
       this.LENGTH = Number(this.duration);
     }

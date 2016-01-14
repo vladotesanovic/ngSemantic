@@ -1,7 +1,7 @@
 /// <reference path="../../../../../typings/tsd.d.ts" />
 import { Directive, ElementRef } from "angular2/core";
-import "semantic/popup.min"
-import "semantic/transition.min"
+import "semantic/popup.min";
+import "semantic/transition.min";
 
 /**
  * Implementation of Semantic UI popup
@@ -20,12 +20,12 @@ import "semantic/transition.min"
 export class SMTooltipDirective {
     public text: string;
 
-    constructor(public element: ElementRef) {}
+    constructor(public element: ElementRef) { }
 
     onMouseEnter() {
-        
+
         jQuery(this.element.nativeElement).popup({
-            content : this.text,
+            content: this.text,
             exclusive: true,
             lastResort: true
         }).popup("show");

@@ -10,7 +10,8 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "../../directives/seman
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Loader</h1>
-        <p>Loading animation is based on Semantic loading element: <i class="icon external"></i> <a href="http://semantic-ui.com/elements/loader.html" target="_blank">Semantic UI Loader</a></p>
+        <p>Loading animation is based on Semantic loading element: <i class="icon external"></i> 
+        <a href="http://semantic-ui.com/elements/loader.html" target="_blank">Semantic UI Loader</a></p>
     </div>
 </div>
 <div class="main ui container">

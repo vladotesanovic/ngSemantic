@@ -34,7 +34,7 @@ export class SemanticTabs implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    jQuery('.menu.tabular .item').tab({
+    jQuery(".menu.tabular .item").tab({
       childrenOnly: true,
       context: jQuery(this.elementRef.nativeElement)
     });

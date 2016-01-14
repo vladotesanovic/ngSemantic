@@ -12,7 +12,8 @@ import { DataServices } from "../../services/data";
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Menu</h1>
-        <p>Semantic UI menu component <i class="icon external"></i> <a href="http://semantic-ui.com/collections/menu.html" target="_blank">Semantic UI Menu</a></p>
+        <p>Semantic UI menu component <i class="icon external"></i> 
+        <a href="http://semantic-ui.com/collections/menu.html" target="_blank">Semantic UI Menu</a></p>
     </div>
 </div>
 <div class="main ui container">

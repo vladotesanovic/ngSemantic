@@ -1,15 +1,30 @@
 {
   "name": "ngSemantic",
   "version": "1.0.0",
-  "description": "Angular2 and SemanticUI",
+  "description": "Angular2 building blocks based on Semantic UI",
   "private": true,
   "main": "",
   "scripts": {
-    "build": "rm -rf build/app && tsc && tslint -c tslint.json src/app/**/*.ts && cd src && find . -name '*.html' | cpio -pdm ../build",
+    "build": "rm -rf build/app && tsc && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../build",
     "start": "browser-sync start --files 'build/app/**/*.js' --server 'build'",
     "postinstall": "tsc && cd src && find . -name '*.html' | cpio -pdm ../build"
   },
-  "author": "vlado.tesanovic@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vladotesanovic/ngSemantic"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "semanticui",
+    "semantic-ui"
+  ],
+  "author": "Vlado Tešanović",
+  "bugs": {
+    "url": "https://github.com/vladotesanovic/ngSemantic/issues"
+  },
+  "typings": "./ng-semantic.d.ts",
+  "homepage": "https://ng-semantic.herokuapp.com/",
   "license": "MIT",
   "dependencies": {
     "angular2": "^2.0.0-beta.1",

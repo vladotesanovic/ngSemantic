@@ -10,7 +10,8 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "../../directives/seman
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Popup &amp; Tooltip</h1>
-        <p>Semantic UI popup component <i class="icon external"></i> <a href="http://semantic-ui.com/modules/popup.html" target="_blank">Semantic UI Popup</a></p>
+        <p>Semantic UI popup component <i class="icon external"></i> 
+        <a href="http://semantic-ui.com/modules/popup.html" target="_blank">Semantic UI Popup</a></p>
     </div>
 </div>
 <div class="main ui container">
@@ -30,7 +31,12 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "../../directives/seman
       <h4 class="ui header">Demo popup</h4>
     <button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'right center'}">Click me</button>
     <sm-popup selector="my-popup">
-        <div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div></div>
+        <div class='header'>User Rating</div>
+        <div class='content'>
+            <div class='ui star rating'>
+                <i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i>
+            </div>
+        </div>
     </sm-popup>
     
     <h4 class="ui header">Code</h4>

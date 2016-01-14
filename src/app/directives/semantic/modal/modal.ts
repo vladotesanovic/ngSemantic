@@ -25,8 +25,6 @@ import "semantic/dimmer.min";
 export class SMModalDirective {
     public data: any;
 
-    constructor() {}
-
     onClick() {
 
         if (!this.data.hasOwnProperty("selector")) {
