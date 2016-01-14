@@ -16,13 +16,13 @@
 git clone https://github.com/vladotesanovic/ngSemantic.git
 cd ngSemantic
 
-# Install dependencies
+# install dependencies
 npm install
 
 # To buil local files
 npm run develop:build
 
-# Local development server
+# local development server
 npm run develop:server
 ```
 
