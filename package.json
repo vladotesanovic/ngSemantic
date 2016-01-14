@@ -1,13 +1,11 @@
 {
-  "name": "ngSemantic",
+  "name": "ng-semantic",
   "version": "1.0.0",
   "description": "Angular2 building blocks based on Semantic UI",
-  "private": true,
   "main": "",
   "scripts": {
     "build": "rm -rf build/app && tsc && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../build",
-    "start": "browser-sync start --files 'build/app/**/*.js' --server 'build'",
-    "postinstall": "tsc && cd src && find . -name '*.html' | cpio -pdm ../build"
+    "start": "browser-sync start --files 'build/app/**/*.js' --server 'build'"
   },
   "repository": {
     "type": "git",

@@ -1,1 +1,1 @@
-web: node server.js
+web: tsc && cd src && find . -name '*.html' | cpio -pdm ../build && node server.js
