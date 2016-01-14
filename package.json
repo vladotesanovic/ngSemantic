@@ -26,19 +26,19 @@
   "license": "MIT",
   "dependencies": {
     "angular2": "^2.0.0-beta.1",
-    "browser-sync": "^2.11.0",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
-    "express": "^4.13.3",
+    "finalhandler": "^0.4.1",
     "reflect-metadata": "^0.1.2",
     "rxjs": "^5.0.0-beta.0",
-    "semantic-ui": "^2.1.8",
-    "systemjs": "^0.19.14",
-    "typescript": "^1.7.5",
+    "serve-static": "^1.10.0",
     "zone.js": "^0.5.10"
   },
   "devDependencies": {
     "browser-sync": "^2.10.1",
-    "tslint": "^3.2.1"
+    "tslint": "^3.2.1",
+    "systemjs": "^0.19.14",
+    "typescript": "^1.7.5",
+    "semantic-ui": "^2.1.8"
   }
 }

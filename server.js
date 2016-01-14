@@ -1,9 +1,13 @@
-var express = require("express");
+var http = require('http');
 
-var app = express();
+var finalhandler = require('finalhandler');
+var serveStatic = require('serve-static');
 
-// serve index response from public folder
-app.use(express.static("./build"));
+var serve = serveStatic("./build");
 
-var server = app.listen((process.env.PORT || 5000));
-server.listen((process.env.PORT || 5000));
+var server = http.createServer(function(req, res) {
+  var done = finalhandler(req, res);
+  serve(req, res, done);
+});
+
+server.listen(process.env.PORT || 3000);
