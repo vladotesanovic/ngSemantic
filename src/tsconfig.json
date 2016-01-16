@@ -1,20 +1,16 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "system",
         "target": "es5",
         "moduleResolution": "node",
         "noImplicitAny": true,
-        "declaration": true,
         "inlineSources": true,
         "inlineSourceMap": true,
         "removeComments": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true
     },
-    "files": [
-        "ng-semantic.ts"
-    ],
     "exclude": [
-        "node_modules"
+        "./node_modules"
     ]
 }

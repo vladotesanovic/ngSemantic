@@ -19,7 +19,7 @@ cd ngSemantic
 # install dependencies
 npm install
 
-# To buil local files
+# build local files
 npm run develop:build
 
 # local development server

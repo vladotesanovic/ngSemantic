@@ -1,11 +1,12 @@
 {
   "name": "ng-semantic",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Angular2 building blocks based on Semantic UI",
   "main": "",
   "scripts": {
-    "develop:build": "rm -rf build/app && tsc && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../build",
-    "develop:server": "browser-sync start --files 'build/app/**/*.js' --server 'build'"
+    "develop:build": "rm -rf demo/app && tsc -p './src' --rootDir './src' --outDir './demo' && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../demo",
+    "develop:server": "browser-sync start --files 'demo/app/**/*.js' --server 'demo'",
+    "prepublish": "tsc ng-semantic.ts"
   },
   "repository": {
     "type": "git",
@@ -24,21 +25,21 @@
   "typings": "./ng-semantic.d.ts",
   "homepage": "https://ng-semantic.herokuapp.com/",
   "license": "MIT",
-  "dependencies": {
-    "angular2": "^2.0.0-beta.1",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.13",
-    "finalhandler": "^0.4.1",
-    "reflect-metadata": "^0.1.2",
-    "rxjs": "^5.0.0-beta.0",
+  "dependencies": {    
     "serve-static": "^1.10.0",
-    "zone.js": "^0.5.10"
+    "finalhandler": "^0.4.1",
+    "semantic-ui": "^2.1.8"
   },
   "devDependencies": {
     "browser-sync": "^2.10.1",
+    "rxjs": "5.0.0-beta.0",
     "tslint": "^3.2.1",
     "systemjs": "^0.19.14",
-    "typescript": "^1.7.5",
-    "semantic-ui": "^2.1.8"
+    "typescript": "^1.7.5",    
+    "angular2": "^2.0.0-beta.1",
+    "zone.js": "^0.5.10",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.33.13",
+    "reflect-metadata": "0.1.2"
   }
 }
