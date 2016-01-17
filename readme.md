@@ -11,24 +11,50 @@
 ## Live demo
 <a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
-## Use in your project
-<a href="https://ng-semantic.herokuapp.com" target="_blank">Installation</a>
+## Important!
 <ul>
    <li>It is built on SystemJS loader</li>
-   <li>jQuery is required</li>
    <li>There is no bundled version yet.</li>
 </ul>
+        
+## Installaction
+```bash
+npm install ng-semantic --save
+```
 <ul>
-  <li>npm install ng-semantic --save</li>
-  <li>Semantic UI must be installed in public folder ( dist folder must be public )</li>
-  <li>In your index page load:
+  <li>Semantic UI installation will be triggered. Semantic UI must be installed in public folder ( dist folder must be public )</li>
+  <li>In your index.html page load:
     <ul>
       <li>semantic.min.css</li>
       <li>jQuery</li>
     </ul>                
    </li>
-  <li>Configure SystemJS loader: <a href="https://gist.github.com/vladotesanovic/596c41d819a32bd220da" target="_blank">Gist link ( config.js )</a></li>
 </ul>
+
+Configure SystemJS loader:
+```javascript
+System.config({
+    defaultJSExtensions: true,
+    paths: {
+        // CHANGE PATH
+        'semantic/*': 'assets/semantic/dist/components/*.js',
+        // REQUIRED BY ANGULAR 2 ( CHANGE PATH )
+        'rxjs/operator/*' : 'vendor/rxjs/operator/*.js',
+    },
+    map: {
+        // IF YOU ARE NOT ABLE TO LOAD FROM node_modules
+        // you must copy ng-semantic from /node_modules/ng-semantic
+        // and set path to it
+        'ng-semantic/semantic': 'vendor/ng-semantic/semantic.js'
+    },
+    packages: {
+        app: {
+            format: 'register',
+            defaultExtension: 'js'
+        }
+    }
+});
+```
         
 ## Development
 ```bash

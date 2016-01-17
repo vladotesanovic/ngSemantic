@@ -51,10 +51,9 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, MessageService } from "ng-sem
 
 export class MessageComponent {
 
-    constructor() { }
-    /*
+    constructor(public ms: MessageService) { }
+
     submitMessage(event: Event, message: Object) {
         this.ms.emitMessage(message);
     }
-    */
 }

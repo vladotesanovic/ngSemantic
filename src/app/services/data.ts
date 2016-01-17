@@ -9,6 +9,6 @@ export class DataServices {
 
 	flatArray(): Observable<any> {
 		return this.http
-			.get("/assets/data/flat.json")
+			.get("/assets/data/flat.json");
 	}
 }
