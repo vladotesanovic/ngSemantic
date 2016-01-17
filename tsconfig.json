@@ -12,7 +12,7 @@
         "experimentalDecorators": true
     },
     "files": [
-        "ng-semantic.ts"
+        "semantic.ts"
     ],
     "exclude": [
         "node_modules"

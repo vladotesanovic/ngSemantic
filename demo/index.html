@@ -18,12 +18,15 @@
         // configure system loader
         System.config({
             defaultJSExtensions: true,
-            paths: {
-                'rxjs/operators/*' : 'vendor/rxjs/operator/*.js',
-                'semantic/*': 'assets/semantic/dist/components/*.js'
+            paths: {                
+                'semantic/*': 'assets/semantic/dist/components/*.js',
+                'rxjs/operator/*' : 'vendor/rxjs/operator/*.js',
+            },
+            map: {
+                'ng-semantic/semantic': 'vendor/ng-semantic/semantic.js'
             },
             packages: {
-                app: {
+                "app": {
                     format: 'register',
                     defaultExtension: 'js'
                 }

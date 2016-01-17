@@ -1,6 +1,5 @@
 import { Component, View } from "angular2/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "../../directives/semantic/semantic";
-import { MessageService } from "../../services/message";
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, MessageService } from "ng-semantic/semantic";
 
 @Component({
     selector: "message",
@@ -52,9 +51,10 @@ import { MessageService } from "../../services/message";
 
 export class MessageComponent {
 
-    constructor(public ms: MessageService) { }
-
+    constructor() { }
+    /*
     submitMessage(event: Event, message: Object) {
         this.ms.emitMessage(message);
     }
+    */
 }

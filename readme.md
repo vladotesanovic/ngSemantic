@@ -9,8 +9,27 @@
 </p>
 
 ## Live demo
-<a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a> 
+<a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
+## Use in your project
+<a href="https://ng-semantic.herokuapp.com" target="_blank">Installation</a>
+<ul>
+   <li>It is built on SystemJS loader</li>
+   <li>jQuery is required</li>
+   <li>There is no bundled version yet.</li>
+</ul>
+<ul>
+  <li>npm install ng-semantic --save</li>
+  <li>Semantic UI must be installed in public folder ( dist folder must be public )</li>
+  <li>In your index page load:
+    <ul>
+      <li>semantic.min.css</li>
+      <li>jQuery</li>
+    </ul>                
+   </li>
+  <li>Configure SystemJS loader: <a href="https://gist.github.com/vladotesanovic/596c41d819a32bd220da" target="_blank">Gist link ( config.js )</a></li>
+</ul>
+        
 ## Development
 ```bash
 git clone https://github.com/vladotesanovic/ngSemantic.git
@@ -38,10 +57,6 @@ npm run develop:server
   - sm-dir-tooltip
   - sm-dir-popup
   - sm-dir-modal
-  
-## Installable package
-
-ToDo
    
 ## Licence 
 

@@ -1,5 +1,5 @@
 import { Component, View } from "angular2/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "../../directives/semantic/semantic";
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 import { DataServices } from "../../services/data";
 
 @Component({
@@ -36,7 +36,7 @@ export class ListComponent {
     flatArray: Array<any> = [];
 	constructor(public ds: DataServices) {
 		ds.flatArray().subscribe((data: any) => {
-			this.flatArray = data;
+            this.flatArray = JSON.parse(data._body);
 		});
 	}
 }

@@ -10,6 +10,5 @@ export class DataServices {
 	flatArray(): Observable<any> {
 		return this.http
 			.get("/assets/data/flat.json")
-			.map((response: any) => response.json());
 	}
 }

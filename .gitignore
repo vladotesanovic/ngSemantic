@@ -1,5 +1,4 @@
 node_modules
-ng-semantic.js
-ng-semantic.d.ts
 src/app/**/*.js
-src/app/**/*.d.ts
+ng-semantic/**/*.js
+semantic.js

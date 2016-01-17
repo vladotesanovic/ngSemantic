@@ -1,12 +1,13 @@
 {
   "name": "ng-semantic",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Angular2 building blocks based on Semantic UI",
   "main": "",
   "scripts": {
     "develop:build": "rm -rf demo/app && tsc -p './src' --rootDir './src' --outDir './demo' && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../demo",
-    "develop:server": "browser-sync start --files 'demo/app/**/*.js' --server 'demo'",
-    "postinstall": "tsc"
+    "copy": "cd src && find . -name '*.html' | cpio -pdm ../demo",
+    "develop:server": "node server.js",
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,24 +23,25 @@
   "bugs": {
     "url": "https://github.com/vladotesanovic/ngSemantic/issues"
   },
-  "typings": "./ng-semantic.d.ts",
+  "typings": "./semantic.d.ts",
   "homepage": "https://ng-semantic.herokuapp.com/",
   "license": "MIT",
-  "dependencies": {    
-    "serve-static": "^1.10.0",
+  "dependencies": {
     "finalhandler": "^0.4.1",
-    "semantic-ui": "^2.1.8"
+    "semantic-ui": "^2.1.8",
+    "serve-static": "^1.10.0"
   },
-  "devDependencies": {
-    "browser-sync": "^2.10.1",
+  "peerDependencies": {
     "rxjs": "5.0.0-beta.0",
-    "tslint": "^3.2.1",
-    "systemjs": "^0.19.14",
-    "typescript": "^1.7.5",    
     "angular2": "^2.0.0-beta.1",
     "zone.js": "^0.5.10",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
     "reflect-metadata": "0.1.2"
+  },
+  "devDependencies": {
+    "tslint": "^3.2.1",
+    "typescript": "^1.7.5",        
+    "systemjs": "^0.19.14"
   }
 }
