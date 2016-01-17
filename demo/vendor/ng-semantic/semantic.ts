@@ -1,11 +1,11 @@
-import { SemanticHeader } from "./header/header";
-import { SemanticMessage, MessageService } from "./message/message";
-import { SMTooltipDirective } from "./popup/tooltip";
-import { SemanticPopup, SMPopupDirective } from "./popup/popup";
-import { SemanticModal, SMModalDirective } from "./modal/modal";
-import { SemanticSegment } from "./segment/segment";
-import { SemanticList } from "./list/list";
-import { SemanticTabs, SemanticTab } from "./tab/tab";
+import { SemanticHeader } from "./ng-semantic/header/header";
+import { SemanticMessage } from "./ng-semantic/message/message";
+import { SMTooltipDirective } from "./ng-semantic/popup/tooltip";
+import { SemanticPopup, SMPopupDirective } from "./ng-semantic/popup/popup";
+import { SemanticModal, SMModalDirective } from "./ng-semantic/modal/modal";
+import { SemanticSegment } from "./ng-semantic/segment/segment";
+import { SemanticList } from "./ng-semantic/list/list";
+import { SemanticTabs, SemanticTab } from "./ng-semantic/tab/tab";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticHeader,
@@ -23,5 +23,3 @@ export let SEMANTIC_DIRECTIVES: Array<any> = [
 	SMPopupDirective,
 	SMModalDirective
 ];
-
-export let SemanticMessageService = MessageService;

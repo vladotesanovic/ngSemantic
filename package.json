@@ -5,7 +5,6 @@
   "main": "",
   "scripts": {
     "develop:build": "rm -rf demo/app && tsc -p './src' --rootDir './src' --outDir './demo' && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../demo",
-    "copy": "cd src && find . -name '*.html' | cpio -pdm ../demo",
     "develop:server": "node server.js",
     "prepublish": "tsc"
   },

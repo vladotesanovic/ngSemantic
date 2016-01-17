@@ -43,7 +43,7 @@ System.config({
     },
     map: {
         // IF YOU ARE NOT ABLE TO LOAD FROM node_modules
-        // you must copy ng-semantic from /node_modules/ng-semantic
+        // you must copy ng-semantic from /node_modules/ng-semantic ( files: semantic.js, semantic.d.ts and folder: ng-semantic )
         // and set path to it
         'ng-semantic/semantic': 'vendor/ng-semantic/semantic.js'
     },
