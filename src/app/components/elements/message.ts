@@ -1,13 +1,14 @@
 import { Component, View } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
+import { MessageService } from "../../services/message";
 
 @Component({
-    selector: "message",
-    providers: []
+  selector: "message",
+  providers: [MessageService]
 })
 @View({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
-    template: `
+  directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+  template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Message</h1>
@@ -18,7 +19,7 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
     <p>Once created, message will expire for 10 seconds.</p>
-    <sm-message duration="10000"></sm-message><br/>
+    <sm-message *ngFor="#message of messages" [type]="message.type" [text]="message.text" [icon]="message.icon"></sm-message><br/>
     <button class="ui button" (click)="submitMessage($event, {icon: 'inbox', text: 'Icon, Icon'})">
         Icon message
     </button>
@@ -35,8 +36,9 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
     <h4 class="ui header">Code</h4>
  <div class="ui form">
         <div class="field">
+
 <textarea rows="12" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-message duration="10000"></sm-message> // 10 seconds
+<sm-message *ngFor="#message of messages" [type]="message.type" [text]="message.text" [icon]="message.icon"></sm-message>
 
 <button class="ui button" (click)="submitMessage($event, {type: 'info', icon: 'inbox', text: 'Icon, Icon'})">Icon message</button>
 <button class="ui button blue" (click)="submitMessage($event, {type: 'info', text: 'Info, Info'})">Info message</button>
@@ -50,11 +52,34 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 })
 
 export class MessageComponent {
-    /*
-    constructor(public ms: MesageService) { }
 
-    submitMessage(event: Event, message: Object) {
-        this.ms.emitMessage(message);
-    }
-    */
+  messages: Array<string> = new Array<string>();
+  duration: number;
+  private LENGTH: number = 5000;
+
+  constructor(public ms: MessageService) {
+    ms._rx.subscribe((data: any) => {
+
+      if (typeof data === "string") {
+        data = {
+          text: data
+        };
+      }
+
+      // display message
+      this.messages.push(data);
+
+      // remove message
+      if (this.LENGTH > 0) {
+        setTimeout(() => {
+          this.messages.shift();
+        }, this.LENGTH);
+      }
+    });
+  }
+
+  submitMessage(event: Event, message: Object) {
+    this.ms.emitMessage(message);
+  }
+
 }

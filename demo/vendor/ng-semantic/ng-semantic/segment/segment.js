@@ -1,38 +1,27 @@
-System.register(["angular2/core"], function(exports_1) {
-    var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        return c > 3 && r && Object.defineProperty(target, key, r), r;
-    };
-    var __metadata = (this && this.__metadata) || function (k, v) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-    };
-    var core_1;
-    var SemanticSegment;
-    return {
-        setters:[
-            function (core_1_1) {
-                core_1 = core_1_1;
-            }],
-        execute: function() {
-            SemanticSegment = (function () {
-                function SemanticSegment() {
-                }
-                SemanticSegment = __decorate([
-                    core_1.Component({
-                        properties: ["class"],
-                        selector: "sm-segment"
-                    }),
-                    core_1.View({
-                        template: "<div class=\"ui segment {{class}}\">\n  <p><ng-content></ng-content></p>\n</div>"
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], SemanticSegment);
-                return SemanticSegment;
-            })();
-            exports_1("SemanticSegment", SemanticSegment);
-        }
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require("angular2/core");
+var SemanticSegment = (function () {
+    function SemanticSegment() {
     }
-});
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VnbWVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInNlZ21lbnQudHMiXSwibmFtZXMiOlsiU2VtYW50aWNTZWdtZW50IiwiU2VtYW50aWNTZWdtZW50LmNvbnN0cnVjdG9yIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7WUFPQTtnQkFBQUE7Z0JBUzhCQyxDQUFDQTtnQkFUL0JEO29CQUFDQSxnQkFBU0EsQ0FBQ0E7d0JBQ1BBLFVBQVVBLEVBQUVBLENBQUNBLE9BQU9BLENBQUNBO3dCQUN4QkEsUUFBUUEsRUFBR0EsWUFBWUE7cUJBQ3ZCQSxDQUFDQTtvQkFDREEsV0FBSUEsQ0FBQ0E7d0JBQ0ZBLFFBQVFBLEVBQUVBLGtGQUVQQTtxQkFDTkEsQ0FBQ0E7O29DQUM2QkE7Z0JBQURBLHNCQUFDQTtZQUFEQSxDQUFDQSxBQVQvQixJQVMrQjtZQVQvQiw2Q0FTK0IsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgVmlldyB9IGZyb20gXCJhbmd1bGFyMi9jb3JlXCI7XG5cbi8qKlxuICogSW1wbGVtZW50YXRpb24gb2YgU2VnbWVudCBjb21wb25lbnRcbiAqIFxuICogQGxpbmsgaHR0cDovL3NlbWFudGljLXVpLmNvbS9lbGVtZW50cy9zZWdtZW50Lmh0bWxcbiAqL1xuQENvbXBvbmVudCh7XG4gICAgcHJvcGVydGllczogW1wiY2xhc3NcIl0sXG5cdHNlbGVjdG9yIDogXCJzbS1zZWdtZW50XCJcbn0pXG5AVmlldyh7XG4gICAgdGVtcGxhdGU6IGA8ZGl2IGNsYXNzPVwidWkgc2VnbWVudCB7e2NsYXNzfX1cIj5cbiAgPHA+PG5nLWNvbnRlbnQ+PC9uZy1jb250ZW50PjwvcD5cbjwvZGl2PmBcbn0pXG5leHBvcnQgY2xhc3MgU2VtYW50aWNTZWdtZW50IHt9XG4iXX0=
+    SemanticSegment = __decorate([
+        core_1.Component({
+            properties: ["class"],
+            selector: "sm-segment"
+        }),
+        core_1.View({
+            template: "<div class=\"ui segment {{class}}\">\n  <p><ng-content></ng-content></p>\n</div>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticSegment);
+    return SemanticSegment;
+})();
+exports.SemanticSegment = SemanticSegment;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VnbWVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbInNlZ21lbnQudHMiXSwibmFtZXMiOlsiU2VtYW50aWNTZWdtZW50IiwiU2VtYW50aWNTZWdtZW50LmNvbnN0cnVjdG9yIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQSxxQkFBZ0MsZUFBZSxDQUFDLENBQUE7QUFPaEQ7SUFBQUE7SUFTOEJDLENBQUNBO0lBVC9CRDtRQUFDQSxnQkFBU0EsQ0FBQ0E7WUFDUEEsVUFBVUEsRUFBRUEsQ0FBQ0EsT0FBT0EsQ0FBQ0E7WUFDeEJBLFFBQVFBLEVBQUdBLFlBQVlBO1NBQ3ZCQSxDQUFDQTtRQUNEQSxXQUFJQSxDQUFDQTtZQUNGQSxRQUFRQSxFQUFFQSxrRkFFUEE7U0FDTkEsQ0FBQ0E7O3dCQUM2QkE7SUFBREEsc0JBQUNBO0FBQURBLENBQUNBLEFBVC9CLElBUytCO0FBQWxCLHVCQUFlLGtCQUFHLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIFZpZXcgfSBmcm9tIFwiYW5ndWxhcjIvY29yZVwiO1xuXG4vKipcbiAqIEltcGxlbWVudGF0aW9uIG9mIFNlZ21lbnQgY29tcG9uZW50XG4gKiBcbiAqIEBsaW5rIGh0dHA6Ly9zZW1hbnRpYy11aS5jb20vZWxlbWVudHMvc2VnbWVudC5odG1sXG4gKi9cbkBDb21wb25lbnQoe1xuICAgIHByb3BlcnRpZXM6IFtcImNsYXNzXCJdLFxuXHRzZWxlY3RvciA6IFwic20tc2VnbWVudFwiXG59KVxuQFZpZXcoe1xuICAgIHRlbXBsYXRlOiBgPGRpdiBjbGFzcz1cInVpIHNlZ21lbnQge3tjbGFzc319XCI+XG4gIDxwPjxuZy1jb250ZW50PjwvbmctY29udGVudD48L3A+XG48L2Rpdj5gXG59KVxuZXhwb3J0IGNsYXNzIFNlbWFudGljU2VnbWVudCB7fVxuIl19

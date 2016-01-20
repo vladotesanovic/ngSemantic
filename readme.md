@@ -13,6 +13,7 @@
 
 ## Important!
 <ul>
+   <li>Angular 2 version: beta.1</li>
    <li>It is built on SystemJS loader</li>
    <li>There is no bundled version yet.</li>
 </ul>
@@ -43,7 +44,8 @@ System.config({
     },
     map: {
         // IF YOU ARE NOT ABLE TO LOAD FROM node_modules
-        // you must copy ng-semantic from /node_modules/ng-semantic ( files: semantic.js, semantic.d.ts and folder: ng-semantic )
+        // you must copy ng-semantic from /node_modules/ng-semantic 
+        // ( files: semantic.js, semantic.d.ts and folder: ng-semantic )
         // and set path to it
         'ng-semantic/semantic': 'vendor/ng-semantic/semantic.js'
     },
