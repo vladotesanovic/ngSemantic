@@ -11,6 +11,7 @@ import { MessageComponent } from "./elements/message";
 import { ModalComponent } from "./elements/modal";
 import { PopupComponent } from "./elements/popup";
 import { TabComponent } from "./elements/tab";
+import { ButtonComponent } from "./elements/button";
 
 @Component({
 	selector: "app"
@@ -28,7 +29,8 @@ import { TabComponent } from "./elements/tab";
 	{ component: MessageComponent, path: "/elements/message" },
 	{ component: ModalComponent, path: "/elements/modal" },
 	{ component: PopupComponent, path: "/elements/popup" },
-	{ component: TabComponent, path: "/elements/tab" }
+	{ component: TabComponent, path: "/elements/tab" },
+	{ component: ButtonComponent, path: "/elements/button" }
 ])
 
 export class AppComponent implements AfterViewInit {
