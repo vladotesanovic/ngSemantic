@@ -1,4 +1,4 @@
-import { Component, View } from "angular2/core";
+import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 
 /**
  * Implementation of Segment component
@@ -6,7 +6,7 @@ import { Component, View } from "angular2/core";
  * @link http://semantic-ui.com/elements/segment.html
  */
 @Component({
-    properties: ["class"],
+  	changeDetection: ChangeDetectionStrategy.OnPush,
 	selector : "sm-segment"
 })
 @View({
@@ -14,4 +14,6 @@ import { Component, View } from "angular2/core";
   <p><ng-content></ng-content></p>
 </div>`
 })
-export class SemanticSegment {}
+export class SemanticSegment {
+  @Input("class") class: string;
+}

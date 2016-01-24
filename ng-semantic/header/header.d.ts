@@ -1,4 +1,6 @@
 export declare class SemanticHeader {
-    private items;
+    class: string;
+    items: Array<Object>;
+    logo: string;
     constructor();
 }

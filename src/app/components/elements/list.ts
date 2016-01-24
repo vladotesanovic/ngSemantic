@@ -17,17 +17,57 @@ import { DataServices } from "../../services/data";
         </div>
     </div>
     <div class="main ui container">
-        <h4 class="ui header">Demo</h4>
-        <sm-list class="bulleted" [items]="flatArray"></sm-list>
-    
+        <h4 class="ui header">Demo Normal</h4>
+        <sm-list class="">
+            <sm-item *ngFor="#item of flatArray" class="item">{{item}}</sm-item>
+        </sm-list>
+        
         <h4 class="ui header">Code</h4>
         <div class="ui form">
             <div class="field">
-                <textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-list class="bulleted" [items]="flatArray"></sm-list>
+                <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-list class="">
+    <sm-item *ngFor="#item of flatArray" class="item">{ {item} }</sm-item>
+</sm-list>
                 </textarea>
             </div>
         </div>
+        
+        <h4 class="ui header">Demo Bulleted</h4>
+        <sm-list class="bulleted">
+            <sm-item *ngFor="#item of flatArray" class="item">{{item}}</sm-item>
+        </sm-list>
+        
+        <h4 class="ui header">Code</h4>
+        <div class="ui form">
+            <div class="field">
+                <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-list class="bulleted">
+    <sm-item *ngFor="#item of flatArray" class="item">{ {item} }</sm-item>
+</sm-list>
+                </textarea>
+            </div>
+        </div>
+        
+        <h4 class="ui header">Demo Ordered</h4>
+        <sm-list class="ordered">
+            <sm-item *ngFor="#item of flatArray" class="item">{{item}}</sm-item>
+        </sm-list>
+        <h4 class="ui header">Code</h4>
+        <div class="ui form">
+            <div class="field">
+                <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-list class="ordered">
+    <sm-item *ngFor="#item of flatArray" class="item">{ {item} }</sm-item>
+</sm-list>
+                </textarea>
+            </div>
+        </div>
+        
+        <br/><br/>
+        Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/list.ts">
+        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/list.ts
+      </a> 
     </div>
     `
 })

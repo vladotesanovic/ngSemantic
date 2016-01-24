@@ -12,6 +12,6 @@ import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 </button>`
 })
 export class SemanticButton {
-  @Input("class") class: any;
-  @Input("icon") icon: any;
+  @Input("class") class: string;
+  @Input("icon") icon: string;
 }

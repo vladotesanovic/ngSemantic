@@ -1,4 +1,4 @@
-import { Component, View } from "angular2/core";
+import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 
 /**
  * Implementation of Menu component
@@ -7,7 +7,7 @@ import { Component, View } from "angular2/core";
  * @link http://semantic-ui.com/elements/icon.html
  */
 @Component({
-    properties: ["title", "logo", "class"],
+    changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-header"
 })
 @View({
@@ -32,7 +32,9 @@ import { Component, View } from "angular2/core";
 </div>`
 })
 export class SemanticHeader {
-    private items: Array<Object> = [];
+    @Input("class") class: string;
+    @Input("items") items: Array<Object> = [];
+    @Input("logo") logo: string;
 
     constructor() {
 

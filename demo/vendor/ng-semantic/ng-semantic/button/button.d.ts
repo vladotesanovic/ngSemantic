@@ -1,4 +1,4 @@
 export declare class SemanticButton {
-    class: any;
-    icon: any;
+    class: string;
+    icon: string;
 }

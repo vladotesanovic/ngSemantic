@@ -2,7 +2,6 @@ import { Component, View, Query, QueryList, AfterViewInit, ElementRef, Input } f
 import "semantic/tab.min";
 
 @Component({
-  properties: ["title", "data-tab", "class"],
   selector: "sm-tab"
 })
 
@@ -11,11 +10,12 @@ import "semantic/tab.min";
 })
 export class SemanticTab {
   @Input("tab") dataDatab: string;
+  @Input("title") title: string;
+  @Input("class") class: string;
 }
 
 
 @Component({
-  properties: [],
   selector: "sm-tabs"
 })
 

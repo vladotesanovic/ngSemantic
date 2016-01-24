@@ -1,9 +1,11 @@
 import { Component, View } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 import { ROUTER_DIRECTIVES } from "angular2/router";
+import { DataServices } from "../../services/data";
 
 @Component({
-    selector: "loader"
+    selector: "loader",
+    providers: [DataServices]
 })
 @View({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, ROUTER_DIRECTIVES],
@@ -51,10 +53,11 @@ import { ROUTER_DIRECTIVES } from "angular2/router";
           </textarea>
         </div>
       </div>
+      
       <br/><br/>
       Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/loader.ts">
         https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/loader.ts
-      </a> 
+      </a>
 </div>
 `
 })
@@ -62,8 +65,12 @@ import { ROUTER_DIRECTIVES } from "angular2/router";
 export class LoaderComponent {
 
     isCompleted: boolean = false;
-    constructor() {
+    flatArray: Array<any> = [];
+    constructor(ds: DataServices) {
         this.complete();
+        ds.flatArray().subscribe((data: any) => {
+            this.flatArray = JSON.parse(data._body);
+        });
     }
     complete() {
         setTimeout(() => {

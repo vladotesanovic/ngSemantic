@@ -1,4 +1,4 @@
-export declare class SemanticButton {
+export declare class SemanticItem {
     class: string;
     icon: string;
 }

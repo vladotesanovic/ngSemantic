@@ -6,6 +6,7 @@ import { SemanticModal, SMModalDirective } from "./ng-semantic/modal/modal";
 import { SemanticSegment } from "./ng-semantic/segment/segment";
 import { SemanticList } from "./ng-semantic/list/list";
 import { SemanticButton } from "./ng-semantic/button/button";
+import { SemanticItem } from "./ng-semantic/item/item";
 import { SemanticLoader } from "./ng-semantic/loader/loader";
 import { SemanticTabs, SemanticTab } from "./ng-semantic/tab/tab";
 
@@ -15,6 +16,7 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticSegment,
 	SemanticPopup,
 	SemanticList,
+	SemanticItem,
 	SemanticModal,
 	SemanticTabs,
 	SemanticTab,

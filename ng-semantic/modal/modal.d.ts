@@ -4,4 +4,7 @@ export declare class SMModalDirective {
     onClick(): void;
 }
 export declare class SemanticModal {
+    selector: string;
+    title: string;
+    class: string;
 }

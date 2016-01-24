@@ -1,15 +1,15 @@
-import { Component, View, Input } from "angular2/core";
+import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-list"
 })
 
 @View({
-  template: `<div *ngFor="#item of items" class="ui list {{class}}">
-  <div class="item">{{item}}</div>
+  template: `<div class="ui list {{class}}">
+  <ng-content></ng-content>
 </div>`
 })
 export class SemanticList {
-  @Input("class") class: any;
-  @Input("items") items: any;
+  @Input("class") class: string;
 }

@@ -74,6 +74,8 @@ npm run develop:server
 
 ## Components
 
+  - sm-button
+  - sm-loader
   - sm-header
   - sm-message
   - sm-popup
@@ -81,6 +83,7 @@ npm run develop:server
   - sm-modal
   - sm-tabs & sm-tab
   - sm-list
+  - sm-item
   - sm-dir-tooltip
   - sm-dir-popup
   - sm-dir-modal

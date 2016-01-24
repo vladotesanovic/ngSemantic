@@ -1,5 +1,5 @@
 /// <reference path="../../typings/tsd.d.ts" />
-import { Directive, Component, View } from "angular2/core";
+import { Directive, Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 import "semantic/modal.min";
 import "semantic/dimmer.min";
 
@@ -44,7 +44,7 @@ export class SMModalDirective {
  * This component is triggered by SMModalDirective.
  */
 @Component({
-    properties: ["selector", "title", "class"],
+    changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-modal"
 })
 @View({
@@ -58,4 +58,8 @@ export class SMModalDirective {
     </div>
 </div>`
 })
-export class SemanticModal {}
+export class SemanticModal {
+  @Input("selector") selector: string;
+  @Input("title") title: string;
+  @Input("class") class: string;
+}

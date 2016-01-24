@@ -1,7 +1,7 @@
-import { Component, View } from "angular2/core";
+import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 
 @Component({
-  properties: ["type", "icon","text"],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-message"
 })
 
@@ -11,4 +11,8 @@ import { Component, View } from "angular2/core";
   Message: {{text}}
 </div>`
 })
-export class SemanticMessage {}
+export class SemanticMessage {
+  @Input("type") type: string;
+  @Input("icon") icon: string;
+  @Input("icon") text: string;
+}
