@@ -11,10 +11,6 @@ var core_1 = require("angular2/core");
 var SemanticButton = (function () {
     function SemanticButton() {
     }
-    SemanticButton.prototype.onChanges = function (value) {
-        console.log(value);
-        return;
-    };
     __decorate([
         core_1.Input("class"), 
         __metadata('design:type', Object)
@@ -28,11 +24,11 @@ var SemanticButton = (function () {
             selector: "sm-button"
         }),
         core_1.View({
-            template: "<button class=\"ui {{class}} button\">\n  <i class=\"{{icon}} icon\"></i>\n    <ng-content></ng-content>\n</button>"
+            template: "<button [ngClass]=\"{icon: icon}\" class=\"ui {{class}} button\">\n  <i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n    <ng-content></ng-content>\n</button>"
         }), 
         __metadata('design:paramtypes', [])
     ], SemanticButton);
     return SemanticButton;
 })();
 exports.SemanticButton = SemanticButton;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnV0dG9uLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYnV0dG9uLnRzIl0sIm5hbWVzIjpbIlNlbWFudGljQnV0dG9uIiwiU2VtYW50aWNCdXR0b24uY29uc3RydWN0b3IiLCJTZW1hbnRpY0J1dHRvbi5vbkNoYW5nZXMiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBLHFCQUF1QyxlQUFlLENBQUMsQ0FBQTtBQUV2RDtJQUFBQTtJQWtCQUMsQ0FBQ0E7SUFKQ0Qsa0NBQVNBLEdBQVRBLFVBQVVBLEtBQVVBO1FBQ2xCRSxPQUFPQSxDQUFDQSxHQUFHQSxDQUFDQSxLQUFLQSxDQUFDQSxDQUFDQTtRQUNuQkEsTUFBTUEsQ0FBQ0E7SUFDVEEsQ0FBQ0E7SUFOREY7UUFBQ0EsWUFBS0EsQ0FBQ0EsT0FBT0EsQ0FBQ0E7O09BQUNBLGlDQUFLQSxVQUFNQTtJQUMzQkE7UUFBQ0EsWUFBS0EsQ0FBQ0EsTUFBTUEsQ0FBQ0E7O09BQUNBLGdDQUFJQSxVQUFNQTtJQVozQkE7UUFBQ0EsZ0JBQVNBLENBQUNBO1lBQ1RBLFFBQVFBLEVBQUVBLFdBQVdBO1NBQ3RCQSxDQUFDQTtRQUVEQSxXQUFJQSxDQUFDQTtZQUNKQSxRQUFRQSxFQUFFQSxxSEFHRkE7U0FDVEEsQ0FBQ0E7O3VCQVNEQTtJQUFEQSxxQkFBQ0E7QUFBREEsQ0FBQ0EsQUFsQkQsSUFrQkM7QUFSWSxzQkFBYyxpQkFRMUIsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgVmlldywgSW5wdXQgfSBmcm9tIFwiYW5ndWxhcjIvY29yZVwiO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6IFwic20tYnV0dG9uXCJcbn0pXG5cbkBWaWV3KHtcbiAgdGVtcGxhdGU6IGA8YnV0dG9uIGNsYXNzPVwidWkge3tjbGFzc319IGJ1dHRvblwiPlxuICA8aSBjbGFzcz1cInt7aWNvbn19IGljb25cIj48L2k+XG4gICAgPG5nLWNvbnRlbnQ+PC9uZy1jb250ZW50PlxuPC9idXR0b24+YFxufSlcbmV4cG9ydCBjbGFzcyBTZW1hbnRpY0J1dHRvbiB7XG4gIEBJbnB1dChcImNsYXNzXCIpIGNsYXNzOiBhbnk7XG4gIEBJbnB1dChcImljb25cIikgaWNvbjogYW55O1xuICBcbiAgb25DaGFuZ2VzKHZhbHVlOiBhbnkpIHtcbiAgICBjb25zb2xlLmxvZyh2YWx1ZSk7XG4gICAgcmV0dXJuO1xuICB9XG59XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnV0dG9uLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYnV0dG9uLnRzIl0sIm5hbWVzIjpbIlNlbWFudGljQnV0dG9uIiwiU2VtYW50aWNCdXR0b24uY29uc3RydWN0b3IiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBLHFCQUF1QyxlQUFlLENBQUMsQ0FBQTtBQUV2RDtJQUFBQTtJQWFBQyxDQUFDQTtJQUZDRDtRQUFDQSxZQUFLQSxDQUFDQSxPQUFPQSxDQUFDQTs7T0FBQ0EsaUNBQUtBLFVBQU1BO0lBQzNCQTtRQUFDQSxZQUFLQSxDQUFDQSxNQUFNQSxDQUFDQTs7T0FBQ0EsZ0NBQUlBLFVBQU1BO0lBWjNCQTtRQUFDQSxnQkFBU0EsQ0FBQ0E7WUFDVEEsUUFBUUEsRUFBRUEsV0FBV0E7U0FDdEJBLENBQUNBO1FBRURBLFdBQUlBLENBQUNBO1lBQ0pBLFFBQVFBLEVBQUVBLCtKQUdGQTtTQUNUQSxDQUFDQTs7dUJBSURBO0lBQURBLHFCQUFDQTtBQUFEQSxDQUFDQSxBQWJELElBYUM7QUFIWSxzQkFBYyxpQkFHMUIsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgVmlldywgSW5wdXQgfSBmcm9tIFwiYW5ndWxhcjIvY29yZVwiO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6IFwic20tYnV0dG9uXCJcbn0pXG5cbkBWaWV3KHtcbiAgdGVtcGxhdGU6IGA8YnV0dG9uIFtuZ0NsYXNzXT1cIntpY29uOiBpY29ufVwiIGNsYXNzPVwidWkge3tjbGFzc319IGJ1dHRvblwiPlxuICA8aSAqbmdJZj1cImljb25cIiBjbGFzcz1cInt7aWNvbn19IGljb25cIj48L2k+XG4gICAgPG5nLWNvbnRlbnQ+PC9uZy1jb250ZW50PlxuPC9idXR0b24+YFxufSlcbmV4cG9ydCBjbGFzcyBTZW1hbnRpY0J1dHRvbiB7XG4gIEBJbnB1dChcImNsYXNzXCIpIGNsYXNzOiBhbnk7XG4gIEBJbnB1dChcImljb25cIikgaWNvbjogYW55O1xufVxuIl19
