@@ -17,12 +17,12 @@ import { ButtonComponent } from "./elements/button";
 	selector: "app"
 })
 @View({
-	directives: [ ROUTER_DIRECTIVES],
-	templateUrl : "./app/components/app.html"
+	directives: [ROUTER_DIRECTIVES],
+	templateUrl: "./app/components/app.html"
 })
 @RouteConfig([
 	{ component: HomeComponent, path: "/" },
-	{ as: "Loader", component: LoaderComponent, path: "/elements/loader" },
+	{  component: LoaderComponent, path: "/elements/loader" },
 	{ component: ListComponent, path: "/elements/list" },
 	{ component: SegmentComponent, path: "/elements/segment" },
 	{ component: MenuComponent, path: "/elements/menu" },
@@ -37,4 +37,4 @@ export class AppComponent implements AfterViewInit {
 	ngAfterViewInit() {
 		jQuery("#page .full.height").css("height", jQuery(window).height() + "px");
 	}
- }
+}
