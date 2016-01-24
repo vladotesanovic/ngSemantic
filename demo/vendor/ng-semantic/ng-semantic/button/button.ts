@@ -1,6 +1,7 @@
-import { Component, View, Input } from "angular2/core";
+import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-button"
 })
 

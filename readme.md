@@ -14,7 +14,6 @@
 ## Important!
 <ul>
    <li>Angular 2 version: beta.1</li>
-   <li>It is built on SystemJS loader</li>
    <li>There is no bundled version yet.</li>
 </ul>
         

@@ -6,6 +6,7 @@ import { SemanticModal, SMModalDirective } from "./ng-semantic/modal/modal";
 import { SemanticSegment } from "./ng-semantic/segment/segment";
 import { SemanticList } from "./ng-semantic/list/list";
 import { SemanticButton } from "./ng-semantic/button/button";
+import { SemanticLoader } from "./ng-semantic/loader/loader";
 import { SemanticTabs, SemanticTab } from "./ng-semantic/tab/tab";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
@@ -17,7 +18,8 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticModal,
 	SemanticTabs,
 	SemanticTab,
-	SemanticButton
+	SemanticButton,
+	SemanticLoader
 ];
 
 export let SEMANTIC_DIRECTIVES: Array<any> = [

@@ -1,7 +1,6 @@
-import { Component, View } from "angular2/core";
+import { Component, View, Input } from "angular2/core";
 
 @Component({
-  properties: ["items", "class"],
   selector: "sm-list"
 })
 
@@ -10,4 +9,7 @@ import { Component, View } from "angular2/core";
   <div class="item">{{item}}</div>
 </div>`
 })
-export class SemanticList {}
+export class SemanticList {
+  @Input("class") class: any;
+  @Input("items") items: any;
+}

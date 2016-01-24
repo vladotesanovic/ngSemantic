@@ -84,6 +84,12 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
             
         <h4 class="ui header">Fluid button</h4>
         <sm-button class="fluid" icon="">Fluid ( full width ) button</sm-button>
+        
+        <br/><br/>
+      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/button.ts">
+        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/button.ts
+      </a> 
+      
     </div>
     `
 })

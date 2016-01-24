@@ -24,7 +24,7 @@ import { DataServices } from "../../services/data";
         <div class="ui form">
             <div class="field">
                 <textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-                <sm-list class="bulleted" [items]="flatArray"></sm-list>
+<sm-list class="bulleted" [items]="flatArray"></sm-list>
                 </textarea>
             </div>
         </div>
