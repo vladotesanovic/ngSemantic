@@ -76,6 +76,11 @@ import { DataServices } from "../../services/data";
             Pellentesque habitant morbi tristique senectus et netus et malesuada.
         </p>
     </sm-segment>
+    
+    <br/><br/>
+      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/segment.ts">
+        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/segment.ts
+      </a>
 </div>
 `
 })
