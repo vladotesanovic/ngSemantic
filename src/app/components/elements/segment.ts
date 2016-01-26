@@ -78,7 +78,8 @@ import { DataServices } from "../../services/data";
     </sm-segment>
     
     <br/><br/>
-      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/segment.ts">
+      Page source: <a target="_blank" 
+      href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/segment.ts">
         https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/segment.ts
       </a>
 </div>
