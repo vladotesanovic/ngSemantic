@@ -5,3 +5,4 @@ src
 semantic.json
 server.js
 Procfile
+node_modules
