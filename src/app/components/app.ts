@@ -12,6 +12,8 @@ import { ModalComponent } from "./elements/modal";
 import { PopupComponent } from "./elements/popup";
 import { TabComponent } from "./elements/tab";
 import { ButtonComponent } from "./elements/button";
+import { CardComponent } from "./elements/card";
+import { InputComponent } from "./elements/input";
 
 @Component({
 	selector: "app"
@@ -24,6 +26,8 @@ import { ButtonComponent } from "./elements/button";
 	{ component: HomeComponent, path: "/" },
 	{ component: LoaderComponent, path: "/elements/loader" },
 	{ component: ListComponent, path: "/elements/list" },
+	{ component: InputComponent, path: "/elements/input" },
+	{ component: CardComponent, path: "/elements/card" },
 	{ component: SegmentComponent, path: "/elements/segment" },
 	{ component: MenuComponent, path: "/elements/menu" },
 	{ component: MessageComponent, path: "/elements/message" },
