@@ -1,10 +1,8 @@
 import { Component, View } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
-import { DataServices } from "../../services/data";
 
 @Component({
-	selector : "menu-cp",
-    providers: [DataServices]
+	selector : "menu-cp"
 })
 @View({
 	directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
@@ -57,11 +55,4 @@ import { DataServices } from "../../services/data";
 `
 })
 
-export class MenuComponent {
-    flatArray: Array<any> = [];
-	constructor(public ds: DataServices) {
-		ds.flatArray().subscribe((data: any) => {
-			this.flatArray = data;
-		});
-	}
-}
+export class MenuComponent {}

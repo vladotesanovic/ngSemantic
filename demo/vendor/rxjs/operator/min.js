@@ -1,5 +1,9 @@
-var Observable_1 = require('../../Observable');
-var min_1 = require('../../operator/min');
-var observableProto = Observable_1.Observable.prototype;
-observableProto.min = min_1.min;
+var reduce_support_1 = require('./reduce-support');
+function min(comparer) {
+    var min = (typeof comparer === 'function')
+        ? comparer
+        : function (x, y) { return x < y ? x : y; };
+    return this.lift(new reduce_support_1.ReduceOperator(min));
+}
+exports.min = min;
 //# sourceMappingURL=min.js.map

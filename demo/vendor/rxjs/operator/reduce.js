@@ -1,4 +1,6 @@
-var Observable_1 = require('../../Observable');
-var reduce_1 = require('../../operator/reduce');
-Observable_1.Observable.prototype.reduce = reduce_1.reduce;
+var reduce_support_1 = require('./reduce-support');
+function reduce(project, seed) {
+    return this.lift(new reduce_support_1.ReduceOperator(project, seed));
+}
+exports.reduce = reduce;
 //# sourceMappingURL=reduce.js.map

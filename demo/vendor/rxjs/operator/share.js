@@ -1,4 +1,11 @@
-var Observable_1 = require('../../Observable');
-var share_1 = require('../../operator/share');
-Observable_1.Observable.prototype.share = share_1.share;
+var multicast_1 = require('./multicast');
+var Subject_1 = require('../Subject');
+function shareSubjectFactory() {
+    return new Subject_1.Subject();
+}
+function share() {
+    return multicast_1.multicast.call(this, shareSubjectFactory).refCount();
+}
+exports.share = share;
+;
 //# sourceMappingURL=share.js.map

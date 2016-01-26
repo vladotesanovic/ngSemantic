@@ -1,1 +1,1 @@
-export declare var _void: void;
+export declare function _finally<T>(finallySelector: () => void): any;

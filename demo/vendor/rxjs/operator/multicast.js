@@ -1,4 +1,15 @@
-var Observable_1 = require('../../Observable');
-var multicast_1 = require('../../operator/multicast');
-Observable_1.Observable.prototype.multicast = multicast_1.multicast;
+var ConnectableObservable_1 = require('../observable/ConnectableObservable');
+function multicast(subjectOrSubjectFactory) {
+    var subjectFactory;
+    if (typeof subjectOrSubjectFactory === 'function') {
+        subjectFactory = subjectOrSubjectFactory;
+    }
+    else {
+        subjectFactory = function subjectFactory() {
+            return subjectOrSubjectFactory;
+        };
+    }
+    return new ConnectableObservable_1.ConnectableObservable(this, subjectFactory);
+}
+exports.multicast = multicast;
 //# sourceMappingURL=multicast.js.map

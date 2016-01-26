@@ -1,1 +1,1 @@
-export declare var _void: void;
+export declare function skip(total: any): any;

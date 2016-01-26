@@ -28,19 +28,17 @@
   "dependencies": {
     "finalhandler": "^0.4.1",
     "semantic-ui": "^2.1.8",
-    "serve-static": "^1.10.2",
-    "systemjs": "^0.19.17",
-    "tslint": "^3.3.0"
+    "serve-static": "^1.10.2"
   },
   "devDependencies": {
-    "tslint": "^3.2.1",
-    "typescript": "^1.7.5",
-    "systemjs": "^0.19.14",    
     "angular2": "^2.0.0-beta.0",
-    "zone.js": "^0.5.10",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
     "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.0"
+    "rxjs": "5.0.0-beta.0",
+    "systemjs": "^0.19.17",
+    "tslint": "^3.2.1",
+    "typescript": "^1.7.5",
+    "zone.js": "^0.5.10"
   }
 }

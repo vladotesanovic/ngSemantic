@@ -1,5 +1,6 @@
-var Observable_1 = require('../../Observable');
-var findIndex_1 = require('../../operator/findIndex');
-var observableProto = Observable_1.Observable.prototype;
-observableProto.findIndex = findIndex_1.findIndex;
+var find_support_1 = require('./find-support');
+function findIndex(predicate, thisArg) {
+    return this.lift(new find_support_1.FindValueOperator(predicate, this, true, thisArg));
+}
+exports.findIndex = findIndex;
 //# sourceMappingURL=findIndex.js.map

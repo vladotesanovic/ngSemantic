@@ -1,1 +1,3 @@
-export declare var _void: void;
+import { Subject } from '../Subject';
+import { ConnectableObservable } from '../observable/ConnectableObservable';
+export declare function multicast<T>(subjectOrSubjectFactory: Subject<T> | (() => Subject<T>)): ConnectableObservable<T>;

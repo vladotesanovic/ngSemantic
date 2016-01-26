@@ -1,1 +1,1 @@
-export declare var _void: void;
+export declare function publishBehavior(value: any): any;

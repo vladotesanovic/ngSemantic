@@ -1,1 +1,2 @@
-export declare var _void: void;
+import { Observable } from '../Observable';
+export declare function findIndex<T>(predicate: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): Observable<number>;

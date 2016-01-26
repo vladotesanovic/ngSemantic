@@ -1,4 +1,7 @@
-var Observable_1 = require('../../Observable');
-var publishLast_1 = require('../../operator/publishLast');
-Observable_1.Observable.prototype.publishLast = publishLast_1.publishLast;
+var AsyncSubject_1 = require('../subject/AsyncSubject');
+var multicast_1 = require('./multicast');
+function publishLast() {
+    return multicast_1.multicast.call(this, new AsyncSubject_1.AsyncSubject());
+}
+exports.publishLast = publishLast;
 //# sourceMappingURL=publishLast.js.map

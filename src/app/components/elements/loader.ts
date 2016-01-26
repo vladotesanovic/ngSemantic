@@ -65,12 +65,9 @@ import { DataServices } from "../../services/data";
 export class LoaderComponent {
 
     isCompleted: boolean = false;
-    flatArray: Array<any> = [];
+
     constructor(ds: DataServices) {
         this.complete();
-        ds.flatArray().subscribe((data: any) => {
-            this.flatArray = JSON.parse(data._body);
-        });
     }
     complete() {
         setTimeout(() => {

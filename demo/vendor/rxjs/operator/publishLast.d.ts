@@ -1,1 +1,2 @@
-export declare var _void: void;
+import { ConnectableObservable } from '../observable/ConnectableObservable';
+export declare function publishLast<T>(): ConnectableObservable<T>;

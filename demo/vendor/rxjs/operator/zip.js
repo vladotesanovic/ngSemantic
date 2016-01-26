@@ -1,4 +1,11 @@
-var Observable_1 = require('../../Observable');
-var zip_1 = require('../../operator/zip');
-Observable_1.Observable.prototype.zip = zip_1.zipProto;
+var zip_static_1 = require('./zip-static');
+function zipProto() {
+    var observables = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        observables[_i - 0] = arguments[_i];
+    }
+    observables.unshift(this);
+    return zip_static_1.zip.apply(this, observables);
+}
+exports.zipProto = zipProto;
 //# sourceMappingURL=zip.js.map

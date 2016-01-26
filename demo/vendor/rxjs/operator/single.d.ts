@@ -1,1 +1,2 @@
-export declare var _void: void;
+import { Observable } from '../Observable';
+export declare function single<T>(predicate?: (value: T, index: number, source: Observable<T>) => boolean): Observable<T>;

@@ -22,7 +22,7 @@ import { ButtonComponent } from "./elements/button";
 })
 @RouteConfig([
 	{ component: HomeComponent, path: "/" },
-	{  component: LoaderComponent, path: "/elements/loader" },
+	{ component: LoaderComponent, path: "/elements/loader" },
 	{ component: ListComponent, path: "/elements/list" },
 	{ component: SegmentComponent, path: "/elements/segment" },
 	{ component: MenuComponent, path: "/elements/menu" },

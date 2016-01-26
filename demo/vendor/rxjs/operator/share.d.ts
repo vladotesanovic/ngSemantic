@@ -1,1 +1,2 @@
-export declare var _void: void;
+import { Observable } from '../Observable';
+export declare function share<T>(): Observable<T>;

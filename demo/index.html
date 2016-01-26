@@ -20,7 +20,8 @@
             defaultJSExtensions: true,
             paths: {                
                 'semantic/*': 'assets/semantic/dist/components/*.js',
-                'rxjs/operator/*' : 'vendor/rxjs/operator/*.js',
+                'rxjs/operator/*' : 'vendor/rxjs/add/operator/*',
+                'rxjs/*': 'vendor/rxjs/*'
             },
             map: {
                 'ng-semantic/semantic': 'vendor/ng-semantic/semantic.js'
@@ -29,11 +30,13 @@
                 "app": {
                     format: 'register',
                     defaultExtension: 'js'
+                },
+                "rxjs": { 
+                    defaultExtension: 'js'
                 }
             }
         });
         </script>    
-        <script src="vendor/rxjs/Rx.min.js"></script>
         <script src="vendor/angular2.js"></script>
         <script src="vendor/router.js"></script>
         <script src="vendor/http.js"></script>

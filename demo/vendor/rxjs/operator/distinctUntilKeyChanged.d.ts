@@ -1,1 +1,1 @@
-export declare var _void: void;
+export declare function distinctUntilKeyChanged<T>(key: string, compare?: (x: any, y: any) => boolean): any;

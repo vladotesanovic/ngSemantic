@@ -1,1 +1,2 @@
-export declare var _void: void;
+import { Observable } from '../Observable';
+export declare function skipWhile<T>(predicate: (x: T, index: number) => boolean): Observable<T>;

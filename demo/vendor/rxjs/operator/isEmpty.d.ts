@@ -1,1 +1,1 @@
-export declare var _void: void;
+export declare function isEmpty(): any;
