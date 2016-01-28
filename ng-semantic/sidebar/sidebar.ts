@@ -11,11 +11,11 @@ jQuery.fn.fixSidebar = function() {
                 selector        = {
                     pusher: '.pusher'
                 },
-                $module         = jQuery(this),
-                $context        = jQuery('body');
+                module         = jQuery(this),
+                context        = jQuery('body');
 
-            if($module.nextAll(selector.pusher).length === 0) {
-                $module.detach().prependTo($context);
+            if(module.nextAll(selector.pusher).length === 0) {
+                module.detach().prependTo(context);
             }
         });
 
