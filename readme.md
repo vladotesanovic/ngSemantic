@@ -81,11 +81,15 @@ npm run develop:server
   - sm-popup
   - sm-segment
   - sm-modal
+  - sm-sidebar
+  - sm-input
+  - sm-card
   - sm-tabs & sm-tab
   - sm-list
   - sm-item
   - sm-dir-tooltip
   - sm-dir-popup
+  - sm-dir-sidebar
   - sm-dir-modal
    
 ## Licence 

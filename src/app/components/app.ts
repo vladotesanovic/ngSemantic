@@ -14,6 +14,7 @@ import { TabComponent } from "./elements/tab";
 import { ButtonComponent } from "./elements/button";
 import { CardComponent } from "./elements/card";
 import { InputComponent } from "./elements/input";
+import { SidebarComponent } from "./elements/sidebar";
 
 @Component({
 	selector: "app"
@@ -23,7 +24,7 @@ import { InputComponent } from "./elements/input";
 	templateUrl: "./app/components/app.html"
 })
 @RouteConfig([
-	{ component: HomeComponent, path: "/" },
+	{ component: HomeComponent, path: "/", useAsDefault: true },
 	{ component: LoaderComponent, path: "/elements/loader" },
 	{ component: ListComponent, path: "/elements/list" },
 	{ component: InputComponent, path: "/elements/input" },
@@ -33,8 +34,9 @@ import { InputComponent } from "./elements/input";
 	{ component: MessageComponent, path: "/elements/message" },
 	{ component: ModalComponent, path: "/elements/modal" },
 	{ component: PopupComponent, path: "/elements/popup" },
+	{ component: SidebarComponent, path: "/elements/sidebar" },
 	{ component: TabComponent, path: "/elements/tab" },
-	{ component: ButtonComponent, path: "/elements/button" }
+	{ component: ButtonComponent, path: "/elements/button" },
 ])
 
 export class AppComponent implements AfterViewInit {

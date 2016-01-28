@@ -10,6 +10,7 @@ import { SemanticItem } from "./ng-semantic/item/item";
 import { SemanticLoader } from "./ng-semantic/loader/loader";
 import { SemanticCard } from "./ng-semantic/card/card";
 import { SemanticInput } from "./ng-semantic/input/input";
+import { SemanticSidebar, SMSidebarDirective } from "./ng-semantic/sidebar/sidebar";
 import { SemanticTabs, SemanticTab } from "./ng-semantic/tab/tab";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
@@ -21,6 +22,7 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticPopup,
 	SemanticList,
 	SemanticItem,
+	SemanticSidebar,
 	SemanticModal,
 	SemanticTabs,
 	SemanticTab,
@@ -31,5 +33,6 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 export let SEMANTIC_DIRECTIVES: Array<any> = [
 	SMTooltipDirective,
 	SMPopupDirective,
-	SMModalDirective
+	SMModalDirective,
+	SMSidebarDirective
 ];
