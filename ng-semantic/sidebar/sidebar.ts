@@ -3,9 +3,9 @@ import { Component, View, Input, ChangeDetectionStrategy, Directive } from "angu
 import "semantic/sidebar.min";
 
 jQuery.fn.fixSidebar = function() {
-    var $allModules     = jQuery(this);
+    var allModules     = jQuery(this);
 
-    $allModules
+    allModules
         .each(function() {
             var
                 selector        = {
