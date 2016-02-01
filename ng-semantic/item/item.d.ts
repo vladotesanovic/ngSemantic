@@ -1,5 +1,5 @@
 export declare class SemanticItem {
-    class: string;
     icon: string;
+    header: string;
     image: string;
 }

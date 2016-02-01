@@ -16,7 +16,7 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
-   	<sm-button class="positive" sm-dir-sidebar="left">Lunch left sidebar</sm-button> 
+   	<sm-button class="positive icon" icon="sidebar" sm-dir-sidebar="left">Lunch left sidebar</sm-button> 
     <sm-button class="" sm-dir-sidebar="bottom">Lunch bottom sidebar</sm-button>
     <sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
         <a class="item">

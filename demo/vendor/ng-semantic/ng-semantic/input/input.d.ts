@@ -1,4 +1,4 @@
 export declare class SemanticInput {
-    model: string;
+    value: string;
     placeholder: string;
 }

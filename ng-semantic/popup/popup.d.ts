@@ -7,4 +7,5 @@ export declare class SMPopupDirective {
     onClick(): void;
 }
 export declare class SemanticPopup {
+    selector: string;
 }

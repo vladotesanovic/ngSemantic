@@ -18,7 +18,7 @@ import { DataServices } from "../../services/data";
     </div>
     <div class="main ui container">
         <h4 class="ui header">Demo Normal</h4>
-        <sm-list class="">
+        <sm-list class="ui list">
             <sm-item *ngFor="#item of flatArray | async" class="item">{{item}}</sm-item>
         </sm-list>
 
@@ -26,7 +26,7 @@ import { DataServices } from "../../services/data";
         <div class="ui form">
             <div class="field">
                 <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-list class="">
+<sm-list class="ui list">
     <sm-item *ngFor="#item of flatArray" class="item">{ {item} }</sm-item>
 </sm-list>
                 </textarea>
@@ -34,7 +34,7 @@ import { DataServices } from "../../services/data";
         </div>
 
         <h4 class="ui header">Demo Bulleted</h4>
-        <sm-list class="bulleted">
+        <sm-list class="ui list bulleted">
             <sm-item *ngFor="#item of flatArray | async" class="item">{{item}}</sm-item>
         </sm-list>
 
@@ -42,7 +42,7 @@ import { DataServices } from "../../services/data";
         <div class="ui form">
             <div class="field">
                 <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-list class="bulleted">
+<sm-list class="ui list bulleted">
     <sm-item *ngFor="#item of flatArray" class="item">{ {item} }</sm-item>
 </sm-list>
                 </textarea>
@@ -50,23 +50,51 @@ import { DataServices } from "../../services/data";
         </div>
 
         <h4 class="ui header">Demo Ordered</h4>
-        <sm-list class="ordered">
+        <sm-list class="ui list ordered">
             <sm-item *ngFor="#item of flatArray | async" class="item">{{item}}</sm-item>
         </sm-list>
         <h4 class="ui header">Code</h4>
         <div class="ui form">
             <div class="field">
                 <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-list class="ordered">
+<sm-list class="ui list ordered">
     <sm-item *ngFor="#item of flatArray" class="item">{ {item} }</sm-item>
 </sm-list>
                 </textarea>
             </div>
         </div>
 
-        <h4 class="ui header">Demo Avatar</h4>
-        <sm-list class="">
-            <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar">{{item.user}}</sm-item>
+        <h4 class="ui header">Demo avatar</h4>
+        <sm-list class="ui list">
+            <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
+        </sm-list>
+        <h4 class="ui header">Code</h4>
+        <div class="ui form">
+            <div class="field">
+                <textarea rows="5" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-list class="ui list">
+    <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{ {item.date} }</sm-item>
+</sm-list>
+                </textarea>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        
+        <h4 class="ui header">Demo avatar horizontal</h4>
+        <sm-list class="ui list horizontal">
+            <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
+        </sm-list>
+        <div class="ui divider"></div>
+        
+        <h4 class="ui header">Demo avatar horizontal ordered</h4>
+        <sm-list class="ui list horizontal ordered">
+            <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
+        </sm-list>
+        <div class="ui divider"></div>
+        
+        <h4 class="ui header">Demo avatar animated</h4>
+        <sm-list class="ui list animated">
+            <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
         </sm-list>
 
         <br/><br/>

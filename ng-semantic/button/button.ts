@@ -1,5 +1,10 @@
 import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 
+/**
+ * Implementation of Button component
+ * 
+ * @link http://semantic-ui.com/elements/button.html
+ */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-button"

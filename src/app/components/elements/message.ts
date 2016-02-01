@@ -19,34 +19,38 @@ import { MessageService } from "../../services/message";
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
     <p>Once created, message will expire for 10 seconds.</p>
-    <sm-message *ngFor="#message of messages" [type]="message.type" [text]="message.text" [icon]="message.icon"></sm-message><br/>
-    <button class="ui button" (click)="submitMessage($event, {icon: 'inbox', text: 'Icon, Icon'})">
+    <sm-message *ngFor="#message of messages" class="ui message {{message.type}}" 
+    [ngClass]="{ icon: message.icon}" [icon]="message.icon">{{message.text}}</sm-message>
+    
+    <sm-button (click)="submitMessage($event, {icon: 'inbox', text: 'Icon, Icon'})">
         Icon message
-    </button>
-    <button class="ui button blue" (click)="submitMessage($event, {type: 'info', text: 'Info, Info'})">
+    </sm-button>
+    <sm-button class="blue" (click)="submitMessage($event, {type: 'info', text: 'Info, Info'})">
         Info message
-    </button>
-    <button class="ui button red" (click)="submitMessage($event, {type: 'warning', text: 'Warning, Warning'})">
+    </sm-button>
+    <sm-button class="red" (click)="submitMessage($event, {type: 'warning', text: 'Warning, Warning'})">
         Warning message
-    </button>
-    <button class="ui button positive" (click)="submitMessage($event, {type: 'positive', text: 'Positive, Positive'})">
+    </sm-button>
+    <sm-button class="positive" (click)="submitMessage($event, {type: 'positive', text: 'Positive, Positive'})">
         Positive message
-    </button>
+    </sm-button>
 
     <h4 class="ui header">Code</h4>
  <div class="ui form">
         <div class="field">
 
-<textarea rows="12" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-message *ngFor="#message of messages" [type]="message.type" [text]="message.text" [icon]="message.icon"></sm-message>
-
-<button class="ui button" (click)="submitMessage($event, {type: 'info', icon: 'inbox', text: 'Icon, Icon'})">Icon message</button>
-<button class="ui button blue" (click)="submitMessage($event, {type: 'info', text: 'Info, Info'})">Info message</button>
-<button class="ui button red" (click)="submitMessage($event, {type: 'warning', text: 'Warning, Warning'})">Warning message</button>
-<button class="ui button positive" (click)="submitMessage($event, {type: 'positive', text: 'Positive, Positive'})">Positive message</button>
+<textarea rows="3" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-message *ngFor="#message of messages" class="ui message { {message.type} }" 
+    [ngClass]="{ icon: message.icon}" [icon]="message.icon">{ {message.text} }</sm-message>
 </textarea>
         </div>
       </div>
+      
+       <br/><br/>
+        Page source: <a target="_blank" 
+        href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/message.ts">
+        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/message.ts
+      </a>
 </div>
 `
 })

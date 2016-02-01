@@ -1,5 +1,10 @@
 import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 
+/**
+ * Implementation of Loader element
+ * 
+ * @link http://semantic-ui.com/elements/loader.html
+ */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-loader"

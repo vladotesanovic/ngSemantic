@@ -1,5 +1,5 @@
 /// <reference path="../../typings/tsd.d.ts" />
-import { Directive, ElementRef, Component, View } from "angular2/core";
+import { Directive, ElementRef, Component, View, Input } from "angular2/core";
 
 
 /**
@@ -54,7 +54,6 @@ export class SMPopupDirective {
  * This component is triggered by UIPopupDirective.
  */
 @Component({
-    properties: ["selector"],
     selector: "sm-popup"
 })
 @View({
@@ -64,4 +63,6 @@ export class SMPopupDirective {
     </div>
 </div>`
 })
-export class SemanticPopup {}
+export class SemanticPopup {
+    @Input("selector") selector: string;
+}

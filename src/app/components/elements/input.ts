@@ -16,13 +16,13 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
-   	<sm-input placeholder="Search..." [(model)]="default"></sm-input>
-    
+   	<sm-input class="ui input" placeholder="Search..." [(value)]="inputValue"></sm-input>
+    <h5>{{inputValue}}</h5>
     <h4 class="ui header">Code</h4>
  <div class="ui form">
         <div class="field">
-<textarea rows="3" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-input placeholder="Search..." [(model)]="default"></sm-input>
+<textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<sm-input class="ui input" placeholder="Search..." [(value)]="inputValue"></sm-input>
 </textarea>
         </div>
       </div>
@@ -31,5 +31,5 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 })
 
 export class InputComponent {
-    default: string = "test";
+    inputValue: string = "";
 }

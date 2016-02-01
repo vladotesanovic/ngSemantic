@@ -1,4 +1,4 @@
-import { SemanticHeader } from "./ng-semantic/header/header";
+import { SemanticMenu } from "./ng-semantic/menu/menu";
 import { SemanticMessage } from "./ng-semantic/message/message";
 import { SMTooltipDirective } from "./ng-semantic/popup/tooltip";
 import { SemanticPopup, SMPopupDirective } from "./ng-semantic/popup/popup";
@@ -16,7 +16,7 @@ import { SemanticTabs, SemanticTab } from "./ng-semantic/tab/tab";
 export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticCard,
 	SemanticInput,
-	SemanticHeader,
+	SemanticMenu,
 	SemanticMessage,
 	SemanticSegment,
 	SemanticPopup,
