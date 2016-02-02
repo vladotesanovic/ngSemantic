@@ -17,15 +17,15 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
     <sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
-        <div text>
+        <conntent>
             Kristy is an art director living in New York.
-        </div>
-        <div extra>
-        <a>
-            <i class="user icon"></i>
-            22 Friends
-        </a>
-        </div>
+        </conntent>
+        <extra>
+            <a>
+                <i class="user icon"></i>
+                22 Friends
+            </a>
+        </extra>
     </sm-card>
     
     <h4 class="ui header">Code</h4>
@@ -33,8 +33,8 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
         <div class="field">
 <textarea rows="6" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
-    <div text>...</div>
-    <div extra>...</div>
+    <conntent>...</conntent>
+    <extra>...</extra>
 </sm-card>
 </textarea>
         </div>

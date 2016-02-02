@@ -19,11 +19,11 @@ import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
       <span class="date">{{subtitle}}</span>
     </div>
     <div class="description">
-      <ng-content select="[text]"></ng-content>
+      <ng-content select="conntent"></ng-content>
     </div>
   </div>
   <div class="extra content">
-    <ng-content select="[extra]"></ng-content>
+    <ng-content select="extra"></ng-content>
   </div>`
 })
 export class SemanticCard {
