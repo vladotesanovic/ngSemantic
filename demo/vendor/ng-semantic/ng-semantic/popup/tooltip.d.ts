@@ -1,4 +1,4 @@
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../typings/main.d.ts" />
 import { ElementRef } from "angular2/core";
 export declare class SMTooltipDirective {
     element: ElementRef;

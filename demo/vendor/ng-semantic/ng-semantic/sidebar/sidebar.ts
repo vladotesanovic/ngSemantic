@@ -1,4 +1,4 @@
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../typings/main.d.ts" />
 import { Component, View, Input, ChangeDetectionStrategy, Directive } from "angular2/core";
 import "semantic/sidebar.min";
 

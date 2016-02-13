@@ -1,4 +1,4 @@
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../typings/main.d.ts" />
 import { Directive, ElementRef } from "angular2/core";
 import "semantic/popup.min";
 import "semantic/transition.min";

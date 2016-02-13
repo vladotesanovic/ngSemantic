@@ -87,7 +87,15 @@ System.register("angular2/src/http/headers", ["angular2/src/facade/lang", "angul
       return collection_1.MapWrapper.values(this._headersMap);
     };
     Headers.prototype.toJSON = function() {
-      return lang_1.Json.stringify(this.values());
+      var serializableHeaders = {};
+      this._headersMap.forEach(function(values, name) {
+        var list = [];
+        collection_1.iterateListLike(values, function(val) {
+          return list = collection_1.ListWrapper.concat(list, val.split(','));
+        });
+        serializableHeaders[name] = list;
+      });
+      return serializableHeaders;
     };
     Headers.prototype.getAll = function(header) {
       var headers = this._headersMap.get(header);

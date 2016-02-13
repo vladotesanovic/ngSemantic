@@ -13,7 +13,7 @@
 
 ## Important!
 <ul>
-   <li>Angular 2 version: beta.1</li>
+   <li>Angular 2 version: beta.6</li>
    <li>There is no bundled version yet.</li>
 </ul>
         
@@ -64,6 +64,8 @@ cd ngSemantic
 
 # install dependencies
 npm install
+
+# skip semantic installation ( with default settings after )
 
 # build local files
 npm run develop:build

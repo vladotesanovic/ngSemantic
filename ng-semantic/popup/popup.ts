@@ -1,4 +1,4 @@
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../typings/main.d.ts" />
 import { Directive, ElementRef, Component, View, Input } from "angular2/core";
 
 

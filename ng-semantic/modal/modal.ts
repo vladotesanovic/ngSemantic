@@ -1,4 +1,4 @@
-/// <reference path="../../typings/tsd.d.ts" />
+/// <reference path="../../typings/main.d.ts" />
 import { Directive, Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 import "semantic/modal.min";
 import "semantic/dimmer.min";

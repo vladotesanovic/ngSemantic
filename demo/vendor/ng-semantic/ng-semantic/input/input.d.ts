@@ -1,4 +1,7 @@
 export declare class SemanticInput {
-    value: string;
+    inputControl: string;
     placeholder: string;
+}
+export declare class SemanticForm {
+    formModel: any;
 }
