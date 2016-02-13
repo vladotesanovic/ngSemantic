@@ -65,7 +65,7 @@ cd ngSemantic
 # install dependencies
 npm install
 
-# skip semantic installation ( with default settings after )
+# skip semantic installation ( with default settings after ), this is because we already have semantic in demo/assets/semantic
 
 # build local files
 npm run develop:build
