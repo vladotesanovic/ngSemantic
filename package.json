@@ -4,9 +4,9 @@
   "description": "Angular2 building blocks based on Semantic UI",
   "main": "",
   "scripts": {
-    "develop:build": "rm -rf demo/app && tsc -p './src' --rootDir './src' --outDir './demo' && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../demo && npm run develop:copy",
-    "develop:server": "node server.js",
-    "develop:copy": "tsc && rm -rf demo/vendor/ng-semantic/* && cp -f semantic.js demo/vendor/ng-semantic && cp -f semantic.d.ts demo/vendor/ng-semantic && cp -rfp ng-semantic demo/vendor/ng-semantic"
+    "build": "rm -rf demo/app && tsc -p './src' --rootDir './src' --outDir './demo' && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../demo && npm run copy",
+    "server": "node server.js",
+    "copy": "tsc && rm -rf demo/vendor/ng-semantic/* && cp -f semantic.js demo/vendor/ng-semantic && cp -f semantic.d.ts demo/vendor/ng-semantic && cp -rfp ng-semantic demo/vendor/ng-semantic"
   },
   "repository": {
     "type": "git",

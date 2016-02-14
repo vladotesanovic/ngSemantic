@@ -23,7 +23,7 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
     <sm-form [formModel]="form">
         <input type="text" ngControl="input">
     </sm-form>
-    
+
     <form [ngFormModel]="form">
         <input type="text" ngControl="input">
     </form>
@@ -55,5 +55,6 @@ export class InputComponent {
         this.input.valueChanges.subscribe((data: any) => {
             console.log(data);
         });
+
     }
 }

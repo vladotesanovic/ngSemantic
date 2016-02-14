@@ -68,10 +68,10 @@ npm install
 # skip semantic installation ( with default settings after ), this is because we already have semantic in demo/assets/semantic
 
 # build local files
-npm run develop:build
+npm run build
 
 # local development server
-npm run develop:server
+npm run server
 ```
 
 ## Components
