@@ -7,7 +7,7 @@ import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-item"
+  selector: "a[sm-item], sm-item"
 })
 @View({
   template:

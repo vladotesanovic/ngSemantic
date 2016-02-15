@@ -12,7 +12,7 @@ import { PopupComponent } from "./elements/popup";
 import { TabComponent } from "./elements/tab";
 import { ButtonComponent } from "./elements/button";
 import { CardComponent } from "./elements/card";
-import { InputComponent } from "./elements/input";
+import { FormComponent } from "./elements/form";
 import { SidebarComponent } from "./elements/sidebar";
 
 @Component({
@@ -26,7 +26,7 @@ import { SidebarComponent } from "./elements/sidebar";
 	{ component: HomeComponent, path: "/", useAsDefault: true },
 	{ component: LoaderComponent, path: "/elements/loader" },
 	{ component: ListComponent, path: "/elements/list" },
-	{ component: InputComponent, path: "/elements/input" },
+	{ component: FormComponent, path: "/elements/form" },
 	{ component: CardComponent, path: "/elements/card" },
 	{ component: SegmentComponent, path: "/elements/segment" },
 	{ component: MenuComponent, path: "/elements/menu" },

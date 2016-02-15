@@ -82,19 +82,19 @@ import { DataServices } from "../../services/data";
         
         <h4 class="ui header">Demo avatar horizontal</h4>
         <sm-list class="ui list horizontal">
-            <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
+            <a sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
         </sm-list>
         <div class="ui divider"></div>
         
         <h4 class="ui header">Demo avatar horizontal ordered</h4>
         <sm-list class="ui list horizontal ordered">
-            <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
+            <a sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
         </sm-list>
         <div class="ui divider"></div>
         
         <h4 class="ui header">Demo avatar animated</h4>
         <sm-list class="ui list animated">
-            <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
+            <a sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
         </sm-list>
 
         <br/><br/>

@@ -1,5 +1,5 @@
-import { Component, View, Input, ChangeDetectionStrategy, ViewEncapsulation } from "angular2/core";
-import { FORM_DIRECTIVES, FORM_PROVIDERS } from "angular2/common";
+import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
+import { FORM_DIRECTIVES, Control, FORM_PROVIDERS } from "angular2/common";
 
 /**
  * Implementation of Input element
@@ -11,32 +11,28 @@ import { FORM_DIRECTIVES, FORM_PROVIDERS } from "angular2/common";
   selector: "sm-input"
 })
 @View({
-  directives: [FORM_DIRECTIVES],
-  template: `<input type="text" [ngControl]="inputControl" placeholder="{{placeholder}}...">`,
-  encapsulation: ViewEncapsulation.None
+  template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty) }">
+  <label *ngIf="label">{{label}}</label>
+  <input type="text" [ngFormControl]="control" placeholder="{{placeholder}}">
+</div>`
 })
 export class SemanticInput {
-  @Input("inputControl") inputControl: string;
+  @Input("control") control: Control;
+  @Input("label") label: string;
   @Input("placeholder") placeholder: string;
 }
 
 /**
  * Implementation of Form element
- *
- * @link
+ * 
+ * @link http://semantic-ui.com/collections/form.html
  */
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-form",
+  selector: "form[sm-form]",
   providers: [FORM_PROVIDERS]
 })
 @View({
   directives: [FORM_DIRECTIVES],
-  template: `<form [ngFormModel]="loginForm">
-    <ng-content></ng-content>
-</form>`,
-  encapsulation: ViewEncapsulation.None
+  template: `<ng-content></ng-content>`
 })
-export class SemanticForm {
-  @Input("formModel") formModel: any;
-}
+export class SemanticForm {}

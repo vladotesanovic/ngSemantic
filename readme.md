@@ -85,6 +85,7 @@ npm run server
   - sm-modal
   - sm-sidebar
   - sm-input
+  - sm-form
   - sm-card
   - sm-tabs & sm-tab
   - sm-list

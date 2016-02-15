@@ -18,10 +18,10 @@ import { ROUTER_DIRECTIVES } from "angular2/router";
 <div class="main ui container">
     <h4 class="ui header">Demo inverted</h4>
     <sm-menu title="Angular2" class="ui menu inverted teal" logo="/assets/images/semantic.png">
-        <sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</sm-item>
+        <a sm-item href="#/elements/menu" *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</a>
         
-        <sm-menu class="ui menu right secondary">
-            <sm-item icon="sidebar big" class="item" sm-dir-sidebar="left"></sm-item>
+        <sm-menu class="ui menu right secondary icon">
+            <a sm-item href="#/elements/menu" icon="sidebar big" class="item" sm-dir-sidebar="left"></a>
             <sm-sidebar class="left vertical inverted sidebar labeled menu">        
                 <a class="item">
                     <i class="home icon"></i>
@@ -44,10 +44,10 @@ import { ROUTER_DIRECTIVES } from "angular2/router";
         <div class="field">
 <textarea rows="8" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-menu title="Angular2" class="ui menu inverted teal" logo="/assets/images/semantic.png">
-    <sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</sm-item>
+    <a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</a>
     
     <sm-menu class="ui menu right secondary">
-        <sm-item icon="sidebar big" class="item"></sm-item>
+        <a sm-item icon="sidebar big" class="item"></a>
     </sm-menu>
 </sm-menu>
 </textarea>
@@ -56,7 +56,7 @@ import { ROUTER_DIRECTIVES } from "angular2/router";
       <div class="ui divider"></div>
     <h4 class="ui header">Demo vertical</h4>
     <sm-menu title="Vertical" class="ui menu vertical">
-        <sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</sm-item>
+        <a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</a>
     </sm-menu>
     
     <h4 class="ui header">Code</h4>
@@ -64,7 +64,7 @@ import { ROUTER_DIRECTIVES } from "angular2/router";
         <div class="field">
 <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-menu title="Vertical" class="ui menu vertical">
-    <sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</sm-item>
+    <a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</a>
 </sm-menu>
 </textarea>
         </div>
@@ -72,7 +72,7 @@ import { ROUTER_DIRECTIVES } from "angular2/router";
       <div class="ui divider"></div>
       <h4 class="ui header">Demo secondary</h4>
     <sm-menu title="Secondary" class="ui menu secondary">
-        <sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</sm-item>
+        <a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</a>
     </sm-menu>
     
     <h4 class="ui header">Code</h4>
@@ -80,7 +80,7 @@ import { ROUTER_DIRECTIVES } from "angular2/router";
         <div class="field">
 <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
 <sm-menu title="Secondary" class="ui menu secondary">
-    <sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</sm-item>
+    <a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</a>
 </sm-menu>
 </textarea>
         </div>
