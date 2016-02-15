@@ -1,5 +1,5 @@
 import { Component, View, Query, QueryList, AfterViewInit, ElementRef, Input } from "angular2/core";
-import "semantic/tab.min";
+import "semantic-ui/dist/components/tab.min";
 
 @Component({
   selector: "sm-tab"

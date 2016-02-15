@@ -21,8 +21,8 @@ import { ROUTER_DIRECTIVES } from "angular2/router";
         <a sm-item href="#/elements/menu" *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}</a>
         
         <sm-menu class="ui menu right secondary icon">
-            <a sm-item href="#/elements/menu" icon="sidebar big" class="item" sm-dir-sidebar="left"></a>
-            <sm-sidebar class="left vertical inverted sidebar labeled menu">        
+            <a sm-item href="#/elements/menu" icon="sidebar big" class="item" sm-dir-sidebar="right"></a>
+            <sm-sidebar class="right vertical inverted sidebar labeled menu teal huge">        
                 <a class="item">
                     <i class="home icon"></i>
                     Home

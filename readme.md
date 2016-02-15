@@ -36,8 +36,9 @@ Configure SystemJS loader:
 System.config({
     defaultJSExtensions: true,
     paths: {
-        // CHANGE PATH
-        'semantic/*': 'assets/semantic/dist/components/*.js',
+        // DON'T CHANGE KEY OF THIS PATH, CHANGE VALUE ONLY
+        // IF YOU EXPOSE node_modules as public / static dir to your app, you can remove this line.
+        'semantic-ui/dist/components/*': 'assets/semantic/dist/components/*.js',
         // REQUIRED BY ANGULAR 2 ( CHANGE PATH )
         'rxjs/operator/*' : 'vendor/rxjs/operator/*.js',
     },

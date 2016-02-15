@@ -1,7 +1,9 @@
 /// <reference path="../../typings/main.d.ts" />
 import { Component, View, Input, ChangeDetectionStrategy, Directive } from "angular2/core";
-import "semantic/sidebar.min";
+import "semantic-ui/dist/components/sidebar.min";
 
+// Because a of lot of shadow dom elements, we must create this fixSidebar
+// function, to move elements to proper location before sidebar run.
 jQuery.fn.fixSidebar = function() {
     var allModules     = jQuery(this);
 
@@ -20,7 +22,11 @@ jQuery.fn.fixSidebar = function() {
     return this;
 };
 
-
+/**
+ * Implementation of Sidebar module
+ * 
+ * @link semantic-ui.com/modules/sidebar.html
+ */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-sidebar"
@@ -33,6 +39,11 @@ export class SemanticSidebar {
   @Input("class") class: string;
 }
 
+/**
+ * Directive whcih trigger sidebar
+ * 
+ * @link semantic-ui.com/modules/sidebar.html
+ */
 @Directive({
     host: {
         "(click)": "toggleSidebar()"
@@ -51,9 +62,6 @@ export class SMSidebarDirective {
         jQuery(".ui.sidebar." + this.data)
             .fixSidebar()
             .sidebar({
-                error: {
-                    movedSidebar: "Sidebar moving."
-                },
                 transition: "overlay",
                 verbose: false
             })

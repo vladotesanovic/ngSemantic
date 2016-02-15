@@ -1,7 +1,7 @@
 /// <reference path="../../typings/main.d.ts" />
 import { Directive, Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
-import "semantic/modal.min";
-import "semantic/dimmer.min";
+import "semantic-ui/dist/components/modal.min";
+import "semantic-ui/dist/components/dimmer.min";
 
 /**
  * Directive, implementation of Semantic UI modal components.
