@@ -9,4 +9,6 @@ http.createServer(function (req, res) {
     res.writeHead(200);
     res.end(data);
   });
-}).listen(process.env.PORT || 3000);
+}).listen(process.env.PORT || 3000, function() {
+  console.log("Serving at htpp://localhost:" + 3000);
+});
