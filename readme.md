@@ -96,6 +96,7 @@ npm run server
   - sm-dir-popup
   - sm-dir-sidebar
   - sm-dir-modal
+  - sm-breadcrumb
    
 ## Licence 
 
