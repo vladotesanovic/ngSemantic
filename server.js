@@ -10,5 +10,5 @@ http.createServer(function (req, res) {
     res.end(data);
   });
 }).listen(process.env.PORT || 3000, function() {
-  console.log("Serving Demo at htpp://localhost:" + 3000);
+  console.log("Serving at http://localhost:" + 3000);
 });
