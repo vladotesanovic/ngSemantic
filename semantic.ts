@@ -12,6 +12,7 @@ import { SemanticCard } from "./ng-semantic/card/card";
 import { SemanticInput,SemanticForm } from "./ng-semantic/input/input";
 import { SemanticSidebar, SMSidebarDirective } from "./ng-semantic/sidebar/sidebar";
 import { SemanticTabs, SemanticTab } from "./ng-semantic/tab/tab";
+import { SemanticBreadcrumb } from "./ng-semantic/breadcrumb/breadcrumb";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticCard,
@@ -28,7 +29,8 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticTabs,
 	SemanticTab,
 	SemanticButton,
-	SemanticLoader
+	SemanticLoader,
+    SemanticBreadcrumb
 ];
 
 export let SEMANTIC_DIRECTIVES: Array<any> = [

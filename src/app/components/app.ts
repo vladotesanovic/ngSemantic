@@ -14,6 +14,7 @@ import { ButtonComponent } from "./elements/button";
 import { CardComponent } from "./elements/card";
 import { FormComponent } from "./elements/form";
 import { SidebarComponent } from "./elements/sidebar";
+import { BreadCrumbComponent } from "./elements/breadcrumb";
 
 @Component({
 	selector: "app"
@@ -25,6 +26,7 @@ import { SidebarComponent } from "./elements/sidebar";
 @RouteConfig([
 	{ component: HomeComponent, path: "/", useAsDefault: true },
 	{ component: LoaderComponent, path: "/elements/loader" },
+    { component: BreadCrumbComponent, path: "/elements/breadcrumb" },
 	{ component: ListComponent, path: "/elements/list" },
 	{ component: FormComponent, path: "/elements/form" },
 	{ component: CardComponent, path: "/elements/card" },
