@@ -1,0 +1,37 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart ng-semantic@1.0.13
+6 info start ng-semantic@1.0.13
+7 verbose unsafe-perm in lifecycle true
+8 info ng-semantic@1.0.13 Failed to exec start script
+9 verbose stack Error: ng-semantic@1.0.13 start: `node server.js`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at EventEmitter.emit (events.js:172:7)
+9 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+9 verbose stack     at emitTwo (events.js:87:13)
+9 verbose stack     at ChildProcess.emit (events.js:172:7)
+9 verbose stack     at maybeClose (internal/child_process.js:821:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+10 verbose pkgid ng-semantic@1.0.13
+11 verbose cwd /home/john/Documents/projetos/ngSemantic
+12 error Linux 3.19.0-49-generic
+13 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
+14 error node v4.3.0
+15 error npm  v2.14.12
+16 error code ELIFECYCLE
+17 error ng-semantic@1.0.13 start: `node server.js`
+17 error Exit status 1
+18 error Failed at the ng-semantic@1.0.13 start script 'node server.js'.
+18 error This is most likely a problem with the ng-semantic package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     node server.js
+18 error You can get their info via:
+18 error     npm owner ls ng-semantic
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]

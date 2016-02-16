@@ -5,16 +5,16 @@ import "semantic-ui/dist/components/sidebar.min";
 // Because a of lot of shadow dom elements, we must create this fixSidebar
 // function, to move elements to proper location before sidebar run.
 jQuery.fn.fixSidebar = function() {
-    var allModules     = jQuery(this);
+    var allModules = jQuery(this);
 
     allModules
         .each(function() {
             var
                 selector = { pusher: '.pusher' },
-                module   = jQuery(this),
-                context  = jQuery('body');
+                module = jQuery(this),
+                context = jQuery('body');
 
-            if(module.nextAll(selector.pusher).length === 0) {
+            if (module.nextAll(selector.pusher).length === 0) {
                 module.detach().prependTo(context);
             }
         });
@@ -28,15 +28,15 @@ jQuery.fn.fixSidebar = function() {
  * @link semantic-ui.com/modules/sidebar.html
  */
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-sidebar"
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "sm-sidebar"
 })
 
 @View({
-  template: `<div class="ui sidebar {{class}}"><ng-content></ng-content></div>`
+    template: `<div class="ui sidebar {{class}}"><ng-content></ng-content></div>`
 })
 export class SemanticSidebar {
-  @Input("class") class: string;
+    @Input("class") class: string;
 }
 
 /**
@@ -58,6 +58,10 @@ export class SMSidebarDirective {
     public data: any;
 
     toggleSidebar() {
+        if (typeof jQuery === "undefined") {
+            console.log("jQuery is not loaded");
+            return;
+        }
 
         jQuery(".ui.sidebar." + this.data)
             .fixSidebar()

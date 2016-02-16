@@ -26,6 +26,10 @@ export class SMModalDirective {
     public data: any;
 
     onClick() {
+        if (typeof jQuery === "undefined") {
+            console.log("jQuery is not loaded");
+            return;
+        }
 
         if (!this.data.hasOwnProperty("selector")) {
             console.log("target selector missing for modal");
@@ -59,7 +63,7 @@ export class SMModalDirective {
 </div>`
 })
 export class SemanticModal {
-  @Input("selector") selector: string;
-  @Input("title") title: string;
-  @Input("class") class: string;
+    @Input("selector") selector: string;
+    @Input("title") title: string;
+    @Input("class") class: string;
 }
