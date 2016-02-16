@@ -34,6 +34,11 @@ export class SemanticTabs implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    if (typeof jQuery === "undefined") {
+      console.log("jQuery is not loaded");
+      return;
+    }
+    
     jQuery(".menu.tabular .item").tab({
       childrenOnly: true,
       context: jQuery(this.elementRef.nativeElement)

@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "build": "rm -rf demo/app && tsc -p './src' --rootDir './src' --outDir './demo' && tslint -c tslint.json 'src/app/**/*.ts' && cd src && find . -name '*.html' | cpio -pdm ../demo && npm run copy",
-    "server": "node server.js",
+    "demo": "node server.js",
     "live": "tsc -w -p './src' --rootDir './src' --outDir './demo'",
     "copy": "tsc && rm -rf demo/vendor/ng-semantic/* && cp -f semantic.js demo/vendor/ng-semantic && cp -f semantic.d.ts demo/vendor/ng-semantic && cp -rfp ng-semantic demo/vendor/ng-semantic"
   },

@@ -23,6 +23,10 @@ export class SMTooltipDirective {
     constructor(public element: ElementRef) { }
 
     onMouseEnter() {
+        if (typeof jQuery === "undefined") {
+            console.log("jQuery is not loaded");
+            return;
+        }
 
         jQuery(this.element.nativeElement).popup({
             content: this.text,

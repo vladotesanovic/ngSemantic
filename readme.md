@@ -73,7 +73,7 @@ npm install
 npm run build
 
 # local development server
-npm run server
+npm run demo
 ```
 
 ## Components

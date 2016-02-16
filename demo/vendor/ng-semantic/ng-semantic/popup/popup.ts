@@ -28,6 +28,10 @@ export class SMPopupDirective {
     constructor(public element: ElementRef) {}
 
     onClick() {
+        if (typeof jQuery === "undefined") {
+            console.log("jQuery is not loaded");
+            return;
+        }
 
         if (!this.data.hasOwnProperty("position") || !this.data.hasOwnProperty("selector")) {
             console.log("position or target selector missing for popup");
