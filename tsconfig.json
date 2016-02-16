@@ -5,8 +5,8 @@
         "moduleResolution": "node",
         "noImplicitAny": true,
         "declaration": true,
-        "inlineSources": true,
-        "inlineSourceMap": true,
+        "inlineSources": false,
+        "inlineSourceMap": false,
         "removeComments": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true
