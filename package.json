@@ -26,9 +26,6 @@
   "typings": "./semantic.d.ts",
   "homepage": "https://ng-semantic.herokuapp.com/",
   "license": "MIT",
-  "dependencies": {
-    "semantic-ui": "^2.1.8"
-  },
   "devDependencies": {
     "angular2": "2.0.0-beta.6",
     "systemjs": "0.19.20",
@@ -39,6 +36,7 @@
     "zone.js": "0.5.14",
     "tslint": "^3.2.1",
     "typescript": "^1.7.5",
-    "typings": "^0.6.8"
+    "typings": "^0.6.8",
+    "semantic-ui": "^2.1.8"
   }
 }
