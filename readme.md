@@ -13,7 +13,7 @@
 
 ## Important!
 <ul>
-   <li>Angular 2 version: beta.6</li>
+   <li>Angular 2 version: beta.7</li>
    <li>There is no bundled version yet.</li>
 </ul>
         
