@@ -16,6 +16,7 @@ var tab_1 = require("./ng-semantic/tab/tab");
 exports.SEMANTIC_COMPONENTS = [
     card_1.SemanticCard,
     input_1.SemanticInput,
+    input_1.SemanticTextarea,
     input_1.SemanticCheckbox,
     input_1.SemanticForm,
     menu_1.SemanticMenu,

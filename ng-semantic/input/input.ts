@@ -45,6 +45,27 @@ export class SemanticCheckbox {
 }
 
 /**
+ * Implementation of Textarea element
+ * 
+ * @link http://semantic-ui.com/collections/form.html#text-area
+ */
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: "sm-textarea"
+})
+@View({
+  template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty) }">
+    <label *ngIf="label">{{label}}</label>
+    <textarea rows="{{rows}}" [ngFormControl]="control"></textarea>
+  </div>`
+})
+export class SemanticTextarea {
+  @Input("control") control: Control;
+  @Input("label") label: string;
+  @Input("rows") rows: string;
+}
+
+/**
  * Implementation of Form element
  * 
  * @link http://semantic-ui.com/collections/form.html

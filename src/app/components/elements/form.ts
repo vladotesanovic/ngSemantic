@@ -16,30 +16,52 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
     </div>
 </div>
 <div class="main ui container">
-    <h4 class="ui header">Demo</h4>
+    <h4 class="ui header">Demo login</h4>
     <form sm-form class="ui form" [ngFormModel]="form">
         <sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
-        
-        <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
-        <sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
-        <sm-checkbox label="I agree to the Terms and Conditions" [control]="agreeControl"></sm-checkbox>
-        <br/>
+        <div class="field">
+            <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
+        </div>
+        <div class="field">
+            <sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
+        </div>
+        <div class="field">
+            <sm-checkbox label="I agree to the Terms and Conditions" [control]="agreeControl"></sm-checkbox>
+        </div>
         <sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login</sm-button>
-        Is form valid: {{form.valid}}
     </form>
     <h4 class="ui header">Code</h4>
  <div class="ui form">
         <div class="field">
-<textarea rows="8" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
- <form sm-form class="ui form" [ngFormModel]="form">
-    <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
-    <sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
-    <sm-checkbox label="I agree to the Terms and Conditions" [control]="agreeControl"></sm-checkbox>
-    <sm-button>Login</sm-button>
+<textarea rows="14" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+<form sm-form class="ui form" [ngFormModel]="form">
+    <sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
+    <div class="field">
+        <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
+    </div>
+    <div class="field">
+        <sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
+    </div>
+    <div class="field">
+        <sm-checkbox label="I agree to the Terms and Conditions" [control]="agreeControl"></sm-checkbox>
+    </div>
+    <sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login</sm-button>
 </form>
 </textarea>
         </div>
       </div>
+      
+      <h4 class="ui header">Demo feedback</h4>
+      <form sm-form class="ui form" [ngFormModel]="formFeedback">
+        <div class="field">
+            <sm-input label="Name" [control]="nameFControl" placeholder="Enter name..."></sm-input>
+        </div>
+        <div class="field">
+            <sm-textarea label="Name" rows="10" [control]="textControl"></sm-textarea>
+        </div>
+        <sm-button (click)="send()" class="primary">Send</sm-button>
+      </form>
+      
 
       <br/><br/>
       Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/form.ts">
@@ -51,16 +73,25 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 export class FormComponent {
 
     form: ControlGroup;
+    formFeedback: ControlGroup;
     formSubmited: boolean = false;
     nameControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(4)]));
     emailControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(4)]));
     agreeControl: Control = new Control("", this.checkboxValidator);
+
+    nameFControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(4)]));
+    textControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(10)]));
 
     constructor(fb: FormBuilder) {
         this.form = fb.group({
             nameControl: this.nameControl,
             emailControl: this.emailControl,
             agreeControl: this.agreeControl
+        });
+
+        this.formFeedback = fb.group({
+            nameFControl: this.nameFControl,
+            textControl: this.textControl
         });
     }
 

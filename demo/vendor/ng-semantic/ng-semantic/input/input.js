@@ -62,6 +62,34 @@ var SemanticCheckbox = (function () {
     return SemanticCheckbox;
 }());
 exports.SemanticCheckbox = SemanticCheckbox;
+var SemanticTextarea = (function () {
+    function SemanticTextarea() {
+    }
+    __decorate([
+        core_1.Input("control"), 
+        __metadata('design:type', common_1.Control)
+    ], SemanticTextarea.prototype, "control", void 0);
+    __decorate([
+        core_1.Input("label"), 
+        __metadata('design:type', String)
+    ], SemanticTextarea.prototype, "label", void 0);
+    __decorate([
+        core_1.Input("rows"), 
+        __metadata('design:type', String)
+    ], SemanticTextarea.prototype, "rows", void 0);
+    SemanticTextarea = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-textarea"
+        }),
+        core_1.View({
+            template: "<div class=\"field\" [ngClass]=\"{error: (!control.valid && control.dirty) }\">\n    <label *ngIf=\"label\">{{label}}</label>\n    <textarea rows=\"{{rows}}\" [ngFormControl]=\"control\"></textarea>\n  </div>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticTextarea);
+    return SemanticTextarea;
+}());
+exports.SemanticTextarea = SemanticTextarea;
 var SemanticForm = (function () {
     function SemanticForm() {
     }

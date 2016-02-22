@@ -9,13 +9,14 @@ import { SemanticButton } from "./ng-semantic/button/button";
 import { SemanticItem } from "./ng-semantic/item/item";
 import { SemanticLoader } from "./ng-semantic/loader/loader";
 import { SemanticCard } from "./ng-semantic/card/card";
-import { SemanticInput, SemanticForm, SemanticCheckbox } from "./ng-semantic/input/input";
+import { SemanticInput, SemanticForm, SemanticTextarea, SemanticCheckbox } from "./ng-semantic/input/input";
 import { SemanticSidebar, SMSidebarDirective } from "./ng-semantic/sidebar/sidebar";
 import { SemanticTabs, SemanticTab } from "./ng-semantic/tab/tab";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticCard,
 	SemanticInput,
+	SemanticTextarea,
 	SemanticCheckbox,
 	SemanticForm,
 	SemanticMenu,

@@ -8,5 +8,10 @@ export declare class SemanticCheckbox {
     control: Control;
     label: string;
 }
+export declare class SemanticTextarea {
+    control: Control;
+    label: string;
+    rows: string;
+}
 export declare class SemanticForm {
 }
