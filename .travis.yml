@@ -1,6 +1,6 @@
 before_script:
-  - npm install typescript@1.7.5 -g
-  - npm install tslint -g
+  - npm install typescript@1.8.0 -g
+  - npm install tslint@3.3.0 -g
   - npm install tsd -g
   - npm install angular2
   - npm install reflect-metadata@0.1.2
