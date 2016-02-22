@@ -87,6 +87,8 @@ npm run demo
   - sm-modal
   - sm-sidebar
   - sm-input
+  - sm-checkbox
+  - sm-textarea
   - sm-form
   - sm-card
   - sm-tabs & sm-tab
