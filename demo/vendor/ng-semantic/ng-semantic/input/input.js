@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -35,8 +36,32 @@ var SemanticInput = (function () {
         __metadata('design:paramtypes', [])
     ], SemanticInput);
     return SemanticInput;
-})();
+}());
 exports.SemanticInput = SemanticInput;
+var SemanticCheckbox = (function () {
+    function SemanticCheckbox() {
+    }
+    __decorate([
+        core_1.Input("control"), 
+        __metadata('design:type', common_1.Control)
+    ], SemanticCheckbox.prototype, "control", void 0);
+    __decorate([
+        core_1.Input("label"), 
+        __metadata('design:type', String)
+    ], SemanticCheckbox.prototype, "label", void 0);
+    SemanticCheckbox = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-checkbox"
+        }),
+        core_1.View({
+            template: "<div class=\"field\" [ngClass]=\"{error: (!control.valid) }\">\n    <div class=\"ui checkbox\">\n      <input type=\"checkbox\" tabindex=\"0\" [ngFormControl]=\"control\">\n      <label *ngIf=\"label\">{{label}}</label>\n    </div>\n  </div>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticCheckbox);
+    return SemanticCheckbox;
+}());
+exports.SemanticCheckbox = SemanticCheckbox;
 var SemanticForm = (function () {
     function SemanticForm() {
     }
@@ -52,5 +77,5 @@ var SemanticForm = (function () {
         __metadata('design:paramtypes', [])
     ], SemanticForm);
     return SemanticForm;
-})();
+}());
 exports.SemanticForm = SemanticForm;

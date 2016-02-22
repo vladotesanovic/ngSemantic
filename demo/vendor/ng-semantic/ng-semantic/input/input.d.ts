@@ -4,5 +4,9 @@ export declare class SemanticInput {
     label: string;
     placeholder: string;
 }
+export declare class SemanticCheckbox {
+    control: Control;
+    label: string;
+}
 export declare class SemanticForm {
 }

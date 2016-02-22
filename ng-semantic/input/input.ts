@@ -23,6 +23,28 @@ export class SemanticInput {
 }
 
 /**
+ * Implementation of Checkbox element
+ * 
+ * @link http://semantic-ui.com/modules/checkbox.html
+ */
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: "sm-checkbox"
+})
+@View({
+  template: `<div class="field" [ngClass]="{error: (!control.valid) }">
+    <div class="ui checkbox">
+      <input type="checkbox" tabindex="0" [ngFormControl]="control">
+      <label *ngIf="label">{{label}}</label>
+    </div>
+  </div>`
+})
+export class SemanticCheckbox {
+  @Input("control") control: Control;
+  @Input("label") label: string;
+}
+
+/**
  * Implementation of Form element
  * 
  * @link http://semantic-ui.com/collections/form.html

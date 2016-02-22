@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -10,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("angular2/core");
 var SemanticButton = (function () {
     function SemanticButton() {
+        this.disabled = false;
     }
     __decorate([
         core_1.Input("class"), 
@@ -19,16 +21,20 @@ var SemanticButton = (function () {
         core_1.Input("icon"), 
         __metadata('design:type', String)
     ], SemanticButton.prototype, "icon", void 0);
+    __decorate([
+        core_1.Input("disabled"), 
+        __metadata('design:type', Boolean)
+    ], SemanticButton.prototype, "disabled", void 0);
     SemanticButton = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
             selector: "sm-button"
         }),
         core_1.View({
-            template: "<button [ngClass]=\"{icon: icon}\" class=\"ui {{class}} button\">\n  <i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n    <ng-content></ng-content>\n</button>"
+            template: "<button [ngClass]=\"{icon: icon}\" [attr.disabled]=\"disabled ? true : null\" class=\"ui {{class}} button\">\n  <i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n    <ng-content></ng-content>\n</button>"
         }), 
         __metadata('design:paramtypes', [])
     ], SemanticButton);
     return SemanticButton;
-})();
+}());
 exports.SemanticButton = SemanticButton;
