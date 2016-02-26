@@ -11,7 +11,7 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
     <div class="ui container">
         <h1>Sidebar</h1>
         <p>Semantic UI Sidebar module <i class="icon external"></i> 
-        <a href="hhttp://semantic-ui.com/modules/sidebar.html" target="_blank">Semantic UI Sidebar</a></p>
+        <a href="http://semantic-ui.com/modules/sidebar.html" target="_blank">Semantic UI Sidebar</a></p>
     </div>
 </div>
 <div class="main ui container">
