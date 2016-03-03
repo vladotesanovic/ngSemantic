@@ -17,7 +17,7 @@
    <li>There is no bundled version yet.</li>
 </ul>
         
-## Installaction
+## Installation
 ```bash
 npm install ng-semantic --save
 ```
