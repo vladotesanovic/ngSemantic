@@ -101,4 +101,6 @@ npm run demo
    
 ## Licence 
 
-MIT
+[MIT License] 
+
+[![License][license-badge]][MIT License]
