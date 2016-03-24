@@ -1,5 +1,5 @@
 /// <reference path="../../typings/main.d.ts" />
-import { Directive, Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
+import { Directive, Component, View, Input, ChangeDetectionStrategy, ElementRef } from "angular2/core";
 import "semantic-ui/dist/components/dropdown.min";
 import "semantic-ui/dist/components/dimmer.min";
 
@@ -14,16 +14,14 @@ import "semantic-ui/dist/components/dimmer.min";
  * @link http://semantic-ui.com/modules/dropdown.html
  */
 @Directive({
+    selector: "[sm-dir-dropdown]",
     host: {
         "(click)": "onClick()"
-    },
-    inputs: [
-        "data: sm-dir-dropdown"
-    ],
-    selector: "[sm-dir-dropdown]"
+    }
 })
 export class SMDropdownDirective {
-    public data: any;
+
+    constructor(private el: ElementRef) { }
 
     onClick() {
         if (typeof jQuery === "undefined") {
@@ -31,39 +29,32 @@ export class SMDropdownDirective {
             return;
         }
 
-        if (!this.data.hasOwnProperty("selector")) {
-            console.log("target selector missing for dropdown");
-            return;
-        }
-
-        jQuery(".ui.dropdown." + this.data.selector).dropdown();
+        jQuery(".ui.dropdown").dropdown();
 
     }
 
 }
 
 /**
- * Component, implementation of Semantic UI modal components.
+ * Component, implementation of Semantic UI dropdown components.
  *
- * This component is triggered by SMModalDirective.
+ * This component is triggered by SMDropdownDirective.
  */
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-dropdown"
 })
 @View({
-    template: `<div class="ui dropdown">
-    <input name="gender" type="hidden">
-  <i class="dropdown icon"></i>
-  <div class="default text">Gender</div>
-  <div class="menu">
-    <div class="item" data-value="male">Male</div>
-    <div class="item" data-value="female">Female</div>
-  </div>
-</div>`
+    template: `<div class="ui dropdown {{selector}}">
+                    <div class="text">{{title}}</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <ng-content></ng-content>
+                    </div>
+               </div>
+    `
 })
 export class SemanticDropdown {
     @Input("selector") selector: string;
     @Input("title") title: string;
-    @Input("class") class: string;
 }
