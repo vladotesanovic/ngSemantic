@@ -8,6 +8,7 @@ import { SegmentComponent } from "./elements/segment";
 import { MenuComponent } from "./elements/menu";
 import { MessageComponent } from "./elements/message";
 import { ModalComponent } from "./elements/modal";
+import { DropdownComponent } from "./elements/dropdown";
 import { PopupComponent } from "./elements/popup";
 import { TabComponent } from "./elements/tab";
 import { ButtonComponent } from "./elements/button";
@@ -32,6 +33,7 @@ import { SidebarComponent } from "./elements/sidebar";
 	{ component: MenuComponent, path: "/elements/menu" },
 	{ component: MessageComponent, path: "/elements/message" },
 	{ component: ModalComponent, path: "/elements/modal" },
+	{ component: DropdownComponent, path: "/elements/dropdown" },
 	{ component: PopupComponent, path: "/elements/popup" },
 	{ component: SidebarComponent, path: "/elements/sidebar" },
 	{ component: TabComponent, path: "/elements/tab" },
