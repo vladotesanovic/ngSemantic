@@ -4,6 +4,7 @@ var message_1 = require("./ng-semantic/message/message");
 var tooltip_1 = require("./ng-semantic/popup/tooltip");
 var popup_1 = require("./ng-semantic/popup/popup");
 var modal_1 = require("./ng-semantic/modal/modal");
+var dropdown_1 = require("./ng-semantic/dropdown/dropdown");
 var segment_1 = require("./ng-semantic/segment/segment");
 var list_1 = require("./ng-semantic/list/list");
 var button_1 = require("./ng-semantic/button/button");
@@ -27,6 +28,7 @@ exports.SEMANTIC_COMPONENTS = [
     item_1.SemanticItem,
     sidebar_1.SemanticSidebar,
     modal_1.SemanticModal,
+    dropdown_1.SemanticDropdown,
     tab_1.SemanticTabs,
     tab_1.SemanticTab,
     button_1.SemanticButton,
@@ -36,5 +38,6 @@ exports.SEMANTIC_DIRECTIVES = [
     tooltip_1.SMTooltipDirective,
     popup_1.SMPopupDirective,
     modal_1.SMModalDirective,
+    dropdown_1.SMDropdownDirective,
     sidebar_1.SMSidebarDirective
 ];
