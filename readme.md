@@ -101,6 +101,7 @@ npm run demo
   - sm-dir-popup
   - sm-dir-sidebar
   - sm-dir-modal
+  - sm-dir-dropdown
    
 ## Licence 
 
