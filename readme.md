@@ -86,6 +86,7 @@ npm run demo
   - sm-message
   - sm-popup
   - sm-segment
+  - sm-dropdown
   - sm-modal
   - sm-sidebar
   - sm-input
