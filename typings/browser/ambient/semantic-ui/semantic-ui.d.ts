@@ -1,5 +1,6 @@
 interface JQuery {
     popup(options?: any): JQuery;
+    accordion(options?: any): JQuery;
     dropdown(options?: any): JQuery;
     modal(options?: any): JQuery;
     sidebar(options?: any): JQuery;

@@ -1,5 +1,5 @@
 /// <reference path="../../typings/main.d.ts" />
-import { Directive, Component, View, Input, ChangeDetectionStrategy, ElementRef } from "angular2/core";
+import { Directive, Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
 import "semantic-ui/dist/components/dropdown.min";
 import "semantic-ui/dist/components/dimmer.min";
 
@@ -21,7 +21,7 @@ import "semantic-ui/dist/components/dimmer.min";
 })
 export class SMDropdownDirective {
 
-    constructor(private el: ElementRef) { }
+    constructor() {}
 
     onClick() {
         if (typeof jQuery === "undefined") {
