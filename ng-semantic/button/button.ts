@@ -1,4 +1,4 @@
-import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy } from "angular2/core";
 
 /**
  * Implementation of Button component
@@ -7,10 +7,7 @@ import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-button"
-})
-
-@View({
+  selector: "sm-button",
   template: `<button [ngClass]="{icon: icon}" [attr.disabled]="disabled ? true : null" class="ui {{class}} button">
   <i *ngIf="icon" class="{{icon}} icon"></i>
     <ng-content></ng-content>

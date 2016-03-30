@@ -1,11 +1,8 @@
-import { Component, View, Query, QueryList, AfterViewInit, ElementRef, Input } from "angular2/core";
+import { Component, Query, QueryList, AfterViewInit, ElementRef, Input } from "angular2/core";
 import "semantic-ui/dist/components/tab.min";
 
 @Component({
-  selector: "sm-tab"
-})
-
-@View({
+  selector: "sm-tab",
   template: `<ng-content></ng-content>`
 })
 export class SemanticTab {
@@ -16,10 +13,7 @@ export class SemanticTab {
 
 
 @Component({
-  selector: "sm-tabs"
-})
-
-@View({
+  selector: "sm-tabs",
   template: `<div class="ui top attached tabular menu">
   <a class="item" [ngClass]="{active: i === 0}" *ngFor="#tab of tabs; #i = index" attr.data-tab="{{tab.dataDatab}}">{{tab.title}}</a>
 </div>
