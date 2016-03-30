@@ -31,9 +31,7 @@ var SemanticSidebar = (function () {
     SemanticSidebar = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-sidebar"
-        }),
-        core_1.View({
+            selector: "sm-sidebar",
             template: "<div class=\"ui sidebar {{class}}\"><ng-content></ng-content></div>"
         }), 
         __metadata('design:paramtypes', [])

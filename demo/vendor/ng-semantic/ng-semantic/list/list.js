@@ -15,9 +15,7 @@ var SemanticList = (function () {
     SemanticList = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-list"
-        }),
-        core_1.View({
+            selector: "sm-list",
             template: "<ng-content></ng-content>",
             styles: ["sm-list { display: block; }"],
             encapsulation: core_1.ViewEncapsulation.None

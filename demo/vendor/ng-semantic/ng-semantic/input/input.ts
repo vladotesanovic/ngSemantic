@@ -1,4 +1,4 @@
-import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy } from "angular2/core";
 import { FORM_DIRECTIVES, Control, FORM_PROVIDERS } from "angular2/common";
 
 /**
@@ -8,9 +8,7 @@ import { FORM_DIRECTIVES, Control, FORM_PROVIDERS } from "angular2/common";
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-input"
-})
-@View({
+  selector: "sm-input",
   template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty) }">
   <label *ngIf="label">{{label}}</label>
   <input type="text" [ngFormControl]="control" placeholder="{{placeholder}}">
@@ -29,9 +27,7 @@ export class SemanticInput {
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-checkbox"
-})
-@View({
+  selector: "sm-checkbox",
   template: `<div class="field" [ngClass]="{error: (!control.valid) }">
     <div class="ui checkbox">
       <input type="checkbox" tabindex="0" [ngFormControl]="control">
@@ -51,9 +47,7 @@ export class SemanticCheckbox {
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-textarea"
-})
-@View({
+  selector: "sm-textarea",
   template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty) }">
     <label *ngIf="label">{{label}}</label>
     <textarea rows="{{rows}}" [ngFormControl]="control"></textarea>
@@ -71,11 +65,9 @@ export class SemanticTextarea {
  * @link http://semantic-ui.com/collections/form.html
  */
 @Component({
-  selector: "form[sm-form]",
-  providers: [FORM_PROVIDERS]
-})
-@View({
   directives: [FORM_DIRECTIVES],
+  providers: [FORM_PROVIDERS],    
+  selector: "form[sm-form]",
   template: `<ng-content></ng-content>`
 })
 export class SemanticForm {}

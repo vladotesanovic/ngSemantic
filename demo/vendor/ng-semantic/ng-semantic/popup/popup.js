@@ -56,9 +56,7 @@ var SemanticPopup = (function () {
     ], SemanticPopup.prototype, "selector", void 0);
     SemanticPopup = __decorate([
         core_1.Component({
-            selector: "sm-popup"
-        }),
-        core_1.View({
+            selector: "sm-popup",
             template: "<div class=\"ui popup very wide {{selector}}\">\n    <div class=\"content\">\n        <ng-content></ng-content>\n    </div>\n</div>"
         }), 
         __metadata('design:paramtypes', [])

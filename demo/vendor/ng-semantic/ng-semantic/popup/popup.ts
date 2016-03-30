@@ -1,5 +1,5 @@
 /// <reference path="../../typings/main.d.ts" />
-import { Directive, ElementRef, Component, View, Input } from "angular2/core";
+import { Directive, ElementRef, Component, Input } from "angular2/core";
 
 
 /**
@@ -58,9 +58,7 @@ export class SMPopupDirective {
  * This component is triggered by UIPopupDirective.
  */
 @Component({
-    selector: "sm-popup"
-})
-@View({
+    selector: "sm-popup",
     template: `<div class="ui popup very wide {{selector}}">
     <div class="content">
         <ng-content></ng-content>

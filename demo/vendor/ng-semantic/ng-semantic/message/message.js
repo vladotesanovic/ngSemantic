@@ -19,9 +19,7 @@ var SemanticMessage = (function () {
     SemanticMessage = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-message"
-        }),
-        core_1.View({
+            selector: "sm-message",
             template: "<i *ngIf=\"icon\" class=\"icon {{icon}}\"></i>\n  <p><ng-content></ng-content></p>",
             styles: ["sm-message { display: block; }"],
             encapsulation: core_1.ViewEncapsulation.None

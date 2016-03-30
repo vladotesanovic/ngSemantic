@@ -1,4 +1,4 @@
-import { Component, View, Input, ChangeDetectionStrategy, ViewEncapsulation } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy, ViewEncapsulation } from "angular2/core";
 
 /**
  * Implementation of List collection
@@ -7,9 +7,7 @@ import { Component, View, Input, ChangeDetectionStrategy, ViewEncapsulation } fr
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-list"
-})
-@View({
+  selector: "sm-list",
   template: `<ng-content></ng-content>`,
   styles: [`sm-list { display: block; }`],
   encapsulation: ViewEncapsulation.None

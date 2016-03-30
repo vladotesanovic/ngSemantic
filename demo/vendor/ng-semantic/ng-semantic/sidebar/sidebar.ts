@@ -1,5 +1,5 @@
 /// <reference path="../../typings/main.d.ts" />
-import { Component, View, Input, ChangeDetectionStrategy, Directive } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy, Directive } from "angular2/core";
 import "semantic-ui/dist/components/sidebar.min";
 
 // Because a of lot of shadow dom elements, we must create this fixSidebar
@@ -29,10 +29,7 @@ jQuery.fn.fixSidebar = function() {
  */
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    selector: "sm-sidebar"
-})
-
-@View({
+    selector: "sm-sidebar",
     template: `<div class="ui sidebar {{class}}"><ng-content></ng-content></div>`
 })
 export class SemanticSidebar {
