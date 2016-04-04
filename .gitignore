@@ -2,3 +2,4 @@ node_modules
 src/app/**/*.js
 ng-semantic/**/*.js
 /semantic.js
+.idea
