@@ -12,7 +12,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = require("angular2/core");
-require("semantic-ui/dist/components/tab.min");
 var SemanticTab = (function () {
     function SemanticTab() {
     }

@@ -1,7 +1,5 @@
 /// <reference path="../../typings/main.d.ts" />
 import { Directive, ElementRef } from "angular2/core";
-import "semantic-ui/dist/components/popup.min";
-import "semantic-ui/dist/components/transition.min";
 
 /**
  * Implementation of Semantic UI popup

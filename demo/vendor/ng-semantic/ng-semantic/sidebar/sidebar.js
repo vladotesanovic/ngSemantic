@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("angular2/core");
-require("semantic-ui/dist/components/sidebar.min");
 jQuery.fn.fixSidebar = function () {
     var allModules = jQuery(this);
     allModules

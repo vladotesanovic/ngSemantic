@@ -8,21 +8,22 @@
         <link rel="icon" type="image/png" href="assets/images/favicon.png">
         <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
         
-        <link rel="stylesheet" type="text/css" href="assets/semantic/dist/semantic.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/semantic.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
         <script src="vendor/es6-shim.js"></script>
         <script src="vendor/system-polyfills.js"></script>
         <script src="vendor/angular2-polyfills.min.js"></script>
         <script src="vendor/system.js"></script>
+
         <script src="vendor/jquery-2.1.4.min.js"></script>
+        <script src="vendor/semantic.min.js"></script>
 
         <script>
         // configure system loader
         System.config({
             defaultJSExtensions: true,
-            paths: {                
-                'semantic-ui/dist/components/*': 'assets/semantic/dist/components/*.js',
+            paths: {
                 'rxjs/operator/*' : 'vendor/rxjs/add/operator/*',
                 'rxjs/*': 'vendor/rxjs/*'
             },
@@ -41,8 +42,8 @@
         });
         </script>    
         <script src="vendor/angular2.dev.js"></script>
-        <script src="vendor/router.dev.js"></script>
-        <script src="vendor/http.dev.js"></script>
+        <script src="vendor/router.min.js"></script>
+        <script src="vendor/http.min.js"></script>
     </head>
     
     <body class="pushable" id="page">

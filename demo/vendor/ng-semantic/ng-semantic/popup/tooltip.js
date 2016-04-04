@@ -9,8 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("angular2/core");
-require("semantic-ui/dist/components/popup.min");
-require("semantic-ui/dist/components/transition.min");
 var SMTooltipDirective = (function () {
     function SMTooltipDirective(element) {
         this.element = element;

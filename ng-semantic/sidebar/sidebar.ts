@@ -1,6 +1,5 @@
 /// <reference path="../../typings/main.d.ts" />
 import { Component, Input, ChangeDetectionStrategy, Directive } from "angular2/core";
-import "semantic-ui/dist/components/sidebar.min";
 
 // Because a of lot of shadow dom elements, we must create this fixSidebar
 // function, to move elements to proper location before sidebar run.

@@ -13,32 +13,29 @@
 
 ## Important!
 <ul>
-   <li>Angular 2 version: beta.7</li>
+   <li>Angular 2 version: beta.13</li>
    <li>There is no bundled version yet.</li>
 </ul>
         
-## Installaction
+## Installation
 ```bash
 npm install ng-semantic --save
 ```
-<ul>
-  <li>Semantic UI installation will be triggered. Semantic UI must be installed in public folder ( dist folder must be public )</li>
-  <li>In your index.html page load:
-    <ul>
-      <li>semantic.min.css</li>
-      <li>jQuery</li>
-    </ul>                
-   </li>
-</ul>
+
+Semantic UI ( minified versions of css and js ) must be loaded in your index.html
+
+```html
+<link rel="stylesheet" type="text/css" href="path/to/semantic.min.css">
+
+<script src="path/to/jquery-2.1.4.min.js"></script>
+<script src="path/to/semantic.min.js"></script>
+```
 
 Configure SystemJS loader:
 ```javascript
 System.config({
     defaultJSExtensions: true,
     paths: {
-        // DON'T CHANGE KEY OF THIS PATH, CHANGE VALUE ONLY
-        // IF YOU EXPOSE node_modules as public / static dir to your app, you can remove this line.
-        'semantic-ui/dist/components/*': 'assets/semantic/dist/components/*.js',
         // REQUIRED BY ANGULAR 2 ( CHANGE PATH )
         'rxjs/operator/*' : 'vendor/rxjs/operator/*.js',
     },
@@ -65,9 +62,6 @@ cd ngSemantic
 
 # install dependencies
 npm install
-
-# skip semantic installation ( with default settings after ), 
-# this is because we already have semantic in demo/assets/semantic
 
 # build local files
 npm run build
@@ -101,6 +95,6 @@ npm run demo
    
 ## Licence 
 
-[MIT License] 
+MIT License
 
-[![License][license-badge]][MIT License]
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
