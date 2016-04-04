@@ -1,4 +1,4 @@
-import { Component, View, AfterViewInit } from "angular2/core";
+import { Component, AfterViewInit } from "angular2/core";
 import { ROUTER_DIRECTIVES, RouteConfig } from "angular2/router";
 
 import { HomeComponent } from "./home/home";
@@ -16,10 +16,8 @@ import { FormComponent } from "./elements/form";
 import { SidebarComponent } from "./elements/sidebar";
 
 @Component({
-	selector: "app"
-})
-@View({
-	directives: [ROUTER_DIRECTIVES],
+    	directives: [ROUTER_DIRECTIVES],
+        selector: "app",
 	templateUrl: "./app/components/app.html"
 })
 @RouteConfig([

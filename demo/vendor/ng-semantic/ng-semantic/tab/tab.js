@@ -30,9 +30,7 @@ var SemanticTab = (function () {
     ], SemanticTab.prototype, "class", void 0);
     SemanticTab = __decorate([
         core_1.Component({
-            selector: "sm-tab"
-        }),
-        core_1.View({
+            selector: "sm-tab",
             template: "<ng-content></ng-content>"
         }), 
         __metadata('design:paramtypes', [])
@@ -57,9 +55,7 @@ var SemanticTabs = (function () {
     };
     SemanticTabs = __decorate([
         core_1.Component({
-            selector: "sm-tabs"
-        }),
-        core_1.View({
+            selector: "sm-tabs",
             template: "<div class=\"ui top attached tabular menu\">\n  <a class=\"item\" [ngClass]=\"{active: i === 0}\" *ngFor=\"#tab of tabs; #i = index\" attr.data-tab=\"{{tab.dataDatab}}\">{{tab.title}}</a>\n</div>\n<ng-content></ng-content>\n"
         }),
         __param(0, core_1.Query(SemanticTab)), 

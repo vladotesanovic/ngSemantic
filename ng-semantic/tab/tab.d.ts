@@ -1,4 +1,5 @@
 import { QueryList, AfterViewInit, ElementRef } from "angular2/core";
+import "semantic-ui/dist/components/tab.min";
 export declare class SemanticTab {
     dataDatab: string;
     title: string;

@@ -1,4 +1,4 @@
-import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy } from "angular2/core";
 
 /**
  * Implementation of Item view
@@ -7,9 +7,7 @@ import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "a[sm-item], sm-item"
-})
-@View({
+  selector: "a[sm-item], sm-item",
   template:
 `<i *ngIf="icon" class="{{icon}} icon"></i>
 <img *ngIf="image" class="ui avatar image" src="{{image}}">

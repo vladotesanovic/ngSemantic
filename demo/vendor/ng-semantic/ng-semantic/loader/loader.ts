@@ -1,4 +1,4 @@
-import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy } from "angular2/core";
 
 /**
  * Implementation of Loader element
@@ -7,10 +7,7 @@ import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-loader"
-})
-
-@View({
+  selector: "sm-loader",
   template: `<div *ngIf="!complete" class="ui active dimmer {{class}}">
     <div [ngClass]="{text: text}" class="ui loader">{{text}}</div>
   </div>`

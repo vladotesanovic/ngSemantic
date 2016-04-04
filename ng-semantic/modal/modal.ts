@@ -1,5 +1,5 @@
 /// <reference path="../../typings/main.d.ts" />
-import { Directive, Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
+import { Directive, Component, Input, ChangeDetectionStrategy } from "angular2/core";
 import "semantic-ui/dist/components/modal.min";
 import "semantic-ui/dist/components/dimmer.min";
 
@@ -49,9 +49,7 @@ export class SMModalDirective {
  */
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    selector: "sm-modal"
-})
-@View({
+    selector: "sm-modal",
     template: `<div class="ui modal {{selector}} {{class}}">
     <i class="close icon"></i>
     <div class="ui icon header">
