@@ -7,6 +7,8 @@ import { ListComponent } from "./elements/list";
 import { SegmentComponent } from "./elements/segment";
 import { MenuComponent } from "./elements/menu";
 import { MessageComponent } from "./elements/message";
+import { AccordionComponent } from "./elements/accordion";
+import { DropdownComponent } from "./elements/dropdown";
 import { ModalComponent } from "./elements/modal";
 import { PopupComponent } from "./elements/popup";
 import { TabComponent } from "./elements/tab";
@@ -29,6 +31,8 @@ import { SidebarComponent } from "./elements/sidebar";
 	{ component: SegmentComponent, path: "/elements/segment" },
 	{ component: MenuComponent, path: "/elements/menu" },
 	{ component: MessageComponent, path: "/elements/message" },
+	{ component: AccordionComponent, path: "/elements/accordion" },
+	{ component: DropdownComponent, path: "/elements/dropdown" },
 	{ component: ModalComponent, path: "/elements/modal" },
 	{ component: PopupComponent, path: "/elements/popup" },
 	{ component: SidebarComponent, path: "/elements/sidebar" },

@@ -3,6 +3,8 @@ import { SemanticMessage } from "./ng-semantic/message/message";
 import { SMTooltipDirective } from "./ng-semantic/popup/tooltip";
 import { SemanticPopup, SMPopupDirective } from "./ng-semantic/popup/popup";
 import { SemanticModal, SMModalDirective } from "./ng-semantic/modal/modal";
+import { SemanticDropdown, SMDropdownDirective } from "./ng-semantic/dropdown/dropdown";
+import { SemanticAccordion, SMAccordionDirective } from "./ng-semantic/accordion/accordion";
 import { SemanticSegment } from "./ng-semantic/segment/segment";
 import { SemanticList } from "./ng-semantic/list/list";
 import { SemanticButton } from "./ng-semantic/button/button";
@@ -26,7 +28,9 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticList,
 	SemanticItem,
 	SemanticSidebar,
+	SemanticAccordion,
 	SemanticModal,
+	SemanticDropdown,
 	SemanticTabs,
 	SemanticTab,
 	SemanticButton,
@@ -36,6 +40,8 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 export let SEMANTIC_DIRECTIVES: Array<any> = [
 	SMTooltipDirective,
 	SMPopupDirective,
+	SMAccordionDirective,
 	SMModalDirective,
+	SMDropdownDirective,
 	SMSidebarDirective
 ];

@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/vladotesanovic/ngSemantic.svg?branch=master)](https://travis-ci.org/vladotesanovic/ngSemantic)
 
 # Angular2 & Semantic UI
+
+[![Join the chat at https://gitter.im/bravi-a/ngSemantic](https://badges.gitter.im/bravi-a/ngSemantic.svg)](https://gitter.im/bravi-a/ngSemantic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <p align="center">
   <img src="http://i.imgur.com/SCTxyan.jpg" alt="Angular 2"/><br/>
   <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a> 
@@ -84,6 +86,7 @@ npm run demo
   - sm-message
   - sm-popup
   - sm-segment
+  - sm-dropdown
   - sm-modal
   - sm-sidebar
   - sm-input
@@ -98,6 +101,7 @@ npm run demo
   - sm-dir-popup
   - sm-dir-sidebar
   - sm-dir-modal
+  - sm-dir-dropdown
    
 ## Licence 
 
