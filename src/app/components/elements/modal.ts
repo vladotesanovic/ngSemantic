@@ -1,12 +1,10 @@
-import { Component, View } from "angular2/core";
+import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 
 @Component({
-	selector : "modal",
-})
-@View({
-	directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
-	template : `
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    selector : "modal",
+    template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Modal</h1>

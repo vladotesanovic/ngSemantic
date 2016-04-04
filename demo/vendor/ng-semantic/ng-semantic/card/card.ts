@@ -1,4 +1,4 @@
-import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy } from "angular2/core";
 
 /**
  * Implementation of Card collection
@@ -7,9 +7,7 @@ import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-card"
-})
-@View({
+  selector: "sm-card",
   template: `<div class="image">
     <img src="{{image}}">
   </div>

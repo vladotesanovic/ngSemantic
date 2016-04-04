@@ -1,10 +1,8 @@
-import { Component, View } from "angular2/core";
+import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 @Component({
-    selector: "ui-button"
-})
-@View({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    selector: "ui-button",
     template: `
     <div class="ui masthead vertical segment">
         <div class="ui container">

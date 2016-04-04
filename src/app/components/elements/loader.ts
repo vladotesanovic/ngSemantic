@@ -1,14 +1,12 @@
-import { Component, View } from "angular2/core";
+import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 import { ROUTER_DIRECTIVES } from "angular2/router";
 import { DataServices } from "../../services/data";
 
 @Component({
-    selector: "loader",
-    providers: [DataServices]
-})
-@View({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, ROUTER_DIRECTIVES],
+    providers: [DataServices],
+    selector: "loader",
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">

@@ -58,9 +58,7 @@ var SemanticModal = (function () {
     SemanticModal = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-modal"
-        }),
-        core_1.View({
+            selector: "sm-modal",
             template: "<div class=\"ui modal {{selector}} {{class}}\">\n    <i class=\"close icon\"></i>\n    <div class=\"ui icon header\">\n      {{title}}\n    </div>\n    <div class=\"content\">\n        <ng-content></ng-content>\n    </div>\n</div>"
         }), 
         __metadata('design:paramtypes', [])

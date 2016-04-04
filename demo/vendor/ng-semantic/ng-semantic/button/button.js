@@ -28,9 +28,7 @@ var SemanticButton = (function () {
     SemanticButton = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-button"
-        }),
-        core_1.View({
+            selector: "sm-button",
             template: "<button [ngClass]=\"{icon: icon}\" [attr.disabled]=\"disabled ? true : null\" class=\"ui {{class}} button\">\n  <i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n    <ng-content></ng-content>\n</button>"
         }), 
         __metadata('design:paramtypes', [])

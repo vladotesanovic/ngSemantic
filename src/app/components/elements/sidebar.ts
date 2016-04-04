@@ -1,17 +1,15 @@
-import { Component, View } from "angular2/core";
+import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 
 @Component({
-	selector : "test-sidebar"
-})
-@View({
-	directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
-	template : `
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    selector : "test-sidebar",
+    template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Sidebar</h1>
         <p>Semantic UI Sidebar module <i class="icon external"></i> 
-        <a href="hhttp://semantic-ui.com/modules/sidebar.html" target="_blank">Semantic UI Sidebar</a></p>
+        <a href="http://semantic-ui.com/modules/sidebar.html" target="_blank">Semantic UI Sidebar</a></p>
     </div>
 </div>
 <div class="main ui container">

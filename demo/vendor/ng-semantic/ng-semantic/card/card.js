@@ -27,9 +27,7 @@ var SemanticCard = (function () {
     SemanticCard = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-card"
-        }),
-        core_1.View({
+            selector: "sm-card",
             template: "<div class=\"image\">\n    <img src=\"{{image}}\">\n  </div>\n  <div class=\"content\">\n    <a class=\"header\">{{title}}</a>\n    <div class=\"meta\">\n      <span class=\"date\">{{subtitle}}</span>\n    </div>\n    <div class=\"description\">\n      <ng-content select=\"conntent\"></ng-content>\n    </div>\n  </div>\n  <div class=\"extra content\">\n    <ng-content select=\"extra\"></ng-content>\n  </div>"
         }), 
         __metadata('design:paramtypes', [])

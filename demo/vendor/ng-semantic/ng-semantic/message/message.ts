@@ -1,4 +1,4 @@
-import { Component, View, Input, ChangeDetectionStrategy, ViewEncapsulation } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy, ViewEncapsulation } from "angular2/core";
 
 /**
  * Implementation of Message collection
@@ -7,9 +7,7 @@ import { Component, View, Input, ChangeDetectionStrategy, ViewEncapsulation } fr
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-message"
-})
-@View({
+  selector: "sm-message",
   template: `<i *ngIf="icon" class="icon {{icon}}"></i>
   <p><ng-content></ng-content></p>`,
   styles: [`sm-message { display: block; }`],

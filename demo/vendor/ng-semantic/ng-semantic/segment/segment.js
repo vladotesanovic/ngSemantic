@@ -19,9 +19,7 @@ var SemanticSegment = (function () {
     SemanticSegment = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-segment"
-        }),
-        core_1.View({
+            selector: "sm-segment",
             template: "<div class=\"ui segment {{class}}\">\n  <p><ng-content></ng-content></p>\n</div>"
         }), 
         __metadata('design:paramtypes', [])

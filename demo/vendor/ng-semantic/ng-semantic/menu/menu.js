@@ -19,9 +19,7 @@ var SemanticMenu = (function () {
     SemanticMenu = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-menu"
-        }),
-        core_1.View({
+            selector: "sm-menu",
             template: "\n<a href=\"#/\" *ngIf=\"logo\" class=\"header item\">\n    <img class=\"logo\" alt=\"{{title}}\" src=\"{{logo}}\">\n</a>\n\n<ng-content></ng-content>\n"
         }), 
         __metadata('design:paramtypes', [])

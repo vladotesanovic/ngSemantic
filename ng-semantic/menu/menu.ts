@@ -1,4 +1,4 @@
-import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy } from "angular2/core";
 
 /**
  * Implementation of Menu component
@@ -8,9 +8,7 @@ import { Component, View, Input, ChangeDetectionStrategy } from "angular2/core";
  */
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    selector: "sm-menu"
-})
-@View({
+    selector: "sm-menu",
     template: `
 <a href="#/" *ngIf="logo" class="header item">
     <img class="logo" alt="{{title}}" src="{{logo}}">

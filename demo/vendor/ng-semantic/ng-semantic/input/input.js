@@ -28,9 +28,7 @@ var SemanticInput = (function () {
     SemanticInput = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-input"
-        }),
-        core_1.View({
+            selector: "sm-input",
             template: "<div class=\"field\" [ngClass]=\"{error: (!control.valid && control.dirty) }\">\n  <label *ngIf=\"label\">{{label}}</label>\n  <input type=\"text\" [ngFormControl]=\"control\" placeholder=\"{{placeholder}}\">\n</div>"
         }), 
         __metadata('design:paramtypes', [])
@@ -52,9 +50,7 @@ var SemanticCheckbox = (function () {
     SemanticCheckbox = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-checkbox"
-        }),
-        core_1.View({
+            selector: "sm-checkbox",
             template: "<div class=\"field\" [ngClass]=\"{error: (!control.valid) }\">\n    <div class=\"ui checkbox\">\n      <input type=\"checkbox\" tabindex=\"0\" [ngFormControl]=\"control\">\n      <label *ngIf=\"label\">{{label}}</label>\n    </div>\n  </div>"
         }), 
         __metadata('design:paramtypes', [])
@@ -80,9 +76,7 @@ var SemanticTextarea = (function () {
     SemanticTextarea = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-textarea"
-        }),
-        core_1.View({
+            selector: "sm-textarea",
             template: "<div class=\"field\" [ngClass]=\"{error: (!control.valid && control.dirty) }\">\n    <label *ngIf=\"label\">{{label}}</label>\n    <textarea rows=\"{{rows}}\" [ngFormControl]=\"control\"></textarea>\n  </div>"
         }), 
         __metadata('design:paramtypes', [])
@@ -95,11 +89,9 @@ var SemanticForm = (function () {
     }
     SemanticForm = __decorate([
         core_1.Component({
-            selector: "form[sm-form]",
-            providers: [common_1.FORM_PROVIDERS]
-        }),
-        core_1.View({
             directives: [common_1.FORM_DIRECTIVES],
+            providers: [common_1.FORM_PROVIDERS],
+            selector: "form[sm-form]",
             template: "<ng-content></ng-content>"
         }), 
         __metadata('design:paramtypes', [])

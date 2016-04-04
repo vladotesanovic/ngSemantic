@@ -1,12 +1,10 @@
-import { Component, View } from "angular2/core";
+import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
 import { ROUTER_DIRECTIVES } from "angular2/router";
 
 @Component({
-    selector: "menu-cp"
-})
-@View({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, ROUTER_DIRECTIVES],
+    selector: "menu-cp",
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">

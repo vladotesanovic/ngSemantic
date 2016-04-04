@@ -27,9 +27,7 @@ var SemanticItem = (function () {
     SemanticItem = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "a[sm-item], sm-item"
-        }),
-        core_1.View({
+            selector: "a[sm-item], sm-item",
             template: "<i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n<img *ngIf=\"image\" class=\"ui avatar image\" src=\"{{image}}\">\n<div class=\"content\">\n  <div *ngIf=\"header\" class=\"header\">\n    {{header}}\n  </div>\n  <ng-content></ng-content>\n</div>"
         }), 
         __metadata('design:paramtypes', [])
