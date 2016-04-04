@@ -22,7 +22,7 @@
 npm install ng-semantic --save
 ```
 
-Semantic UI ( minified versions of css and js ) must be loaded in your index.html
+Semantic UI ( minified versions of css and js ) must be loaded in index.html
 
 ```html
 <link rel="stylesheet" type="text/css" href="path/to/semantic.min.css">
@@ -44,7 +44,7 @@ System.config({
         // you must copy ng-semantic from /node_modules/ng-semantic 
         // ( files: semantic.js, semantic.d.ts and folder: ng-semantic )
         // and set path to it
-        'ng-semantic/semantic': 'vendor/ng-semantic/semantic.js'
+        'ng-semantic/semantic': 'path/to/ng-semantic/semantic.js'
     },
     packages: {
         app: {
