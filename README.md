@@ -95,6 +95,7 @@ npm run demo
   - sm-dir-tooltip
   - sm-dir-popup
   - sm-dir-sidebar
+  - sm-dir-dimmer
   - sm-dir-modal
    
 ## Licence 
