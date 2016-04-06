@@ -13,6 +13,9 @@ var card_1 = require("./ng-semantic/card/card");
 var input_1 = require("./ng-semantic/input/input");
 var sidebar_1 = require("./ng-semantic/sidebar/sidebar");
 var tab_1 = require("./ng-semantic/tab/tab");
+var flag_1 = require("./ng-semantic/flag/flag");
+var progress_1 = require("./ng-semantic/progress/progress");
+var dimmer_1 = require("./ng-semantic/dimmer/dimmer");
 exports.SEMANTIC_COMPONENTS = [
     card_1.SemanticCard,
     input_1.SemanticInput,
@@ -22,10 +25,13 @@ exports.SEMANTIC_COMPONENTS = [
     menu_1.SemanticMenu,
     message_1.SemanticMessage,
     segment_1.SemanticSegment,
+    dimmer_1.SemanticDimmer,
     popup_1.SemanticPopup,
     list_1.SemanticList,
+    flag_1.SemanticFlag,
     item_1.SemanticItem,
     sidebar_1.SemanticSidebar,
+    progress_1.SemanticProgress,
     modal_1.SemanticModal,
     tab_1.SemanticTabs,
     tab_1.SemanticTab,
@@ -36,5 +42,6 @@ exports.SEMANTIC_DIRECTIVES = [
     tooltip_1.SMTooltipDirective,
     popup_1.SMPopupDirective,
     modal_1.SMModalDirective,
-    sidebar_1.SMSidebarDirective
+    sidebar_1.SMSidebarDirective,
+    dimmer_1.SMDimmerDirective
 ];

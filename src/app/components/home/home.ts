@@ -7,4 +7,4 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
     templateUrl: "./app/components/home/home.html"
 })
 
-export class HomeComponent { }
+export class HomeComponent {}

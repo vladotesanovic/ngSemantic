@@ -5,6 +5,7 @@ interface JQuery {
     sidebar(...options: any[]): JQuery;
     tab(options?: any): JQuery;
     fixSidebar(): JQuery;
+    dimmer(options?: any): JQuery;
 }
 
 declare module "ng-semantic/semantic" {

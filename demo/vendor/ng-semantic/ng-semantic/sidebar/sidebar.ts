@@ -36,7 +36,7 @@ export class SemanticSidebar {
 }
 
 /**
- * Directive whcih trigger sidebar
+ * Directive which trigger sidebar.
  * 
  * @link semantic-ui.com/modules/sidebar.html
  */

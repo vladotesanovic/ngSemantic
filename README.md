@@ -1,6 +1,7 @@
 [![GitHub version](https://badge.fury.io/gh/vladotesanovic%2FngSemantic.png)](http://badge.fury.io/gh/vladotesanovic%2FngSemantic)
 [![Dependency Status](https://david-dm.org/vladotesanovic/ngSemantic.svg)](https://david-dm.org/vladotesanovic/ngSemantic)
 [![Build Status](https://travis-ci.org/vladotesanovic/ngSemantic.svg?branch=master)](https://travis-ci.org/vladotesanovic/ngSemantic)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
 
 # Angular2 & Semantic UI
 <p align="center">
@@ -80,10 +81,13 @@ npm run demo
   - sm-segment
   - sm-modal
   - sm-sidebar
+  - sm-dimmer
+  - sm-flag
   - sm-input
   - sm-checkbox
   - sm-textarea
   - sm-form
+  - sm-progress
   - sm-card
   - sm-tabs & sm-tab
   - sm-list
@@ -96,5 +100,3 @@ npm run demo
 ## Licence 
 
 MIT License
-
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)

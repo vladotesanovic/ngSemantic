@@ -14,6 +14,9 @@ import { ButtonComponent } from "./elements/button";
 import { CardComponent } from "./elements/card";
 import { FormComponent } from "./elements/form";
 import { SidebarComponent } from "./elements/sidebar";
+import { DimmerComponent } from "./elements/dimmer";
+import { ProgressComponent } from "./elements/progress";
+import { FlagComponent } from "./elements/flag";
 
 @Component({
     	directives: [ROUTER_DIRECTIVES],
@@ -29,6 +32,9 @@ import { SidebarComponent } from "./elements/sidebar";
 	{ component: SegmentComponent, path: "/elements/segment" },
 	{ component: MenuComponent, path: "/elements/menu" },
 	{ component: MessageComponent, path: "/elements/message" },
+	{ component: DimmerComponent, path: "/elements/dimmer" },
+	{ component: ProgressComponent, path: "/elements/progress" },
+	{ component: FlagComponent, path: "/elements/flag" },
 	{ component: ModalComponent, path: "/elements/modal" },
 	{ component: PopupComponent, path: "/elements/popup" },
 	{ component: SidebarComponent, path: "/elements/sidebar" },
