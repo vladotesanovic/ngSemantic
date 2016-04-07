@@ -6,6 +6,7 @@ interface JQuery {
     tab(options?: any): JQuery;
     fixSidebar(): JQuery;
     dimmer(options?: any): JQuery;
+	accordion(options?: any): JQuery;
 }
 
 declare module "ng-semantic/semantic" {
