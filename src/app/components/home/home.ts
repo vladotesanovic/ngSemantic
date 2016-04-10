@@ -20,11 +20,12 @@ import { Markup, Typescript, Bash } from "ng2-prism/languages";
     </div>
 </div>
 <div class="main ui container">
-
     <h2 class="header">Installation</h2>
+<sm-segment class="raised">
 <codeblock bash>
 $ npm install ng-semantic --save
 </codeblock>
+</sm-segment>
     <p></p>
     <p>In your index.html ( entry file )</p>
     <codeblock markup>
@@ -45,7 +46,6 @@ src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.
 
     <p></p>
     <h2 class="header">Use</h2>
-
        <codeblock typescript>
 import {Component} from 'angular2/core';
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
@@ -61,8 +61,6 @@ export class DemoComponent {}
     <h2>Starter project</h2>
         <p>SystemJS: <i class="icon external"></i> 
         <a href="https://github.com/vladotesanovic/angular2-express-starter" target="_blank">Express app with included ng-semantic</a></p>
-    <h2>Contribute</h2>
-        <p>ToDo</p>
 </div>
 `
 })

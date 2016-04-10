@@ -32,9 +32,6 @@
         <script src="vendor/ng-semantic.js"></script>
         <script src="vendor/ng2-prism.js"></script>
         <script src="vendor/prismjs/prism.js"></script>
-        <script src="vendor/prismjs/components/prism-typescript.min.js"></script>
-        <script src="vendor/prismjs/components/prism-bash.min.js"></script>
-        <script src="vendor/prismjs/components/prism-markup.min.js"></script>
         <script>
         // configure system loader
         System.config({
@@ -42,7 +39,13 @@
                 app: {
                     format: 'register',
                     defaultExtension: 'js'
+                },
+                prismjs: {
+                    defaultExtension: 'js'
                 }
+            },
+            map: {
+                prismjs: "vendor/prismjs"
             }
         });
         System.import('/app/bootstrap').then(null, console.error.bind(console));
