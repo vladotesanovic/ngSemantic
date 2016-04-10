@@ -1,5 +1,5 @@
 import { Component } from "angular2/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],

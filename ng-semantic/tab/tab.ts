@@ -1,5 +1,7 @@
 import { Component, Query, QueryList, AfterViewInit, ElementRef, Input } from "angular2/core";
 
+declare var jQuery: any;
+
 @Component({
   selector: "sm-tab",
   template: `<ng-content></ng-content>`
@@ -9,7 +11,6 @@ export class SemanticTab {
   @Input("title") title: string;
   @Input("class") class: string;
 }
-
 
 @Component({
   selector: "sm-tabs",

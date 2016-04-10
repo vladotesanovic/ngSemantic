@@ -21,7 +21,7 @@ import { FlagComponent } from "./elements/flag";
 @Component({
     	directives: [ROUTER_DIRECTIVES],
         selector: "app",
-	templateUrl: "./app/components/app.html"
+		templateUrl: "./app/components/app.html"
 })
 @RouteConfig([
 	{ component: HomeComponent, path: "/", useAsDefault: true },

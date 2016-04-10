@@ -1,5 +1,5 @@
 import { Component } from "angular2/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
@@ -36,8 +36,12 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
           elit a pellentesque aliquet, metus felis mollis enim, et pulvinar orci massa in est.
 </sm-tab>
       </sm-tabs>
-    
     <h4 class="ui header">Code</h4>
+    <codeblock>
+  def my_new_method
+    p "So Impressive!"
+  end
+</codeblock>
  <div class="ui form">
         <div class="field">
 <textarea rows="6" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">

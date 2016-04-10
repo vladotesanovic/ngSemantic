@@ -1,5 +1,7 @@
 import { Component, Input, ChangeDetectionStrategy, Directive } from "angular2/core";
 
+declare var jQuery: any;
+
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-dimmer",

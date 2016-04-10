@@ -1,6 +1,6 @@
-/// <reference path="../../typings/main.d.ts" />
 import { Directive, ElementRef, Component, Input } from "angular2/core";
 
+declare var jQuery: any;
 
 /**
  * Directive, implementation of Semantic UI popup components.

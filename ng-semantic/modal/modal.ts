@@ -1,5 +1,6 @@
-/// <reference path="../../typings/main.d.ts" />
 import { Directive, Component, Input, ChangeDetectionStrategy } from "angular2/core";
+
+declare var jQuery: any;
 
 /**
  * Directive, implementation of Semantic UI modal components.

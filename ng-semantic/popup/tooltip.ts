@@ -1,5 +1,6 @@
-/// <reference path="../../typings/main.d.ts" />
 import { Directive, ElementRef } from "angular2/core";
+
+declare var jQuery: any;
 
 /**
  * Implementation of Semantic UI popup

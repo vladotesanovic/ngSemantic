@@ -14,8 +14,7 @@
 
 ## Important!
 <ul>
-   <li>Angular 2 version: beta.13</li>
-   <li>There is no bundled version yet.</li>
+   <li>Angular 2 version: beta.14</li>
 </ul>
         
 ## Installation
@@ -30,31 +29,29 @@ Semantic UI ( minified versions of css and js ) must be loaded in index.html
 
 <script src="path/to/jquery-2.1.4.min.js"></script>
 <script src="path/to/semantic.min.js"></script>
+
+<!-- Add this after Angular2 bundles -->
+<script src="node_modules/ng-semantic/bundles/ng-semantic.min.js"></script>
 ```
 
-Configure SystemJS loader:
+Import in your your project with:
+
 ```javascript
-System.config({
-    defaultJSExtensions: true,
-    paths: {
-        // REQUIRED BY ANGULAR 2 ( CHANGE PATH )
-        'rxjs/operator/*' : 'vendor/rxjs/operator/*.js',
-    },
-    map: {
-        // IF YOU ARE NOT ABLE TO LOAD FROM node_modules
-        // you must copy ng-semantic from /node_modules/ng-semantic 
-        // ( files: semantic.js, semantic.d.ts and folder: ng-semantic )
-        // and set path to it
-        'ng-semantic/semantic': 'path/to/ng-semantic/semantic.js'
-    },
-    packages: {
-        app: {
-            format: 'register',
-            defaultExtension: 'js'
-        }
-    }
-});
+import {Component} from 'angular2/core';
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+
+@Component({
+selector: 'demo-cmp',
+directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+template: `
+ <sm-segment class="raised">
+    Hello
+ </sm-segment>
+ `
+})
+export class DemoComponent {}
 ```
+
         
 ## Development
 ```bash
@@ -64,11 +61,14 @@ cd ngSemantic
 # install dependencies
 npm install
 
-# build local files
-npm run build
+# compile and build bundle files
+npm run bundle
 
-# local development server
-npm run demo
+# compile demo project
+npm demo:build
+
+# run demo project ( localhost:3000 )
+npm demo:serve
 ```
 
 ## Components

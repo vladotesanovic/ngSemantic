@@ -2,12 +2,11 @@
   "name": "ng-semantic",
   "version": "1.0.19",
   "description": "Angular2 building blocks based on Semantic UI",
-  "main": "",
   "scripts": {
-    "build": "rm -rf demo/app && tslint -c ./tslint.json 'src/app/**/*.ts' && tsc -p './src' --rootDir './src' --outDir './demo' && cd src && find . -name '*.html' | cpio -pdm ../demo && npm run copy",
-    "demo": "node server.js",
+    "demo:build": "rm -rf demo/app && tslint -c ./tslint.json 'src/app/**/*.ts' && tsc -p './src' --rootDir './src' --outDir './demo' && cd src && find . -name '*.html' | cpio -pdm ../demo",
+    "demo:serve": "node server.js",
     "live": "tsc -w -p './src' --rootDir './src' --outDir './demo'",
-    "copy": "tsc && rm -rf demo/vendor/ng-semantic/* && cp -f semantic.js demo/vendor/ng-semantic && cp -f semantic.d.ts demo/vendor/ng-semantic && cp -rfp ng-semantic demo/vendor/ng-semantic"
+    "bundle": "tsc && node bundle.js"
   },
   "repository": {
     "type": "git",
@@ -26,19 +25,21 @@
   "bugs": {
     "url": "https://github.com/vladotesanovic/ngSemantic/issues"
   },
-  "typings": "./semantic.d.ts",
+  "typings": "./ng-semantic.d.ts",
   "homepage": "https://ng-semantic.herokuapp.com/",
   "license": "MIT",
   "devDependencies": {
-    "systemjs": "0.19.25",
+    "angular2": "^2.0.0-beta.14",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.35.0",
+    "ng2-prism": "^2.2.2",
     "reflect-metadata": "0.1.2",
-    "tslint": "^3.2.1",
-    "typings": "^0.6.8",
-    "angular2": "2.0.0-beta.13",
     "rxjs": "5.0.0-beta.2",
+    "systemjs": "0.19.25",
+    "systemjs-builder": "^0.15.14",
+    "tslint": "^3.7.1",
     "typescript": "^1.8.0",
+    "typings": "^0.6.8",
     "zone.js": "0.6.6"
   }
 }

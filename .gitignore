@@ -1,5 +1,7 @@
 node_modules
 src/app/**/*.js
 ng-semantic/**/*.js
-/semantic.js
+/ng-semantic.js
 .idea
+npm-debug.log
+bundles

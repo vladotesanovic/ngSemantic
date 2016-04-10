@@ -1,5 +1,5 @@
 import { Component } from "angular2/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic/semantic";
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { DataServices } from "../../services/data";
 
 @Component({
