@@ -1,0 +1,45 @@
+<div class="ui masthead vertical segment">
+    <div class="ui container">
+        <h1>Getting Started</h1>
+        <p>Angular2 building blocks based on Semantic UI</p>
+        <ul class="">
+            <li class="item">Angular 2 <a href="https://angular.io/" target="_blank">angular.io</a></li>
+            <li class="item">Semantic UI <a href="http://semantic-ui.com/" target="_blank">semantic-ui.com</a></li>
+            <li class="item"><b>GitHub repository</b> <a href="https://github.com/vladotesanovic/ngSemantic">https://github.com/vladotesanovic/ngSemantic</a> ( If you like it, give it a star <i class="icon star"></i> )</li>
+        </ul>
+    </div>
+</div>
+<div class="main ui container">
+    <h2 class="header">Installation</h2>
+    <sm-segment class="raised">
+        $ npm install ng-semantic --save
+    </sm-segment>
+    <p></p>
+    <p>In your index.html ( entry file )</p>
+    <sm-segment class="raised">
+        &lt;script src=&quot;node_modules/ng-semantic/bundles/ng-semantic.min.js&quot;&gt;&lt;/script&gt;
+    </sm-segment>
+    <p></p>
+    <p>Semantic css and js ( with jQuery are required )</p>
+    <sm-segment class="raised">
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; src=&quot;/path/to/semantic.min.css&quot;&gt;&lt;/link&gt;<br/>
+        &lt;script src=&quot;/path/to/jquery-2.1.4.min.js&quot;&gt;&lt;/script&gt;<br/>
+        &lt;script src=&quot;/path/to/semantic.min.js&quot;&gt;&lt;/script&gt;
+    </sm-segment>
+
+    <p></p>
+    <p>Import in your project</p>
+    <sm-segment class="raised">
+        import {Component} from 'angular2/core';<br/>
+        import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";<br/><br/>
+
+        @Component({<br/>
+        selector: 'demo-cmp',<br/>
+        directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],<br/>
+        ...
+    </sm-segment>
+    <h2>Starter project</h2>
+    <p>SystemJS: <i class="icon external"></i> <a href="https://github.com/vladotesanovic/angular2-express-starter" target="_blank">Express app with included ng-semantic</a></p>
+    <h2>Contribute</h2>
+    <p>ToDo</p>
+</div>
