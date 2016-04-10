@@ -1,8 +1,10 @@
 before_script:
   - npm install typescript@1.8.0 -g
-  - npm install tslint@3.3.0 -g
-  - npm install tsd -g
+  - npm install tslint@3.7.1 -g
+  - npm install typings -g
   - npm install angular2
   - npm install reflect-metadata@0.1.2
   - npm install rxjs@5.0.0-beta.2
+  - npm install rxjs@5.0.0-beta.2
+  - npm install ng2-prism
 script: tslint -c tslint.json 'src/app/**/*.ts' && tsc -p './src'

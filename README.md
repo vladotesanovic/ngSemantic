@@ -25,15 +25,15 @@ npm install ng-semantic --save
 Semantic UI ( minified versions of css and js ) must be loaded in index.html
 
 ```html
-<link rel="stylesheet" type="text/css" href="path/to/semantic.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" />
 
-<script src="path/to/jquery-2.1.4.min.js"></script>
-<script src="path/to/semantic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
 
 <!-- Add this after Angular2 bundles -->
 <script src="node_modules/ng-semantic/bundles/ng-semantic.min.js"></script>
 ```
-
+ 
 Import in your your project with:
 
 ```javascript
@@ -52,7 +52,6 @@ template: `
 export class DemoComponent {}
 ```
 
-        
 ## Development
 ```bash
 git clone https://github.com/vladotesanovic/ngSemantic.git
@@ -65,10 +64,10 @@ npm install
 npm run bundle
 
 # compile demo project
-npm demo:build
+npm run demo:build
 
 # run demo project ( localhost:3000 )
-npm demo:serve
+npm run demo:serve
 ```
 
 ## Components
