@@ -1,14 +1,16 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     selector : "card",
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Card</h1>
-        <p>Semantic UI card view <i class="icon external"></i> 
+        <p>Semantic UI Card view <i class="icon external"></i> 
         <a href="http://semantic-ui.com/views/card.html" target="_blank">Semantic UI Card</a></p>
     </div>
 </div>
@@ -27,16 +29,12 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
     </sm-card>
     
     <h4 class="ui header">Code</h4>
- <div class="ui form">
-        <div class="field">
-<textarea rows="6" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
+<codeblock markup>
+&lt;sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
     <conntent>...</conntent>
     <extra>...</extra>
-</sm-card>
-</textarea>
-        </div>
-      </div>
+&lt;/sm-card>
+</codeblock>
 </div>
 `
 })

@@ -1,16 +1,18 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { MessageService } from "../../services/message";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-  directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+  directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
   providers: [MessageService],
   selector: "message",
   template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
 	<h1>Message</h1>
-	<p>Semantic UI message element <i class="icon external"></i>
+	<p>Semantic UI Message element <i class="icon external"></i>
 	<a href="http://semantic-ui.com/collections/message.html" target="_blank">Semantic UI Message</a></p>
     </div>
 </div>
@@ -34,28 +36,17 @@ import { MessageService } from "../../services/message";
     </sm-button>
 
     <h4 class="ui header">Code</h4>
- <div class="ui form">
-	<div class="field">
-
-<textarea rows="3" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-message *ngFor="#message of messages" class="ui message { {message.type} }"
-    [ngClass]="{ icon: message.icon}" [icon]="message.icon">{ {message.text} }</sm-message>
-</textarea>
-	</div>
-      </div>
-
-       <br/><br/>
-	Page source: <a target="_blank"
-	href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/message.ts">
-	https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/message.ts
-      </a>
+<codeblock markup>
+&lt;sm-message *ngFor="#message of messages" class="ui message { {message.type} }"
+    [ngClass]="{ icon: message.icon}" [icon]="message.icon">{ {message.text} }&lt;/sm-message>
+</codeblock>
 </div>
 `
 })
 
 export class MessageComponent {
 
-  messages: Array<string> = new Array<string>();
+  messages: Array<string> = [];
   duration: number;
   private LENGTH: number = 5000;
 

@@ -1,14 +1,16 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     selector: "progress-bar",
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Progress</h1>
-        <p>Semantic UI progress module <i class="icon external"></i>
+        <p>Semantic UI Progress module <i class="icon external"></i>
         <a href="http://semantic-ui.com/modules/progress.html" target="_blank">Semantic UI Progress</a></p>
     </div>
 </div>
@@ -19,20 +21,10 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
     <sm-progress class="warning" [progress]="percent"></sm-progress>
     
     <h4 class="ui header">Code</h4>
-    <div class="ui form">
-        <div class="field">
-          <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-progress [progress]="percent"></sm-progress>
-<sm-progress class="warning" [progress]="percent"></sm-progress>
-          </textarea>
-        </div>
-      </div>
-      
-      <br/><br/>
-      Page source: <a target="_blank" 
-      href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/progress.ts">
-        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/progress.ts
-      </a>
+        <codeblock markup>
+&lt;sm-progress [progress]="percent">&lt;/sm-progress>
+&lt;sm-progress class="warning" [progress]="percent">&lt;/sm-progress>
+    </codeblock>
 </div>
 `
 })

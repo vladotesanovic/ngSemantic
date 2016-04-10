@@ -1,14 +1,16 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     selector : "modal",
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Modal</h1>
-        <p>Semantic UI modal module <i class="icon external"></i> 
+        <p>Semantic UI Modal module <i class="icon external"></i> 
         <a href="http://semantic-ui.com/modules/modal.html" target="_blank">Semantic UI Modal</a></p>
     </div>
 </div>
@@ -25,14 +27,10 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
     </sm-modal>
     
     <h4 class="ui header">Code</h4>
- <div class="ui form">
-        <div class="field">
-<textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<button class="ui button green" [sm-dir-modal]="{selector: 'my-modal'}">Click me</button>
-<sm-modal selector="my-modal" title="Hello from Modal" class="basic">...</sm-modal>
-</textarea>
-        </div>
-      </div>
+<codeblock markup>
+&lt;button class="ui button green" [sm-dir-modal]="{selector: 'my-modal'}">Click me&lt;/button>
+&lt;sm-modal selector="my-modal" title="Hello from Modal" class="basic">...&lt;/sm-modal>
+</codeblock>
 </div>
 `
 })

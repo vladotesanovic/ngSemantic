@@ -1,14 +1,16 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     selector : "tab",
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Tab</h1>
-        <p>Semantic UI tab module <i class="icon external"></i> 
+        <p>Semantic UI Tab module <i class="icon external"></i> 
         <a href="http://semantic-ui.com/modules/tab.html" target="_blank">Semantic UI Tab</a></p>
     </div>
 </div>
@@ -37,23 +39,13 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 </sm-tab>
       </sm-tabs>
     <h4 class="ui header">Code</h4>
-    <codeblock>
-  def my_new_method
-    p "So Impressive!"
-  end
-</codeblock>
- <div class="ui form">
-        <div class="field">
-<textarea rows="6" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-tabs>
+    <codeblock markup>
+&lt;sm-tabs>
   <sm-tab title="Hello" class="ui tab bottom attached segment active" data-tab="first">text...</sm-tab>
   <sm-tab title="About" class="ui tab bottom attached segment" data-tab="second">text..</sm-tab>
-</sm-tabs>
-</textarea>
-        </div>
-      </div>
+&lt;/sm-tabs>
+    </codeblock>
 </div>
 `
 })
-
 export class TabComponent {}

@@ -1,13 +1,16 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
+
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     selector: "dimmer",
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
         <h1>Dimmer</h1>
-        <p>Semantic UI dimmer module <i class="icon external"></i>
+        <p>Semantic UI Dimmer module <i class="icon external"></i>
         <a href="http://semantic-ui.com/modules/dimmer.html" target="_blank">Semantic UI Dimmer</a></p>
     </div>
 </div>
@@ -26,21 +29,18 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
     <sm-button sm-dir-dimmer="page" class="primary">Page dimmer</sm-button>
     
     <h4 class="ui header">Code</h4>
-    <div class="ui form">
-        <div class="field">
-          <textarea rows="5" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-dimmer selector="page">
-        ...
-</sm-dimmer>
-<sm-button sm-dir-dimmer="page" class="primary">Page dimmer</sm-button>
-          </textarea>
-        </div>
-      </div>
-      
-      <br/><br/>
-      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/dimmer.ts">
-        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/dimmer.ts
-      </a>
+    <codeblock markup>
+&lt;sm-dimmer selector="page">
+    <div class="center">
+        <h2 class="ui inverted icon header">
+            <i class="mail icon"></i>
+            Dimmer Message
+            <div class="sub header">Dimmer sub-header</div>
+        </h2>
+    </div>
+&lt;/sm-dimmer>
+&lt;sm-button sm-dir-dimmer="page" class="primary">Page dimmer&lt;/sm-button>
+</codeblock>
 </div>
 `
 })

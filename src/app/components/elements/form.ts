@@ -1,9 +1,11 @@
 import { Component } from "angular2/core";
 import { Control, Validators, ControlGroup, FormBuilder } from "angular2/common";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     selector: "test-form",
     template: `
 	<div class="ui masthead vertical segment">
@@ -29,42 +31,32 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 	<sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login</sm-button>
     </form>
     <h4 class="ui header">Code</h4>
- <div class="ui form">
-	<div class="field">
-<textarea rows="14" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<form sm-form class="ui form" [ngFormModel]="form">
-    <sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
+<codeblock markup>
+&lt;form sm-form class="ui form" [ngFormModel]="form">
+    &lt;sm-loader [complete]="!formSubmited" class="inverted" text="Loading...">&lt;/sm-loader>
     <div class="field">
-	<sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
+	    &lt;sm-input label="Name" [control]="nameControl" placeholder="Enter name...">&lt;/sm-input>
     </div>
     <div class="field">
-	<sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
+	    &lt;sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail...">&lt;/sm-input>
     </div>
     <div class="field">
-	<sm-checkbox label="I agree to the Terms and Conditions" [control]="agreeControl"></sm-checkbox>
+	    &lt;sm-checkbox label="I agree to the Terms and Conditions" [control]="agreeControl">&lt;/sm-checkbox>
     </div>
-    <sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login</sm-button>
+    &lt;sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login&lt;/sm-button>
+&lt;/form>
+</codeblock>
+
+<h4 class="ui header">Demo feedback</h4>
+<form sm-form class="ui form" [ngFormModel]="formFeedback">
+    <div class="field">
+        <sm-input label="Name" [control]="nameFControl" placeholder="Enter name..."></sm-input>
+    </div>
+    <div class="field">
+        <sm-textarea label="Name" rows="10" [control]="textControl"></sm-textarea>
+    </div>
+    <sm-button (click)="send()" class="primary">Send</sm-button>
 </form>
-</textarea>
-	</div>
-      </div>
-
-      <h4 class="ui header">Demo feedback</h4>
-      <form sm-form class="ui form" [ngFormModel]="formFeedback">
-	<div class="field">
-	    <sm-input label="Name" [control]="nameFControl" placeholder="Enter name..."></sm-input>
-	</div>
-	<div class="field">
-	    <sm-textarea label="Name" rows="10" [control]="textControl"></sm-textarea>
-	</div>
-	<sm-button (click)="send()" class="primary">Send</sm-button>
-      </form>
-
-
-      <br/><br/>
-      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/form.ts">
-	https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/form.ts
-      </a>
 </div>
 `
 })
@@ -82,7 +74,6 @@ export class FormComponent {
 
     constructor(fb: FormBuilder) {
 	this.form = fb.group({
-//            agreeControl: this.agreeControl,
 	    emailControl: this.emailControl,
 	    nameControl: this.nameControl,
 	});
@@ -94,11 +85,11 @@ export class FormComponent {
     }
 
     checkboxValidator(control: Control) {
-	let value = (typeof control.value === "boolean") ? control.value : false;
-	return (value) ? "" : "yes";
+	    let value = (typeof control.value === "boolean") ? control.value : false;
+	    return (value) ? "" : "yes";
     }
 
     submit() {
-	this.formSubmited = true;
+	    this.formSubmited = true;
     }
 }

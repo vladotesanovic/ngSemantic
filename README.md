@@ -31,10 +31,10 @@ Semantic UI ( minified versions of css and js ) must be loaded in index.html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
 
 <!-- Add this after Angular2 bundles -->
-<script src="node_modules/ng-semantic/bundles/ng-semantic.min.js"></script>
+<script src="node_modules/ng-semantic/bundles/ng-semantic.js"></script>
 ```
  
-Import in your your project with:
+## Use
 
 ```javascript
 import {Component} from 'angular2/core';

@@ -1,8 +1,10 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     selector : "test-sidebar",
     template : `
 	<div class="ui masthead vertical segment">
@@ -32,11 +34,9 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
     </sm-sidebar>
 
     <h4 class="ui header">Code</h4>
-    <div class="ui form">
-        <div class="field">
-<textarea rows="14" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-button class="positive" sm-dir-sidebar="left">Lunch left sidebar</sm-button>
-<sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
+        <codeblock markup>
+&lt;sm-button class="positive" sm-dir-sidebar="left">Lunch left sidebar&lt;/sm-button>
+&lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
     <a class="item">
         <i class="home icon"></i> Home
     </a>
@@ -46,10 +46,8 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
     <a class="item">
         <i class="smile icon"></i> Friends
     </a>
-</sm-sidebar>
-</textarea>
-        </div>
-     </div>
+&lt;/sm-sidebar>
+    </codeblock>
      
      <sm-sidebar class="bottom inverted nine item labeled icon sidebar menu">        
          <a class="item">

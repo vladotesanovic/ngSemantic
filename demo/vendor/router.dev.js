@@ -516,6 +516,11 @@ System.register("angular2/src/router/url_parser", ["angular2/src/facade/collecti
     var match = lang_1.RegExpWrapper.firstMatch(SEGMENT_RE, str);
     return lang_1.isPresent(match) ? match[0] : '';
   }
+  var QUERY_PARAM_VALUE_RE = lang_1.RegExpWrapper.create('^[^\\(\\)\\?;&#]+');
+  function matchUrlQueryParamValue(str) {
+    var match = lang_1.RegExpWrapper.firstMatch(QUERY_PARAM_VALUE_RE, str);
+    return lang_1.isPresent(match) ? match[0] : '';
+  }
   var UrlParser = (function() {
     function UrlParser() {}
     UrlParser.prototype.peekStartsWith = function(str) {
@@ -585,10 +590,10 @@ System.register("angular2/src/router/url_parser", ["angular2/src/facade/collecti
     UrlParser.prototype.parseQueryParams = function() {
       var params = {};
       this.capture('?');
-      this.parseParam(params);
+      this.parseQueryParam(params);
       while (this._remaining.length > 0 && this.peekStartsWith('&')) {
         this.capture('&');
-        this.parseParam(params);
+        this.parseQueryParam(params);
       }
       return params;
     };
@@ -610,6 +615,23 @@ System.register("angular2/src/router/url_parser", ["angular2/src/facade/collecti
       if (this.peekStartsWith('=')) {
         this.capture('=');
         var valueMatch = matchUrlSegment(this._remaining);
+        if (lang_1.isPresent(valueMatch)) {
+          value = valueMatch;
+          this.capture(value);
+        }
+      }
+      params[key] = value;
+    };
+    UrlParser.prototype.parseQueryParam = function(params) {
+      var key = matchUrlSegment(this._remaining);
+      if (lang_1.isBlank(key)) {
+        return ;
+      }
+      this.capture(key);
+      var value = true;
+      if (this.peekStartsWith('=')) {
+        this.capture('=');
+        var valueMatch = matchUrlQueryParamValue(this._remaining);
         if (lang_1.isPresent(valueMatch)) {
           value = valueMatch;
           this.capture(value);
