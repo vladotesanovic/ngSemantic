@@ -1,6 +1,6 @@
 {
   "name": "ng-semantic",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "Angular2 building blocks based on Semantic UI",
   "scripts": {
     "demo:build": "rm -rf demo/app && tslint -c ./tslint.json 'src/app/**/*.ts' && tsc -p './src' --rootDir './src' --outDir './demo' && cd src && find . -name '*.html' | cpio -pdm ../demo",
