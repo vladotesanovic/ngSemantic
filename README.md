@@ -72,6 +72,7 @@ npm run demo:serve
 
 ## Components
 
+  - sm-accordination
   - sm-button
   - sm-loader
   - sm-header

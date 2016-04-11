@@ -22,6 +22,7 @@ import { Markup, Typescript, Bash } from "ng2-prism/languages";
 <div class="main ui container">
     <h2 class="header">Installation</h2>
 <sm-segment class="raised">
+In terminal: 
 <codeblock bash>
 $ npm install ng-semantic --save
 </codeblock>
@@ -42,7 +43,7 @@ $ npm install ng-semantic --save
 src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css&quot;&gt;&lt;/link&gt;
 
 <!-- JS -->
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.j&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js&quot;&gt;&lt;/script&gt;
 </codeblock>
 </sm-segment>
@@ -55,9 +56,9 @@ import {Component} from 'angular2/core';
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 
 @Component({
-selector: 'demo-cmp',
-directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
-template: '&lt;sm-segment class="raised">Hello&lt;/sm-segment>'
+    selector: 'demo-cmp',
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    template: '&lt;sm-segment class="raised">Hello&lt;/sm-segment>'
 })
 export class DemoComponent {}
     </codeblock>
