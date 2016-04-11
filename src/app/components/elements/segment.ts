@@ -1,9 +1,11 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { DataServices } from "../../services/data";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     providers: [DataServices],
     selector : "segment",
     template : `
@@ -21,14 +23,9 @@ import { DataServices } from "../../services/data";
     Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</sm-segment>
 
     <h4 class="ui header">Code</h4>
- <div class="ui form">
-	<div class="field">
-<textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-segment class="raised">...</sm-segment>
-</textarea>
-	</div>
-      </div>
-
+    <codeblock markup>
+&lt;sm-segment class="raised">...&lt;/sm-segment>
+</codeblock>
       <h4 class="ui header">Demo stacked</h4>
     <sm-segment class="stacked">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
     Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
@@ -74,12 +71,6 @@ import { DataServices } from "../../services/data";
 	    Pellentesque habitant morbi tristique senectus et netus et malesuada.
 	</p>
     </sm-segment>
-
-    <br/><br/>
-      Page source: <a target="_blank"
-      href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/segment.ts">
-	https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/segment.ts
-      </a>
 </div>
 `
 })

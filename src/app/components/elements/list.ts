@@ -1,16 +1,18 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { DataServices } from "../../services/data";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     providers: [DataServices],
     selector: "list",
     template: `
     <div class="ui masthead vertical segment">
         <div class="ui container">
             <h1>List</h1>
-            <p>Semantic UI list element <i class="icon external"></i>
+            <p>Semantic UI List element <i class="icon external"></i>
             <a href="http://semantic-ui.com/elements/list.html" target="_blank">Semantic UI List</a></p>
         </div>
     </div>
@@ -21,15 +23,11 @@ import { DataServices } from "../../services/data";
         </sm-list>
 
         <h4 class="ui header">Code</h4>
-        <div class="ui form">
-            <div class="field">
-                <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-list class="ui list">
-    <sm-item *ngFor="#item of flatArray" class="item">{ {item} }</sm-item>
-</sm-list>
-                </textarea>
-            </div>
-        </div>
+            <codeblock markup>
+&lt;sm-list class="ui list">
+    &lt;sm-item *ngFor="#item of flatArray" class="item">{{item}}&lt;/sm-item>
+&lt;/sm-list>
+</codeblock>
 
         <h4 class="ui header">Demo Bulleted</h4>
         <sm-list class="ui list bulleted">
@@ -37,45 +35,33 @@ import { DataServices } from "../../services/data";
         </sm-list>
 
         <h4 class="ui header">Code</h4>
-        <div class="ui form">
-            <div class="field">
-                <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-list class="ui list bulleted">
-    <sm-item *ngFor="#item of flatArray" class="item">{ {item} }</sm-item>
-</sm-list>
-                </textarea>
-            </div>
-        </div>
+            <codeblock markup>
+&lt;sm-list class="ui list bulleted">
+    &lt;sm-item *ngFor="#item of flatArray" class="item">{{item}}&lt;/sm-item>
+&lt;/sm-list>
+</codeblock>
 
         <h4 class="ui header">Demo Ordered</h4>
         <sm-list class="ui list ordered">
             <sm-item *ngFor="#item of flatArray | async" class="item">{{item}}</sm-item>
         </sm-list>
         <h4 class="ui header">Code</h4>
-        <div class="ui form">
-            <div class="field">
-                <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-list class="ui list ordered">
-    <sm-item *ngFor="#item of flatArray" class="item">{ {item} }</sm-item>
-</sm-list>
-                </textarea>
-            </div>
-        </div>
+            <codeblock markup>
+&lt;sm-list class="ui list ordered">
+    &lt;sm-item *ngFor="#item of flatArray" class="item">{{item}}&lt;/sm-item>
+&lt;/sm-list>
+</codeblock>
 
         <h4 class="ui header">Demo avatar</h4>
         <sm-list class="ui list">
             <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
         </sm-list>
         <h4 class="ui header">Code</h4>
-        <div class="ui form">
-            <div class="field">
-                <textarea rows="5" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-list class="ui list">
-    <sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{ {item.date} }</sm-item>
-</sm-list>
-                </textarea>
-            </div>
-        </div>
+            <codeblock markup>
+&lt;sm-list class="ui list">
+    &lt;sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{ {item.date} }&lt;/sm-item>
+&lt;/sm-list>
+</codeblock>
         <div class="ui divider"></div>
 
         <h4 class="ui header">Demo avatar horizontal</h4>
@@ -94,11 +80,6 @@ import { DataServices } from "../../services/data";
         <sm-list class="ui list animated">
             <a sm-item *ngFor="#item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
         </sm-list>
-
-        <br/><br/>
-        Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/list.ts">
-        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/list.ts
-      </a>
     </div>
     `
 })

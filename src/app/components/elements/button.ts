@@ -1,14 +1,16 @@
 import { Component } from "angular2/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { Codeblock } from "ng2-prism/codeblock";
+import { Markup } from "ng2-prism/languages";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, Codeblock, Markup],
     selector: "ui-button",
     template: `
     <div class="ui masthead vertical segment">
         <div class="ui container">
             <h1>Button</h1>
-            <p>Semantic UI button element <i class="icon external"></i>
+            <p>Semantic UI Button element <i class="icon external"></i>
             <a href="http://semantic-ui.com/elements/button.html" target="_blank">Semantic UI Button</a></p>
         </div>
     </div>
@@ -16,18 +18,14 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
         <h4 class="ui header">Demo</h4>
         <sm-button class="positive" (click)="clickMe($event)" icon="thumbs up">Click Me</sm-button>
         <h3>{{isClicked}}</h3>
-        <h4 class="ui header">Code</h4>
-        <div class="ui form">
-            <div class="field">
-                <textarea rows="2" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-button class="positive" (click)="clickMe($event)" icon="thumbs up">Click Me</sm-button>
-                </textarea>
-            </div>
-        </div>
         <p>
             Available icons in Semantic UI: 
             <a href="http://semantic-ui.com/elements/icon.html" target="_blank">http://semantic-ui.com/elements/icon.html</a>
         </p>
+        <h4 class="ui header">Code</h4>
+            <codeblock markup>
+&lt;sm-button class="positive" (click)="clickMe($event)" icon="thumbs up">Click Me&lt;/sm-button>
+</codeblock>
         
         <h4 class="ui header">Buttons</h4>
         <sm-button class="" icon="">Normal</sm-button>
@@ -83,12 +81,7 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
             
         <h4 class="ui header">Fluid button</h4>
         <sm-button class="fluid" icon="">Fluid ( full width ) button</sm-button>
-        
-        <br/><br/>
-      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/button.ts">
-        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/button.ts
-      </a> 
-      
+              
     </div>
     `
 })

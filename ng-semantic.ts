@@ -15,6 +15,7 @@ import { SemanticTabs, SemanticTab } from "./ng-semantic/tab/tab";
 import { SemanticFlag } from "./ng-semantic/flag/flag";
 import { SemanticProgress } from "./ng-semantic/progress/progress";
 import { SemanticDimmer, SMDimmerDirective } from "./ng-semantic/dimmer/dimmer";
+import { SemanticAccordination, SemanticAccordinationItem } from "./ng-semantic/accordination/accordination";
 
 export * from "./ng-semantic/menu/menu";
 export *  from "./ng-semantic/message/message";
@@ -33,6 +34,7 @@ export *  from "./ng-semantic/tab/tab";
 export *  from "./ng-semantic/flag/flag";
 export *  from "./ng-semantic/progress/progress";
 export *  from "./ng-semantic/dimmer/dimmer";
+export *  from "./ng-semantic/accordination/accordination";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticCard,
@@ -54,7 +56,9 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticTabs,
 	SemanticTab,
 	SemanticButton,
-	SemanticLoader
+	SemanticLoader,
+	SemanticAccordination,
+	SemanticAccordinationItem
 ];
 
 export let SEMANTIC_DIRECTIVES: Array<any> = [

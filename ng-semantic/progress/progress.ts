@@ -1,4 +1,4 @@
-import {Component, Input, ChangeDetectionStrategy} from "angular2/core";
+import {Component, Input, ChangeDetectionStrategy, ViewEncapsulation} from "angular2/core";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,

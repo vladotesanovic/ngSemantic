@@ -17,7 +17,7 @@ import { Component, Input, ChangeDetectionStrategy } from "angular2/core";
       <span class="date">{{subtitle}}</span>
     </div>
     <div class="description">
-      <ng-content select="conntent"></ng-content>
+      <ng-content select="content"></ng-content>
     </div>
   </div>
   <div class="extra content">

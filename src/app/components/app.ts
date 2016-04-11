@@ -17,6 +17,7 @@ import { SidebarComponent } from "./elements/sidebar";
 import { DimmerComponent } from "./elements/dimmer";
 import { ProgressComponent } from "./elements/progress";
 import { FlagComponent } from "./elements/flag";
+import { AccordinationComponent } from "./elements/accordination";
 
 @Component({
     	directives: [ROUTER_DIRECTIVES],
@@ -26,6 +27,7 @@ import { FlagComponent } from "./elements/flag";
 @RouteConfig([
 	{ component: HomeComponent, path: "/", useAsDefault: true },
 	{ component: LoaderComponent, path: "/elements/loader" },
+	{ component: AccordinationComponent, path: "/elements/accordination" },
 	{ component: ListComponent, path: "/elements/list" },
 	{ component: FormComponent, path: "/elements/form" },
 	{ component: CardComponent, path: "/elements/card" },

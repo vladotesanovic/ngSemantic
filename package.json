@@ -6,7 +6,7 @@
     "demo:build": "rm -rf demo/app && tslint -c ./tslint.json 'src/app/**/*.ts' && tsc -p './src' --rootDir './src' --outDir './demo' && cd src && find . -name '*.html' | cpio -pdm ../demo",
     "demo:serve": "node server.js",
     "live": "tsc -w -p './src' --rootDir './src' --outDir './demo'",
-    "bundle": "tsc && node bundle.js"
+    "bundle": "tsc && node bundle.js && cp ./bundles/ng-semantic.js ./demo/vendor"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,6 @@
     "tslint": "^3.7.1",
     "typescript": "^1.8.0",
     "typings": "^0.6.8",
-    "zone.js": "0.6.6"
+    "zone.js": "^0.6.10"
   }
 }

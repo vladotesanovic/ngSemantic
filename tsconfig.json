@@ -30,7 +30,8 @@
         "ng-semantic/sidebar/sidebar.ts",
         "ng-semantic/tab/tab.ts",
         "ng-semantic/flag/flag.ts",
-        "ng-semantic/progress/progress.ts"
+        "ng-semantic/progress/progress.ts",
+        "ng-semantic/accordination/accordination.ts"
     ],
     "exclude": [
         "./node_modules",

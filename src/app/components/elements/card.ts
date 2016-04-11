@@ -17,9 +17,9 @@ import { Markup } from "ng2-prism/languages";
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
     <sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
-        <conntent>
+        <content>
             Kristy is an art director living in New York.
-        </conntent>
+        </content>
         <extra>
             <a>
                 <i class="user icon"></i>
@@ -31,7 +31,7 @@ import { Markup } from "ng2-prism/languages";
     <h4 class="ui header">Code</h4>
 <codeblock markup>
 &lt;sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
-    <conntent>...</conntent>
+    <content>...</content>
     <extra>...</extra>
 &lt;/sm-card>
 </codeblock>
