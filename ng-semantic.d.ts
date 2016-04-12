@@ -15,6 +15,6 @@ export * from "./ng-semantic/tab/tab";
 export * from "./ng-semantic/flag/flag";
 export * from "./ng-semantic/progress/progress";
 export * from "./ng-semantic/dimmer/dimmer";
-export * from "./ng-semantic/accordination/accordination";
+export * from "./ng-semantic/accordion/accordion";
 export declare let SEMANTIC_COMPONENTS: Array<any>;
 export declare let SEMANTIC_DIRECTIVES: Array<any>;

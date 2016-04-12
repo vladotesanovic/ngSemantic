@@ -17,7 +17,7 @@ import { SidebarComponent } from "./elements/sidebar";
 import { DimmerComponent } from "./elements/dimmer";
 import { ProgressComponent } from "./elements/progress";
 import { FlagComponent } from "./elements/flag";
-import { AccordinationComponent } from "./elements/accordination";
+import { AccordionComponent } from "./elements/accordion";
 
 @Component({
     	directives: [ROUTER_DIRECTIVES],
@@ -27,7 +27,7 @@ import { AccordinationComponent } from "./elements/accordination";
 @RouteConfig([
 	{ component: HomeComponent, path: "/", useAsDefault: true },
 	{ component: LoaderComponent, path: "/elements/loader" },
-	{ component: AccordinationComponent, path: "/elements/accordination" },
+	{ component: AccordionComponent, path: "/elements/accordion" },
 	{ component: ListComponent, path: "/elements/list" },
 	{ component: FormComponent, path: "/elements/form" },
 	{ component: CardComponent, path: "/elements/card" },
@@ -46,6 +46,13 @@ import { AccordinationComponent } from "./elements/accordination";
 
 export class AppComponent implements AfterViewInit {
 	ngAfterViewInit() {
-		jQuery("#page .full.height").css("height", jQuery(window).height() + "px");
+
+		const _resize = (): any => {
+			jQuery("#page .full.height").css("height", jQuery(window).height() + "px");
+		};
+		_resize();
+		window.onresize = function(event): any {
+			_resize();
+		};
 	}
 }

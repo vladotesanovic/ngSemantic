@@ -7,7 +7,7 @@ declare var jQuery: any;
   template: `<ng-content></ng-content>`
 })
 export class SemanticTab {
-  @Input("tab") dataDatab: string;
+  @Input("tab") dataTab: string;
   @Input("title") title: string;
   @Input("class") class: string;
 }
@@ -15,7 +15,7 @@ export class SemanticTab {
 @Component({
   selector: "sm-tabs",
   template: `<div class="ui top attached tabular menu">
-  <a class="item" [ngClass]="{active: i === 0}" *ngFor="#tab of tabs; #i = index" attr.data-tab="{{tab.dataDatab}}">{{tab.title}}</a>
+  <a class="item" [ngClass]="{active: i === 0}" *ngFor="#tab of tabs; #i = index" attr.data-tab="{{tab.dataTab}}">{{tab.title}}</a>
 </div>
 <ng-content></ng-content>
 `

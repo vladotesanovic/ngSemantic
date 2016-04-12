@@ -6,3 +6,7 @@ server.js
 Procfile
 bundle.js
 node_modules
+typings
+typings.json
+tslint.json
+tsconfig.json

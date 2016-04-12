@@ -20,11 +20,6 @@ import { Markup } from "ng2-prism/languages";
     <sm-progress [progress]="percent"></sm-progress>
     <sm-progress class="warning" [progress]="percent"></sm-progress>
     
-    <sm-segment class="raised">
-        <sm-progress class="top attached" [progress]="percent"></sm-progress>
-        Segment progress
-    </sm-segment>
-    
     <h4 class="ui header">Code</h4>
         <codeblock markup>
 &lt;sm-progress [progress]="percent">&lt;/sm-progress>

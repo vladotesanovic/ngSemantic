@@ -1,6 +1,6 @@
 import { QueryList, AfterViewInit, ElementRef } from "angular2/core";
 export declare class SemanticTab {
-    dataDatab: string;
+    dataTab: string;
     title: string;
     class: string;
 }

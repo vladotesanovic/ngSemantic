@@ -58,7 +58,7 @@ git clone https://github.com/vladotesanovic/ngSemantic.git
 cd ngSemantic
 
 # install dependencies
-npm install
+npm install && npm run typings
 
 # compile and build bundle files
 npm run bundle
@@ -72,7 +72,7 @@ npm run demo:serve
 
 ## Components
 
-  - sm-accordination
+  - sm-accordion
   - sm-button
   - sm-loader
   - sm-header

@@ -660,7 +660,7 @@ System.registerDynamic("ng-semantic/tab/tab", ["angular2/core"], true, function(
   var core_1 = $__require('angular2/core');
   var SemanticTab = (function() {
     function SemanticTab() {}
-    __decorate([core_1.Input("tab"), __metadata('design:type', String)], SemanticTab.prototype, "dataDatab", void 0);
+    __decorate([core_1.Input("tab"), __metadata('design:type', String)], SemanticTab.prototype, "dataTab", void 0);
     __decorate([core_1.Input("title"), __metadata('design:type', String)], SemanticTab.prototype, "title", void 0);
     __decorate([core_1.Input("class"), __metadata('design:type', String)], SemanticTab.prototype, "class", void 0);
     SemanticTab = __decorate([core_1.Component({
@@ -687,7 +687,7 @@ System.registerDynamic("ng-semantic/tab/tab", ["angular2/core"], true, function(
     };
     SemanticTabs = __decorate([core_1.Component({
       selector: "sm-tabs",
-      template: "<div class=\"ui top attached tabular menu\">\n  <a class=\"item\" [ngClass]=\"{active: i === 0}\" *ngFor=\"#tab of tabs; #i = index\" attr.data-tab=\"{{tab.dataDatab}}\">{{tab.title}}</a>\n</div>\n<ng-content></ng-content>\n"
+      template: "<div class=\"ui top attached tabular menu\">\n  <a class=\"item\" [ngClass]=\"{active: i === 0}\" *ngFor=\"#tab of tabs; #i = index\" attr.data-tab=\"{{tab.dataTab}}\">{{tab.title}}</a>\n</div>\n<ng-content></ng-content>\n"
     }), __param(0, core_1.Query(SemanticTab)), __metadata('design:paramtypes', [core_1.QueryList, core_1.ElementRef])], SemanticTabs);
     return SemanticTabs;
   }());
@@ -834,7 +834,7 @@ System.registerDynamic("ng-semantic/dimmer/dimmer", ["angular2/core"], true, fun
   return module.exports;
 });
 
-System.registerDynamic("ng-semantic/accordination/accordination", ["angular2/core"], true, function($__require, exports, module) {
+System.registerDynamic("ng-semantic/accordion/accordion", ["angular2/core"], true, function($__require, exports, module) {
   "use strict";
   ;
   var define,
@@ -857,42 +857,52 @@ System.registerDynamic("ng-semantic/accordination/accordination", ["angular2/cor
       return Reflect.metadata(k, v);
   };
   var core_1 = $__require('angular2/core');
-  var SMAccordinationDirective = (function() {
-    function SMAccordinationDirective(element) {
+  var SMAccordionDirective = (function() {
+    function SMAccordionDirective(element) {
       this.element = element;
-      jQuery(element.nativeElement).accordion();
     }
-    SMAccordinationDirective = __decorate([core_1.Directive({selector: "[sm-dir-accordination]"}), __metadata('design:paramtypes', [core_1.ElementRef])], SMAccordinationDirective);
-    return SMAccordinationDirective;
+    SMAccordionDirective.prototype.ngOnInit = function() {
+      var options = {};
+      if (typeof this.data === "object") {
+        options = this.data;
+      }
+      jQuery(this.element.nativeElement).accordion(options);
+    };
+    SMAccordionDirective = __decorate([core_1.Directive({
+      inputs: ["data: sm-dir-accordion"],
+      selector: "[sm-dir-accordion]"
+    }), __metadata('design:paramtypes', [core_1.ElementRef])], SMAccordionDirective);
+    return SMAccordionDirective;
   }());
-  var SemanticAccordination = (function() {
-    function SemanticAccordination() {}
-    __decorate([core_1.Input("class"), __metadata('design:type', String)], SemanticAccordination.prototype, "class", void 0);
-    SemanticAccordination = __decorate([core_1.Component({
+  var SemanticAccordion = (function() {
+    function SemanticAccordion() {}
+    __decorate([core_1.Input("class"), __metadata('design:type', String)], SemanticAccordion.prototype, "class", void 0);
+    __decorate([core_1.Input("options"), __metadata('design:type', String)], SemanticAccordion.prototype, "options", void 0);
+    SemanticAccordion = __decorate([core_1.Component({
       changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-      directives: [SMAccordinationDirective],
-      selector: "sm-accordination",
-      template: "\n<div class=\"ui accordion {{class}}\" sm-dir-accordination>\n    <ng-content></ng-content>\n</div>\n",
-      styles: [".ui.accordion.styled sm-accordination-item:first-child .title { border-top: none !important; }"]
-    }), __metadata('design:paramtypes', [])], SemanticAccordination);
-    return SemanticAccordination;
+      directives: [SMAccordionDirective],
+      selector: "sm-accordion",
+      template: "\n<div class=\"ui accordion {{class}}\" [sm-dir-accordion]=\"options\">\n    <ng-content></ng-content>\n</div>\n",
+      styles: ["sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }"]
+    }), __metadata('design:paramtypes', [])], SemanticAccordion);
+    return SemanticAccordion;
   }());
-  exports.SemanticAccordination = SemanticAccordination;
-  var SemanticAccordinationItem = (function() {
-    function SemanticAccordinationItem() {}
-    __decorate([core_1.Input("title"), __metadata('design:type', String)], SemanticAccordinationItem.prototype, "title", void 0);
-    SemanticAccordinationItem = __decorate([core_1.Component({
+  exports.SemanticAccordion = SemanticAccordion;
+  var SemanticAccordionItem = (function() {
+    function SemanticAccordionItem() {}
+    __decorate([core_1.Input("title"), __metadata('design:type', String)], SemanticAccordionItem.prototype, "title", void 0);
+    SemanticAccordionItem = __decorate([core_1.Component({
       changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-      selector: "sm-accordination-item",
-      template: "\n<div class=\"active title\">\n    <i class=\"dropdown icon\"></i>\n    {{title}}\n  </div>\n  <div class=\"content\">\n    <p><ng-content></ng-content></p>\n  </div>\n"
-    }), __metadata('design:paramtypes', [])], SemanticAccordinationItem);
-    return SemanticAccordinationItem;
+      selector: "sm-accordion-item",
+      template: "\n<div class=\"active title\">\n    <i class=\"dropdown icon\"></i>\n    {{title}}\n</div>\n<div class=\"content\">\n    <p><ng-content></ng-content></p>\n</div>\n"
+    }), __metadata('design:paramtypes', [])], SemanticAccordionItem);
+    return SemanticAccordionItem;
   }());
-  exports.SemanticAccordinationItem = SemanticAccordinationItem;
+  exports.SemanticAccordionItem = SemanticAccordionItem;
   return module.exports;
 });
 
-System.registerDynamic("ng-semantic", ["./ng-semantic/menu/menu", "./ng-semantic/message/message", "./ng-semantic/popup/tooltip", "./ng-semantic/popup/popup", "./ng-semantic/modal/modal", "./ng-semantic/segment/segment", "./ng-semantic/list/list", "./ng-semantic/button/button", "./ng-semantic/item/item", "./ng-semantic/loader/loader", "./ng-semantic/card/card", "./ng-semantic/input/input", "./ng-semantic/sidebar/sidebar", "./ng-semantic/tab/tab", "./ng-semantic/flag/flag", "./ng-semantic/progress/progress", "./ng-semantic/dimmer/dimmer", "./ng-semantic/accordination/accordination"], true, function($__require, exports, module) {
+System.registerDynamic("ng-semantic", ["./ng-semantic/menu/menu", "./ng-semantic/message/message", "./ng-semantic/popup/tooltip", "./ng-semantic/popup/popup", "./ng-semantic/modal/modal", "./ng-semantic/segment/segment", "./ng-semantic/list/list", "./ng-semantic/button/button", "./ng-semantic/item/item", "./ng-semantic/loader/loader", "./ng-semantic/card/card", "./ng-semantic/input/input", "./ng-semantic/sidebar/sidebar", "./ng-semantic/tab/tab", "./ng-semantic/flag/flag", "./ng-semantic/progress/progress", "./ng-semantic/dimmer/dimmer", "./ng-semantic/accordion/accordion"], true, function($__require, exports, module) {
   "use strict";
   ;
   var define,
@@ -920,7 +930,7 @@ System.registerDynamic("ng-semantic", ["./ng-semantic/menu/menu", "./ng-semantic
   var flag_1 = $__require('./ng-semantic/flag/flag');
   var progress_1 = $__require('./ng-semantic/progress/progress');
   var dimmer_1 = $__require('./ng-semantic/dimmer/dimmer');
-  var accordination_1 = $__require('./ng-semantic/accordination/accordination');
+  var accordion_1 = $__require('./ng-semantic/accordion/accordion');
   __export($__require('./ng-semantic/menu/menu'));
   __export($__require('./ng-semantic/message/message'));
   __export($__require('./ng-semantic/popup/tooltip'));
@@ -938,8 +948,8 @@ System.registerDynamic("ng-semantic", ["./ng-semantic/menu/menu", "./ng-semantic
   __export($__require('./ng-semantic/flag/flag'));
   __export($__require('./ng-semantic/progress/progress'));
   __export($__require('./ng-semantic/dimmer/dimmer'));
-  __export($__require('./ng-semantic/accordination/accordination'));
-  exports.SEMANTIC_COMPONENTS = [card_1.SemanticCard, input_1.SemanticInput, input_1.SemanticTextarea, input_1.SemanticCheckbox, input_1.SemanticForm, menu_1.SemanticMenu, message_1.SemanticMessage, segment_1.SemanticSegment, dimmer_1.SemanticDimmer, popup_1.SemanticPopup, list_1.SemanticList, flag_1.SemanticFlag, item_1.SemanticItem, sidebar_1.SemanticSidebar, progress_1.SemanticProgress, modal_1.SemanticModal, tab_1.SemanticTabs, tab_1.SemanticTab, button_1.SemanticButton, loader_1.SemanticLoader, accordination_1.SemanticAccordination, accordination_1.SemanticAccordinationItem];
+  __export($__require('./ng-semantic/accordion/accordion'));
+  exports.SEMANTIC_COMPONENTS = [card_1.SemanticCard, input_1.SemanticInput, input_1.SemanticTextarea, input_1.SemanticCheckbox, input_1.SemanticForm, menu_1.SemanticMenu, message_1.SemanticMessage, segment_1.SemanticSegment, dimmer_1.SemanticDimmer, popup_1.SemanticPopup, list_1.SemanticList, flag_1.SemanticFlag, item_1.SemanticItem, sidebar_1.SemanticSidebar, progress_1.SemanticProgress, modal_1.SemanticModal, tab_1.SemanticTabs, tab_1.SemanticTab, button_1.SemanticButton, loader_1.SemanticLoader, accordion_1.SemanticAccordion, accordion_1.SemanticAccordionItem];
   exports.SEMANTIC_DIRECTIVES = [tooltip_1.SMTooltipDirective, popup_1.SMPopupDirective, modal_1.SMModalDirective, sidebar_1.SMSidebarDirective, dimmer_1.SMDimmerDirective];
   return module.exports;
 });

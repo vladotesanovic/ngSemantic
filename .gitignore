@@ -5,3 +5,4 @@ ng-semantic/**/*.js
 .idea
 npm-debug.log
 bundles
+typings
