@@ -12,6 +12,9 @@
 ## Live demo
 <a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
+##  Angular 2 QuickStart ( rc.1 ) with ngSemantic
+https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
+
 ## Important!
 <ul>
    <li>Angular 2 version: rc.1</li>
