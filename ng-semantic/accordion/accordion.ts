@@ -1,9 +1,9 @@
-import {Component, ChangeDetectionStrategy, Input, Directive, ElementRef, OnInit } from "angular2/core";
+import {Component, ChangeDetectionStrategy, Input, Directive, ElementRef, OnInit, Type } from "@angular/core";
 
 declare var jQuery: any;
 
 /**
- * Implementation of Semantic UI accordination
+ * Implementation of Semantic UI accordion
  *
  * @link http://semantic-ui.com/modules/accordion.html
  */
@@ -33,7 +33,7 @@ class SMAccordionDirective implements OnInit {
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    directives: [SMAccordionDirective],
+    directives: [<Type>SMAccordionDirective],
     selector: "sm-accordion",
     template: `
 <div class="ui accordion {{class}}" [sm-dir-accordion]="options">

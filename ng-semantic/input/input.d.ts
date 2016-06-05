@@ -1,4 +1,4 @@
-import { Control } from "angular2/common";
+import { Control } from "@angular/common";
 export declare class SemanticInput {
     control: Control;
     label: string;

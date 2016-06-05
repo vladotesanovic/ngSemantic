@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, Directive } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy, Directive } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -18,7 +18,7 @@ export class SemanticDimmer {
 /**
  * Directive which trigger sidebar.
  *
- * @link semantic-ui.com/modules/dimmer.html
+ * @link http://semantic-ui.com/modules/dimmer.html
  */
 @Directive({
     host: {

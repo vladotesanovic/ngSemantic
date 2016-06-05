@@ -13,29 +13,6 @@
     },
     "files": [
         "ng-semantic.ts",
-        "typings/browser.d.ts",
-        "ng-semantic/menu/menu.ts",
-        "ng-semantic/message/message.ts",
-        "ng-semantic/dimmer/dimmer.ts",
-        "ng-semantic/popup/tooltip.ts",
-        "ng-semantic/popup/popup.ts",
-        "ng-semantic/modal/modal.ts",
-        "ng-semantic/segment/segment.ts",
-        "ng-semantic/list/list.ts",
-        "ng-semantic/button/button.ts",
-        "ng-semantic/item/item.ts",
-        "ng-semantic/loader/loader.ts",
-        "ng-semantic/card/card.ts",
-        "ng-semantic/input/input.ts",
-        "ng-semantic/sidebar/sidebar.ts",
-        "ng-semantic/tab/tab.ts",
-        "ng-semantic/flag/flag.ts",
-        "ng-semantic/progress/progress.ts",
-        "ng-semantic/accordion/accordion.ts"
-    ],
-    "exclude": [
-        "./node_modules",
-        "./typings/main",
-        "./typings/main.d.ts"
+        "typings/index.d.ts"
     ]
 }

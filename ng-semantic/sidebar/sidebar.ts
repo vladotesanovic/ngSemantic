@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, Directive } from "angular2/core";
+import { Component, Input, ChangeDetectionStrategy, Directive } from "@angular/core";
 
 declare var jQuery: any;
 

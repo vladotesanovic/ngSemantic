@@ -19,36 +19,16 @@
 
         <!-- 1. Load libraries -->
         <!-- IE required polyfills, in this exact order -->
-        <script src="vendor/es6-shim.min.js"></script>
-        <script src="vendor/system-polyfills.js"></script>
-
-        <script src="vendor/Reflect.js"></script>
+        <!-- 1. Load libraries -->
+        <!-- Polyfill(s) for older browsers -->
+        <script src="vendor/shim.min.js"></script>
         <script src="vendor/zone.js"></script>
+        <script src="vendor/Reflect.js"></script>
         <script src="vendor/system.src.js"></script>
+        <!-- 2. Configure SystemJS -->
+        <script src="bin/systemjs.config.js"></script>
 
-        <script src="vendor/Rx.js"></script>
-        <script src="vendor/angular2.dev.js"></script>
-        <script src="vendor/router.dev.js"></script>
-        <script src="vendor/http.dev.js"></script>
-        <script src="vendor/ng-semantic.js"></script>
-        <script src="vendor/ng2-prism.js"></script>
-        <script src="vendor/prismjs/prism.js"></script>
         <script>
-        // configure system loader
-        System.config({
-            packages: {
-                app: {
-                    format: 'register',
-                    defaultExtension: 'js'
-                },
-                prismjs: {
-                    defaultExtension: 'js'
-                }
-            },
-            map: {
-                prismjs: "vendor/prismjs"
-            }
-        });
         System.import('/app/bootstrap').then(null, console.error.bind(console));
         </script>
     </head>

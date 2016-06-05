@@ -14,7 +14,7 @@
 
 ## Important!
 <ul>
-   <li>Angular 2 version: beta.14</li>
+   <li>Angular 2 version: rc.1</li>
 </ul>
         
 ## Installation
@@ -37,7 +37,7 @@ Semantic UI ( minified versions of css and js ) must be loaded in index.html
 ## Use
 
 ```javascript
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 
 @Component({

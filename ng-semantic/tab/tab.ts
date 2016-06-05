@@ -1,4 +1,4 @@
-import { Component, Query, QueryList, AfterViewInit, ElementRef, Input } from "angular2/core";
+import { Component, Query, QueryList, AfterViewInit, ElementRef, Input, Type } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -15,7 +15,7 @@ export class SemanticTab {
 @Component({
   selector: "sm-tabs",
   template: `<div class="ui top attached tabular menu">
-  <a class="item" [ngClass]="{active: i === 0}" *ngFor="#tab of tabs; #i = index" attr.data-tab="{{tab.dataTab}}">{{tab.title}}</a>
+  <a class="item" [ngClass]="{active: i === 0}" *ngFor="let tab of tabs; let i = index" attr.data-tab="{{tab.dataTab}}">{{tab.title}}</a>
 </div>
 <ng-content></ng-content>
 `
@@ -23,7 +23,7 @@ export class SemanticTab {
 export class SemanticTabs implements AfterViewInit {
   tabs: QueryList<SemanticTab>;
 
-  constructor( @Query(SemanticTab) tabs: QueryList<SemanticTab>, public elementRef: ElementRef) {
+  constructor( @Query(<Type>SemanticTab) tabs: QueryList<SemanticTab>, public elementRef: ElementRef) {
     this.tabs = tabs;
   }
 

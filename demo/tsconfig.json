@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "inlineSources": true,
+        "inlineSourceMap": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "files": [
+        "./app/bootstrap.ts",
+        "./semantic.d.ts",
+        "../typings/index.d.ts"
+    ]
+}

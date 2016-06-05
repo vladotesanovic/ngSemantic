@@ -1,5 +1,5 @@
-import { Component, Input, ChangeDetectionStrategy } from "angular2/core";
-import { FORM_DIRECTIVES, Control, FORM_PROVIDERS } from "angular2/common";
+import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
+import { FORM_DIRECTIVES, Control, FORM_PROVIDERS } from "@angular/common";
 
 /**
  * Implementation of Input element
