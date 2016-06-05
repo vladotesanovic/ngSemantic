@@ -1,6 +1,6 @@
 {
   "name": "ng-semantic",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Angular2 building blocks based on Semantic UI",
   "scripts": {
     "demo:build": "tslint -c ./tslint.json 'src/app/**/*.ts'",
