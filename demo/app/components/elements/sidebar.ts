@@ -15,8 +15,8 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
-   	<sm-button class="positive icon" icon="sidebar" sm-dir-sidebar="left">Lunch left sidebar</sm-button> 
-    <sm-button class="" sm-dir-sidebar="bottom">Lunch bottom sidebar</sm-button>
+   	<sm-button class="positive icon" icon="sidebar" smDirSidebar="left">Lunch left sidebar</sm-button> 
+    <sm-button class="" smDirSidebar="bottom">Lunch bottom sidebar</sm-button>
     <sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
         <a class="item">
             <i class="home icon"></i>
@@ -34,7 +34,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
     <h4 class="ui header">Code</h4>
         <codeblock prismjs="html">
-&lt;sm-button class="positive" sm-dir-sidebar="left">Lunch left sidebar&lt;/sm-button>
+&lt;sm-button class="positive" smDirSidebar="left">Lunch left sidebar&lt;/sm-button>
 &lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
     &lt;a class="item">
         <i class="home icon"></i> Home

@@ -12,7 +12,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
     <div [ngClass]="{text: text}" class="ui loader">{{text}}</div>
   </div>`
 })
-export class SemanticLoader {
+export class SemanticLoaderComponent {
   @Input("class") class: string;
   @Input("text") text: string;
   @Input("complete") complete: boolean = false;

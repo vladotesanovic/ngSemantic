@@ -1,4 +1,4 @@
-export declare class SemanticCard {
+export declare class SemanticCardComponent {
     image: string;
     title: string;
     subtitle: string;

@@ -13,7 +13,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
     <ng-content></ng-content>
 </button>`
 })
-export class SemanticButton {
+export class SemanticButtonComponent {
   @Input("class") class: string;
   @Input("icon") icon: string;
   @Input("disabled") disabled: boolean = false;

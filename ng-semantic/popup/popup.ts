@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Component, Input } from "@angular/core";
+import { Directive, ElementRef, HostListener, Component, Input } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -14,26 +14,22 @@ declare var jQuery: any;
  * @link http://semantic-ui.com/modules/popup.html
  */
 @Directive({
-    host: {
-        "(click)": "onClick()"
-    },
-    inputs: [
-        "data: sm-dir-popup"
-    ],
-    selector: "[sm-dir-popup]"
+    selector: "[smDirPopup]"
 })
 export class SMPopupDirective {
-    public data: any;
+
+    @Input() smDirPopup: { selector: string, position: string};
 
     constructor(public element: ElementRef) {}
 
+    @HostListener("click", ["$event.target"])
     onClick() {
         if (typeof jQuery === "undefined") {
             console.log("jQuery is not loaded");
             return;
         }
 
-        if (!this.data.hasOwnProperty("position") || !this.data.hasOwnProperty("selector")) {
+        if (!this.smDirPopup.hasOwnProperty("position") || !this.smDirPopup.hasOwnProperty("selector")) {
             console.log("position or target selector missing for popup");
             return;
         }
@@ -43,8 +39,8 @@ export class SMPopupDirective {
             exclusive: true,
             lastResort: true,
             on: "click",
-            popup: "." + this.data.selector + ".popup",
-            position : this.data.position,
+            popup: "." + this.smDirPopup.selector + ".popup",
+            position : this.smDirPopup.position,
             preserve: true
         }).popup("show");
 
@@ -65,6 +61,6 @@ export class SMPopupDirective {
     </div>
 </div>`
 })
-export class SemanticPopup {
+export class SemanticPopupComponent {
     @Input("selector") selector: string;
 }

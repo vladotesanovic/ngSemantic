@@ -1,4 +1,4 @@
-import { Directive, Component, Input, ChangeDetectionStrategy } from "@angular/core";
+import { Directive, Component, Input, HostListener, ChangeDetectionStrategy } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -13,29 +13,25 @@ declare var jQuery: any;
  * @link http://semantic-ui.com/modules/modal.html
  */
 @Directive({
-    host: {
-        "(click)": "onClick()"
-    },
-    inputs: [
-        "data: sm-dir-modal"
-    ],
-    selector: "[sm-dir-modal]"
+    selector: "[smDirModal]"
 })
 export class SMModalDirective {
-    public data: any;
 
+    @Input() smDirModal: { selector: string };
+
+    @HostListener("click", ["$event.target"])
     onClick() {
         if (typeof jQuery === "undefined") {
             console.log("jQuery is not loaded");
             return;
         }
 
-        if (!this.data.hasOwnProperty("selector")) {
+        if (!this.smDirModal.hasOwnProperty("selector")) {
             console.log("target selector missing for modal");
             return;
         }
 
-        jQuery(".ui.modal." + this.data.selector).modal("show");
+        jQuery(".ui.modal." + this.smDirModal.selector).modal("show");
 
     }
 
@@ -59,8 +55,8 @@ export class SMModalDirective {
     </div>
 </div>`
 })
-export class SemanticModal {
+export class SemanticModalComponent {
+    @Input("class") class: string;
     @Input("selector") selector: string;
     @Input("title") title: string;
-    @Input("class") class: string;
 }

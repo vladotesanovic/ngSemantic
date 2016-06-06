@@ -1,4 +1,4 @@
-export declare class SemanticProgress {
+export declare class SemanticProgressComponent {
     label: string;
     class: string;
     _progress: number;

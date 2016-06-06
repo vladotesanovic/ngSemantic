@@ -24,7 +24,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
     <ng-content select="extra"></ng-content>
   </div>`
 })
-export class SemanticCard {
+export class SemanticCardComponent {
   @Input("image") image: string;
   @Input("title") title: string;
   @Input("subtitle") subtitle: string;

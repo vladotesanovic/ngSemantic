@@ -8,26 +8,16 @@ declare var jQuery: any;
  * @link http://semantic-ui.com/modules/accordion.html
  */
 @Directive({
-    inputs: [
-        "data: sm-dir-accordion"
-    ],
-    selector: "[sm-dir-accordion]"
+    selector: "[smDirAccordion]"
 })
 class SMAccordionDirective implements OnInit {
 
-    public data: string;
+    @Input() smDirAccordion: string;
 
     constructor(public element: ElementRef) {}
 
     ngOnInit() {
-
-        let options = {};
-
-        if (typeof this.data === "object") {
-            options = this.data;
-        }
-
-        jQuery(this.element.nativeElement).accordion(options);
+        jQuery(this.element.nativeElement).accordion(this.smDirAccordion || {});
     }
 }
 
@@ -37,12 +27,12 @@ class SMAccordionDirective implements OnInit {
     selector: "sm-accordion",
     styles: [`sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }`],
     template: `
-<div class="ui accordion {{class}}" [sm-dir-accordion]="options">
+<div class="ui accordion {{class}}" [smDirAccordion]="options">
     <ng-content></ng-content>
 </div>
 `
 })
-export class SemanticAccordion {
+export class SemanticAccordionComponent {
     @Input("class") class: string;
     @Input("options") options: string;
 }
@@ -61,6 +51,6 @@ export class SemanticAccordion {
 `
 
 })
-export class SemanticAccordionItem {
+export class SemanticAccordionItemComponent {
     @Input("title") title: string;
 }

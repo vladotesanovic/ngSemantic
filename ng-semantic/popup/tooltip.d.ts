@@ -1,7 +1,7 @@
 import { ElementRef } from "@angular/core";
 export declare class SMTooltipDirective {
     element: ElementRef;
-    text: string;
+    smDirTooltip: string;
     constructor(element: ElementRef);
     onMouseEnter(): void;
 }

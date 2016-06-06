@@ -5,6 +5,6 @@ import {Component, ChangeDetectionStrategy, Input} from "@angular/core";
     selector: "sm-flag",
     template: `<i class="{{flag}} flag"></i>`
 })
-export class SemanticFlag {
-    @Input('flag') flag: string;
+export class SemanticFlagComponent {
+    @Input("flag") flag: string;
 }

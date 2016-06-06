@@ -112,7 +112,7 @@ import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common"
              
         <h4 class="ui header">Demo form</h4>
         <sm-segment>
-            <form sm-form class="ui form" [ngFormModel]="form">
+            <form smForm class="ui form" [ngFormModel]="form">
                 <div class="field">
                     <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
                 </div>

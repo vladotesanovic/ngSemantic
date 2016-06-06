@@ -14,7 +14,7 @@ import { FORM_DIRECTIVES, Control, FORM_PROVIDERS } from "@angular/common";
   <input type="text" [ngFormControl]="control" placeholder="{{placeholder}}">
 </div>`
 })
-export class SemanticInput {
+export class SemanticInputComponent {
   @Input("control") control: Control;
   @Input("label") label: string;
   @Input("placeholder") placeholder: string;
@@ -35,7 +35,7 @@ export class SemanticInput {
     </div>
   </div>`
 })
-export class SemanticCheckbox {
+export class SemanticCheckboxComponent {
   @Input("control") control: Control;
   @Input("label") label: string;
 }
@@ -53,7 +53,7 @@ export class SemanticCheckbox {
     <textarea rows="{{rows}}" [ngFormControl]="control"></textarea>
   </div>`
 })
-export class SemanticTextarea {
+export class SemanticTextareaComponent {
   @Input("control") control: Control;
   @Input("label") label: string;
   @Input("rows") rows: string;
@@ -66,8 +66,8 @@ export class SemanticTextarea {
  */
 @Component({
   directives: [FORM_DIRECTIVES],
-  providers: [FORM_PROVIDERS],    
-  selector: "form[sm-form]",
+  providers: [FORM_PROVIDERS],
+  selector: "form[smForm]",
   template: `<ng-content></ng-content>`
 })
-export class SemanticForm {}
+export class SemanticFormComponent {}

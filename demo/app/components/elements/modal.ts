@@ -15,7 +15,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo basic</h4>
-    <button class="ui button green" [sm-dir-modal]="{selector: 'my-modal'}">Click me</button>
+    <button class="ui button green" [smDirModal]="{selector: 'my-modal'}">Click me</button>
     <sm-modal selector="my-modal" title="Hello from Modal" class="basic">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -27,7 +27,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     
     <h4 class="ui header">Code</h4>
 <codeblock prismjs="html">
-&lt;button class="ui button green" [sm-dir-modal]="{selector: 'my-modal'}">Click me&lt;/button>
+&lt;button class="ui button green" [smDirModal]="{selector: 'my-modal'}">Click me&lt;/button>
 &lt;sm-modal selector="my-modal" title="Hello from Modal" class="basic">...&lt;/sm-modal>
 </codeblock>
 </div>

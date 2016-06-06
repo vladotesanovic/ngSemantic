@@ -1,7 +1,7 @@
-export declare class SemanticDimmer {
+export declare class SemanticDimmerComponent {
     selector: string;
 }
 export declare class SMDimmerDirective {
-    data: any;
+    smDirDimmer: string;
     toggleDimmer(): void;
 }

@@ -10,13 +10,13 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
   <div class="label" *ngIf="label">{{label}}</div>
 </div>`
 })
-export class SemanticProgress {
+export class SemanticProgressComponent {
     @Input("label") label: string;
     @Input("class") class: string;
     _progress: number = 0;
 
     @Input()
     set progress(value: number) {
-        this._progress = (value >= 100) ? 100: value;
+        this._progress = (value >= 100) ? 100 : value;
     }
 }

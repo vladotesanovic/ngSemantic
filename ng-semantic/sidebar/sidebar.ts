@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, Directive } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy, Directive, HostListener } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -32,7 +32,7 @@ jQuery.fn.fixSidebar = function() {
     selector: "sm-sidebar",
     template: `<div class="ui sidebar {{class}}"><ng-content></ng-content></div>`
 })
-export class SemanticSidebar {
+export class SemanticSidebarComponent {
     @Input("class") class: string;
 }
 
@@ -42,25 +42,20 @@ export class SemanticSidebar {
  * @link semantic-ui.com/modules/sidebar.html
  */
 @Directive({
-    host: {
-        "(click)": "toggleSidebar()"
-    },
-    inputs: [
-        "data: sm-dir-sidebar"
-    ],
-    selector: "[sm-dir-sidebar]"
+    selector: "[smDirSidebar]"
 })
 export class SMSidebarDirective {
 
-    public data: any;
+    @Input() smDirSidebar: string;
 
+    @HostListener("click", ["$event.target"])
     toggleSidebar() {
         if (typeof jQuery === "undefined") {
             console.log("jQuery is not loaded");
             return;
         }
 
-        jQuery(".ui.sidebar." + this.data)
+        jQuery(".ui.sidebar." + this.smDirSidebar)
             .fixSidebar()
             .sidebar({
                 transition: "overlay",

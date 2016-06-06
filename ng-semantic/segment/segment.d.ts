@@ -1,3 +1,3 @@
-export declare class SemanticSegment {
+export declare class SemanticSegmentComponent {
     class: string;
 }

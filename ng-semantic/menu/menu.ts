@@ -17,6 +17,6 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
 <ng-content></ng-content>
 `
 })
-export class SemanticMenu {
+export class SemanticMenuComponent {
     @Input("logo") logo: string;
 }

@@ -1,9 +1,11 @@
 export declare class SMModalDirective {
-    data: any;
+    smDirModal: {
+        selector: string;
+    };
     onClick(): void;
 }
-export declare class SemanticModal {
+export declare class SemanticModalComponent {
+    class: string;
     selector: string;
     title: string;
-    class: string;
 }

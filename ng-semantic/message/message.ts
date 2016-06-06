@@ -7,12 +7,12 @@ import { Component, Input, ChangeDetectionStrategy, ViewEncapsulation } from "@a
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
   selector: "sm-message",
-  template: `<i *ngIf="icon" class="icon {{icon}}"></i>
-  <p><ng-content></ng-content></p>`,
   styles: [`sm-message { display: block; }`],
-  encapsulation: ViewEncapsulation.None
+  template: `<i *ngIf="icon" class="icon {{icon}}"></i>
+  <p><ng-content></ng-content></p>`
 })
-export class SemanticMessage {
+export class SemanticMessageComponent {
   @Input("icon") icon: string;
 }

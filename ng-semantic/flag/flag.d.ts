@@ -1,3 +1,3 @@
-export declare class SemanticFlag {
+export declare class SemanticFlagComponent {
     flag: string;
 }

@@ -1,4 +1,4 @@
-import { Directive, ElementRef } from "@angular/core";
+import { Directive, ElementRef, HostListener, Input } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -8,19 +8,15 @@ declare var jQuery: any;
  * @link http://semantic-ui.com/modules/popup.html
  */
 @Directive({
-    host: {
-        "(mouseenter)": "onMouseEnter()"
-    },
-    inputs: [
-        "text: sm-dir-tooltip"
-    ],
-    selector: "[sm-dir-tooltip]"
+    selector: "[smDirTooltip]"
 })
 export class SMTooltipDirective {
-    public text: string;
+
+    @Input() smDirTooltip: string;
 
     constructor(public element: ElementRef) { }
 
+    @HostListener("mouseenter", ["$event.target"])
     onMouseEnter() {
         if (typeof jQuery === "undefined") {
             console.log("jQuery is not loaded");
@@ -28,7 +24,7 @@ export class SMTooltipDirective {
         }
 
         jQuery(this.element.nativeElement).popup({
-            content: this.text,
+            content: this.smDirTooltip,
             exclusive: true,
             lastResort: true
         }).popup("show");

@@ -12,6 +12,6 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
   <p><ng-content></ng-content></p>
 </div>`
 })
-export class SemanticSegment {
+export class SemanticSegmentComponent {
   @Input("class") class: string;
 }

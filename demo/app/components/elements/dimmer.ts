@@ -14,7 +14,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </div>
 </div>
 <div class="main ui container">
-    <p>Note that selector attribute on sm-dimmer and value in sm-dir-dimmer must be same.</p>
+    <p>Note that selector attribute on sm-dimmer and value in smDirDimmer must be same.</p>
     <h4 class="ui header">Demo</h4>
     <sm-dimmer selector="page">
         <div class="center">
@@ -25,7 +25,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
             </h2>
         </div>
     </sm-dimmer>
-    <sm-button sm-dir-dimmer="page" class="primary">Page dimmer</sm-button>
+    <sm-button smDirDimmer="page" class="primary">Page dimmer</sm-button>
     
     <h4 class="ui header">Code</h4>
     <codeblock prismjs="html">
@@ -38,7 +38,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         &lt;/h2>
     &lt;/div>
 &lt;/sm-dimmer>
-&lt;sm-button sm-dir-dimmer="page" class="primary">Page dimmer&lt;/sm-button>
+&lt;sm-button smDirDimmer="page" class="primary">Page dimmer&lt;/sm-button>
 </codeblock>
 </div>
 `

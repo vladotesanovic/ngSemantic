@@ -1,7 +1,7 @@
-export declare class SemanticSidebar {
+export declare class SemanticSidebarComponent {
     class: string;
 }
 export declare class SMSidebarDirective {
-    data: any;
+    smDirSidebar: string;
     toggleSidebar(): void;
 }

@@ -16,7 +16,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo login</h4>
-    <form sm-form class="ui form" [ngFormModel]="form">
+    <form smForm class="ui form" [ngFormModel]="form">
 	<sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
 	<div class="field">
 	    <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
@@ -31,7 +31,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </form>
     <h4 class="ui header">Code</h4>
 <codeblock prismjs="html">
-&lt;form sm-form class="ui form" [ngFormModel]="form">
+&lt;form smForm class="ui form" [ngFormModel]="form">
     &lt;sm-loader [complete]="!formSubmited" class="inverted" text="Loading...">&lt;/sm-loader>
     &lt;div class="field">
 	    &lt;sm-input label="Name" [control]="nameControl" placeholder="Enter name...">&lt;/sm-input>
@@ -47,7 +47,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </codeblock>
 
 <h4 class="ui header">Demo feedback</h4>
-<form sm-form class="ui form" [ngFormModel]="formFeedback">
+<form smForm class="ui form" [ngFormModel]="formFeedback">
     <div class="field">
         <sm-input label="Name" [control]="nameFControl" placeholder="Enter name..."></sm-input>
     </div>

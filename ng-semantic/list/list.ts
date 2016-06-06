@@ -7,9 +7,9 @@ import { Component, Input, ChangeDetectionStrategy, ViewEncapsulation } from "@a
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
   selector: "sm-list",
-  template: `<ng-content></ng-content>`,
   styles: [`sm-list { display: block; }`],
-  encapsulation: ViewEncapsulation.None
+  template: `<ng-content></ng-content>`
 })
-export class SemanticList {}
+export class SemanticListComponent {}

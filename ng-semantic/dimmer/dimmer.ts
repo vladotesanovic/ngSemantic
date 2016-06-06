@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, Directive } from "@angular/core";
+import { Component, Input, HostListener, ChangeDetectionStrategy, Directive } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -11,7 +11,7 @@ declare var jQuery: any;
   </div>
 </div>`
 })
-export class SemanticDimmer {
+export class SemanticDimmerComponent {
     @Input("selector") selector: string;
 }
 
@@ -21,26 +21,21 @@ export class SemanticDimmer {
  * @link http://semantic-ui.com/modules/dimmer.html
  */
 @Directive({
-    host: {
-        "(click)": "toggleDimmer()"
-    },
-    inputs: [
-        "data: sm-dir-dimmer"
-    ],
-    selector: "[sm-dir-dimmer]"
+    selector: "[smDirDimmer]"
 })
 export class SMDimmerDirective {
 
-    public data: any;
+    @Input() smDirDimmer: string;
 
+    @HostListener("click", ["$event.target"])
     toggleDimmer() {
         if (typeof jQuery === "undefined") {
             console.log("jQuery is not loaded");
             return;
         }
 
-        jQuery(".ui.dimmer." + this.data)
-            .dimmer('toggle');
+        jQuery(".ui.dimmer." + this.smDirDimmer)
+            .dimmer("toggle");
     }
 
 }

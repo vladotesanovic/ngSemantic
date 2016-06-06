@@ -1,3 +1,3 @@
-export declare class SemanticMessage {
+export declare class SemanticMessageComponent {
     icon: string;
 }

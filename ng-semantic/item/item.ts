@@ -18,7 +18,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
   <ng-content></ng-content>
 </div>`
 })
-export class SemanticItem {
+export class SemanticItemComponent {
   @Input("icon") icon: string;
   @Input("header") header: string;
   @Input("image") image: string;

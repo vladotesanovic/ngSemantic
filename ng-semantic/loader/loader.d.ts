@@ -1,4 +1,4 @@
-export declare class SemanticLoader {
+export declare class SemanticLoaderComponent {
     class: string;
     text: string;
     complete: boolean;

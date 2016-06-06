@@ -1,3 +1,3 @@
-export declare class SemanticMenu {
+export declare class SemanticMenuComponent {
     logo: string;
 }

@@ -1,2 +1,2 @@
-export declare class SemanticList {
+export declare class SemanticListComponent {
 }

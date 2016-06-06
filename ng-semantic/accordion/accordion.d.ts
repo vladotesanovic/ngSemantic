@@ -1,7 +1,7 @@
-export declare class SemanticAccordion {
+export declare class SemanticAccordionComponent {
     class: string;
     options: string;
 }
-export declare class SemanticAccordionItem {
+export declare class SemanticAccordionItemComponent {
     title: string;
 }

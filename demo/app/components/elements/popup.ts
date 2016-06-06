@@ -15,16 +15,16 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo tooltip</h4>
-    <button class="ui button" sm-dir-tooltip="Pellentesque habitant morbi tristique.">Hover me</button>
+    <button class="ui button" smDirTooltip="Pellentesque habitant morbi tristique.">Hover me</button>
     
     <h4 class="ui header">Code</h4>
 <codeblock prismjs="html">
-&lt;button class="ui button" sm-dir-tooltip="text...">Hover me&lt;/button>
+&lt;button class="ui button" smDirTooltip="text...">Hover me&lt;/button>
 </codeblock>
       <div class="ui divider"></div>
       
       <h4 class="ui header">Demo popup</h4>
-    <button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'right center'}">Click me</button>
+    <button class="ui button green" [smDirPopup]="{selector: 'my-popup', position: 'right center'}">Click me</button>
     <sm-popup selector="my-popup">
         <div class='header'>User Rating</div>
         <div class='content'>
@@ -36,7 +36,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     
     <h4 class="ui header">Code</h4>
         <codeblock prismjs="html">
-&lt;button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'right center'}">Click me&lt;/button>
+&lt;button class="ui button green" [smDirPopup]="{selector: 'my-popup', position: 'right center'}">Click me&lt;/button>
 &lt;sm-popup selector="my-popup">
     ...
 &lt;/sm-popup>

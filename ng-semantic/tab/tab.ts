@@ -6,7 +6,7 @@ declare var jQuery: any;
   selector: "sm-tab",
   template: `<ng-content></ng-content>`
 })
-export class SemanticTab {
+export class SemanticTabComponent {
   @Input("tab") dataTab: string;
   @Input("title") title: string;
   @Input("class") class: string;
@@ -20,10 +20,10 @@ export class SemanticTab {
 <ng-content></ng-content>
 `
 })
-export class SemanticTabs implements AfterViewInit {
-  tabs: QueryList<SemanticTab>;
+export class SemanticTabsComponent implements AfterViewInit {
+  tabs: QueryList<SemanticTabComponent>;
 
-  constructor( @Query(<Type>SemanticTab) tabs: QueryList<SemanticTab>, public elementRef: ElementRef) {
+  constructor( @Query(<Type>SemanticTabComponent) tabs: QueryList<SemanticTabComponent>, public elementRef: ElementRef) {
     this.tabs = tabs;
   }
 
@@ -32,7 +32,7 @@ export class SemanticTabs implements AfterViewInit {
       console.log("jQuery is not loaded");
       return;
     }
-    
+
     jQuery(".menu.tabular .item").tab({
       childrenOnly: true,
       context: jQuery(this.elementRef.nativeElement)

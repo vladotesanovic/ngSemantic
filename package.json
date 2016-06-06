@@ -7,7 +7,8 @@
     "library:lint": "tslint -c ./tslint.json 'ng-semantic/**/*.ts'",
     "demo:server": "node server.js",
     "typings": "typings install",
-    "start": "tsc && concurrently \"npm run tsc:w\" \"lite-server\" ",
+    "tsc:w": "tsc -w -p './demo'",
+    "start": "tsc && concurrently \"tsc -w\" \"npm run tsc:w\" \"lite-server\" ",
     "library:bundle": "tsc && rm -rf bundles && node library.builder.js",
     "demo:bundle": "tsc -p './demo' && node demo.builder.js"
   },
