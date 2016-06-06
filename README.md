@@ -63,14 +63,19 @@ cd ngSemantic
 # install dependencies
 npm install && npm run typings
 
-# compile and build bundle files
-npm run bundle
+# Uncomment in index.html file
+<!-- DEVELOPMENT
+<script src="systemjs.config.js"></script>
+<script>
+System.import('/demo/app/bootstrap').then(null, console.error.bind(console));
+</script>
+-->
 
+# Comment out
+<script src="demo/vendor/bundle.min.js"></script>
+        
 # compile demo project
-npm run demo:build
-
-# run demo project ( localhost:3000 )
-npm run demo:serve
+npm start
 ```
 
 ## Components

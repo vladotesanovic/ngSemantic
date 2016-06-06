@@ -18,7 +18,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <button class="ui button" sm-dir-tooltip="Pellentesque habitant morbi tristique.">Hover me</button>
     
     <h4 class="ui header">Code</h4>
-<codeblock markup>
+<codeblock prismjs="html">
 &lt;button class="ui button" sm-dir-tooltip="text...">Hover me&lt;/button>
 </codeblock>
       <div class="ui divider"></div>
@@ -35,7 +35,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-popup>
     
     <h4 class="ui header">Code</h4>
-        <codeblock markup>
+        <codeblock prismjs="html">
 &lt;button class="ui button green" [sm-dir-popup]="{selector: 'my-popup', position: 'right center'}">Click me&lt;/button>
 &lt;sm-popup selector="my-popup">
     ...

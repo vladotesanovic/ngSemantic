@@ -28,7 +28,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-card>
     
     <h4 class="ui header">Code</h4>
-<codeblock markup>
+<codeblock prismjs="html">
 &lt;sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
     <content>...</content>
     <extra>...</extra>

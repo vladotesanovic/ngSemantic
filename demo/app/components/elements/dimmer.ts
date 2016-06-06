@@ -28,15 +28,15 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <sm-button sm-dir-dimmer="page" class="primary">Page dimmer</sm-button>
     
     <h4 class="ui header">Code</h4>
-    <codeblock markup>
+    <codeblock prismjs="html">
 &lt;sm-dimmer selector="page">
-    <div class="center">
-        <h2 class="ui inverted icon header">
-            <i class="mail icon"></i>
+    &lt;div class="center">
+        &lt;h2 class="ui inverted icon header">
+            &lt;i class="mail icon">&lt;/i>
             Dimmer Message
-            <div class="sub header">Dimmer sub-header</div>
-        </h2>
-    </div>
+            &lt;div class="sub header">Dimmer sub-header&lt;/div>
+        &lt;/h2>
+    &lt;/div>
 &lt;/sm-dimmer>
 &lt;sm-button sm-dir-dimmer="page" class="primary">Page dimmer&lt;/sm-button>
 </codeblock>

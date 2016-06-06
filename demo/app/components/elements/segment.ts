@@ -22,7 +22,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</sm-segment>
 
     <h4 class="ui header">Code</h4>
-    <codeblock markup>
+    <codeblock prismjs="html">
 &lt;sm-segment class="raised">...&lt;/sm-segment>
 </codeblock>
       <h4 class="ui header">Demo stacked</h4>

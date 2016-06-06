@@ -23,7 +23,7 @@ class SMAccordionDirective implements OnInit {
 
         let options = {};
 
-        if(typeof this.data === "object") {
+        if (typeof this.data === "object") {
             options = this.data;
         }
 
@@ -35,12 +35,12 @@ class SMAccordionDirective implements OnInit {
     changeDetection: ChangeDetectionStrategy.OnPush,
     directives: [<Type>SMAccordionDirective],
     selector: "sm-accordion",
+    styles: [`sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }`],
     template: `
 <div class="ui accordion {{class}}" [sm-dir-accordion]="options">
     <ng-content></ng-content>
 </div>
-`,
-    styles: [`sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }`]
+`
 })
 export class SemanticAccordion {
     @Input("class") class: string;

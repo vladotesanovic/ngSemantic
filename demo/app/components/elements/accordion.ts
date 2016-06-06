@@ -35,7 +35,7 @@ import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common"
         </sm-accordion>
         
         <h4 class="ui header">Code</h4>
-<codeblock markup>
+<codeblock prismjs="html">
 &lt;sm-accordion [options]="{exclusive: false}">
     &lt;sm-accordion-item title="What is a dog?">
         A dog is a type of domesticated animal. Known for its loyalty and faithfulness,

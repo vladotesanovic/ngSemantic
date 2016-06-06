@@ -3,8 +3,8 @@
 		<div class="ui vertical inverted sticky menu" style="width: 250px !important; left: 0px; top: 0px;">
 			<div class="item">
 				<a class="ui mini images" href="/">
-				<img class="ui image" src="/assets/images/angular.png">
-				<img class="ui image" src="/assets/images/semantic.png">
+				<img class="ui image" src="/demo/assets/images/angular.png">
+				<img class="ui image" src="/demo/assets/images/semantic.png">
 				</a>
 				<b class="logo">ngSemantic</b>
 			</div>
@@ -14,37 +14,37 @@
 			<div class="item">
 				<div class="active  header">Elements</div>
 				<div class="menu">                            
-					<a class="item" href="#/elements/button">Button</a>
-					<a class="item" href="#/elements/flag">Flag</a>
-					<a class="item" href="#/elements/loader">Loader</a>
-					<a class="item" href="#/elements/list">List</a>   
-					<a class="item" href="#/elements/segment">Segment</a>                         
+					<a class="item" [routerLink]="['/elements/button']">Button</a>
+					<a class="item" [routerLink]="['/elements/flag']">Flag</a>
+					<a class="item" [routerLink]="['/elements/loader']">Loader</a>
+					<a class="item" [routerLink]="['/elements/list']">List</a>
+					<a class="item" [routerLink]="['/elements/segment']">Segment</a>
 				</div>
 			</div>
 			<div class="item">
 				<div class="active  header">Collections</div>
 				<div class="menu">                            
-					<a class="item" href="#/elements/menu">Menu</a>
-					<a class="item" href="#/elements/form">Form</a>
-					<a class="item" href="#/elements/message">Message</a>                         
+					<a class="item" [routerLink]="['/elements/menu']">Menu</a>
+					<a class="item" [routerLink]="['/elements/form']">Form</a>
+					<a class="item" [routerLink]="['/elements/message']">Message</a>
 				</div>
 			</div>
 			<div class="item">
 				<div class="active  header">Views</div>
 				<div class="menu">                            
-					<a class="item" href="#/elements/card">Card</a>                       
+					<a class="item" [routerLink]="['/elements/card']">Card</a>
 				</div>
 			</div>
 			<div class="item">
 				<div class="active  header">Modules</div>
 				<div class="menu">
-					<a class="item" href="#/elements/accordion">Accordion</a>
-					<a class="item" href="#/elements/dimmer">Dimmer</a>
-					<a class="item" href="#/elements/modal">Modal</a>   
-					<a class="item" href="#/elements/sidebar">Sidebar</a>    
-					<a class="item" href="#/elements/popup">Popup &amp; Tooltip</a>
-					<a class="item" href="#/elements/progress">Progress</a>
-					<a class="item" href="#/elements/tab">Tab</a>                
+					<a class="item" [routerLink]="['/elements/accordion']">Accordion</a>
+					<a class="item" [routerLink]="['/elements/dimmer']">Dimmer</a>
+					<a class="item" [routerLink]="['/elements/modal']">Modal</a>
+					<a class="item" [routerLink]="['/elements/sidebar']">Sidebar</a>
+					<a class="item" [routerLink]="['/elements/popup']">Popup &amp; Tooltip</a>
+					<a class="item" [routerLink]="['/elements/progress']">Progress</a>
+					<a class="item" [routerLink]="['/elements/tab']">Tab</a>
 				</div>
 			</div>
 		</div>

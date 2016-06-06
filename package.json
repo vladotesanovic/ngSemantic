@@ -3,12 +3,13 @@
   "version": "1.0.22",
   "description": "Angular2 building blocks based on Semantic UI",
   "scripts": {
-    "demo:build": "tslint -c ./tslint.json 'src/app/**/*.ts'",
-    "demo:serve": "node server.js",
+    "demo:lint": "tslint -c ./tslint.json 'demo/app/**/*.ts'",
+    "library:lint": "tslint -c ./tslint.json 'ng-semantic/**/*.ts'",
+    "demo:server": "node server.js",
     "typings": "typings install",
-    "tsc:w": "tsc -w -p './demo'",
-    "library:bundle": "tsc && rm -rf bundles && node bundler.js",
-    "demo:bundle": "tsc -p './demo' && node ./demo/bin/builder.js"
+    "start": "tsc && concurrently \"npm run tsc:w\" \"lite-server\" ",
+    "library:bundle": "tsc && rm -rf bundles && node library.builder.js",
+    "demo:bundle": "tsc -p './demo' && node demo.builder.js"
   },
   "repository": {
     "type": "git",
@@ -41,7 +42,9 @@
     "@angular/router-deprecated": "2.0.0-rc.1",
     "@angular/upgrade": "2.0.0-rc.1",
     "angular2-in-memory-web-api": "0.0.11",
+    "concurrently": "^2.1.0",
     "core-js": "^2.4.0",
+    "lite-server": "^2.2.0",
     "reflect-metadata": "^0.1.3",
     "rxjs": "5.0.0-beta.6",
     "systemjs": "0.19.27",
@@ -50,5 +53,8 @@
     "typescript": "^1.8.10",
     "typings": "^1.0.4",
     "zone.js": "^0.6.12"
+  },
+  "dependencies": {
+    "codelyzer": "0.0.20"
   }
 }

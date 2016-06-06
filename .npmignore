@@ -3,9 +3,12 @@ demo
 !*.d.ts
 server.js
 Procfile
-bundle.js
 node_modules
 typings
 typings.json
 tslint.json
 tsconfig.json
+.idea
+library.builder.js
+demo.builder.js
+index.html

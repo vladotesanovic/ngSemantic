@@ -19,7 +19,7 @@ import { MessageService } from "../../services/message";
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
     <p>Once created, message will expire for 10 seconds.</p>
-    <sm-message *ngFor="#message of messages" class="ui message {{message.type}}"
+    <sm-message *ngFor="let message of messages" class="ui message {{message.type}}"
     [ngClass]="{ icon: message.icon}" [icon]="message.icon">{{message.text}}</sm-message>
 
     <sm-button (click)="submitMessage($event, {icon: 'inbox', text: 'Icon, Icon'})">
@@ -36,7 +36,7 @@ import { MessageService } from "../../services/message";
     </sm-button>
 
     <h4 class="ui header">Code</h4>
-<codeblock markup>
+<codeblock prismjs="html">
 &lt;sm-message *ngFor="#message of messages" class="ui message { {message.type} }"
     [ngClass]="{ icon: message.icon}" [icon]="message.icon">{ {message.text} }&lt;/sm-message>
 </codeblock>

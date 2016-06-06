@@ -33,18 +33,18 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-sidebar>
 
     <h4 class="ui header">Code</h4>
-        <codeblock markup>
+        <codeblock prismjs="html">
 &lt;sm-button class="positive" sm-dir-sidebar="left">Lunch left sidebar&lt;/sm-button>
 &lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
-    <a class="item">
+    &lt;a class="item">
         <i class="home icon"></i> Home
-    </a>
-    <a class="item">
+    &lt;/a>
+    &lt;a class="item">
         <i class="block layout icon"></i> Topics
-    </a>
-    <a class="item">
+    &lt;/a>
+    &lt;a class="item">
         <i class="smile icon"></i> Friends
-    </a>
+    &lt;/a>
 &lt;/sm-sidebar>
     </codeblock>
      

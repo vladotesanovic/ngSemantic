@@ -1,4 +1,4 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import { bootstrap } from "@angular/platform-browser-dynamic";
 import { provide, Type } from "@angular/core";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 import { ROUTER_PROVIDERS } from "@angular/router";

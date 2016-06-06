@@ -20,7 +20,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <sm-progress class="warning" [progress]="percent"></sm-progress>
     
     <h4 class="ui header">Code</h4>
-        <codeblock markup>
+        <codeblock prismjs="html">
 &lt;sm-progress [progress]="percent">&lt;/sm-progress>
 &lt;sm-progress class="warning" [progress]="percent">&lt;/sm-progress>
     </codeblock>

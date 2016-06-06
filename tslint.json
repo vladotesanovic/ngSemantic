@@ -1,4 +1,7 @@
 {
+  "rulesDirectory": [
+    "node_modules/codelyzer"
+  ],
   "rules": {
     "class-name": true,
     "comment-format": [true, "check-lowercase", "check-space"],
@@ -57,6 +60,48 @@
       "check-operator",
       "check-separator",
       "check-type"
-    ]
+    ],
+    // rules based on codelyzer/angular2 style guide
+    "directive-selector-name": [
+      true,
+      "camelCase"
+    ],
+    "component-selector-name": [
+      true,
+      "kebab-case"
+    ],
+    "directive-selector-type": [
+      true,
+      "attribute"
+    ],
+    "component-selector-type": [
+      true,
+      "element"
+    ],
+    "directive-selector-prefix": [
+      true,
+      "sm"
+    ],
+    // be as in bimeye
+    "component-selector-prefix": [
+      true,
+      "sm"
+    ],
+    "use-input-property-decorator": true,
+    "use-output-property-decorator": true,
+    "use-host-property-decorator": true,
+    "no-attribute-parameter-decorator": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "no-forward-ref": true,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "pipe-naming": [
+      true,
+      "camelCase",
+      "sm"
+    ],
+    "component-class-suffix": true,
+    "directive-class-suffix": true
   }
 }

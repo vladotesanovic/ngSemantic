@@ -64,9 +64,13 @@ export class DemoComponent {}
 </sm-segment>
     <h2>{{title}}</h2>
         <p><i class="icon external"></i> 
-        <a href="https://github.com/vladotesanovic/angular2-express-starter" target="_blank">Express app with included ng-semantic</a></p>
+        <a href="https://github.com/vladotesanovic/angular2-express-starter" target="_blank">
+        Express app with included ng-semantic</a></p>
+        
+        <p><i class="icon external"></i> 
+        <a href="https://github.com/vladotesanovic/angular2-quickstart-ngsemantic" target="_blank">
+        Angular 2 QuickStart with ngSmantic</a></p>
 </div>
-
 `
 })
 export class HomeComponent {

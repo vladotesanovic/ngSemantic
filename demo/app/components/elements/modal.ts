@@ -26,7 +26,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-modal>
     
     <h4 class="ui header">Code</h4>
-<codeblock markup>
+<codeblock prismjs="html">
 &lt;button class="ui button green" [sm-dir-modal]="{selector: 'my-modal'}">Click me&lt;/button>
 &lt;sm-modal selector="my-modal" title="Hello from Modal" class="basic">...&lt;/sm-modal>
 </codeblock>

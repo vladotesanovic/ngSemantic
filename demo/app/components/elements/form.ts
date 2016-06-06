@@ -30,18 +30,18 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 	<sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login</sm-button>
     </form>
     <h4 class="ui header">Code</h4>
-<codeblock markup>
+<codeblock prismjs="html">
 &lt;form sm-form class="ui form" [ngFormModel]="form">
     &lt;sm-loader [complete]="!formSubmited" class="inverted" text="Loading...">&lt;/sm-loader>
-    <div class="field">
+    &lt;div class="field">
 	    &lt;sm-input label="Name" [control]="nameControl" placeholder="Enter name...">&lt;/sm-input>
-    </div>
-    <div class="field">
+    &lt;/div>
+    &lt;div class="field">
 	    &lt;sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail...">&lt;/sm-input>
-    </div>
-    <div class="field">
+    &lt;/div>
+    &lt;div class="field">
 	    &lt;sm-checkbox label="I agree to the Terms and Conditions" [control]="agreeControl">&lt;/sm-checkbox>
-    </div>
+    &lt;/div>
     &lt;sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login&lt;/sm-button>
 &lt;/form>
 </codeblock>

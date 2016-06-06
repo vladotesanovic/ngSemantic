@@ -21,8 +21,9 @@ import { AccordionComponent } from "./elements/accordion";
 
 @Component({
     	directives: [ROUTER_DIRECTIVES],
+		providers: [Location],
         selector: "app",
-		templateUrl: "./app/components/app.html"
+		templateUrl: "/demo/app/components/app.html"
 })
 @Routes([
 	{ component: <Type>HomeComponent, path: "/" },
@@ -45,8 +46,8 @@ import { AccordionComponent } from "./elements/accordion";
 ])
 
 export class AppComponent implements AfterViewInit {
-	ngAfterViewInit() {
 
+	ngAfterViewInit() {
 		const _resize = (): any => {
 			jQuery("#page .full.height").css("height", jQuery(window).height() + "px");
 		};

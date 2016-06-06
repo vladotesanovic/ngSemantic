@@ -38,10 +38,10 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </sm-tab>
       </sm-tabs>
     <h4 class="ui header">Code</h4>
-    <codeblock markup>
+    <codeblock prismjs="html">
 &lt;sm-tabs>
-  <sm-tab title="Hello" class="ui tab bottom attached segment active" data-tab="first">text...</sm-tab>
-  <sm-tab title="About" class="ui tab bottom attached segment" data-tab="second">text..</sm-tab>
+  &lt;sm-tab title="Hello" class="ui tab bottom attached segment active" data-tab="first">text...&lt;/sm-tab>
+  &lt;sm-tab title="About" class="ui tab bottom attached segment" data-tab="second">text..&lt;/sm-tab>
 &lt;/sm-tabs>
     </codeblock>
 </div>
