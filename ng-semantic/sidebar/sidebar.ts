@@ -2,17 +2,17 @@ import { Component, Input, ChangeDetectionStrategy, Directive } from "@angular/c
 
 declare var jQuery: any;
 
-// Because a of lot of shadow dom elements, we must create this fixSidebar
+// because a of lot of shadow dom elements, we must create this fixSidebar
 // function, to move elements to proper location before sidebar run.
 jQuery.fn.fixSidebar = function() {
-    var allModules = jQuery(this);
+    let allModules = jQuery(this);
 
     allModules
         .each(function() {
-            var
-                selector = { pusher: '.pusher' },
+            let
+                selector = { pusher: ".pusher" },
                 module = jQuery(this),
-                context = jQuery('body');
+                context = jQuery("body");
 
             if (module.nextAll(selector.pusher).length === 0) {
                 module.detach().prependTo(context);
