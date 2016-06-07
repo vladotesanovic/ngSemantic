@@ -4,7 +4,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
-    selector : "test-sidebar",
+    selector : "sm-page-sidebar",
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -14,9 +14,15 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </div>
 </div>
 <div class="main ui container">
+    <p>Options can be passed in form of JavaScript object. Full list of settings can be found on: </p>
+        <a href="http://semantic-ui.com/modules/sidebar.html#/settings" target="_blank">
+        http://semantic-ui.com/modules/sidebar.html#/settings
+        </a>
+        
     <h4 class="ui header">Demo</h4>
-   	<sm-button class="positive icon" icon="sidebar" smDirSidebar="left">Lunch left sidebar</sm-button> 
-    <sm-button class="" smDirSidebar="bottom">Lunch bottom sidebar</sm-button>
+   	<sm-button class="positive icon" icon="sidebar" 
+   	[smDirSidebar]="{selector: 'left', transition: 'overlay'}">Lunch left sidebar</sm-button> 
+    <sm-button class="" [smDirSidebar]="{selector: 'bottom', dimPage: false }">Lunch bottom sidebar</sm-button>
     <sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
         <a class="item">
             <i class="home icon"></i>
@@ -34,7 +40,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
     <h4 class="ui header">Code</h4>
         <codeblock prismjs="html">
-&lt;sm-button class="positive" smDirSidebar="left">Lunch left sidebar&lt;/sm-button>
+&lt;sm-button class="positive" [smDirSidebar]="{selector: 'left'}">Lunch left sidebar&lt;/sm-button>
 &lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
     &lt;a class="item">
         <i class="home icon"></i> Home

@@ -8,4 +8,5 @@ export declare class SemanticModalComponent {
     class: string;
     selector: string;
     title: string;
+    icon: string;
 }

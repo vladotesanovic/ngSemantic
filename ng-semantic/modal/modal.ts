@@ -31,8 +31,9 @@ export class SMModalDirective {
             return;
         }
 
-        jQuery(".ui.modal." + this.smDirModal.selector).modal("show");
-
+        jQuery(".ui.modal." + this.smDirModal.selector)
+            .modal(this.smDirModal || {})
+            .modal("toggle");
     }
 
 }
@@ -47,16 +48,18 @@ export class SMModalDirective {
     selector: "sm-modal",
     template: `<div class="ui modal {{selector}} {{class}}">
     <i class="close icon"></i>
-    <div class="ui icon header">
-      {{title}}
-    </div>
+    <div [ngClass]="{'icon': icon}" class="ui header">
+        <i *ngIf="icon" class="icon {{icon}}"></i>
+        {{title}}
+    </div>  
     <div class="content">
         <ng-content></ng-content>
     </div>
 </div>`
 })
 export class SemanticModalComponent {
-    @Input("class") class: string;
-    @Input("selector") selector: string;
-    @Input("title") title: string;
+    @Input() class: string;
+    @Input() selector: string;
+    @Input() title: string;
+    @Input() icon: string;
 }

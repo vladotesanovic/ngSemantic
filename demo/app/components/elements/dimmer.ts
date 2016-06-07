@@ -4,7 +4,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
-    selector: "dimmer",
+    selector: "sm-page-dimmer",
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -21,7 +21,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
             <h2 class="ui inverted icon header">
                 <i class="mail icon"></i>
                 Dimmer Message
-                <div class="sub header">Dimmer sub-header</div>
+                <div class="sub header">With { opacity: 1 }</div>
             </h2>
         </div>
     </sm-dimmer>

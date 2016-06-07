@@ -46,7 +46,7 @@ export class SemanticSidebarComponent {
 })
 export class SMSidebarDirective {
 
-    @Input() smDirSidebar: string;
+    @Input() smDirSidebar: { selector: string };
 
     @HostListener("click", ["$event.target"])
     toggleSidebar() {
@@ -55,13 +55,9 @@ export class SMSidebarDirective {
             return;
         }
 
-        jQuery(".ui.sidebar." + this.smDirSidebar)
+        jQuery(".ui.sidebar." + this.smDirSidebar.selector)
             .fixSidebar()
-            .sidebar({
-                transition: "overlay",
-                verbose: false
-            })
-            .sidebar("toggle");
+            .sidebar("show");
     }
 
 }

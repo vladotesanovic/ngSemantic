@@ -12,7 +12,7 @@ declare var jQuery: any;
 </div>`
 })
 export class SemanticDimmerComponent {
-    @Input("selector") selector: string;
+    @Input() selector: string;
 }
 
 /**
@@ -33,7 +33,6 @@ export class SMDimmerDirective {
             console.log("jQuery is not loaded");
             return;
         }
-
         jQuery(".ui.dimmer." + this.smDirDimmer)
             .dimmer("toggle");
     }
