@@ -4,4 +4,5 @@ export declare class SemanticAccordionComponent {
 }
 export declare class SemanticAccordionItemComponent {
     title: string;
+    class: string;
 }

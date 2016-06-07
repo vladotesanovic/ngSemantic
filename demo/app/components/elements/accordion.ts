@@ -5,7 +5,7 @@ import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common"
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
-    selector: "ui-accordion",
+    selector: "sm-page-accordion",
     template: `
     <div class="ui masthead vertical segment">
         <div class="ui container">
@@ -15,9 +15,14 @@ import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common"
         </div>
     </div>
     <div class="main ui container">
-        <h4 class="ui header">Demo</h4>
+    
+        <p>Options can be passed in form of JavaScript object. Full list of settings can be found on: </p>
+        <a href="http://semantic-ui.com/modules/accordion.html#/settings" target="_blank">
+        http://semantic-ui.com/modules/accordion.html#/settings
+        </a>
         
-        <sm-accordion [options]="{exclusive: false}">
+        <h4 class="ui header">Demo ( with options )</h4>
+        <sm-accordion [options]="accordionOption">
             <sm-accordion-item title="What is a dog?">
                 A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
                 it can be found as a welcome guest in many households across the world.
@@ -33,10 +38,13 @@ import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common"
                 finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
             </sm-accordion-item>
         </sm-accordion>
-        
         <h4 class="ui header">Code</h4>
 <codeblock prismjs="html">
-&lt;sm-accordion [options]="{exclusive: false}">
+accordionOption = {
+    exclusive: true,
+    on: "mouseenter"
+}
+&lt;sm-accordion [options]="accordionOption">
     &lt;sm-accordion-item title="What is a dog?">
         A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
         it can be found as a welcome guest in many households across the world.
@@ -72,13 +80,13 @@ import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common"
             </sm-accordion-item>
         </sm-accordion>
         
-        <h4 class="ui header">Demo fluid</h4>
+        <h4 class="ui header">Demo fluid ( second is active by default)</h4>
         <sm-accordion class="styled fluid">
             <sm-accordion-item title="What is a dog?">
                 A dog is a type of domesticated animal. Known for its loyalty and faithfulness, 
                 it can be found as a welcome guest in many households across the world.
             </sm-accordion-item>
-            <sm-accordion-item title="What kinds of dogs are there?">
+            <sm-accordion-item class="active" title="What kinds of dogs are there?">
                 There are many breeds of dogs. Each breed varies in size and temperament. 
                 Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
             </sm-accordion-item>
@@ -91,9 +99,9 @@ import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common"
         </sm-accordion>
         
         <h4 class="ui header">Demo inverted</h4>
-        <sm-segment class="inverted">
+        <sm-segment class="inverted teal">
            <sm-accordion class="inverted">
-            <sm-accordion-item title="What is a dog?">
+            <sm-accordion-item class="active" title="What is a dog?">
                 A dog is a type of domesticated animal. Known for its loyalty and faithfulness, 
                 it can be found as a welcome guest in many households across the world.
             </sm-accordion-item>
@@ -141,6 +149,10 @@ export class AccordionComponent {
     emailControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(4)]));
 
     form: ControlGroup;
+    accordionOption = {
+        exclusive: true,
+        on: "mouseenter"
+    };
 
     constructor(fb: FormBuilder) {
         this.form = fb.group({

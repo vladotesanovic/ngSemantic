@@ -33,24 +33,25 @@ class SMAccordionDirective implements OnInit {
 `
 })
 export class SemanticAccordionComponent {
-    @Input("class") class: string;
-    @Input("options") options: string;
+    @Input() class: string;
+    @Input() options: string;
 }
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-accordion-item",
     template: `
-<div class="active title">
+<div class="{{class}} title">
     <i class="dropdown icon"></i>
     {{title}}
 </div>
-<div class="content">
+<div class="{{class}} content">
     <p><ng-content></ng-content></p>
 </div>
 `
 
 })
 export class SemanticAccordionItemComponent {
-    @Input("title") title: string;
+    @Input() title: string;
+    @Input() class: string;
 }
