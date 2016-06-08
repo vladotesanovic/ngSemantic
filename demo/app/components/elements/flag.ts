@@ -1,9 +1,10 @@
 import { Component , Type } from "@angular/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
-    selector: "flag",
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
+    selector: "sm-page-flag",
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -20,20 +21,12 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
     <sm-flag flag="argentina"></sm-flag>
     
     <h4 class="ui header">Code</h4>
-    <div class="ui form">
-        <div class="field">
-          <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-flag flag="serbia"></sm-flag>
-<sm-flag flag="bosnia"></sm-flag>
-<sm-flag flag="argentina"></sm-flag>
-          </textarea>
-        </div>
-      </div>
+    <codeblock prismjs="html">
+&lt;sm-flag flag="serbia">&lt;/sm-flag>
+&lt;sm-flag flag="bosnia">&lt;/sm-flag>
+&lt;sm-flag flag="argentina">&lt;/sm-flag>
+</codeblock>
       
-      <br/><br/>
-      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/flag.ts">
-        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/flag.ts
-      </a>
 </div>
 `
 })

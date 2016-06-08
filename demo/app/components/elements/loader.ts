@@ -2,11 +2,12 @@ import { Component , Type } from "@angular/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { ROUTER_DIRECTIVES } from "@angular/router";
 import { DataServices } from "../../services/data";
+import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, ROUTER_DIRECTIVES],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, ROUTER_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     providers: [DataServices],
-    selector: "loader",
+    selector: "sm-page-loader",
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -19,16 +20,14 @@ import { DataServices } from "../../services/data";
     <p>If you want to add loading animation to your Angular 2 app, add this code snippet inside your root app tag.</p>
     <h4 class="ui header">Demo</h4>
     <p><a onClick="location.reload()" href="#/elements/loader">Refresh page</a></p>
-    <h4 class="ui header">Code</h4>
-    <div class="ui form">
-        <div class="field">
-          <textarea rows="4" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<div class="ui active inverted dimmer">
-    <div class="ui text large loader">Loading</div>
-</div>
-          </textarea>
-        </div>
-      </div>
+    
+        <h4 class="ui header">Code</h4>
+    <codeblock prismjs="html">
+&lt;div class="ui active inverted dimmer">
+    &lt;div class="ui text large loader">Loading&lt;/div>
+&lt;/div>
+</codeblock>
+
    <h4 class="ui header">Loader component</h4>
    <sm-segment>
         <sm-loader [complete]="isCompleted" class="inverted" text="Loading..."></sm-loader>
@@ -41,21 +40,12 @@ import { DataServices } from "../../services/data";
         publishing software like Aldus PageMaker including versions of Lorem Ipsum.
    </sm-segment>
    <h4 class="ui header">Code</h4>
-       <div class="ui form">
-        <div class="field">
-          <textarea rows="5" readonly class="code" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-<sm-segment>
-        <sm-loader [complete]="isCompleted" class="inverted" text="Loading..."></sm-loader>
+    <codeblock prismjs="html">
+&lt;sm-segment>
+        &lt;sm-loader [complete]="isCompleted" class="inverted" text="Loading...">&lt;/sm-loader>
         ...
-</sm-segment>
-          </textarea>
-        </div>
-      </div>
-      
-      <br/><br/>
-      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/loader.ts">
-        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/loader.ts
-      </a>
+&lt;/sm-segment>
+</codeblock>
 </div>
 `
 })
