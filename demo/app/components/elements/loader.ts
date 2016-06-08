@@ -53,8 +53,8 @@ import { DataServices } from "../../services/data";
       </div>
       
       <br/><br/>
-      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/loader.ts">
-        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/loader.ts
+      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/demo/app/components/elements/loader.ts">
+        https://github.com/vladotesanovic/ngSemantic/blob/master/demo/app/components/elements/loader.ts
       </a>
 </div>
 `

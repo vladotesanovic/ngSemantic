@@ -31,8 +31,8 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
       </div>
       
       <br/><br/>
-      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/flag.ts">
-        https://github.com/vladotesanovic/ngSemantic/blob/master/src/app/components/elements/flag.ts
+      Page source: <a target="_blank" href="https://github.com/vladotesanovic/ngSemantic/blob/master/demo/app/components/elements/flag.ts">
+        https://github.com/vladotesanovic/ngSemantic/blob/master/demo/app/components/elements/flag.ts
       </a>
 </div>
 `
