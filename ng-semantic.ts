@@ -8,7 +8,7 @@ import { SemanticListComponent } from "./ng-semantic/list/list";
 import { SemanticButtonComponent } from "./ng-semantic/button/button";
 import { SemanticItemComponent } from "./ng-semantic/item/item";
 import { SemanticLoaderComponent } from "./ng-semantic/loader/loader";
-import { SemanticCardComponent } from "./ng-semantic/card/card";
+import { SemanticCardComponent, SemanticCardsComponent } from "./ng-semantic/card/card";
 import { SemanticInputComponent, SemanticFormComponent,
 	SemanticTextareaComponent, SemanticCheckboxComponent } from "./ng-semantic/input/input";
 import { SemanticSidebarComponent, SMSidebarDirective } from "./ng-semantic/sidebar/sidebar";
@@ -39,6 +39,7 @@ export *  from "./ng-semantic/accordion/accordion";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticCardComponent,
+	SemanticCardsComponent,
 	SemanticInputComponent,
 	SemanticTextareaComponent,
 	SemanticCheckboxComponent,

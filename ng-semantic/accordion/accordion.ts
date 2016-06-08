@@ -43,15 +43,13 @@ export class SemanticAccordionComponent {
     template: `
 <div class="{{class}} title">
     <i class="dropdown icon"></i>
-    {{title}}
+    <ng-content select="accordion-title"></ng-content>
 </div>
 <div class="{{class}} content">
-    <p><ng-content></ng-content></p>
+    <ng-content select="accordion-content"></ng-content>
 </div>
 `
-
 })
 export class SemanticAccordionItemComponent {
-    @Input() title: string;
     @Input() class: string;
 }

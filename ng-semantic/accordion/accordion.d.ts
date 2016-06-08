@@ -3,6 +3,5 @@ export declare class SemanticAccordionComponent {
     options: string;
 }
 export declare class SemanticAccordionItemComponent {
-    title: string;
     class: string;
 }

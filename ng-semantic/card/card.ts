@@ -8,24 +8,40 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-card",
-  template: `<div class="image">
+  template: `<div class="ui {{class}}">
+<div class="image" *ngIf="image">
     <img src="{{image}}">
   </div>
   <div class="content">
-    <a class="header">{{title}}</a>
+    <ng-content select="card-title"></ng-content>
     <div class="meta">
-      <span class="date">{{subtitle}}</span>
+      <ng-content select="card-subtitle"></ng-content>
     </div>
     <div class="description">
-      <ng-content select="content"></ng-content>
+      <ng-content select="card-content"></ng-content>
     </div>
   </div>
   <div class="extra content">
-    <ng-content select="extra"></ng-content>
-  </div>`
+    <ng-content select="card-extra"></ng-content>
+  </div>
+  <ng-content></ng-content>
+</div>`
 })
 export class SemanticCardComponent {
-  @Input("image") image: string;
-  @Input("title") title: string;
-  @Input("subtitle") subtitle: string;
+  @Input() class: string;
+  @Input() image: string;
+}
+
+/**
+ * Implementation of Cards collection
+ *
+ * @link http://semantic-ui.com/views/card.html
+ */
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: "sm-cards",
+  template: `<div class="ui cards {{class}}"><ng-content></ng-content></div>`
+})
+export class SemanticCardsComponent {
+  @Input() class: string;
 }

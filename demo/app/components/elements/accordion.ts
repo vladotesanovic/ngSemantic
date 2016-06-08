@@ -23,19 +23,20 @@ import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common"
         
         <h4 class="ui header">Demo ( with options )</h4>
         <sm-accordion [options]="accordionOption">
-            <sm-accordion-item title="What is a dog?">
-                A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                it can be found as a welcome guest in many households across the world.
+            <sm-accordion-item>
+                <accordion-title>What is a dog?</accordion-title>
+                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
-            <sm-accordion-item title="What kinds of dogs are there?">
-                There are many breeds of dogs. Each breed varies in size and temperament.
-                Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+            <sm-accordion-item>
+                <accordion-title>What kinds of dogs are there?</accordion-title>
+                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
-            <sm-accordion-item title="How do you acquire a dog?">
-                Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
-                A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner 
-                allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, 
-                finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            <sm-accordion-item>
+                <accordion-title>How do you acquire a dog?</accordion-title>
+                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
         </sm-accordion>
         <h4 class="ui header">Code</h4>
@@ -46,75 +47,78 @@ accordionOption = {
 }
 &lt;sm-accordion [options]="accordionOption">
     &lt;sm-accordion-item title="What is a dog?">
-        A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-        it can be found as a welcome guest in many households across the world.
+        &lt;accordion-title>What is a dog?&lt;/accordion-title>
+        &lt;accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+        it can be found as a welcome guest in many households across the world.&lt;/accordion-content>
     &lt;/sm-accordion-item>
     &lt;sm-accordion-item title="What kinds of dogs are there?">
-        There are many breeds of dogs. Each breed varies in size and temperament.
-        Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+        &lt;accordion-title>What is a dog?&lt;/accordion-title>
+        &lt;accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+        it can be found as a welcome guest in many households across the world.&lt;/accordion-content>
     &lt;/sm-accordion-item>
     &lt;sm-accordion-item title="How do you acquire a dog?">
-        Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
-        A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner 
-        allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, 
-        finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+        &lt;accordion-title>What is a dog?&lt;/accordion-title>
+        &lt;accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+        it can be found as a welcome guest in many households across the world.&lt;/accordion-content>
     &lt;/sm-accordion-item>
 &lt;/sm-accordion>
 </codeblock>
          <h4 class="ui header">Demo styled</h4>
          <sm-accordion class="styled">
-            <sm-accordion-item title="What is a dog?">
-                A dog is a type of domesticated animal. Known for its loyalty and faithfulness, 
-                it can be found as a welcome guest in many households across the world.
+            <sm-accordion-item>
+                <accordion-title>What is a dog?</accordion-title>
+                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
-            <sm-accordion-item title="What kinds of dogs are there?">
-                There are many breeds of dogs. Each breed varies in size and temperament. 
-                Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+            <sm-accordion-item>
+                <accordion-title>What kinds of dogs are there?</accordion-title>
+                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
-            <sm-accordion-item title="How do you acquire a dog?">
-                Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
-                A pet shop may be the most convenient way to buy a dog. 
-                Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog 
-                before choosing to take it home. 
-                Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            <sm-accordion-item>
+                <accordion-title>How do you acquire a dog?</accordion-title>
+                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
         </sm-accordion>
         
         <h4 class="ui header">Demo fluid ( second is active by default)</h4>
         <sm-accordion class="styled fluid">
-            <sm-accordion-item title="What is a dog?">
-                A dog is a type of domesticated animal. Known for its loyalty and faithfulness, 
-                it can be found as a welcome guest in many households across the world.
+            <sm-accordion-item>
+                <accordion-title>What is a dog?</accordion-title>
+                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
-            <sm-accordion-item class="active" title="What kinds of dogs are there?">
-                There are many breeds of dogs. Each breed varies in size and temperament. 
-                Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+            <sm-accordion-item>
+                <accordion-title>What kinds of dogs are there?</accordion-title>
+                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
-            <sm-accordion-item title="How do you acquire a dog?">
-                Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
-                A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows 
-                you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, 
-                finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+            <sm-accordion-item>
+                <accordion-title>How do you acquire a dog?</accordion-title>
+                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
         </sm-accordion>
         
         <h4 class="ui header">Demo inverted</h4>
         <sm-segment class="inverted teal">
            <sm-accordion class="inverted">
-            <sm-accordion-item class="active" title="What is a dog?">
-                A dog is a type of domesticated animal. Known for its loyalty and faithfulness, 
-                it can be found as a welcome guest in many households across the world.
-            </sm-accordion-item>
-            <sm-accordion-item title="What kinds of dogs are there?">
-                There are many breeds of dogs. Each breed varies in size and temperament. 
-                Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
-            </sm-accordion-item>
-            <sm-accordion-item title="How do you acquire a dog?">
-                Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
-                A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess 
-                the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter,
-                 helps give a good home to a dog who may not find one so readily.
-            </sm-accordion-item>
+                <sm-accordion-item>
+                    <accordion-title>What is a dog?</accordion-title>
+                    <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                    it can be found as a welcome guest in many households across the world.</accordion-content>
+                </sm-accordion-item>
+                <sm-accordion-item>
+                    <accordion-title>What kinds of dogs are there?</accordion-title>
+                    <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                    it can be found as a welcome guest in many households across the world.</accordion-content>
+                </sm-accordion-item>
+                <sm-accordion-item>
+                    <accordion-title>How do you acquire a dog?</accordion-title>
+                    <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+                    it can be found as a welcome guest in many households across the world.</accordion-content>
+                </sm-accordion-item>
             </sm-accordion>
         </sm-segment>
              
@@ -125,13 +129,16 @@ accordionOption = {
                     <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
                 </div>
                 <sm-accordion>
-                    <sm-accordion-item title="Additional">                        
-                        <div class="field">
-                            <sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
-                        </div>
-                        <div class="field">
-                            <sm-input label="Phone number" [control]="emailControl" placeholder="Enter phone number..."></sm-input>
-                        </div>
+                    <sm-accordion-item>   
+                        <accordion-title>Additional</accordion-title>
+                        <accordion-content>
+                            <div class="field">
+                                <sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
+                            </div>
+                            <div class="field">
+                                <sm-input label="Phone number" [control]="emailControl" placeholder="Enter phone number..."></sm-input>
+                            </div>
+                        </accordion-content>
                     </sm-accordion-item>
                 </sm-accordion>
                     <p></p>

@@ -1,3 +1,7 @@
+## version: 1.0.26
+
+Templates for <sm-card> and <sm-accordion> is much more declarative.
+
 ## version: 1.0.25
 
 - smModalDir

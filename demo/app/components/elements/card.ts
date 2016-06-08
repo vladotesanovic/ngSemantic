@@ -4,7 +4,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
-    selector : "card",
+    selector : "sm-page-card",
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -15,25 +15,95 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
-    <sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
-        <content>
+    <sm-card class="card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+        <card-title> Kristy </card-title>
+        <card-subtitle> Joined in 2013 </card-subtitle>
+        <card-content>
             Kristy is an art director living in New York.
-        </content>
-        <extra>
+        </card-content>
+        <card-extra>
             <a>
                 <i class="user icon"></i>
                 22 Friends
             </a>
-        </extra>
+        </card-extra>
     </sm-card>
     
     <h4 class="ui header">Code</h4>
 <codeblock prismjs="html">
-&lt;sm-card class="ui card" title="Kristy" image="http://semantic-ui.com/images/avatar2/large/kristy.png" subtitle="Joined in 2013">
-    <content>...</content>
-    <extra>...</extra>
+&lt;sm-card class="ui card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+    &lt;card-title> Kristy &lt;/card-title>
+    &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
+    &lt;card-content>
+        Kristy is an art director living in New York.
+    &lt;/card-content>
+    &lt;card-extra>
+        &lt;a>
+            &lt;i class="user icon">&lt;/i>
+            22 Friends
+        &lt;/a>
+    &lt;/card-extra>
 &lt;/sm-card>
 </codeblock>
+    <h4 class="ui header">Demo cards</h4>
+    <sm-cards>
+        <sm-card class="card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+            <card-title> Kristy </card-title>
+            <card-subtitle> Joined in 2013 </card-subtitle>
+            <card-content>
+                Kristy is an art director living in New York.
+            </card-content>
+            <card-extra>
+                <a>
+                    <i class="user icon"></i>
+                    22 Friends
+                </a>
+            </card-extra>
+        </sm-card>
+        <sm-card class="card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+            <card-title> Kristy </card-title>
+            <card-subtitle> Joined in 2013 </card-subtitle>
+            <card-content>
+                Kristy is an art director living in New York.
+            </card-content>
+            <card-extra>
+                <a>
+                    <i class="user icon"></i>
+                    22 Friends
+                </a>
+            </card-extra>
+        </sm-card>
+    </sm-cards>
+        <h4 class="ui header">Code</h4>
+<codeblock prismjs="html">
+&lt;sm-cards>
+    &lt;sm-card class="ui card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+        &lt;card-title> Kristy &lt;/card-title>
+        &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
+        &lt;card-content>
+            Kristy is an art director living in New York.
+        &lt;/card-content>
+        &lt;card-extra>
+            &lt;a>
+                &lt;i class="user icon">&lt;/i>
+                22 Friends
+            &lt;/a>
+        &lt;/card-extra>
+    &lt;/sm-card>
+    &lt;sm-card class="ui card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
+    ...
+    &lt;/sm-card>
+&lt;/sm-cards>
+</codeblock>
+<h4 class="ui header">Demo attached button without image</h4>
+    <sm-card class="card">
+        <card-title> Kristy </card-title>
+        <card-subtitle> Joined in 2013 </card-subtitle>
+        <card-content>
+            Kristy is an art director living in New York.
+        </card-content>
+        <sm-button class="bottom attached fluid" icon="add">Add friend</sm-button>
+    </sm-card>
 </div>
 `
 })

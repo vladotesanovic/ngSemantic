@@ -1,5 +1,7 @@
 export declare class SemanticCardComponent {
+    class: string;
     image: string;
-    title: string;
-    subtitle: string;
+}
+export declare class SemanticCardsComponent {
+    class: string;
 }
