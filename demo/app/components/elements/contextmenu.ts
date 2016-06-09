@@ -1,4 +1,4 @@
-import { Component, Type, Renderer, ElementRef } from "@angular/core";
+import { Component, Type, Renderer, ElementRef, ViewChild, AfterViewInit } from "@angular/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 import { ContextMenuService, IContextMenu } from "../../services/contextmenu";
@@ -8,6 +8,7 @@ declare var jQuery: any;
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-contextmenu",
+    styles: [`.full { height: 500px; border: 1px dashed gray }`],
     template: `
     <div class="ui masthead vertical segment">
         <div class="ui container">
@@ -17,9 +18,12 @@ declare var jQuery: any;
         </div>
     </div>
     <div class="main ui container">
-    
-        <p>To activate contextmenu, press right click anywhere on the page.</p>
-        
+        <br/>
+        <div class="full" #query>
+            <sm-segment class="basic">
+                <p>To activate contextmenu, press right click inside dotted box.</p>
+           </sm-segment>
+        </div>
         <sm-modal selector="modal" title="Simple modal" class="">
             You activated it trough context menu!
         </sm-modal>
@@ -29,20 +33,13 @@ declare var jQuery: any;
     `
 })
 
-export class ContextmenuComponent {
+export class ContextmenuComponent implements AfterViewInit {
 
     menuPosition: { x: number, y: number };
     menuItems: Array<IContextMenu> = [];
+    @ViewChild("query") query: ElementRef;
 
-    constructor(renderer: Renderer, elementRef: ElementRef, contextmenu: ContextMenuService) {
-
-        renderer.listenGlobal("body", "contextmenu", (event: MouseEvent): void => {
-
-            this.menuPosition = { x: event.clientX, y: event.clientY };
-
-            // disable showing browser context menu
-            event.preventDefault();
-        });
+    constructor(public renderer: Renderer) {
 
         this.menuItems = [...this.menuItems, {
             action: (): void => { location.assign("/#/elements/accordion"); },
@@ -65,16 +62,18 @@ export class ContextmenuComponent {
             method: 1,
             title: "Open modal Window"
         }];
+    }
 
-        setTimeout(() => {
-            this.menuItems = [...this.menuItems, {
-                action: (): void => { jQuery(".ui.modal.modal")
-                    .modal("toggle"); },
-                icon: "browser",
-                method: 0,
-                title: "Test"
-            }];
-        }, 3000);
+    ngAfterViewInit(): void {
 
+        this.renderer.listen(this.query.nativeElement, "contextmenu", (event: MouseEvent): void => {
+
+            this.menuPosition = { x: event.clientX, y: event.clientY };
+
+            // disable showing browser context menu
+            event.preventDefault();
+        });
+
+        return undefined;
     }
 }
