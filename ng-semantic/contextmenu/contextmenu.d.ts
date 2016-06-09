@@ -3,6 +3,7 @@ export declare class SemanticContextMenuComponent {
         x: number;
         y: number;
     };
+    _items: Array<{}>;
     show: boolean;
     items: Array<{}>;
     position: {

@@ -4,6 +4,7 @@ import { Subject } from "rxjs/Rx";
 export interface IContextMenu {
     action: Function;
     title: string;
+    method: number;
     icon: string;
 }
 

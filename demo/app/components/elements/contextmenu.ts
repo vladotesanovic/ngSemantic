@@ -47,12 +47,14 @@ export class ContextmenuComponent {
         this.menuItems = [...this.menuItems, {
             action: (): void => { location.assign("/#/elements/accordion"); },
             icon: "home",
-            title: "Go to Accordion Page"
+            method: 1,
+            title: "Go to Accordion Page",
         }];
 
         this.menuItems = [...this.menuItems, {
             action: (): void => { location.reload(); },
             icon: "refresh",
+            method: 1,
             title: "Refresh window"
         }];
 
@@ -60,8 +62,19 @@ export class ContextmenuComponent {
             action: (): void => { jQuery(".ui.modal.modal")
                 .modal("toggle"); },
             icon: "browser",
+            method: 1,
             title: "Open modal Window"
         }];
+
+        setTimeout(() => {
+            this.menuItems = [...this.menuItems, {
+                action: (): void => { jQuery(".ui.modal.modal")
+                    .modal("toggle"); },
+                icon: "browser",
+                method: 0,
+                title: "Test"
+            }];
+        }, 3000);
 
     }
 }
