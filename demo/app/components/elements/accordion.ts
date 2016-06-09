@@ -46,17 +46,17 @@ accordionOption = {
     on: "mouseenter"
 }
 &lt;sm-accordion [options]="accordionOption">
-    &lt;sm-accordion-item title="What is a dog?">
+    &lt;sm-accordion-item>
         &lt;accordion-title>What is a dog?&lt;/accordion-title>
         &lt;accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
         it can be found as a welcome guest in many households across the world.&lt;/accordion-content>
     &lt;/sm-accordion-item>
-    &lt;sm-accordion-item title="What kinds of dogs are there?">
+    &lt;sm-accordion-item>
         &lt;accordion-title>What is a dog?&lt;/accordion-title>
         &lt;accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
         it can be found as a welcome guest in many households across the world.&lt;/accordion-content>
     &lt;/sm-accordion-item>
-    &lt;sm-accordion-item title="How do you acquire a dog?">
+    &lt;sm-accordion-item>
         &lt;accordion-title>What is a dog?&lt;/accordion-title>
         &lt;accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
         it can be found as a welcome guest in many households across the world.&lt;/accordion-content>
