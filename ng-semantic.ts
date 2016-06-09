@@ -14,11 +14,13 @@ import { SemanticInputComponent, SemanticFormComponent,
 import { SemanticSidebarComponent, SMSidebarDirective } from "./ng-semantic/sidebar/sidebar";
 import { SemanticTabsComponent, SemanticTabComponent } from "./ng-semantic/tab/tab";
 import { SemanticFlagComponent } from "./ng-semantic/flag/flag";
+import { SemanticContextMenuComponent } from "./ng-semantic/contextmenu/contextmenu";
 import { SemanticProgressComponent } from "./ng-semantic/progress/progress";
 import { SemanticDimmerComponent, SMDimmerDirective } from "./ng-semantic/dimmer/dimmer";
 import { SemanticAccordionComponent, SemanticAccordionItemComponent } from "./ng-semantic/accordion/accordion";
 
 export * from "./ng-semantic/menu/menu";
+export * from "./ng-semantic/contextmenu/contextmenu";
 export *  from "./ng-semantic/message/message";
 export * from "./ng-semantic/popup/tooltip";
 export *  from "./ng-semantic/popup/popup";
@@ -40,6 +42,7 @@ export *  from "./ng-semantic/accordion/accordion";
 export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticCardComponent,
 	SemanticCardsComponent,
+	SemanticContextMenuComponent,
 	SemanticInputComponent,
 	SemanticTextareaComponent,
 	SemanticCheckboxComponent,

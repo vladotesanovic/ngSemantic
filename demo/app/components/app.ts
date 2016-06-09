@@ -2,6 +2,7 @@ import { Component, AfterViewInit, Type } from "@angular/core";
 import { ROUTER_DIRECTIVES, Routes } from "@angular/router";
 
 import { HomeComponent } from "./home/home";
+import { ContextmenuComponent } from "./elements/contextmenu";
 import { LoaderComponent } from "./elements/loader";
 import { ListComponent } from "./elements/list";
 import { SegmentComponent } from "./elements/segment";
@@ -22,12 +23,13 @@ import { AccordionComponent } from "./elements/accordion";
 @Component({
     	directives: [ROUTER_DIRECTIVES],
 		providers: [Location],
-        selector: "app",
+        selector: "sm-app",
 		templateUrl: "/demo/app/components/app.html"
 })
 @Routes([
 	{ component: <Type>HomeComponent, path: "/" },
 	{ component: <Type>LoaderComponent, path: "/elements/loader" },
+	{ component: <Type>ContextmenuComponent, path: "/elements/contextmenu" },
 	{ component: <Type>AccordionComponent, path: "/elements/accordion" },
 	{ component: <Type>ListComponent, path: "/elements/list" },
 	{ component: <Type>FormComponent, path: "/elements/form" },

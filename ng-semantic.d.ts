@@ -1,4 +1,5 @@
 export * from "./ng-semantic/menu/menu";
+export * from "./ng-semantic/contextmenu/contextmenu";
 export * from "./ng-semantic/message/message";
 export * from "./ng-semantic/popup/tooltip";
 export * from "./ng-semantic/popup/popup";

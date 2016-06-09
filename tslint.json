@@ -27,6 +27,7 @@
       "trace"
     ],
     "no-construct": true,
+    "no-any": false,
     "no-debugger": true,
     "no-duplicate-key": true,
     "no-duplicate-variable": true,

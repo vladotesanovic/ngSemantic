@@ -5,7 +5,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
-    selector: "test-form",
+    selector: "sm-page-form",
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
