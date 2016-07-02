@@ -14,7 +14,7 @@
         <link rel="stylesheet" type="text/css" href="demo/assets/css/style.css">
 
         <!-- Semantic imports -->
-        <script src="demo/vendor/jquery-2.1.4.min.js"></script>
+        <script src="demo/vendor/jquery.min.js"></script>
         <script src="demo/vendor/semantic.min.js"></script>
 
         <!-- 1. Load libraries -->
@@ -25,11 +25,11 @@
         <script src="demo/vendor/system.src.js"></script>
         <!-- 2. Configure SystemJS -->
 
-        <!-- DEVELOPMENT
+        <!-- DEVELOPMENT  -->
         <script src="systemjs.config.js"></script>
         <script>
         System.import('/demo/app/bootstrap').then(null, console.error.bind(console));
-        </script>  -->
+        </script>
     </head>
 
     <body class="pushable" id="page">
@@ -40,8 +40,8 @@
                 </div>
             </sm-app>
         </div>
-        <!-- PRODUCTION -->
-        <script src="demo/vendor/bundle.min.js"></script>
+        <!-- PRODUCTION
+        <script src="demo/vendor/bundle.min.js"></script> -->
     </body>
     <script>
 

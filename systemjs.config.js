@@ -25,6 +25,7 @@
         'compiler',
         'core',
         'http',
+        'forms',
         'platform-browser',
         'platform-browser-dynamic',
         'router',

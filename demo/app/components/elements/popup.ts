@@ -4,7 +4,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
-    selector : "popup",
+    selector : "sm-page-popup",
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -14,18 +14,18 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </div>
 </div>
 <div class="main ui container">
-    <h4 class="ui header">Demo tooltip</h4>
-    <button class="ui button" smDirTooltip="Pellentesque habitant morbi tristique.">Hover me</button>
+    <h4 class="ui header">Demo tooltip ( pure CSS )</h4>
+    <button class="ui button" smDirTooltip="Pellentesque habitant morbi tristique." smDirPosition="right center">Hover me</button>
     
     <h4 class="ui header">Code</h4>
-<codeblock prismjs="html">
-&lt;button class="ui button" smDirTooltip="text...">Hover me&lt;/button>
-</codeblock>
+<sm-codeblock smPrismjs="html">
+&lt;button class="ui button" smDirTooltip="text..." smDirPosition="right center">Hover me&lt;/button>
+</sm-codeblock>
       <div class="ui divider"></div>
       
       <h4 class="ui header">Demo popup</h4>
-    <button class="ui button green" [smDirPopup]="{selector: 'my-popup', position: 'right center'}">Click me</button>
-    <sm-popup selector="my-popup">
+    <button class="ui button green" (click)="myPopup.show($event, {position: 'right center'})">Click me</button>
+    <sm-popup #myPopup>
         <div class='header'>User Rating</div>
         <div class='content'>
             <div class='ui star rating'>
@@ -35,12 +35,12 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-popup>
     
     <h4 class="ui header">Code</h4>
-        <codeblock prismjs="html">
-&lt;button class="ui button green" [smDirPopup]="{selector: 'my-popup', position: 'right center'}">Click me&lt;/button>
-&lt;sm-popup selector="my-popup">
+        <sm-codeblock smPrismjs="html">
+&lt;button class="ui button green" (click)="myPopup.show($event, {position: 'right center'})">Click me&lt;/button>
+&lt;<sm-popup></sm-popup> #myPopup>
     ...
 &lt;/sm-popup>
-    </codeblock>   
+    </sm-codeblock>   
 </div>
 `
 })

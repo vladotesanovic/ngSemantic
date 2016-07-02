@@ -1,9 +1,6 @@
+import { ElementRef } from "@angular/core";
 export declare class SemanticSidebarComponent {
     class: string;
-}
-export declare class SMSidebarDirective {
-    smDirSidebar: {
-        selector: string;
-    };
-    toggleSidebar(): void;
+    sidebar: ElementRef;
+    show(options?: {}): void;
 }

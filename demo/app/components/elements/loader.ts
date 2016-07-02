@@ -22,11 +22,11 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <p><a onClick="location.reload()" href="#/elements/loader">Refresh page</a></p>
     
         <h4 class="ui header">Code</h4>
-    <codeblock prismjs="html">
+    <sm-codeblock smPrismjs="html">
 &lt;div class="ui active inverted dimmer">
     &lt;div class="ui text large loader">Loading&lt;/div>
 &lt;/div>
-</codeblock>
+</sm-codeblock>
 
    <h4 class="ui header">Loader component</h4>
    <sm-segment>
@@ -40,12 +40,12 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         publishing software like Aldus PageMaker including versions of Lorem Ipsum.
    </sm-segment>
    <h4 class="ui header">Code</h4>
-    <codeblock prismjs="html">
+    <sm-codeblock smPrismjs="html">
 &lt;sm-segment>
-        &lt;sm-loader [complete]="isCompleted" class="inverted" text="Loading...">&lt;/sm-loader>
+    &lt;sm-loader [complete]="isCompleted" class="inverted" text="Loading...">&lt;/sm-loader>
         ...
 &lt;/sm-segment>
-</codeblock>
+</sm-codeblock>
 </div>
 `
 })

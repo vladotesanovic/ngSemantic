@@ -22,9 +22,9 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
             <a href="http://semantic-ui.com/elements/icon.html" target="_blank">http://semantic-ui.com/elements/icon.html</a>
         </p>
         <h4 class="ui header">Code</h4>
-            <codeblock prismjs="html">
+            <sm-codeblock smPrismjs="html">
 &lt;sm-button class="positive" (click)="clickMe($event)" icon="thumbs up">Click Me&lt;/sm-button>
-</codeblock>
+</sm-codeblock>
         
         <h4 class="ui header">Buttons</h4>
         <sm-button class="" icon="">Normal</sm-button>

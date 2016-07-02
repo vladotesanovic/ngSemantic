@@ -1,12 +1,8 @@
-export declare class SMModalDirective {
-    smDirModal: {
-        selector: string;
-    };
-    onClick(): void;
-}
+import { ElementRef } from "@angular/core";
 export declare class SemanticModalComponent {
     class: string;
-    selector: string;
     title: string;
     icon: string;
+    modal: ElementRef;
+    show(data?: {}): void;
 }

@@ -1,8 +1,8 @@
 import { SemanticMenuComponent } from "./ng-semantic/menu/menu";
 import { SemanticMessageComponent } from "./ng-semantic/message/message";
 import { SMTooltipDirective } from "./ng-semantic/popup/tooltip";
-import { SemanticPopupComponent, SMPopupDirective } from "./ng-semantic/popup/popup";
-import { SemanticModalComponent, SMModalDirective } from "./ng-semantic/modal/modal";
+import { SemanticPopupComponent } from "./ng-semantic/popup/popup";
+import { SemanticModalComponent } from "./ng-semantic/modal/modal";
 import { SemanticSegmentComponent } from "./ng-semantic/segment/segment";
 import { SemanticListComponent } from "./ng-semantic/list/list";
 import { SemanticButtonComponent } from "./ng-semantic/button/button";
@@ -11,12 +11,12 @@ import { SemanticLoaderComponent } from "./ng-semantic/loader/loader";
 import { SemanticCardComponent, SemanticCardsComponent } from "./ng-semantic/card/card";
 import { SemanticInputComponent, SemanticFormComponent,
 	SemanticTextareaComponent, SemanticCheckboxComponent } from "./ng-semantic/input/input";
-import { SemanticSidebarComponent, SMSidebarDirective } from "./ng-semantic/sidebar/sidebar";
+import { SemanticSidebarComponent } from "./ng-semantic/sidebar/sidebar";
 import { SemanticTabsComponent, SemanticTabComponent } from "./ng-semantic/tab/tab";
 import { SemanticFlagComponent } from "./ng-semantic/flag/flag";
 import { SemanticContextMenuComponent } from "./ng-semantic/contextmenu/contextmenu";
 import { SemanticProgressComponent } from "./ng-semantic/progress/progress";
-import { SemanticDimmerComponent, SMDimmerDirective } from "./ng-semantic/dimmer/dimmer";
+import { SemanticDimmerComponent } from "./ng-semantic/dimmer/dimmer";
 import { SemanticAccordionComponent, SemanticAccordionItemComponent } from "./ng-semantic/accordion/accordion";
 
 export * from "./ng-semantic/menu/menu";
@@ -67,9 +67,5 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 ];
 
 export let SEMANTIC_DIRECTIVES: Array<any> = [
-	SMTooltipDirective,
-	SMPopupDirective,
-	SMModalDirective,
-	SMSidebarDirective,
-	SMDimmerDirective
+	SMTooltipDirective
 ];

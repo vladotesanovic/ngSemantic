@@ -30,7 +30,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-card>
     
     <h4 class="ui header">Code</h4>
-<codeblock prismjs="html">
+<sm-codeblock smPrismjs="html">
 &lt;sm-card class="ui card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
     &lt;card-title> Kristy &lt;/card-title>
     &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
@@ -44,7 +44,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         &lt;/a>
     &lt;/card-extra>
 &lt;/sm-card>
-</codeblock>
+</sm-codeblock>
     <h4 class="ui header">Demo cards</h4>
     <sm-cards>
         <sm-card class="card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
@@ -75,7 +75,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         </sm-card>
     </sm-cards>
         <h4 class="ui header">Code</h4>
-<codeblock prismjs="html">
+<sm-codeblock smPrismjs="html">
 &lt;sm-cards>
     &lt;sm-card class="ui card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
         &lt;card-title> Kristy &lt;/card-title>
@@ -94,7 +94,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     ...
     &lt;/sm-card>
 &lt;/sm-cards>
-</codeblock>
+</sm-codeblock>
 <h4 class="ui header">Demo attached button without image</h4>
     <sm-card class="card">
         <card-title> Kristy </card-title>

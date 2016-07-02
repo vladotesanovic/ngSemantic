@@ -7,7 +7,7 @@ import { MessageService } from "../../services/message";
 @Component({
   directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
   providers: [MessageService],
-  selector: "message",
+  selector: "sm-page-message",
   template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -36,10 +36,10 @@ import { MessageService } from "../../services/message";
     </sm-button>
 
     <h4 class="ui header">Code</h4>
-<codeblock prismjs="html">
+<sm-codeblock smPrismjs="html">
 &lt;sm-message *ngFor="#message of messages" class="ui message { {message.type} }"
     [ngClass]="{ icon: message.icon}" [icon]="message.icon">{ {message.text} }&lt;/sm-message>
-</codeblock>
+</sm-codeblock>
 </div>
 `
 })

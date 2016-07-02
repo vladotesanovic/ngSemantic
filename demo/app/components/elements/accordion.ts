@@ -1,10 +1,10 @@
 import { Component , Type } from "@angular/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
-import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common";
+import { REACTIVE_FORM_DIRECTIVES, Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, REACTIVE_FORM_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-accordion",
     template: `
     <div class="ui masthead vertical segment">
@@ -40,7 +40,7 @@ import { Control, Validators, FormBuilder, ControlGroup } from "@angular/common"
             </sm-accordion-item>
         </sm-accordion>
         <h4 class="ui header">Code</h4>
-<codeblock prismjs="html">
+<sm-codeblock smPrismjs="html">
 accordionOption = {
     exclusive: true,
     on: "mouseenter"
@@ -62,7 +62,7 @@ accordionOption = {
         it can be found as a welcome guest in many households across the world.&lt;/accordion-content>
     &lt;/sm-accordion-item>
 &lt;/sm-accordion>
-</codeblock>
+</sm-codeblock>
          <h4 class="ui header">Demo styled</h4>
          <sm-accordion class="styled">
             <sm-accordion-item>
@@ -124,7 +124,7 @@ accordionOption = {
              
         <h4 class="ui header">Demo form</h4>
         <sm-segment>
-            <form smForm class="ui form" [ngFormModel]="form">
+            <form smForm class="ui form" [formGroup]="form">
                 <div class="field">
                     <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
                 </div>
@@ -151,11 +151,11 @@ accordionOption = {
 
 export class AccordionComponent {
 
-    agreeControl: Control = new Control("", Validators.required);
-    nameControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(4)]));
-    emailControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(4)]));
+    agreeControl: FormControl = new FormControl("", Validators.required);
+    nameControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
+    emailControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
 
-    form: ControlGroup;
+    form: FormGroup;
     accordionOption = {
         exclusive: true,
         on: "mouseenter"

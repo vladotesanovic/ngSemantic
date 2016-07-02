@@ -1,7 +1,8 @@
-import { ElementRef } from "@angular/core";
-export declare class SMTooltipDirective {
-    element: ElementRef;
+import { ViewContainerRef, OnInit } from "@angular/core";
+export declare class SMTooltipDirective implements OnInit {
+    element: ViewContainerRef;
     smDirTooltip: string;
-    constructor(element: ElementRef);
-    onMouseEnter(): void;
+    smDirPosition: string;
+    constructor(element: ViewContainerRef);
+    ngOnInit(): void;
 }

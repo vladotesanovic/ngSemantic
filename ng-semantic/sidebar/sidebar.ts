@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, Directive, HostListener } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -24,40 +24,24 @@ jQuery.fn.fixSidebar = function() {
 
 /**
  * Implementation of Sidebar module
- * 
+ *
  * @link semantic-ui.com/modules/sidebar.html
  */
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-sidebar",
-    template: `<div class="ui sidebar {{class}}"><ng-content></ng-content></div>`
+    template: `<div class="ui sidebar {{class}}" #sidebar>
+<ng-content></ng-content>
+</div>`
 })
 export class SemanticSidebarComponent {
     @Input("class") class: string;
-}
+    @ViewChild("sidebar") sidebar: ElementRef;
 
-/**
- * Directive which trigger sidebar.
- * 
- * @link semantic-ui.com/modules/sidebar.html
- */
-@Directive({
-    selector: "[smDirSidebar]"
-})
-export class SMSidebarDirective {
-
-    @Input() smDirSidebar: { selector: string };
-
-    @HostListener("click", ["$event.target"])
-    toggleSidebar() {
-        if (typeof jQuery === "undefined") {
-            console.log("jQuery is not loaded");
-            return;
-        }
-
-        jQuery(".ui.sidebar." + this.smDirSidebar.selector)
+    show(options?: {}) {
+        jQuery(this.sidebar.nativeElement)
             .fixSidebar()
+            .sidebar(options || {})
             .sidebar("show");
     }
-
 }

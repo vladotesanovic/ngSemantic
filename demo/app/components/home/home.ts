@@ -4,7 +4,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
     directives: [<Type>CodeblockComponent, <Type>PrismJsDirective , SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
-    selector: "home",
+    selector: "sm-page-home",
     template: `
 <div class="ui masthead vertical segment">
     <div class="ui container">

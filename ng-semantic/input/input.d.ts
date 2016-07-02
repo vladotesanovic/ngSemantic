@@ -1,15 +1,15 @@
-import { Control } from "@angular/common";
+import { FormControl } from "@angular/forms";
 export declare class SemanticInputComponent {
-    control: Control;
+    control: FormControl;
     label: string;
     placeholder: string;
 }
 export declare class SemanticCheckboxComponent {
-    control: Control;
+    control: FormControl;
     label: string;
 }
 export declare class SemanticTextareaComponent {
-    control: Control;
+    control: FormControl;
     label: string;
     rows: string;
 }

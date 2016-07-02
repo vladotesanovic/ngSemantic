@@ -21,11 +21,11 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <sm-flag flag="argentina"></sm-flag>
     
     <h4 class="ui header">Code</h4>
-    <codeblock prismjs="html">
+    <sm-codeblock smPrismjs="html">
 &lt;sm-flag flag="serbia">&lt;/sm-flag>
 &lt;sm-flag flag="bosnia">&lt;/sm-flag>
 &lt;sm-flag flag="argentina">&lt;/sm-flag>
-</codeblock>
+</sm-codeblock>
       
 </div>
 `

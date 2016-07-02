@@ -6,7 +6,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, ROUTER_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
-    selector: "menu-cp",
+    selector: "sm-menu-card",
     template: `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -40,7 +40,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-menu>
 
     <h4 class="ui header">Code</h4>
-    <codeblock prismjs="html">
+    <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Angular2" class="ui menu inverted teal" logo="/assets/images/semantic.png">
     &lt;a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
 
@@ -48,7 +48,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         &lt;a sm-item icon="sidebar big" class="item">&lt;/a>
     &lt;/sm-menu>
 &lt;/sm-menu>
-</codeblock>
+</sm-codeblock>
     <h4 class="ui header">Demo three item</h4>
     <sm-menu title="" class="ui three item menu">
         <a sm-item *ngFor="let item of ['Editorials', 'Reviews', 'Upcoming Events']" class="item">{{item}}</a>
@@ -71,22 +71,22 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-menu>
 
     <h4 class="ui header">Code</h4>
-<codeblock prismjs="html">
+<sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Vertical" class="ui menu vertical">
     &lt;a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
 &lt;/sm-menu>
-</codeblock>
+</sm-codeblock>
       <h4 class="ui header">Demo secondary</h4>
     <sm-menu title="Secondary" class="ui menu secondary">
         <a sm-item *ngFor="let item of items" [icon]="item.icon" class="item">{{item?.title}}</a>
     </sm-menu>
 
     <h4 class="ui header">Code</h4>
-<codeblock prismjs="html">
+<sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Secondary" class="ui menu secondary">
     &lt;a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
 &lt;/sm-menu>
-</codeblock>
+</sm-codeblock>
 </div>
 `
 })

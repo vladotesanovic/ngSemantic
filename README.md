@@ -12,12 +12,13 @@
 ## Live demo
 <a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
-##  Angular 2 QuickStart ( rc.1 ) with ngSemantic
+##  Angular 2 QuickStart ( rc.4 ) with ngSemantic
 https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
 
 ## Important!
 <ul>
-   <li>Angular 2 version: rc.1</li>
+   <li>Angular 2 version: rc.4</li>
+   <li>Semantic UI version: 2.2.1</li>
 </ul>
         
 ## Installation
@@ -101,10 +102,6 @@ npm start
   - sm-list
   - sm-item
   - sm-dir-tooltip
-  - sm-dir-popup
-  - sm-dir-sidebar
-  - sm-dir-dimmer
-  - sm-dir-modal
    
 ## Licence 
 

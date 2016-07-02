@@ -4,7 +4,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
-    selector : "tab",
+    selector : "sm-page-tab",
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -38,12 +38,12 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </sm-tab>
       </sm-tabs>
     <h4 class="ui header">Code</h4>
-    <codeblock prismjs="html">
+    <sm-codeblock smPrismjs="html">
 &lt;sm-tabs>
   &lt;sm-tab title="Hello" class="ui tab bottom attached segment active" data-tab="first">text...&lt;/sm-tab>
   &lt;sm-tab title="About" class="ui tab bottom attached segment" data-tab="second">text..&lt;/sm-tab>
 &lt;/sm-tabs>
-    </codeblock>
+    </sm-codeblock>
 </div>
 `
 })

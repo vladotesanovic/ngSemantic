@@ -20,10 +20,9 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         </a>
         
     <h4 class="ui header">Demo</h4>
-   	<sm-button class="positive icon" icon="sidebar" 
-   	[smDirSidebar]="{selector: 'left', transition: 'overlay'}">Lunch left sidebar</sm-button> 
-    <sm-button class="" [smDirSidebar]="{selector: 'bottom', dimPage: false }">Lunch bottom sidebar</sm-button>
-    <sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
+   	<sm-button class="positive icon" icon="sidebar" (click)="invertedSidebar.show({transition: 'overlay'})">
+   	Lunch left sidebar</sm-button> 
+    <sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>        
         <a class="item">
             <i class="home icon"></i>
             Home
@@ -39,9 +38,9 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-sidebar>
 
     <h4 class="ui header">Code</h4>
-        <codeblock prismjs="html">
-&lt;sm-button class="positive" [smDirSidebar]="{selector: 'left'}">Lunch left sidebar&lt;/sm-button>
-&lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu">        
+        <sm-codeblock smPrismjs="html">
+&lt;sm-button class="positive" (click)="invertedSidebar.show({transition: 'overlay'})">Lunch left sidebar&lt;/sm-button>
+&lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>        
     &lt;a class="item">
         <i class="home icon"></i> Home
     &lt;/a>
@@ -52,9 +51,25 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <i class="smile icon"></i> Friends
     &lt;/a>
 &lt;/sm-sidebar>
-    </codeblock>
-     
-     <sm-sidebar class="bottom inverted nine item labeled icon sidebar menu">        
+    </sm-codeblock>
+    
+   
+    <sm-button class="" (click)="bottomSidebar.show({dimPage: false})">Lunch bottom sidebar</sm-button>
+         <h4 class="ui header">Code</h4>
+        <sm-codeblock smPrismjs="html">
+&lt;sm-button class="positive" (click)="bottomSidebar.show({transition: 'overlay'})">Lunch left sidebar&lt;/sm-button>
+&lt;sm-sidebar class="bottom inverted nine item labeled icon sidebar menu" #bottomSidebar> 
+   &lt;a class="item">
+        <i class="home icon"></i>
+        Home
+   &lt;/a>
+   &lt;a class="item">
+        <i class="block layout icon"></i>
+        Topics
+   &lt;/a>
+&lt;/sm-sidebar>
+    </sm-codeblock>
+     <sm-sidebar class="bottom inverted nine item labeled icon sidebar menu" #bottomSidebar>        
          <a class="item">
             <i class="home icon"></i>
             Home

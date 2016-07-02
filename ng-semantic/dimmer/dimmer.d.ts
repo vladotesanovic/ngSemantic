@@ -1,7 +1,5 @@
+import { ElementRef } from "@angular/core";
 export declare class SemanticDimmerComponent {
-    selector: string;
-}
-export declare class SMDimmerDirective {
-    smDirDimmer: string;
-    toggleDimmer(): void;
+    dimmer: ElementRef;
+    show(options?: {}): void;
 }

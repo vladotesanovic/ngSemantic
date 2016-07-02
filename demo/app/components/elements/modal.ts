@@ -20,8 +20,8 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     http://semantic-ui.com/modules/modal.html#/settings
     </a>
     <h4 class="ui header">Demo basic</h4>
-    <button class="ui button green" [smDirModal]="{selector: 'my-modal', closable: false}">Click me</button>
-    <sm-modal selector="my-modal" title="Hello from Modal" class="basic">
+    <button class="ui button green" (click)="myModal.show()">Click me</button>
+    <sm-modal title="Hello from Modal" class="basic" #myModal>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
     when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -31,19 +31,19 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-modal>
     
     <h4 class="ui header">Code</h4>
-<codeblock prismjs="html">
-&lt;button class="ui button green" [smDirModal]="{selector: 'my-modal', closable: false}">Click me&lt;/button>
-&lt;sm-modal selector="my-modal" title="Hello from Modal" class="basic">...&lt;/sm-modal>
-</codeblock>
+<sm-codeblock smPrismjs="html">
+&lt;button class="ui button green" (click)="myModal.show()">Click me&lt;/button>
+&lt;sm-modal title="Hello from Modal" class="basic" #myModal>...&lt;/sm-modal>
+</sm-codeblock>
     <h4 class="ui header">Demo normal</h4>
-    <button class="ui button teal" [smDirModal]="{selector: 'my-modal-normal'}">Click me</button>
-    <sm-modal selector="my-modal-normal" title="Hello from Modal" class="" icon="home">
+    <button class="ui button teal" (click)="myModalNormal.show()">Click me</button>
+    <sm-modal title="Hello from Modal" class="" icon="home" #myModalNormal>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     </sm-modal>
     
     <h4 class="ui header">Demo ( blurring )</h4>
-    <button class="ui button teal" [smDirModal]="{selector: 'my-modal-overlay', blurring: true}">Click me</button>
-    <sm-modal selector="my-modal-overlay" title="Hello from Modal" class="fluid">
+    <button class="ui button teal" (click)="myModalBluring.show({blurring: true})">Click me</button>
+    <sm-modal #myModalBluring title="Hello from Modal" class="fluid">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     </sm-modal>
 </div>

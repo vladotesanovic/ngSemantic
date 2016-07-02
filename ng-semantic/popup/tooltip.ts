@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input } from "@angular/core";
+import { Directive, ViewContainerRef, Input, OnInit } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -10,23 +10,15 @@ declare var jQuery: any;
 @Directive({
     selector: "[smDirTooltip]"
 })
-export class SMTooltipDirective {
+export class SMTooltipDirective implements OnInit {
 
     @Input() smDirTooltip: string;
+    @Input() smDirPosition: string;
 
-    constructor(public element: ElementRef) { }
+    constructor(public element: ViewContainerRef) {}
 
-    @HostListener("mouseenter", ["$event.target"])
-    onMouseEnter() {
-        if (typeof jQuery === "undefined") {
-            console.log("jQuery is not loaded");
-            return;
-        }
-
-        jQuery(this.element.nativeElement).popup({
-            content: this.smDirTooltip,
-            exclusive: true,
-            lastResort: true
-        }).popup("show");
+    ngOnInit(): void {
+        this.element.element.nativeElement.setAttribute("data-position", this.smDirPosition || "top center");
+        this.element.element.nativeElement.setAttribute("data-tooltip", this.smDirTooltip);
     }
 }

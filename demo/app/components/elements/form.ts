@@ -1,10 +1,10 @@
 import { Component , Type } from "@angular/core";
-import { Control, Validators, ControlGroup, FormBuilder } from "@angular/common";
+import { REACTIVE_FORM_DIRECTIVES, Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
+    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, REACTIVE_FORM_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-form",
     template: `
 	<div class="ui masthead vertical segment">
@@ -16,7 +16,8 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo login</h4>
-    <form smForm class="ui form" [ngFormModel]="form">
+    
+    <form smForm class="ui form" [formGroup]="form">
 	<sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
 	<div class="field">
 	    <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
@@ -30,8 +31,8 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 	<sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login</sm-button>
     </form>
     <h4 class="ui header">Code</h4>
-<codeblock prismjs="html">
-&lt;form smForm class="ui form" [ngFormModel]="form">
+<sm-codeblock smPrismjs="html">
+&lt;form smForm class="ui form" [formGroup]="form"> 
     &lt;sm-loader [complete]="!formSubmited" class="inverted" text="Loading...">&lt;/sm-loader>
     &lt;div class="field">
 	    &lt;sm-input label="Name" [control]="nameControl" placeholder="Enter name...">&lt;/sm-input>
@@ -44,46 +45,60 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     &lt;/div>
     &lt;sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login&lt;/sm-button>
 &lt;/form>
-</codeblock>
+</sm-codeblock>
 
 <h4 class="ui header">Demo feedback</h4>
-<form smForm class="ui form" [ngFormModel]="formFeedback">
+<form smForm class="ui form" [formGroup]="formFeedback">
     <div class="field">
         <sm-input label="Name" [control]="nameFControl" placeholder="Enter name..."></sm-input>
     </div>
     <div class="field">
         <sm-textarea label="Name" rows="10" [control]="textControl"></sm-textarea>
     </div>
-    <sm-button (click)="send()" class="primary">Send</sm-button>
+    <sm-button (click)="feedbackModal.show({ transition: 'slide up'})" [disabled]="!formFeedback.valid" class="primary">Send</sm-button>
 </form>
+
+<sm-modal title="Feedback sent" #feedbackModal>
+    <h2 class="ui icon center aligned header">
+      <i class="thumbs up icon"></i>
+      <div class="content">
+        <p>Successfully sent</p>
+        <div class="sub header">{{nameFControl.value}}</div>
+        <p>
+            {{textControl.value}}
+        </p>
+      </div>
+    </h2>
+</sm-modal>
 </div>
 `
 })
 export class FormComponent {
-    agreeControl: Control = new Control("", Validators.required);
-    emailControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(4)]));
+    agreeControl: FormControl = new FormControl("", Validators.required);
+    emailControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
+    search: FormControl = new FormControl("");
 
-    form: ControlGroup;
-    formFeedback: ControlGroup;
+    form: FormGroup;
+    formFeedback: FormGroup;
     formSubmited: boolean = false;
-    nameControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(4)]));
+    nameControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
 
-    nameFControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(4)]));
-    textControl: Control = new Control("", Validators.compose([Validators.required, Validators.minLength(10)]));
+    nameFControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
+    textControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(10)]));
 
     constructor(fb: FormBuilder) {
-	this.form = fb.group({
-	    emailControl: this.emailControl,
-	    nameControl: this.nameControl,
-	});
+        this.form = fb.group({
+            emailControl: this.emailControl,
+            nameControl: this.nameControl,
+        });
 
-	this.formFeedback = fb.group({
-	    nameFControl: this.nameFControl,
-	    textControl: this.textControl
-	});
+        this.formFeedback = fb.group({
+            nameFControl: this.nameFControl,
+            textControl: this.textControl
+        });
     }
 
-    checkboxValidator(control: Control) {
+    checkboxValidator(control: FormControl) {
 	    let value = (typeof control.value === "boolean") ? control.value : false;
 	    return (value) ? "" : "yes";
     }

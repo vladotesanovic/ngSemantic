@@ -6,7 +6,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     providers: [DataServices],
-    selector : "segment",
+    selector : "sm-page-segment",
     template : `
 	<div class="ui masthead vertical segment">
     <div class="ui container">
@@ -22,9 +22,9 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</sm-segment>
 
     <h4 class="ui header">Code</h4>
-    <codeblock prismjs="html">
+    <sm-codeblock smPrismjs="html">
 &lt;sm-segment class="raised">...&lt;/sm-segment>
-</codeblock>
+</sm-codeblock>
       <h4 class="ui header">Demo stacked</h4>
     <sm-segment class="stacked">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
     Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.

@@ -1,20 +1,20 @@
-import { Pipe } from "angular2/core";
+import { Pipe, PipeTransform } from "@angular/core";
 
 /**
  * Filter trough array in Angular2
  *
- * Implementation: 
- * 
- *  Filter source: 
+ * Implementation:
+ *
+ *  Filter source:
  *  <input type="text" [(ng-model)]="search" placeholder="Search list...">
  *
  *  For-Each
  *  <a class="item" *ng-for="var item of items | arrayFilter: search"> {{item}}</a>
  */
 @Pipe({
-	name: "arrayFilter"
+	name: "smArrayFilter"
 })
-export class ArrayFilterPipe {
+export class ArrayFilterPipe implements PipeTransform {
 	private _tmp: Array<string>;
 
 	transform(array: Array<string>, text: any): Array<string> {
