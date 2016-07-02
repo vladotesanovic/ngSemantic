@@ -12,3 +12,5 @@ tsconfig.json
 library.builder.js
 demo.builder.js
 index.html
+dev.config.js
+index.dev.html

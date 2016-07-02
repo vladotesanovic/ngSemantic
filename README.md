@@ -1,6 +1,5 @@
 [![GitHub version](https://badge.fury.io/gh/vladotesanovic%2FngSemantic.png)](http://badge.fury.io/gh/vladotesanovic%2FngSemantic)
 [![Dependency Status](https://david-dm.org/vladotesanovic/ngSemantic.svg)](https://david-dm.org/vladotesanovic/ngSemantic)
-[![Build Status](https://travis-ci.org/vladotesanovic/ngSemantic.svg?branch=master)](https://travis-ci.org/vladotesanovic/ngSemantic)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
 
 # Angular2 & Semantic UI
@@ -63,17 +62,6 @@ cd ngSemantic
 
 # install dependencies
 npm install && npm run typings
-
-# Uncomment in index.html file
-<!-- DEVELOPMENT
-<script src="systemjs.config.js"></script>
-<script>
-System.import('/demo/app/bootstrap').then(null, console.error.bind(console));
-</script>
--->
-
-# Comment out
-<script src="demo/vendor/bundle.min.js"></script>
         
 # compile demo project
 npm start

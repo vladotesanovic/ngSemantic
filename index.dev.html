@@ -23,24 +23,17 @@
         <script src="demo/vendor/zone.js"></script>
         <script src="demo/vendor/Reflect.js"></script>
         <script src="demo/vendor/system.src.js"></script>
+        <!-- 2. Configure SystemJS -->
+        <script src="systemjs.config.js"></script>
+        <script>
+        System.import('/demo/app/bootstrap').then(null, console.error.bind(console));
+        </script>
     </head>
-
     <body class="pushable" id="page">
         <div class="pusher">
             <sm-app>
-                <div class="ui active text loader">Loading</div>
+                <div class="ui active text loader">Development</div>
             </sm-app>
         </div>
-        <!-- PRODUCTION -->
-        <script src="demo/vendor/bundle.min.js"></script>
     </body>
-    <script>
-
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-72072751-1', 'auto');
-  ga('send', 'pageview');
-</script>
 </html>
