@@ -15,9 +15,12 @@ declare var jQuery: any;
     <div [ngClass]="{'icon': icon}" class="ui header">
         <i *ngIf="icon" class="icon {{icon}}"></i>
         {{title}}
-    </div>  
+    </div>
     <div class="content">
-        <ng-content></ng-content>
+        <ng-content select="modal-content"></ng-content>
+    </div>
+    <div class="actions">
+        <ng-content select="modal-actions"></ng-content>
     </div>
 </div>`
 })

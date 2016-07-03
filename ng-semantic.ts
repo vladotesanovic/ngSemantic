@@ -18,6 +18,7 @@ import { SemanticContextMenuComponent } from "./ng-semantic/contextmenu/contextm
 import { SemanticProgressComponent } from "./ng-semantic/progress/progress";
 import { SemanticDimmerComponent } from "./ng-semantic/dimmer/dimmer";
 import { SemanticAccordionComponent, SemanticAccordionItemComponent } from "./ng-semantic/accordion/accordion";
+import { SemanticRatingComponent } from "./ng-semantic/rating/rating";
 
 export * from "./ng-semantic/menu/menu";
 export * from "./ng-semantic/contextmenu/contextmenu";
@@ -26,6 +27,7 @@ export * from "./ng-semantic/popup/tooltip";
 export *  from "./ng-semantic/popup/popup";
 export *  from "./ng-semantic/modal/modal";
 export *  from "./ng-semantic/segment/segment";
+export *  from "./ng-semantic/rating/rating";
 export *  from "./ng-semantic/list/list";
 export *  from "./ng-semantic/button/button";
 export *  from "./ng-semantic/item/item";
@@ -63,7 +65,8 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticButtonComponent,
 	SemanticLoaderComponent,
 	SemanticAccordionComponent,
-	SemanticAccordionItemComponent
+	SemanticAccordionItemComponent,
+	SemanticRatingComponent
 ];
 
 export let SEMANTIC_DIRECTIVES: Array<any> = [

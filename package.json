@@ -41,7 +41,7 @@
     "@angular/http": "2.0.0-rc.4",
     "@angular/platform-browser": "2.0.0-rc.4",
     "@angular/platform-browser-dynamic": "2.0.0-rc.4",
-    "@angular/router": "2.0.0-rc.4",
+    "@angular/router": "3.0.0-beta.2",
     "@angular/upgrade": "2.0.0-rc.4",
     "angular2-in-memory-web-api": "0.0.12",
     "concurrently": "^2.1.0",

@@ -1,3 +1,8 @@
+## version: 1.0.28
+
+- &lt;sm-rating>, added
+- &lt;sm-modal> now accept &lt;modal-content> and &lt;modal-actions>
+
 ## version: 1.0.27
 
 - Update to Angular rc.4

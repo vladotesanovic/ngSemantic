@@ -22,35 +22,34 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h2 class="header">Installation</h2>
 <sm-segment class="raised">
 In terminal: 
-<codeblock prismjs="bash">
+<sm-codeblock smPrismjs="bash">
 $ npm install ng-semantic --save
-</codeblock>
+</sm-codeblock>
 </sm-segment>
     <p></p>
     <sm-segment class="raised">
-    <p>In your index.html ( entry file )</p>
-    <codeblock prismjs="markup">
-&lt;script src=&quot;node_modules/ng-semantic/bundles/ng-semantic.js&quot;&gt;&lt;/script&gt;
-</codeblock>
+    <p>Semantic css and js ( with jQuery are required )</p>
+        <sm-codeblock smPrismjs="markup">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; 
+src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.css&quot;&gt;
+
+<!-- JS -->
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.js&quot;&gt;&lt;/script&gt;
+</sm-codeblock>
+</sm-segment>
+    <p></p>
+    <sm-segment class="raised">
+    <p>Configure SystemJS or Webpack to load ng-semantic</p>
+<sm-codeblock prismjs="markup">
+...
+</sm-codeblock>
     <p></p>
     </sm-segment>
     <br/>
-    <sm-segment class="raised">
-    <p>Semantic css and js ( with jQuery are required )</p>
-        <codeblock prismjs="markup">
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; 
-src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css&quot;&gt;
-
-<!-- JS -->
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js&quot;&gt;&lt;/script&gt;
-</codeblock>
-</sm-segment>
-
-    <p></p>
     <h2 class="header">Use</h2>
     <sm-segment class="raised">
-       <codeblock prismjs="typescript">
+       <sm-codeblock smPrismjs="typescript">
 import {Component} from 'angular2/core';
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 
@@ -60,7 +59,7 @@ import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
     template: '&lt;sm-segment class="raised">Hello&lt;/sm-segment>'
 })
 export class DemoComponent {}
-    </codeblock>
+    </sm-codeblock>
 </sm-segment>
     <h2>{{title}}</h2>
         <p><i class="icon external"></i> 

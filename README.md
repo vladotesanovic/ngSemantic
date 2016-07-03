@@ -28,13 +28,13 @@ npm install ng-semantic --save
 Semantic UI ( minified versions of css and js ) must be loaded in index.html
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.css">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.js"></script>
 
-<!-- Add this after Angular2 bundles -->
-<script src="node_modules/ng-semantic/bundles/ng-semantic.js"></script>
+<!-- Configure SystemJS or Webpack to load ng-semantic -->
+
 ```
  
 ## Use
@@ -82,6 +82,7 @@ npm start
   - sm-flag
   - sm-input
   - sm-checkbox
+  - sm-rating
   - sm-textarea
   - sm-form
   - sm-progress

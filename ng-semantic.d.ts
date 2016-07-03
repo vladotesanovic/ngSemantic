@@ -5,6 +5,7 @@ export * from "./ng-semantic/popup/tooltip";
 export * from "./ng-semantic/popup/popup";
 export * from "./ng-semantic/modal/modal";
 export * from "./ng-semantic/segment/segment";
+export * from "./ng-semantic/rating/rating";
 export * from "./ng-semantic/list/list";
 export * from "./ng-semantic/button/button";
 export * from "./ng-semantic/item/item";
