@@ -83,6 +83,7 @@ npm start
   - sm-input
   - sm-checkbox
   - sm-rating
+  - sm-dropdown
   - sm-textarea
   - sm-form
   - sm-progress

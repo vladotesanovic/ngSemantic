@@ -9,6 +9,7 @@ export * from "./ng-semantic/rating/rating";
 export * from "./ng-semantic/list/list";
 export * from "./ng-semantic/button/button";
 export * from "./ng-semantic/item/item";
+export * from "./ng-semantic/dropdown/dropdown";
 export * from "./ng-semantic/loader/loader";
 export * from "./ng-semantic/card/card";
 export * from "./ng-semantic/input/input";

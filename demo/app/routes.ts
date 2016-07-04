@@ -11,6 +11,7 @@ import { MenuComponent } from "./components/elements/menu";
 import { MessageComponent } from "./components/elements/message";
 import { ModalComponent } from "./components/elements/modal";
 import { PopupComponent } from "./components/elements/popup";
+import { DropdownComponent } from "./components/elements/dropdown";
 import { TabComponent } from "./components/elements/tab";
 import { ButtonComponent } from "./components/elements/button";
 import { CardComponent } from "./components/elements/card";
@@ -30,6 +31,7 @@ const routes: RouterConfig = [
     { component: <Type>ListComponent, path: "elements/list" },
     { component: <Type>FormComponent, path: "elements/form" },
     { component: <Type>CardComponent, path: "elements/card" },
+    { component: <Type>DropdownComponent, path: "elements/dropdown" },
     { component: <Type>SegmentComponent, path: "elements/segment" },
     { component: <Type>MenuComponent, path: "elements/menu" },
     { component: <Type>MessageComponent, path: "elements/message" },
