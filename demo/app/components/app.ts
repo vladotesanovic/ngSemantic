@@ -1,5 +1,7 @@
-import { Component, AfterViewInit } from "@angular/core";
+import { Component, AfterViewInit, enableProdMode } from "@angular/core";
 import { ROUTER_DIRECTIVES } from "@angular/router";
+
+enableProdMode();
 
 @Component({
 	directives: [ROUTER_DIRECTIVES],
