@@ -1,4 +1,6 @@
-import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef } from "@angular/core";
+import {
+    Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, OnInit, OnDestroy
+} from "@angular/core";
 
 declare var jQuery: any;
 
@@ -34,14 +36,23 @@ jQuery.fn.fixSidebar = function() {
 <ng-content></ng-content>
 </div>`
 })
-export class SemanticSidebarComponent {
+export class SemanticSidebarComponent implements OnInit, OnDestroy {
     @Input("class") class: string;
     @ViewChild("sidebar") sidebar: ElementRef;
 
     show(options?: {}) {
         jQuery(this.sidebar.nativeElement)
-            .fixSidebar()
             .sidebar(options || {})
             .sidebar("show");
+    }
+
+    ngOnInit(): void {
+        jQuery(this.sidebar.nativeElement)
+            .fixSidebar();
+    }
+
+    ngOnDestroy(): void {
+        const parent: Node = this.sidebar.nativeElement.parentNode;
+        parent.removeChild(this.sidebar.nativeElement);
     }
 }
