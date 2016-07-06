@@ -84,6 +84,7 @@ npm start
   - sm-checkbox
   - sm-rating
   - sm-dropdown
+  - sm-select
   - sm-textarea
   - sm-form
   - sm-progress

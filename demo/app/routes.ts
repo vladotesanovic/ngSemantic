@@ -22,6 +22,7 @@ import { ProgressComponent } from "./components/elements/progress";
 import { FlagComponent } from "./components/elements/flag";
 import { AccordionComponent } from "./components/elements/accordion";
 import { RatingComponent } from "./components/elements/rating";
+import { SelectComponent } from "./components/elements/select";
 
 const routes: RouterConfig = [
     { component: <Type>HomeComponent, path: "" },
@@ -32,6 +33,7 @@ const routes: RouterConfig = [
     { component: <Type>FormComponent, path: "elements/form" },
     { component: <Type>CardComponent, path: "elements/card" },
     { component: <Type>DropdownComponent, path: "elements/dropdown" },
+    { component: <Type>SelectComponent, path: "elements/select" },
     { component: <Type>SegmentComponent, path: "elements/segment" },
     { component: <Type>MenuComponent, path: "elements/menu" },
     { component: <Type>MessageComponent, path: "elements/message" },

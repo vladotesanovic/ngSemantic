@@ -16,34 +16,18 @@ import { FormControl } from "@angular/forms";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
-    <sm-dropdown [control]="selectControl" placeholder="Search..." class="fluid search" [items]="[1,2,3]"></sm-dropdown>
-    {{selectControl.value}}
+    <sm-dropdown title="Cities" [items]="cities"></sm-dropdown>
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
-&lt;sm-dropdown [control]="selectControl" placeholder="Search..." class="fluid search" [items]="[1,2,3]">&lt;/sm-dropdown>
 </sm-codeblock>
-    <h4 class="ui header">Demo Multiple</h4>
-    <sm-dropdown [control]="multipleControl" placeholder="Select multiple..." 
-    class="fluid search multiple" (onChange)="onMultiple($event)" [items]="['New York','Belgrade','Stockholm']"></sm-dropdown>
-    {{multipleData | json}}
-<h4 class="ui header">Code</h4>
-<sm-codeblock smPrismjs="html">
-&lt;sm-dropdown 
-    [control]="selectControl"
-    placeholder="Select multiple..." 
-    class="fluid search multiple"
-    (onChange)="onMultiple($event)"
-    [items]="['New York','Belgrade','Stockholm']">&lt;/sm-dropdown>
-</sm-codeblock>
-      
+      # Under construction
 </div>
 `
 })
 
 export class DropdownComponent {
-    selectControl: FormControl = new FormControl("");
-    multipleControl: FormControl = new FormControl("");
     multipleData = [];
+    cities: Array<string> = ["New York", "Belgrade", "Stockholm"];
 
     onMultiple(data: Array<string>): void {
         this.multipleData = data;

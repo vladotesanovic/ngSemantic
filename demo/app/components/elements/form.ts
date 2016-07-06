@@ -51,24 +51,36 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <form smForm class="ui form" [formGroup]="formFeedback">
     <div class="field">
         <sm-input label="Name" [control]="nameFControl" placeholder="Enter name..."></sm-input>
+        Remaining: {{(nameFControl.value.length - 4 )}}
+    </div>
+    <div class="field">
+        <label>Category</label>
+        <sm-select class="fluid" [control]="selectControl" placeholder="Choose category...">
+            <option>Support</option>
+            <option>Feedback</option>
+        </sm-select>
     </div>
     <div class="field">
         <sm-textarea label="Name" rows="10" [control]="textControl"></sm-textarea>
+        Remaining: {{(textControl.value.length - 10)}}
     </div>
     <sm-button (click)="feedbackModal.show({ transition: 'slide up'})" [disabled]="!formFeedback.valid" class="primary">Send</sm-button>
 </form>
 
 <sm-modal title="Feedback sent" #feedbackModal>
-    <h2 class="ui icon center aligned header">
-      <i class="thumbs up icon"></i>
-      <div class="content">
-        <p>Successfully sent</p>
-        <div class="sub header">{{nameFControl.value}}</div>
-        <p>
-            {{textControl.value}}
-        </p>
-      </div>
-    </h2>
+    <modal-content>
+        <h2 class="ui icon center aligned header">
+          <i class="thumbs up icon"></i>
+          <div class="content">
+            <p>Successfully sent</p>
+            <div class="sub header">{{nameFControl.value}}</div>
+            <div>{{selectControl.value}}</div>
+            <p>
+                {{textControl.value}}
+            </p>
+          </div>
+        </h2>
+    </modal-content>
 </sm-modal>
 </div>
 `
@@ -84,6 +96,7 @@ export class FormComponent {
     nameControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
 
     nameFControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
+    selectControl: FormControl = new FormControl("");
     textControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(10)]));
 
     constructor(fb: FormBuilder) {
@@ -94,6 +107,7 @@ export class FormComponent {
 
         this.formFeedback = fb.group({
             nameFControl: this.nameFControl,
+            selectControl: this.selectControl,
             textControl: this.textControl
         });
     }

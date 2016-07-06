@@ -42,7 +42,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Angular2" class="ui menu inverted teal" logo="/assets/images/semantic.png">
-    &lt;a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
+    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
 
     &lt;sm-menu class="ui menu right secondary">
         &lt;a sm-item icon="sidebar big" class="item">&lt;/a>
@@ -73,7 +73,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Vertical" class="ui menu vertical">
-    &lt;a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
+    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
 &lt;/sm-menu>
 </sm-codeblock>
       <h4 class="ui header">Demo secondary</h4>
@@ -84,7 +84,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Secondary" class="ui menu secondary">
-    &lt;a sm-item *ngFor="#item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
+    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
 &lt;/sm-menu>
 </sm-codeblock>
 </div>

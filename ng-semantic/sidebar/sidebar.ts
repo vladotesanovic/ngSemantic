@@ -1,5 +1,5 @@
 import {
-    Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, OnInit, OnDestroy
+    Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, OnInit, OnDestroy, Renderer
 } from "@angular/core";
 
 declare var jQuery: any;
@@ -40,6 +40,8 @@ export class SemanticSidebarComponent implements OnInit, OnDestroy {
     @Input("class") class: string;
     @ViewChild("sidebar") sidebar: ElementRef;
 
+    constructor(private renderer: Renderer) {}
+
     show(options?: {}) {
         jQuery(this.sidebar.nativeElement)
             .sidebar(options || {})
@@ -52,7 +54,6 @@ export class SemanticSidebarComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy(): void {
-        const parent: Node = this.sidebar.nativeElement.parentNode;
-        parent.removeChild(this.sidebar.nativeElement);
+        this.renderer.detachView([this.sidebar.nativeElement]);
     }
 }
