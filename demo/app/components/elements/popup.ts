@@ -21,17 +21,19 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <sm-codeblock smPrismjs="html">
 &lt;button class="ui button" smDirTooltip="text..." smDirPosition="right center">Hover me&lt;/button>
 </sm-codeblock>
-      <div class="ui divider"></div>
+      <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
       
       <h4 class="ui header">Demo popup</h4>
     <button class="ui button green" (click)="myPopup.show($event, {position: 'right center'})">Click me</button>
     <sm-popup #myPopup>
-        <div class='header'>User Rating</div>
-        <div class='content'>
-            <div class='ui star rating'>
-                <i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i>
-            </div>
-        </div>
+        <sm-card class="card">
+            <card-title> Kristy </card-title>
+            <card-subtitle> Joined in 2013 </card-subtitle>
+            <card-content>
+                Kristy is an art director living in New York.
+            </card-content>
+            <sm-button class="bottom attached fluid" icon="add">Add friend</sm-button>
+        </sm-card>
     </sm-popup>
     
     <h4 class="ui header">Code</h4>

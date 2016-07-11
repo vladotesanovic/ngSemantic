@@ -1,39 +1,52 @@
-import { Component, Query, QueryList, AfterViewInit, ElementRef, Input, Type } from "@angular/core";
+import {
+    Component, QueryList, AfterViewInit, ElementRef, Input, Type, ContentChildren, ViewChild
+} from "@angular/core";
 
 declare var jQuery: any;
 
 @Component({
   selector: "sm-tab",
-  template: `<ng-content></ng-content>`
+  template: `
+<div #tab>
+    <ng-content></ng-content>
+</div>  `
 })
-export class SemanticTabComponent {
-  @Input("tab") dataTab: string;
-  @Input("title") title: string;
-  @Input("class") class: string;
+export class SemanticTabComponent implements AfterViewInit {
+  @Input() tab: number;
+  @Input() title: string;
+  @Input() active: boolean;
+  @ViewChild("tab") tab: ElementRef;
+
+  ngAfterViewInit() {
+    this.tab.nativeElement.parentElement.classList.add("ui", "tab", "bottom", "attached", "segment");
+
+    if (this.active) {
+      this.tab.nativeElement.parentElement.classList.add("active");
+    }
+  }
 }
 
 @Component({
+  directives: [<Type>SemanticTabComponent],
   selector: "sm-tabs",
-  template: `<div class="ui top attached tabular menu">
-  <a class="item" [ngClass]="{active: i === 0}" *ngFor="let tab of tabs; let i = index" attr.data-tab="{{tab.dataTab}}">{{tab.title}}</a>
+  template: `<div class="ui top attached tabular menu" #menu>
+  <a class="item" [ngClass]="{'active': tab.active}" *ngFor="let tab of tabs; let i = index" [attr.data-tab]="i">{{tab.title}}</a>
 </div>
 <ng-content></ng-content>
 `
 })
 export class SemanticTabsComponent implements AfterViewInit {
-  tabs: QueryList<SemanticTabComponent>;
+  @ContentChildren(<Type>SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
+  @ViewChild("menu") menu: ElementRef;
 
-  constructor( @Query(<Type>SemanticTabComponent) tabs: QueryList<SemanticTabComponent>, public elementRef: ElementRef) {
-    this.tabs = tabs;
-  }
+  constructor(public elementRef: ElementRef) {}
 
   ngAfterViewInit() {
-    if (typeof jQuery === "undefined") {
-      console.log("jQuery is not loaded");
-      return;
-    }
 
-    jQuery(".menu.tabular .item").tab({
+    this.tabs
+        .map((cmp: SemanticTabComponent, index: number) => cmp.tab.nativeElement.parentElement.setAttribute("data-tab", index.toString()));
+
+    jQuery(this.menu.nativeElement.getElementsByClassName("item")).tab({
       childrenOnly: true,
       context: jQuery(this.elementRef.nativeElement)
     });

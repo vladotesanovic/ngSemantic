@@ -45,6 +45,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     &lt;/card-extra>
 &lt;/sm-card>
 </sm-codeblock>
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo cards</h4>
     <sm-cards>
         <sm-card class="card" image="http://semantic-ui.com/images/avatar2/large/kristy.png">
@@ -95,6 +96,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     &lt;/sm-card>
 &lt;/sm-cards>
 </sm-codeblock>
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Demo attached button without image</h4>
     <sm-card class="card">
         <card-title> Kristy </card-title>

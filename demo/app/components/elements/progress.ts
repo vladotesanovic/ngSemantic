@@ -24,12 +24,13 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 &lt;sm-progress [progress]="percent">&lt;/sm-progress>
 &lt;sm-progress class="warning" [progress]="percent">&lt;/sm-progress>
     </sm-codeblock>
-    
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo indicating</h4>
     <sm-progress class="indicating active" [progress]="indicatingPercent"></sm-progress>
     <sm-codeblock smPrismjs="html">
 &lt;sm-progress class="indicating active" [progress]="indicatingPercent">&lt;/sm-progress>
     </sm-codeblock>
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 </div>
 `
 })

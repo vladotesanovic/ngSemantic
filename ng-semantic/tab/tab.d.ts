@@ -1,12 +1,15 @@
 import { QueryList, AfterViewInit, ElementRef } from "@angular/core";
-export declare class SemanticTabComponent {
-    dataTab: string;
+export declare class SemanticTabComponent implements AfterViewInit {
+    tab: number;
     title: string;
-    class: string;
+    active: boolean;
+    tab: ElementRef;
+    ngAfterViewInit(): void;
 }
 export declare class SemanticTabsComponent implements AfterViewInit {
     elementRef: ElementRef;
     tabs: QueryList<SemanticTabComponent>;
-    constructor(tabs: QueryList<SemanticTabComponent>, elementRef: ElementRef);
+    menu: ElementRef;
+    constructor(elementRef: ElementRef);
     ngAfterViewInit(): void;
 }
