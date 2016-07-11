@@ -40,8 +40,8 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-tabs>
-  &lt;sm-tab title="Hello" class="ui tab bottom attached segment active" data-tab="first">text...&lt;/sm-tab>
-  &lt;sm-tab title="About" class="ui tab bottom attached segment" data-tab="second">text..&lt;/sm-tab>
+  &lt;sm-tab title="Hello">text...&lt;/sm-tab>
+  &lt;sm-tab title="About">text..&lt;/sm-tab>
 &lt;/sm-tabs>
     </sm-codeblock>
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
