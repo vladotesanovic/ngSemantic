@@ -32,7 +32,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
             <card-content>
                 Kristy is an art director living in New York.
             </card-content>
-            <sm-button class="bottom attached fluid" icon="add">Add friend</sm-button>
+            <sm-button class="bottom attached fluid primary" (click)="myPopup.hide()" icon="close">Close popup</sm-button>
         </sm-card>
     </sm-popup>
     
@@ -40,7 +40,14 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <sm-codeblock smPrismjs="html">
 &lt;button class="ui button green" (click)="myPopup.show($event, {position: 'right center'})">Click me&lt;/button>
 &lt;<sm-popup></sm-popup> #myPopup>
-    ...
+    &lt;sm-card class="card">
+        &lt;card-title> Kristy &lt;/card-title>
+        &lt;card-subtitle> Joined in 2013 &lt;/card-subtitle>
+        &lt;card-content>
+            Kristy is an art director living in New York.
+        &lt;/card-content>
+        &lt;sm-button class="bottom attached fluid primary" (click)="myPopup.hide()" icon="close">Close popup&lt;/sm-button>
+    &lt;/sm-card>
 &lt;/sm-popup>
     </sm-codeblock>   
 </div>

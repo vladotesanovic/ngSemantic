@@ -35,4 +35,9 @@ export class SemanticModalComponent {
             .modal(data || {})
             .modal("toggle");
     }
+
+    hide() {
+        jQuery(this.modal.nativeElement)
+            .modal("hide");
+    }
 }

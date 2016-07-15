@@ -15,13 +15,13 @@ export class SemanticTabComponent implements AfterViewInit {
   @Input() tab: number;
   @Input() title: string;
   @Input() active: boolean;
-  @ViewChild("tab") tab: ElementRef;
+  @ViewChild("tab") tabEl: ElementRef;
 
   ngAfterViewInit() {
-    this.tab.nativeElement.parentElement.classList.add("ui", "tab", "bottom", "attached", "segment");
+    this.tabEl.nativeElement.parentElement.classList.add("ui", "tab", "bottom", "attached", "segment");
 
     if (this.active) {
-      this.tab.nativeElement.parentElement.classList.add("active");
+      this.tabEl.nativeElement.parentElement.classList.add("active");
     }
   }
 }
@@ -44,7 +44,9 @@ export class SemanticTabsComponent implements AfterViewInit {
   ngAfterViewInit() {
 
     this.tabs
-        .map((cmp: SemanticTabComponent, index: number) => cmp.tab.nativeElement.parentElement.setAttribute("data-tab", index.toString()));
+        .map((cmp: SemanticTabComponent, index: number) => {
+          cmp.tabEl.nativeElement.parentElement.setAttribute("data-tab", index.toString());
+        });
 
     jQuery(this.menu.nativeElement.getElementsByClassName("item")).tab({
       childrenOnly: true,

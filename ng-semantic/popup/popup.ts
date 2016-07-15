@@ -1,4 +1,4 @@
-import { ElementRef, Component, Input, ViewChild } from "@angular/core";
+import { ElementRef, Component, ViewChild } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -17,17 +17,35 @@ declare var jQuery: any;
 })
 export class SemanticPopupComponent {
     @ViewChild("popup") popup: ElementRef;
+    private visible: boolean = false;
+    private element: Element;
 
     show(element: Event, data: { position?: string} = {}) {
 
-        jQuery(element.srcElement).popup({
-            closable: true,
-            exclusive: true,
-            lastResort: true,
-            on: "click",
-            popup: this.popup.nativeElement,
-            position : (data.hasOwnProperty("position")) ? data.position : "bottom center",
-            preserve: true
-        }).popup("show");
+        if (!this.visible) {
+
+            this.visible = true;
+            this.element = element.srcElement;
+
+            jQuery(element.srcElement).popup({
+                closable: true,
+                exclusive: true,
+                lastResort: true,
+                on: "click",
+                popup: this.popup.nativeElement,
+                position : (data.hasOwnProperty("position")) ? data.position : "bottom center",
+                preserve: true
+            }).popup("toggle");
+        }
+    }
+
+    hide() {
+        if (this.visible && this.element) {
+
+            this.visible = false;
+
+            jQuery(this.element)
+                .popup("hide");
+        }
     }
 }

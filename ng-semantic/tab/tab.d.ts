@@ -3,7 +3,7 @@ export declare class SemanticTabComponent implements AfterViewInit {
     tab: number;
     title: string;
     active: boolean;
-    tab: ElementRef;
+    tabEl: ElementRef;
     ngAfterViewInit(): void;
 }
 export declare class SemanticTabsComponent implements AfterViewInit {

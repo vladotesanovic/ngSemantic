@@ -5,4 +5,5 @@ export declare class SemanticModalComponent {
     icon: string;
     modal: ElementRef;
     show(data?: {}): void;
+    hide(): void;
 }

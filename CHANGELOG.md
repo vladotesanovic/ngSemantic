@@ -1,3 +1,8 @@
+## version: 1.0.30
+
+- &lt;sm-select> &lt;sm-dropdown>, basic implementation added
+- &lt;sm-modal>, &lt;sm-popup>, &lt;sm-sidebar> have hide() method, which work in same fashion as show() method
+
 ## version: 1.0.28
 
 - &lt;sm-rating>, added

@@ -41,8 +41,9 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     &lt;modal-content>
 &lt;/sm-modal>
 </sm-codeblock>
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo normal with action buttons</h4>
-    <button class="ui button primary" (click)="myModalNormal.show()">Click me</button>
+    <button class="ui button primary" (click)="myModalNormal.show({inverted: true})">Click me</button>
     <sm-modal title="Hello from Modal" class="" icon="home" #myModalNormal>
         <modal-content>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -50,23 +51,24 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     
         <modal-actions>
             <div class="ui buttons">
-                <div class="ui button primary">Send</div>
+                <div class="ui button primary" (click)="myModalNormal.hide()">Close modal</div>
             </div>
         </modal-actions>
     </sm-modal>
     <sm-codeblock smPrismjs="html">
-&lt;button class="ui button primary" (click)="myModalNormal.show()">Click me&lt;/button>
+&lt;button class="ui button primary" (click)="myModalNormal.show({inverted: true})">Click me&lt;/button>
 &lt;sm-modal title="Hello from Modal" class="" icon="home" #myModalNormal>
     &lt;modal-content>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     &lt;/modal-content>
     &lt;modal-actions>
         &lt;div class="ui buttons">
-            &lt;div class="ui button primary">Send&lt;/div>
+            &lt;div class="ui button primary" (click)="myModalNormal.hide()">Close modal&lt;/div>
         &lt;/div>
     &lt;/modal-actions>
 &lt;/sm-modal>
 </sm-codeblock>
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo ( blurring )</h4>
     <button class="ui button teal" (click)="myModalBluring.show({blurring: true})">Click me</button>
     <sm-modal #myModalBluring title="Hello from Modal" class="fluid">

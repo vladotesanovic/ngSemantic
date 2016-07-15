@@ -37,15 +37,30 @@ jQuery.fn.fixSidebar = function() {
 </div>`
 })
 export class SemanticSidebarComponent implements OnInit, OnDestroy {
-    @Input("class") class: string;
+    @Input() class: string;
     @ViewChild("sidebar") sidebar: ElementRef;
+    private visible: boolean = false;
 
-    constructor(private renderer: Renderer) {}
+    constructor(public renderer: Renderer) {}
 
     show(options?: {}) {
-        jQuery(this.sidebar.nativeElement)
-            .sidebar(options || {})
-            .sidebar("show");
+
+        if (!this.visible) {
+            this.visible = true;
+
+            jQuery(this.sidebar.nativeElement)
+                .sidebar(options || {})
+                .sidebar("toggle");
+        }
+    }
+
+    hide() {
+        if (this.visible) {
+            this.visible = false;
+
+            jQuery(this.sidebar.nativeElement)
+                .sidebar("hide");
+        }
     }
 
     ngOnInit(): void {
