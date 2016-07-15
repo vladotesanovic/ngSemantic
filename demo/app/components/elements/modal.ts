@@ -38,7 +38,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 &lt;sm-modal title="Hello from Modal" class="basic" #myModal>
     &lt;modal-content>
         ...
-    &lt;modal-content>
+    &lt;/modal-content>
 &lt;/sm-modal>
 </sm-codeblock>
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>

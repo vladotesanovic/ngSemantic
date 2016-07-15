@@ -8,7 +8,7 @@ declare var jQuery: any;
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-dropdown",
     template: `
-<div class="ui pointing dropdown link item" #dropdown>
+    <div class="ui pointing dropdown link item" #dropdown>
     <span class="text">{{title}}</span>
     <i class="dropdown icon"></i>
     <div class="menu">
