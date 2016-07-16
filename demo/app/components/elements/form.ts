@@ -17,7 +17,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <div class="main ui container">
     <h4 class="ui header">Demo login</h4>
     
-    <form smForm class="ui form" [formGroup]="form">
+    <form class="ui form" [formGroup]="form">
 	<sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
 	<div class="field">
 	    <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
@@ -48,7 +48,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </sm-codeblock>
 
 <h4 class="ui header">Demo feedback</h4>
-<form smForm class="ui form" [formGroup]="formFeedback">
+<form class="ui form" [formGroup]="formFeedback">
     <div class="field">
         <sm-input label="Name" [control]="nameFControl" placeholder="Enter name..."></sm-input>
         Remaining: {{(nameFControl.value.length - 4 )}}

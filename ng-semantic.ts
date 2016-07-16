@@ -9,10 +9,10 @@ import { SemanticButtonComponent } from "./ng-semantic/button/button";
 import { SemanticItemComponent } from "./ng-semantic/item/item";
 import { SemanticDropdownComponent } from "./ng-semantic/dropdown/dropdown";
 import { SemanticSelectComponent } from "./ng-semantic/select/select";
+import { SemanticSearchComponent } from "./ng-semantic/search/search";
 import { SemanticLoaderComponent } from "./ng-semantic/loader/loader";
 import { SemanticCardComponent, SemanticCardsComponent } from "./ng-semantic/card/card";
-import { SemanticInputComponent, SemanticFormComponent,
-	SemanticTextareaComponent, SemanticCheckboxComponent } from "./ng-semantic/input/input";
+import { SemanticInputComponent, SemanticTextareaComponent, SemanticCheckboxComponent } from "./ng-semantic/input/input";
 import { SemanticSidebarComponent } from "./ng-semantic/sidebar/sidebar";
 import { SemanticTabsComponent, SemanticTabComponent } from "./ng-semantic/tab/tab";
 import { SemanticFlagComponent } from "./ng-semantic/flag/flag";
@@ -32,6 +32,7 @@ export *  from "./ng-semantic/segment/segment";
 export *  from "./ng-semantic/rating/rating";
 export *  from "./ng-semantic/list/list";
 export *  from "./ng-semantic/button/button";
+export *  from "./ng-semantic/search/search";
 export *  from "./ng-semantic/item/item";
 export *  from "./ng-semantic/dropdown/dropdown";
 export *  from "./ng-semantic/select/select";
@@ -52,7 +53,6 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticInputComponent,
 	SemanticTextareaComponent,
 	SemanticCheckboxComponent,
-	SemanticFormComponent,
 	SemanticMenuComponent,
 	SemanticMessageComponent,
 	SemanticSegmentComponent,
@@ -62,6 +62,7 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticListComponent,
 	SemanticSelectComponent,
 	SemanticFlagComponent,
+	SemanticSearchComponent,
 	SemanticItemComponent,
 	SemanticSidebarComponent,
 	SemanticProgressComponent,

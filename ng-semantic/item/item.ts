@@ -2,7 +2,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
 
 /**
  * Implementation of Item view
- * 
+ *
  * @link http://semantic-ui.com/views/item.html
  */
 @Component({
@@ -19,7 +19,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
 </div>`
 })
 export class SemanticItemComponent {
-  @Input("icon") icon: string;
-  @Input("header") header: string;
-  @Input("image") image: string;
+  @Input() icon: string;
+  @Input() header: string;
+  @Input() image: string;
 }

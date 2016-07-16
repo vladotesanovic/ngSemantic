@@ -85,8 +85,8 @@ npm start
   - sm-rating
   - sm-dropdown
   - sm-select
+  - sm-search
   - sm-textarea
-  - sm-form
   - sm-progress
   - sm-card
   - sm-tabs & sm-tab

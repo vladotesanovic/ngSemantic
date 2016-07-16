@@ -1,3 +1,9 @@
+## version: 1.0.31
+
+- sm-search simple implementation of component is added
+- sm-form is removed
+- added types to sm-checkbox ( radio, slider, toggle )
+
 ## version: 1.0.30
 
 - &lt;sm-select> &lt;sm-dropdown>, basic implementation added

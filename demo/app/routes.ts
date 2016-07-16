@@ -23,6 +23,8 @@ import { FlagComponent } from "./components/elements/flag";
 import { AccordionComponent } from "./components/elements/accordion";
 import { RatingComponent } from "./components/elements/rating";
 import { SelectComponent } from "./components/elements/select";
+import { CheckboxComponent } from "./components/elements/checkbox";
+import { SearchComponent } from "./components/elements/search";
 
 const routes: RouterConfig = [
     { component: <Type>HomeComponent, path: "" },
@@ -34,7 +36,9 @@ const routes: RouterConfig = [
     { component: <Type>CardComponent, path: "elements/card" },
     { component: <Type>DropdownComponent, path: "elements/dropdown" },
     { component: <Type>SelectComponent, path: "elements/select" },
+    { component: <Type>CheckboxComponent, path: "elements/checkbox" },
     { component: <Type>SegmentComponent, path: "elements/segment" },
+    { component: <Type>SearchComponent, path: "elements/search" },
     { component: <Type>MenuComponent, path: "elements/menu" },
     { component: <Type>MessageComponent, path: "elements/message" },
     { component: <Type>DimmerComponent, path: "elements/dimmer" },

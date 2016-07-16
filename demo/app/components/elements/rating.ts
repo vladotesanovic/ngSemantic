@@ -23,7 +23,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <sm-codeblock smPrismjs="html">
 &lt;sm-rating class="massive star" (onRate)="onReceiveRating($event)" [maxRating]="10">&lt;/sm-rating>
 </sm-codeblock>
-      
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo rating with initial value</h4>
     
     <sm-rating class="massive heart" (onRate)="onReceiveRating($event)" [initialRating]="2" [maxRating]="10"></sm-rating>

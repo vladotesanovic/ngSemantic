@@ -63,6 +63,7 @@ accordionOption = {
     &lt;/sm-accordion-item>
 &lt;/sm-accordion>
 </sm-codeblock>
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
          <h4 class="ui header">Demo styled</h4>
          <sm-accordion class="styled">
             <sm-accordion-item>
@@ -81,7 +82,7 @@ accordionOption = {
                 it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
         </sm-accordion>
-        
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Demo fluid ( second is active by default)</h4>
         <sm-accordion class="styled fluid">
             <sm-accordion-item>
@@ -100,7 +101,7 @@ accordionOption = {
                 it can be found as a welcome guest in many households across the world.</accordion-content>
             </sm-accordion-item>
         </sm-accordion>
-        
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Demo inverted</h4>
         <sm-segment class="inverted teal">
            <sm-accordion class="inverted">
@@ -121,10 +122,10 @@ accordionOption = {
                 </sm-accordion-item>
             </sm-accordion>
         </sm-segment>
-             
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Demo form</h4>
         <sm-segment>
-            <form smForm class="ui form" [formGroup]="form">
+            <form class="ui form" [formGroup]="form">
                 <div class="field">
                     <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
                 </div>

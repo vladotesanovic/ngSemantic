@@ -1,5 +1,5 @@
 import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
-import { REACTIVE_FORM_DIRECTIVES, FORM_PROVIDERS, FormControl } from "@angular/forms";
+import { REACTIVE_FORM_DIRECTIVES, FormControl } from "@angular/forms";
 
 /**
  * Implementation of Input element
@@ -30,16 +30,32 @@ export class SemanticInputComponent {
   changeDetection: ChangeDetectionStrategy.OnPush,
   directives: [REACTIVE_FORM_DIRECTIVES],
   selector: "sm-checkbox",
-  template: `<div class="field" [ngClass]="{error: (!control.valid) }">
-    <div class="ui checkbox">
-      <input type="checkbox" tabindex="0" [formControl]="control">
+  template: `<div class="field" [ngClass]="{error: (!control.value && control?.validator) }">
+    <div class="ui {{classType}} checkbox">
+      <input type="checkbox" 
+      [attr.value]="value"
+      [attr.type]="inputType" tabindex="0" [attr.name]="name" [formControl]="control" [attr.disabled]="disabled">
       <label *ngIf="label">{{label}}</label>
     </div>
   </div>`
 })
 export class SemanticCheckboxComponent {
-  @Input("control") control: FormControl;
-  @Input("label") label: string;
+  @Input() control: FormControl;
+  @Input() label: string;
+  @Input() disabled: boolean;
+  @Input() value: string|number;
+  @Input() name: string;
+  @Input("type")
+  set type(data: string) {
+    if (data && data !== "checkbox") {
+      this.classType = data;
+      if (data === "radio") {
+        this.inputType = data;
+      }
+    }
+  }
+  private inputType: string = "checkbox";
+  private classType = "checkbox";
 }
 
 /**
@@ -61,16 +77,3 @@ export class SemanticTextareaComponent {
   @Input("label") label: string;
   @Input("rows") rows: string;
 }
-
-/**
- * Implementation of Form element
- *
- * @link http://semantic-ui.com/collections/form.html
- */
-@Component({
-  directives: [REACTIVE_FORM_DIRECTIVES],
-  providers: [FORM_PROVIDERS],
-  selector: "form[smForm]",
-  template: `<ng-content></ng-content>`
-})
-export class SemanticFormComponent {}
