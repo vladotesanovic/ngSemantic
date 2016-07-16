@@ -3,6 +3,7 @@ export * from "./ng-semantic/contextmenu/contextmenu";
 export * from "./ng-semantic/message/message";
 export * from "./ng-semantic/popup/tooltip";
 export * from "./ng-semantic/popup/popup";
+export * from "./ng-semantic/visibility/visibility";
 export * from "./ng-semantic/modal/modal";
 export * from "./ng-semantic/segment/segment";
 export * from "./ng-semantic/rating/rating";

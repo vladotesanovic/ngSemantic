@@ -7,6 +7,7 @@ import { SemanticSegmentComponent } from "./ng-semantic/segment/segment";
 import { SemanticListComponent } from "./ng-semantic/list/list";
 import { SemanticButtonComponent } from "./ng-semantic/button/button";
 import { SemanticItemComponent } from "./ng-semantic/item/item";
+import { SMVisibilityDirective } from "./ng-semantic/visibility/visibility";
 import { SemanticDropdownComponent } from "./ng-semantic/dropdown/dropdown";
 import { SemanticSelectComponent } from "./ng-semantic/select/select";
 import { SemanticSearchComponent } from "./ng-semantic/search/search";
@@ -27,6 +28,7 @@ export * from "./ng-semantic/contextmenu/contextmenu";
 export *  from "./ng-semantic/message/message";
 export * from "./ng-semantic/popup/tooltip";
 export *  from "./ng-semantic/popup/popup";
+export *  from "./ng-semantic/visibility/visibility";
 export *  from "./ng-semantic/modal/modal";
 export *  from "./ng-semantic/segment/segment";
 export *  from "./ng-semantic/rating/rating";
@@ -63,6 +65,7 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticSelectComponent,
 	SemanticFlagComponent,
 	SemanticSearchComponent,
+	SMVisibilityDirective,
 	SemanticItemComponent,
 	SemanticSidebarComponent,
 	SemanticProgressComponent,
