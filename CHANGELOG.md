@@ -1,3 +1,7 @@
+## version: 1.0.32
+
+- fixed sidebar bug
+
 ## version: 1.0.31
 
 - sm-search simple implementation of component is added
