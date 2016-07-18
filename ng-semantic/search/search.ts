@@ -25,7 +25,6 @@ export class SemanticSearchComponent {
 
         this.searchControl
             .valueChanges
-            .distinctUntilChanged()
             .subscribe((data: string|number) => this.onSearch.emit(data));
     }
 }

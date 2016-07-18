@@ -30,7 +30,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Demo Bulleted</h4>
         <sm-list class="ui list bulleted">
-            <sm-item *ngFor="let item of flatArray | async" class="item">{ {item} }</sm-item>
+            <sm-item *ngFor="let item of flatArray | async" class="item">{{item}}</sm-item>
         </sm-list>
 
         <h4 class="ui header">Code</h4>
@@ -42,7 +42,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Demo Ordered</h4>
         <sm-list class="ui list ordered">
-            <sm-item *ngFor="let item of flatArray | async" class="item">{ {item} }</sm-item>
+            <sm-item *ngFor="let item of flatArray | async" class="item">{{item}}</sm-item>
         </sm-list>
         <h4 class="ui header">Code</h4>
             <sm-codeblock smPrismjs="html">

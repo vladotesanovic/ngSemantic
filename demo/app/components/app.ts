@@ -12,7 +12,7 @@ export class AppComponent implements AfterViewInit {
 
 	ngAfterViewInit() {
 		const _resize = (): any => {
-			jQuery("#page .full.height").css("height", jQuery(window).height() + "px");
+			jQuery("#page .article").css("height", jQuery(window).height() + "px");
 		};
 		_resize();
 		window.onresize = (): any => {
