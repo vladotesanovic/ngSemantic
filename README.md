@@ -5,7 +5,7 @@
 # Angular2 & Semantic UI
 <p align="center">
   <img src="http://i.imgur.com/SCTxyan.jpg" alt="Angular 2"/><br/>
-  <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a> 
+  <a href="http://www.angular.io" target="_blank">Angular2</a> - <a href="http://semantic-ui.com" target="_blank">Semantic UI</a>
 </p>
 
 ## Live demo
@@ -19,7 +19,7 @@ https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
    <li>Angular 2 version: rc.4</li>
    <li>Semantic UI version: 2.2.1</li>
 </ul>
-        
+
 ## Installation
 ```bash
 npm install ng-semantic --save
@@ -36,8 +36,16 @@ Semantic UI ( minified versions of css and js ) must be loaded in index.html
 <!-- Configure SystemJS or Webpack to load ng-semantic -->
 
 ```
- 
+
 ## Use
+
+First add ng-semantic to the vendorNPMFiles array in angular-cli-build.js like:
+```javascript
+  vendorNPMFiles: [
+    // other packages here
+    'ng-semantic/**/*',
+  ]
+```
 
 ```javascript
 import {Component} from '@angular/core';
@@ -62,7 +70,7 @@ cd ngSemantic
 
 # install dependencies
 npm install && npm run typings
-        
+
 # compile demo project
 npm start
 ```
@@ -93,7 +101,7 @@ npm start
   - sm-list
   - sm-item
   - sm-dir-tooltip
-   
-## Licence 
+
+## Licence
 
 MIT License
