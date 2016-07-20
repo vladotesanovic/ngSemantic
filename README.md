@@ -39,13 +39,33 @@ Semantic UI ( minified versions of css and js ) must be loaded in index.html
 
 ## Use
 
-First add ng-semantic to the vendorNPMFiles array in angular-cli-build.js like:
+First add `ng-semantic` to the `vendorNPMFiles` array in angular-cli-build.js as follows:
 ```javascript
-  vendorNPMFiles: [
-    // other packages here
-    'ng-semantic/**/*',
-  ]
+
+vendorNPMFiles: [
+  // other packages here
+  'ng-semantic/**/*',
+]
+
 ```
+
+Then configure it in `src/system-config.ts` as follows:
+
+```javascript
+
+/** Map relative paths to URLS. */
+const map: any = {
+  'ng-semantic': 'vendor/ng-semantic'
+};
+
+/** User packages configuration. */
+const packages: any = {
+  'ng-semantic': {main: 'ng-semantic.js', defaultExtension: 'js'}
+}
+
+```
+
+Then you can use in a component as follows:
 
 ```javascript
 import {Component} from '@angular/core';
