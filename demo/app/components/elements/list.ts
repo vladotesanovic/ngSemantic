@@ -18,65 +18,65 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <div class="main ui container">
         <h4 class="ui header">Demo Normal</h4>
         <sm-list class="ui list">
-            <sm-item *ngFor="let item of flatArray | async" class="item">{{item}}</sm-item>
+            <sm-item *ngFor="let item of flatArray | async">{{item}}</sm-item>
         </sm-list>
 
         <h4 class="ui header">Code</h4>
             <sm-codeblock smPrismjs="html">
 &lt;sm-list class="ui list">
-    &lt;sm-item *ngFor="let item of flatArray" class="item">{ {item} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of flatArray">{ {item} }&lt;/sm-item>
 &lt;/sm-list>
 </sm-codeblock>
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Demo Bulleted</h4>
         <sm-list class="ui list bulleted">
-            <sm-item *ngFor="let item of flatArray | async" class="item">{{item}}</sm-item>
+            <sm-item *ngFor="let item of flatArray | async">{{item}}</sm-item>
         </sm-list>
 
-        <h4 class="ui header">Code</h4>
-            <sm-codeblock smPrismjs="html">
+<h4 class="ui header">Code</h4>
+<sm-codeblock smPrismjs="html">
 &lt;sm-list class="ui list bulleted">
-    &lt;sm-item *ngFor="let item of flatArray" class="item">{ {item} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of flatArray">{ {item} }&lt;/sm-item>
 &lt;/sm-list>
 </sm-codeblock>
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Demo Ordered</h4>
         <sm-list class="ui list ordered">
-            <sm-item *ngFor="let item of flatArray | async" class="item">{{item}}</sm-item>
+            <sm-item *ngFor="let item of flatArray | async">{{item}}</sm-item>
         </sm-list>
         <h4 class="ui header">Code</h4>
             <sm-codeblock smPrismjs="html">
 &lt;sm-list class="ui list ordered">
-    &lt;sm-item *ngFor="let item of flatArray" class="item">{ {item} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of flatArray">{ {item} }&lt;/sm-item>
 &lt;/sm-list>
 </sm-codeblock>
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Demo avatar</h4>
         <sm-list class="ui list">
-            <sm-item *ngFor="let item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
+            <sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item.date}}</sm-item>
         </sm-list>
         <h4 class="ui header">Code</h4>
             <sm-codeblock smPrismjs="html">
 &lt;sm-list class="ui list">
-    &lt;sm-item *ngFor="let item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{ {item.date} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{ {item.date} }&lt;/sm-item>
 &lt;/sm-list>
 </sm-codeblock>
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Demo avatar horizontal</h4>
         <sm-list class="ui list horizontal">
-            <a sm-item *ngFor="let item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
+            <a sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
         </sm-list>
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 
         <h4 class="ui header">Demo avatar horizontal ordered</h4>
         <sm-list class="ui list horizontal ordered">
-            <a sm-item *ngFor="let item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
+            <a sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
         </sm-list>
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 
         <h4 class="ui header">Demo avatar animated</h4>
         <sm-list class="ui list animated">
-            <a sm-item *ngFor="let item of usersArray | async" class="item" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
+            <a sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item.date}}</a>
         </sm-list>
     </div>
     `

@@ -1,7 +1,8 @@
-import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from "@angular/core";
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, AfterViewInit } from "@angular/core";
 import { REACTIVE_FORM_DIRECTIVES, FormControl } from "@angular/forms";
 import "rxjs/add/operator/distinct";
 import "rxjs/add/operator/debounceTime";
+import { Observable } from "rxjs/Rx";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -15,21 +16,20 @@ import "rxjs/add/operator/debounceTime";
   <div class="results"></div>
 </div>`
 })
-export class SemanticSearchComponent {
+export class SemanticSearchComponent implements AfterViewInit {
     @Input() class: string;
     @Input() icon: boolean;
     @Input() loading: boolean;
-    @Input() debounceTime: number = 0;
+    @Input() debounce: number = 0;
     @Input() placeholder: string;
     @Output() onSearch: EventEmitter<string|number> = new EventEmitter<string|number>();
     searchControl: FormControl = new FormControl();
 
-    constructor() {
-
+    ngAfterViewInit() {
         this.searchControl
             .valueChanges
             .distinctUntilChanged()
-            .debounceTime(this.debounceTime)
+            .debounceTime(this.debounce)
             .subscribe((data: string|number) => this.onSearch.emit(data));
     }
 }

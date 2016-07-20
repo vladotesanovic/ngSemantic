@@ -18,10 +18,10 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <div class="main ui container">
     <h4 class="ui header">Demo inverted ( with sidebar )</h4>
     <sm-menu title="Angular2" class="ui menu inverted teal" logo="/demo/assets/images/semantic.png">
-        <a sm-item href="#/elements/menu" *ngFor="let item of items" [icon]="item?.icon" class="item">{{item?.title}}</a>
+        <a sm-item href="#/elements/menu" *ngFor="let item of items" [icon]="item?.icon">{{item?.title}}</a>
 
         <sm-menu class="ui menu right secondary icon">
-            <a sm-item icon="sidebar big" class="item" (click)="menuSidebar.show({transition: 'overlay'})"></a>
+            <a sm-item icon="sidebar big" (click)="menuSidebar.show({transition: 'overlay'})"></a>
             <sm-sidebar class="right vertical inverted sidebar labeled menu teal huge" #menuSidebar>
                 <a class="item">
                     <i class="home icon"></i>
@@ -42,49 +42,54 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Angular2" class="ui menu inverted teal" logo="/assets/images/semantic.png">
-    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
+    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}&lt;/a>
 
     &lt;sm-menu class="ui menu right secondary">
-        &lt;a sm-item icon="sidebar big" class="item">&lt;/a>
+        &lt;a sm-item icon="sidebar big">&lt;/a>
     &lt;/sm-menu>
 &lt;/sm-menu>
 </sm-codeblock>
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo three item</h4>
     <sm-menu title="" class="ui three item menu">
-        <a sm-item *ngFor="let item of ['Editorials', 'Reviews', 'Upcoming Events']" class="item">{{item}}</a>
+        <a sm-item *ngFor="let item of ['Editorials', 'Reviews', 'Upcoming Events']">{{item}}</a>
     </sm-menu>
-
+    
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo pointing</h4>
     <sm-menu title="" class="ui three item menu pointing">
-        <a sm-item *ngFor="let item of ['Editorials', 'Reviews', 'Upcoming Events']; let i = index"
-        class="item" [ngClass]="{'active': i == 1}" >{{item}}</a>
+        <a sm-item *ngFor="let item of ['Editorials', 'Reviews', 'Upcoming Events']; let i = index" 
+        [ngClass]="{'active': i == 1}" >{{item}}</a>
     </sm-menu>
-
+    
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Labeled fluid icon menu</h4>
     <sm-menu title="Labeled Icon" class="ui fluid three item labeled icon menu inverted blue">
-        <a sm-item *ngFor="let item of labeledIcons" [icon]="item?.icon" class="item">{{item?.title}}</a>
+        <a sm-item *ngFor="let item of labeledIcons" [icon]="item?.icon">{{item?.title}}</a>
     </sm-menu>    
     
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo vertical</h4>
     <sm-menu title="Vertical" class="ui menu vertical">
-        <a sm-item *ngFor="let item of items" [icon]="item?.icon" class="item">{{item?.title}}</a>
+        <a sm-item *ngFor="let item of items" [icon]="item?.icon">{{item?.title}}</a>
     </sm-menu>
 
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Vertical" class="ui menu vertical">
-    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
+    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}&lt;/a>
 &lt;/sm-menu>
 </sm-codeblock>
-      <h4 class="ui header">Demo secondary</h4>
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+    <h4 class="ui header">Demo secondary</h4>
     <sm-menu title="Secondary" class="ui menu secondary">
-        <a sm-item *ngFor="let item of items" [icon]="item.icon" class="item">{{item?.title}}</a>
+        <a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}</a>
     </sm-menu>
 
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Secondary" class="ui menu secondary">
-    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon" class="item">{{item?.title}}&lt;/a>
+    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}&lt;/a>
 &lt;/sm-menu>
 </sm-codeblock>
 </div>

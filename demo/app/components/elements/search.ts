@@ -20,20 +20,22 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-search placeholder="Search..." (onSearch)="element.innerText = $event" >&lt;/sm-search>
-</sm-codeblock>                                                                         
+</sm-codeblock>      
+                                                                   
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+
     <h4 class="ui header">Demo icon</h4>
-    <sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true"></sm-search>
+    <sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true" [debounce]="500"></sm-search>
     <div #elementIcon></div>
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
-&lt;sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true">&lt;/sm-search>
+&lt;sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true" [debounce]="500">&lt;/sm-search>
 </sm-codeblock>
 
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo loading</h4>
-    <sm-search placeholder="Search..." [loading]="true" (onSearch)="elementIcon.innerText = $event" [icon]="true"></sm-search>
-    <div #elementIcon></div>
+    <sm-search placeholder="Search..." [loading]="true" (onSearch)="elementLoading.innerText = $event" [icon]="true"></sm-search>
+    <div #elementLoading></div>
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-search placeholder="Search..." [loading]="true" (onSearch)="elementIcon.innerText = $event" [icon]="true">&lt;/sm-search>

@@ -1,14 +1,14 @@
-import { EventEmitter } from "@angular/core";
+import { EventEmitter, AfterViewInit } from "@angular/core";
 import { FormControl } from "@angular/forms";
 import "rxjs/add/operator/distinct";
 import "rxjs/add/operator/debounceTime";
-export declare class SemanticSearchComponent {
+export declare class SemanticSearchComponent implements AfterViewInit {
     class: string;
     icon: boolean;
     loading: boolean;
-    debounceTime: number;
+    debounce: number;
     placeholder: string;
     onSearch: EventEmitter<string | number>;
     searchControl: FormControl;
-    constructor();
+    ngAfterViewInit(): void;
 }

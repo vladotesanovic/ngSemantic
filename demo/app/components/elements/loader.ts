@@ -27,7 +27,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     &lt;div class="ui text large loader">Loading&lt;/div>
 &lt;/div>
 </sm-codeblock>
-    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+   <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
    <h4 class="ui header">Loader component</h4>
    <sm-segment>
         <sm-loader [complete]="isCompleted" class="inverted" text="Loading..."></sm-loader>

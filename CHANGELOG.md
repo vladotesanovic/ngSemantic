@@ -1,3 +1,10 @@
+## version: 1.0.33
+
+- Added smDeviceVisibility directive, with available options: mobile, table, desktop, mobile only, tablet only, computer only
+- Added basic implementation of smDirVisibility, http://semantic-ui.com/behaviors/visibility.html
+- removed requirement for class="item" on sm-item component
+- Improved sm-search component
+
 ## version: 1.0.32
 
 - fixed sidebar bug

@@ -25,7 +25,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
             <sm-codeblock smPrismjs="html">
 &lt;sm-button class="positive" (click)="clickMe($event)" icon="thumbs up">Click Me&lt;/sm-button>
 </sm-codeblock>
-        
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Buttons</h4>
         <sm-button class="" icon="">Normal</sm-button>
         <sm-button class="primary" icon="">Primary</sm-button>
@@ -33,22 +33,26 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <sm-button class="negative" icon="">Negative</sm-button>
         <sm-button class="positive" icon="">Positive</sm-button>
         
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">States</h4>
         <sm-button class="primary active" icon="">Active</sm-button>
         <sm-button class="primary loading" icon="">Loading</sm-button>
         <sm-button class="primary disabled" icon="">Disabled</sm-button>
         
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Basic</h4>
         <sm-button class="basic" icon="">Basic</sm-button>
         <sm-button class="basic red" icon="">Red</sm-button>
         <sm-button class="basic" icon="save">With icon</sm-button>
         
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Colored</h4>
         <sm-button class="purple" icon="building">Purple</sm-button>
         <sm-button class="red" icon="remove">Red</sm-button>
         <sm-button class="orange" icon="warning">Orange</sm-button>        
         <sm-button class="violet" icon="announcement">Violet</sm-button>
         
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Sizes</h4>
         <sm-button class="mini teal" icon="">Mini</sm-button>
         <sm-button class="tiny teal" icon="">Tiny</sm-button>
@@ -59,6 +63,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <sm-button class="huge teal" icon="">Huge</sm-button>
         <sm-button class="massive teal" icon="">Massive</sm-button>
         
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Social</h4>
         <sm-button class="facebook" icon="facebook">Facebook</sm-button>
         <sm-button class="twitter" icon="twitter">Twitter</sm-button>
@@ -67,17 +72,20 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <sm-button class="linkedin" icon="linkedin">Linkedin</sm-button>
         <sm-button class="youtube" icon="youtube">Youtube</sm-button>
         
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Icon only</h4>
         <sm-button class="" icon="play"></sm-button>
         <sm-button class="" icon="pause"></sm-button>
         <sm-button class="" icon="shuffle"></sm-button>
         
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Icon only ( Circular )</h4>
         <sm-button class="circular" icon="edit"></sm-button>
         <sm-button class="circular basic" icon="add big"></sm-button>
         <sm-button class="circular basic purple" icon="female big"></sm-button>
         <sm-button class="circular brown" icon="male big"></sm-button>
-            
+        
+        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Fluid button</h4>
         <sm-button class="fluid" icon="">Fluid ( full width ) button</sm-button>
               

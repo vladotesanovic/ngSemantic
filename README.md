@@ -119,7 +119,9 @@ npm start
   - sm-tabs & sm-tab
   - sm-list
   - sm-item
-  - sm-dir-tooltip
+  - smDirTooltip
+  - smDeviceVisibility
+  - smDirVisibility
 
 ## Licence
 
