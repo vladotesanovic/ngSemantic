@@ -25,6 +25,7 @@ import { RatingComponent } from "./components/elements/rating";
 import { SelectComponent } from "./components/elements/select";
 import { CheckboxComponent } from "./components/elements/checkbox";
 import { SearchComponent } from "./components/elements/search";
+import { DeviceVisibilityComponent } from "./components/elements/devicevisibility";
 
 const routes: RouterConfig = [
     { component: <Type>HomeComponent, path: "" },
@@ -48,6 +49,7 @@ const routes: RouterConfig = [
     { component: <Type>ModalComponent, path: "elements/modal" },
     { component: <Type>PopupComponent, path: "elements/popup" },
     { component: <Type>SidebarComponent, path: "elements/sidebar" },
+    { component: <Type>DeviceVisibilityComponent, path: "elements/devicevisibility" },
     { component: <Type>TabComponent, path: "elements/tab" },
     { component: <Type>ButtonComponent, path: "elements/button" },
 ];

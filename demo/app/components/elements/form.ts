@@ -32,7 +32,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </form>
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
-&lt;form smForm class="ui form" [formGroup]="form"> 
+&lt;form class="ui form" [formGroup]="form"> 
     &lt;sm-loader [complete]="!formSubmited" class="inverted" text="Loading...">&lt;/sm-loader>
     &lt;div class="field">
 	    &lt;sm-input label="Name" [control]="nameControl" placeholder="Enter name...">&lt;/sm-input>
@@ -46,7 +46,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     &lt;sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login&lt;/sm-button>
 &lt;/form>
 </sm-codeblock>
-
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Demo feedback</h4>
 <form class="ui form" [formGroup]="formFeedback">
     <div class="field">

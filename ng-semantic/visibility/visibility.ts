@@ -1,4 +1,5 @@
-import { Directive, ViewContainerRef, Input, OnInit, Output, EventEmitter } from "@angular/core";
+import { Directive, ViewContainerRef, Input, OnInit, Output, EventEmitter, Component } from "@angular/core";
+import { isBlank } from "@angular/compiler/src/facade/lang";
 
 declare var jQuery: any;
 
@@ -29,5 +30,24 @@ export class SMVisibilityDirective implements OnInit {
                     onUpdate: (calculations: {}) => this.onUpdate.emit(calculations),
                 });
         }
+    }
+}
+
+/**
+ * Custom Implementation of Semantic UI Device Visibility
+ *
+ * @link http://semantic-ui.com/collections/grid.html#device-visibility
+ */
+@Directive({
+    selector: "[smDeviceVisibility]"
+})
+export class SMDeviceVisibilityDirective implements OnInit {
+
+    @Input() smDeviceVisibility: string;
+
+    constructor(public element: ViewContainerRef) {}
+
+    ngOnInit(): void {
+        this.element.element.nativeElement.classList.add(...this.smDeviceVisibility.split(" "));
     }
 }

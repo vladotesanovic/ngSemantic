@@ -32,12 +32,9 @@ Semantic UI ( minified versions of css and js ) must be loaded in index.html
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.js"></script>
-
-<!-- Configure SystemJS or Webpack to load ng-semantic -->
-
 ```
 
-## Use
+## Angular CLI configuration
 
 First add `ng-semantic` to the `vendorNPMFiles` array in angular-cli-build.js as follows:
 ```javascript
@@ -64,6 +61,8 @@ const packages: any = {
 }
 
 ```
+
+## Use
 
 Then you can use in a component as follows:
 

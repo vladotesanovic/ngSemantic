@@ -1,7 +1,6 @@
 import { Component , Type } from "@angular/core";
 import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
-import { FormControl } from "@angular/forms";
 
 @Component({
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],

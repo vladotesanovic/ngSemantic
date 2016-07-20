@@ -8,3 +8,9 @@ export declare class SMVisibilityDirective implements OnInit {
     constructor(element: ViewContainerRef);
     ngOnInit(): void;
 }
+export declare class SMDeviceVisibilityDirective implements OnInit {
+    element: ViewContainerRef;
+    smDeviceVisibility: string;
+    constructor(element: ViewContainerRef);
+    ngOnInit(): void;
+}

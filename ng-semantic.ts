@@ -7,7 +7,7 @@ import { SemanticSegmentComponent } from "./ng-semantic/segment/segment";
 import { SemanticListComponent } from "./ng-semantic/list/list";
 import { SemanticButtonComponent } from "./ng-semantic/button/button";
 import { SemanticItemComponent } from "./ng-semantic/item/item";
-import { SMVisibilityDirective } from "./ng-semantic/visibility/visibility";
+import { SMVisibilityDirective, SMDeviceVisibilityDirective } from "./ng-semantic/visibility/visibility";
 import { SemanticDropdownComponent } from "./ng-semantic/dropdown/dropdown";
 import { SemanticSelectComponent } from "./ng-semantic/select/select";
 import { SemanticSearchComponent } from "./ng-semantic/search/search";
@@ -65,7 +65,6 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticSelectComponent,
 	SemanticFlagComponent,
 	SemanticSearchComponent,
-	SMVisibilityDirective,
 	SemanticItemComponent,
 	SemanticSidebarComponent,
 	SemanticProgressComponent,
@@ -80,5 +79,7 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 ];
 
 export let SEMANTIC_DIRECTIVES: Array<any> = [
-	SMTooltipDirective
+	SMTooltipDirective,
+	SMVisibilityDirective,
+	SMDeviceVisibilityDirective
 ];

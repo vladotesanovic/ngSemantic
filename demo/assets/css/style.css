@@ -4,7 +4,7 @@ body { background-color: #EAECEC; }
 textarea.code { resize: none !important; }
 
 /* new site */
-#page .full.height { 
+#page .full.height {
 	background-color: #FFFFFF;
 	display: -webkit-box;
     display: -webkit-flex;
@@ -246,4 +246,41 @@ pre[class*="language-"] {
 .router-link-active {
     font-weight: bold !important;
     color: white !important;
+}
+
+.left-demo {
+    width: 250px !important; left: 0px; top: 0px;
+}
+
+/* visibility function */
+@media only screen and (max-width: 767px) {
+    .mobile { display: inherit !important; }
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .tablet { display: inherit !important; }
+}
+
+@media only screen and (min-width: 992px) {
+    .computer { display: inherit !important; }
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile { display: none; }
+    .mobile.only { display: none !important; }
+}
+
+@media only screen and (min-width: 992px)  {
+    .tablet { display: none;  }
+    .tablet.only { display: none !important; }
+}
+
+@media only screen and (max-width: 767px) {
+    .tablet { display: none;  }
+    .tablet.only { display: none !important; }
+}
+
+@media only screen and (max-width: 992px) {
+    .computer { display: none;  }
+    .computer.only { display: none !important; }
 }

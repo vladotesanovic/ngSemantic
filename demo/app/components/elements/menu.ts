@@ -21,7 +21,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <a sm-item href="#/elements/menu" *ngFor="let item of items" [icon]="item?.icon" class="item">{{item?.title}}</a>
 
         <sm-menu class="ui menu right secondary icon">
-            <a sm-item href="#/elements/menu" icon="sidebar big" class="item" (click)="menuSidebar.show({transition: 'overlay'})"></a>
+            <a sm-item icon="sidebar big" class="item" (click)="menuSidebar.show({transition: 'overlay'})"></a>
             <sm-sidebar class="right vertical inverted sidebar labeled menu teal huge" #menuSidebar>
                 <a class="item">
                     <i class="home icon"></i>
