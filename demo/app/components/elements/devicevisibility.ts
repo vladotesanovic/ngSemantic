@@ -102,6 +102,42 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     &lt;/sm-menu>
 &lt;/sm-menu>
 </sm-codeblock>
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">CSS requirement <i class="icon warning red"></i> </h4>
+<p>Copy this into your custom css stylesheet: </p>
+<sm-codeblock smPrismjs="css">
+@media only screen and (max-width: 767px) {
+    .mobile { display: inherit !important; }
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .tablet { display: inherit !important; }
+}
+
+@media only screen and (min-width: 992px) {
+    .computer { display: inherit !important; }
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile { display: none; }
+    .mobile.only { display: none !important; }
+}
+
+@media only screen and (min-width: 992px)  {
+    .tablet { display: none;  }
+    .tablet.only { display: none !important; }
+}
+
+@media only screen and (max-width: 767px) {
+    .tablet { display: none;  }
+    .tablet.only { display: none !important; }
+}
+
+@media only screen and (max-width: 992px) {
+    .computer { display: none;  }
+    .computer.only { display: none !important; }
+}
+</sm-codeblock>
     </div>
     `
 })
