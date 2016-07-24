@@ -27,7 +27,6 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Demo rating with initial value</h4>
     
     <sm-rating 
-    [smDeviceVisibility]="['computer only']" 
     class="massive heart" (onRate)="onReceiveRating($event)" [initialRating]="2" [maxRating]="10"></sm-rating>
     <h2 class="ui header">{{result}}</h2>
     
