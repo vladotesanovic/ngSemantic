@@ -20,13 +20,13 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <form class="ui form" [formGroup]="form">
 	<sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
 	<div class="field">
-	    <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
+	    <sm-input label="Name" [control]="form.controls.nameControl" placeholder="Enter name..."></sm-input>
 	</div>
 	<div class="field">
-	    <sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
+	    <sm-input label="E-mail" [control]="form.controls.emailControl" placeholder="Enter e-mail..."></sm-input>
 	</div>
 	<div class="field">
-	    <sm-checkbox label="I agree to the Terms and Conditions" [control]="agreeControl"></sm-checkbox>
+	    <sm-checkbox label="I agree to the Terms and Conditions" [control]="form.controls.agreeControl"></sm-checkbox>
 	</div>
 	<sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login</sm-button>
     </form>
@@ -35,10 +35,10 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 &lt;form class="ui form" [formGroup]="form"> 
     &lt;sm-loader [complete]="!formSubmited" class="inverted" text="Loading...">&lt;/sm-loader>
     &lt;div class="field">
-	    &lt;sm-input label="Name" [control]="nameControl" placeholder="Enter name...">&lt;/sm-input>
+	    &lt;sm-input label="Name" [control]="form.controls.nameControl" placeholder="Enter name...">&lt;/sm-input>
     &lt;/div>
     &lt;div class="field">
-	    &lt;sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail...">&lt;/sm-input>
+	    &lt;sm-input label="E-mail" [control]="form.controls.emailControl" placeholder="Enter e-mail...">&lt;/sm-input>
     &lt;/div>
     &lt;div class="field">
 	    &lt;sm-checkbox label="I agree to the Terms and Conditions" [control]="agreeControl">&lt;/sm-checkbox>
@@ -50,19 +50,19 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <h4 class="ui header">Demo feedback</h4>
 <form class="ui form" [formGroup]="formFeedback">
     <div class="field">
-        <sm-input label="Name" [control]="nameFControl" placeholder="Enter name..."></sm-input>
-        Remaining: {{(nameFControl.value.length - 4 )}}
+        <sm-input label="Name" [control]="formFeedback.controls.nameControl" placeholder="Enter name..."></sm-input>
+        Remaining: {{(formFeedback.controls.nameControl.value.length - 4 )}}
     </div>
     <div class="field">
         <label>Category</label>
-        <sm-select class="fluid" [control]="selectControl" placeholder="Choose category...">
+        <sm-select class="fluid" [control]="formFeedback.controls.selectControl" placeholder="Choose category...">
             <option>Support</option>
             <option>Feedback</option>
         </sm-select>
     </div>
     <div class="field">
-        <sm-textarea label="Name" rows="10" [control]="textControl"></sm-textarea>
-        Remaining: {{(textControl.value.length - 10)}}
+        <sm-textarea label="Name" rows="10" [control]="formFeedback.controls.textControl"></sm-textarea>
+        Remaining: {{(formFeedback.controls.textControl.value.length - 10)}}
     </div>
     <sm-button (click)="feedbackModal.show({ transition: 'slide up'})" [disabled]="!formFeedback.valid" class="primary">Send</sm-button>
 </form>
@@ -73,10 +73,10 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
           <i class="thumbs up icon"></i>
           <div class="content">
             <p>Successfully sent</p>
-            <div class="sub header">{{nameFControl.value}}</div>
-            <div>{{selectControl.value}}</div>
+            <div class="sub header">{{formFeedback.controls.nameControl.value}}</div>
+            <div>{{formFeedback.controls.selectControl.value}}</div>
             <p>
-                {{textControl.value}}
+                {{formFeedback.controls.textControl.value}}
             </p>
           </div>
         </h2>
@@ -86,35 +86,22 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 `
 })
 export class FormComponent {
-    agreeControl: FormControl = new FormControl("", Validators.required);
-    emailControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
-    search: FormControl = new FormControl("");
-
     form: FormGroup;
     formFeedback: FormGroup;
     formSubmited: boolean = false;
-    nameControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
-
-    nameFControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(4)]));
-    selectControl: FormControl = new FormControl("");
-    textControl: FormControl = new FormControl("", Validators.compose([Validators.required, Validators.minLength(10)]));
 
     constructor(fb: FormBuilder) {
         this.form = fb.group({
-            emailControl: this.emailControl,
-            nameControl: this.nameControl,
+            agreeControl: ["", Validators.required],
+            emailControl: ["", Validators.compose([Validators.required, Validators.minLength(4)])],
+            nameControl: ["", Validators.compose([Validators.required, Validators.minLength(4)])],
         });
 
         this.formFeedback = fb.group({
-            nameFControl: this.nameFControl,
-            selectControl: this.selectControl,
-            textControl: this.textControl
+            nameControl: ["", Validators.compose([Validators.required, Validators.minLength(4)])],
+            selectControl: [""],
+            textControl: ["", Validators.compose([Validators.required, Validators.minLength(10)])]
         });
-    }
-
-    checkboxValidator(control: FormControl) {
-	    let value = (typeof control.value === "boolean") ? control.value : false;
-	    return (value) ? "" : "yes";
     }
 
     submit() {

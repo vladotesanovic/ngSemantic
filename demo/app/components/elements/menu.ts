@@ -19,8 +19,11 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Demo inverted ( with sidebar )</h4>
     <sm-menu title="Angular2" class="ui menu inverted teal" logo="/demo/assets/images/semantic.png">
         <a sm-item href="#/elements/menu" *ngFor="let item of items" [icon]="item?.icon">{{item?.title}}</a>
-
+        
         <sm-menu class="ui menu right secondary icon">
+            <a sm-item href="#/elements/menu"
+            image="http://semantic-ui.com/images/avatar/small/stevie.jpg">Elliot Fu</a>
+        
             <a sm-item icon="sidebar big" (click)="menuSidebar.show({transition: 'overlay'})"></a>
             <sm-sidebar class="right vertical inverted sidebar labeled menu teal huge" #menuSidebar>
                 <a class="item">
@@ -45,6 +48,8 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}&lt;/a>
 
     &lt;sm-menu class="ui menu right secondary">
+        &lt;a sm-item href="#/elements/menu" 
+            image="http://semantic-ui.com/images/avatar/small/stevie.jpg">Elliot Fu&lt;/a>
         &lt;a sm-item icon="sidebar big">&lt;/a>
     &lt;/sm-menu>
 &lt;/sm-menu>

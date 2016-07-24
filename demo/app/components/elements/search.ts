@@ -25,11 +25,12 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 
     <h4 class="ui header">Demo icon</h4>
-    <sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true" [debounce]="500"></sm-search>
+    <sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true" class="fluid" [debounce]="500"></sm-search>
     <div #elementIcon></div>
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
-&lt;sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true" [debounce]="500">&lt;/sm-search>
+&lt;sm-search placeholder="Search..." (onSearch)="elementIcon.innerText = $event" [icon]="true" 
+class="fluid" [debounce]="500">&lt;/sm-search>
 </sm-codeblock>
 
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
