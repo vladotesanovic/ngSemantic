@@ -9,7 +9,7 @@ declare var jQuery: any;
     selector: "sm-dropdown",
     template: `
     <div class="ui {{class}} dropdown item" #dropdown>
-    <span *ngIf="title" class="text">{{title}}</span>
+    <div *ngIf="title" class="text">{{title}}</div>
     <i class="dropdown icon"></i>
     <div class="menu">
         <ng-content></ng-content>
