@@ -71,10 +71,6 @@ export class DemoComponent {}
         Angular 2 QuickStart with ngSmantic</a></p>
         
         <p><i class="icon external"></i> 
-        <a href="https://github.com/vladotesanovic/angular2-quickstart-ngsemantic" target="_blank">
-        Angular 2 QuickStart with ngSmantic</a></p>
-        
-        <p><i class="icon external"></i> 
         <a href="https://github.com/vladotesanovic/angular2-webpack-starter" target="_blank">
         Angular2 Webpack Starter ( forked from AngularClass )</a></p>
         
