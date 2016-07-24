@@ -1,3 +1,8 @@
+## version: 1.0.34
+
+- Improved sm-message component
+- Improved sm-dropdown component
+
 ## version: 1.0.33
 
 - Added smDeviceVisibility directive, with available options: mobile, table, desktop, mobile only, tablet only, computer only

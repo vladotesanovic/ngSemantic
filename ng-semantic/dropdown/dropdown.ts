@@ -8,11 +8,11 @@ declare var jQuery: any;
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-dropdown",
     template: `
-    <div class="ui pointing dropdown link item" #dropdown>
-    <span class="text">{{title}}</span>
+    <div class="ui {{class}} dropdown item" #dropdown>
+    <span *ngIf="title" class="text">{{title}}</span>
     <i class="dropdown icon"></i>
     <div class="menu">
-      <div class="item" *ngFor="let item of items">{{item}}</div>
+        <ng-content></ng-content>
     </div>
   </div>
 `

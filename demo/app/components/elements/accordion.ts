@@ -41,11 +41,7 @@ import { REACTIVE_FORM_DIRECTIVES, Validators, FormControl, FormBuilder, FormGro
         </sm-accordion>
         <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
-accordionOption = {
-    exclusive: true,
-    on: "mouseenter"
-}
-&lt;sm-accordion [options]="accordionOption">
+&lt;sm-accordion [options]="{ exclusive: true, on: "mouseenter" }">
     &lt;sm-accordion-item>
         &lt;accordion-title>What is a dog?&lt;/accordion-title>
         &lt;accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
