@@ -24,7 +24,7 @@ import { FormControl, Validators } from "@angular/forms";
     <p>Selected: {{selectControl.value}}</p>
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
-&lt;sm-select [control]="selectControl" placeholder="Search..." class="fluid search" [items]="[1,2,3]">
+&lt;sm-select [control]="selectControl" placeholder="Search..." class="fluid search">
     &lt;option>1&lt;/option>
     &lt;option>2&lt;/option>
     &lt;option>3&lt;/option>

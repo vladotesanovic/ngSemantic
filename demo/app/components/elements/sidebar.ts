@@ -53,7 +53,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 &lt;/sm-sidebar>
     </sm-codeblock>
     
-   <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>   
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>   
     <sm-button class="" (click)="bottomSidebar.show({dimPage: false})">Lunch bottom sidebar</sm-button>
          <h4 class="ui header">Code</h4>
         <sm-codeblock smPrismjs="html">

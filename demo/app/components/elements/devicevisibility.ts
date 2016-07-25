@@ -54,12 +54,12 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo with mobile menu</h4>
     <p>Resize screen to see mobile menu!</p>
-       <sm-menu title="Angular2" class="ui menu inverted red" logo="/demo/assets/images/angular.png">
+       <sm-menu title="Angular2" class="inverted red" logo="/demo/assets/images/angular.png">
         <div smDeviceVisibility="tablet computer">
             <a sm-item href="#/elements/menu" icon="home">Home</a>
         </div>
         
-        <sm-menu class="ui menu right secondary icon" smDeviceVisibility="mobile only">
+        <sm-menu class="menu right secondary icon" smDeviceVisibility="mobile only">
             <a sm-item icon="sidebar big" (click)="menuSidebar.show({transition: 'overlay'})"></a>
             <sm-sidebar class="right vertical inverted sidebar labeled menu icon red" #menuSidebar>
                 <a class="item">
@@ -79,12 +79,12 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </sm-menu>
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
-&lt;sm-menu title="Angular2" class="ui menu inverted red" logo="/assets/images/angular.png">
+&lt;sm-menu title="Angular2" class="inverted red" logo="/assets/images/angular.png">
     &lt;div smDeviceVisibility="tablet computer">
         &lt;a sm-item href="#/elements/menu" icon="home">Home&lt;/a>
     &lt;/div>
     
-    &lt;sm-menu class="ui menu right secondary icon" smDeviceVisibility="mobile only">
+    &lt;sm-menu class="menu right secondary icon" smDeviceVisibility="mobile only">
     
         &lt;a sm-item icon="sidebar big" (click)="mobileSidebar.show({transition: 'overlay'})">&lt;/a>
         

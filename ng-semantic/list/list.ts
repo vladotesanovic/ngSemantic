@@ -1,15 +1,27 @@
-import { Component, Input, ChangeDetectionStrategy, ViewEncapsulation } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, AfterViewInit } from "@angular/core";
 
 /**
  * Implementation of List collection
- * 
+ *
  * @link http://semantic-ui.com/elements/list.html
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
   selector: "sm-list",
-  styles: [`sm-list { display: block; }`],
-  template: `<ng-content></ng-content>`
+  template: `
+<div class="ui list {{class}}" #innerElement>
+<ng-content></ng-content>
+</div>
+`
 })
-export class SemanticListComponent {}
+export class SemanticListComponent implements AfterViewInit {
+  @Input() class: string;
+  @ViewChild("innerElement") innerElement: ElementRef;
+
+  ngAfterViewInit() {
+
+    Array.from(this.innerElement.nativeElement.childNodes)
+        .filter((element: Element) => element.nodeName === "SM-LIST")
+        .map((element: Element) => element.firstElementChild.classList.remove("ui"));
+  }
+}

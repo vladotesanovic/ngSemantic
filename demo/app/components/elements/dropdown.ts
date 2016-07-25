@@ -75,7 +75,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Demo ( dropdown in menu )</h4>
 <p>Activating on hover.</p>
-<sm-menu title="Angular2" class="ui menu inverted pink massive">
+<sm-menu title="Angular2" class="inverted pink massive">
     <a sm-item href="#/elements/menu" icon="home">Home</a>
     <sm-dropdown class="pointing link" title="Cities" [options]="{on: 'hover'}">
         <sm-item *ngFor="let item of cities">{{item}}</sm-item>
@@ -83,7 +83,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 </sm-menu>
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
-&lt;sm-menu title="Angular2" class="ui menu inverted pink massive">
+&lt;sm-menu title="Angular2" class="inverted pink massive">
     &lt;a sm-item href="#/elements/menu" icon="home">Home&lt;/a>
     &lt;sm-dropdown class="pointing link" title="Cities" [options]="{on: 'hover'}">
         &lt;sm-item *ngFor="let item of cities">{ {item} }&lt;/sm-item>
