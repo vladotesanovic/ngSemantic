@@ -1,0 +1,74 @@
+<div class="ui masthead vertical segment">
+<div class="ui container">
+<h1>Getting Started</h1>
+<p>Angular2 building blocks based on Semantic UI</p>
+<ul class="">
+<li class="item">Angular 2 <a href="https://angular.io/" target="_blank">angular.io</a></li>
+<li class="item">Semantic UI <a href="http://semantic-ui.com/" target="_blank">semantic-ui.com</a></li>
+<li class="item"><b>GitHub repository</b> <a href="https://github.com/vladotesanovic/ngSemantic">
+    https://github.com/vladotesanovic/ngSemantic</a> ( If you like it, give it a star <i class="icon star"></i> )</li>
+</ul>
+</div>
+</div>
+<div class="main ui container">
+<h2 class="header">Installation</h2>
+<sm-segment class="raised">
+In terminal:
+<sm-codeblock smPrismjs="bash">
+$ npm install ng-semantic --save
+</sm-codeblock>
+</sm-segment>
+<p></p>
+<sm-segment class="raised">
+<p>Semantic css and js ( with jQuery are required )</p>
+<sm-codeblock smPrismjs="markup">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
+src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.css&quot;&gt;
+
+<!-- JS -->
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.js&quot;&gt;&lt;/script&gt;
+</sm-codeblock>
+</sm-segment>
+<p></p>
+<sm-segment class="raised">
+<p>Configure SystemJS or Webpack to load ng-semantic</p>
+<p></p>
+</sm-segment>
+<br/>
+<h2 class="header">Use</h2>
+<sm-segment class="raised">
+<sm-codeblock smPrismjs="typescript">
+import {Component} from 'angular2/core';
+import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+
+@Component({
+  selector: 'demo-cmp',
+  directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+  template: '&lt;sm-segment class="raised">Hello&lt;/sm-segment>'
+})
+export class DemoComponent {}
+</sm-codeblock>
+</sm-segment>
+<h2>Starter project</h2>
+<p><i class="icon external"></i>
+<a href="https://github.com/vladotesanovic/angular2-express-starter" target="_blank">
+Express app with included ng-semantic</a></p>
+
+<p><i class="icon external"></i>
+<a href="https://github.com/vladotesanovic/angular2-quickstart-ngsemantic" target="_blank">
+Angular 2 QuickStart with ngSmantic</a></p>
+
+<p><i class="icon external"></i>
+<a href="https://github.com/vladotesanovic/angular2-webpack-starter" target="_blank">
+Angular2 Webpack Starter ( forked from AngularClass )</a></p>
+
+<h2>Donate</h2>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="POST" target="_top" #form>
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="HAJ2G8JMR3UEJ">
+    <button type="submit" class="ui large teal button" (click)="form.submit()">Donate Today to ngSemantic.</button>
+</form>
+
+</div>
