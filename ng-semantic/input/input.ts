@@ -16,9 +16,9 @@ import { REACTIVE_FORM_DIRECTIVES, FormControl } from "@angular/forms";
 </div>`
 })
 export class SemanticInputComponent {
-  @Input("control") control: FormControl;
-  @Input("label") label: string;
-  @Input("placeholder") placeholder: string;
+  @Input() control: FormControl;
+  @Input() label: string;
+  @Input() placeholder: string;
 }
 
 /**
@@ -73,7 +73,7 @@ export class SemanticCheckboxComponent {
   </div>`
 })
 export class SemanticTextareaComponent {
-  @Input("control") control: FormControl;
-  @Input("label") label: string;
-  @Input("rows") rows: string;
+  @Input() control: FormControl;
+  @Input() label: string;
+  @Input() rows: string;
 }

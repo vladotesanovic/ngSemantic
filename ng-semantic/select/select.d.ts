@@ -6,8 +6,10 @@ export declare class SemanticSelectComponent implements AfterViewInit {
     label: string;
     options: {};
     placeholder: string;
+    modelChange: EventEmitter<string | number>;
     onChange: EventEmitter<string | number>;
     select: ElementRef;
+    model: string | number;
     private multiple;
     ngAfterViewInit(): void;
 }

@@ -15,7 +15,7 @@ import { FormControl, Validators } from "@angular/forms";
     </div>
 </div>
 <div class="main ui container">
-    <h4 class="ui header">Demo</h4>
+    <h4 class="ui header">Normal</h4>
     <sm-select [control]="selectControl" placeholder="Search..." class="fluid search">
         <option>1</option>
         <option>2</option>
@@ -30,8 +30,9 @@ import { FormControl, Validators } from "@angular/forms";
     &lt;option>3&lt;/option>
 &lt;/sm-select>
 </sm-codeblock>
+<!-- Multiple -->
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-    <h4 class="ui header">Demo Multiple</h4>
+    <h4 class="ui header">Multiple</h4>
     <p><i>Wrapped in 'ui form' for validation.</i></p>
     <div class="ui form">
     <sm-select [options]="{direction: 'upward', transition: 'vertical flip'}" [control]="multipleControl" placeholder="Select multiple..." 
@@ -51,6 +52,32 @@ import { FormControl, Validators } from "@angular/forms";
     &lt;option *ngFor="let city of cities">{{city}}&lt;/option>
 &lt;/sm-select>
 </sm-codeblock>
+
+<!-- NgModel -->
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">With two way data binding</h4>
+
+    <sm-select 
+    [options]="{direction: 'upward'}"
+    [(model)]="userModel.gender" placeholder="Select gender..."
+    class="fluid">
+        <option value="m"><i class="icon male"></i> Male</option>
+        <option value="f"><i class="icon female"></i> Female</option>
+    </sm-select>
+<pre>
+{{userModel | json}}
+</pre>
+<h4 class="ui header">Code</h4>
+<sm-codeblock smPrismjs="html">
+&lt;sm-select
+    [options]="{direction: 'upward'}" 
+    [(model)]="userModel.gender" placeholder="Select gender..." 
+    class="fluid">
+    &lt;option value="m">&lt;i class="icon male">&lt;/i> Male&lt;/option>
+    &lt;option value="f">&lt;i class="icon female">&lt;/i> Female&lt;/option>
+&lt;/sm-select>
+</sm-codeblock>
+
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Options</h4>
 <table class="ui celled striped table">
@@ -62,7 +89,13 @@ import { FormControl, Validators } from "@angular/forms";
         <i class="arrow circle down icon"></i> [control]
       </td>
       <td>Instance of FormControl. <a href="https://angular.io/docs/ts/latest/api/forms/index/FormControl-class.html"
-       target="_blank"><i class="icon external"></i> </a> </td>
+       target="_blank"><i class="icon external"></i> </a></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> [(model)]
+      </td>
+      <td>Two way data binding. Instance of number or string ( must be same as value in option ).</td>
     </tr>
     <tr>
       <td>
@@ -82,7 +115,7 @@ import { FormControl, Validators } from "@angular/forms";
       </td>
       <td>Semantic UI options object for Dropdown element: 
       <a href="http://semantic-ui.com/modules/dropdown.html#/settings"
-       target="_blank"><i class="icon external"></i> </a>
+       target="_blank"><i class="icon external"></i></a>
        </td>
     </tr>
     <tr>
@@ -92,9 +125,7 @@ import { FormControl, Validators } from "@angular/forms";
       <td>Placeholder text</td>
     </tr>
     <tr>
-        <td colspan="2">
-          Events
-        </td>
+        <td colspan="2">Events </td>
     </tr>
     <tr>
       <td>
@@ -104,13 +135,17 @@ import { FormControl, Validators } from "@angular/forms";
     </tr>
   </tbody>
 </table>
-</div>
-`
+</div>`
 })
 export class SelectComponent {
     selectControl: FormControl = new FormControl("");
     multipleControl: FormControl = new FormControl("", Validators.required);
     multipleData = [];
+
+    userModel = {
+        gender: "m",
+        name: "John Doe"
+    };
     cities: Array<string> = ["New York", "Belgrade", "Stockholm", "Sarajevo"];
 
     onMultiple(data: Array<string>): void {

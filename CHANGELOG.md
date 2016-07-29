@@ -1,3 +1,7 @@
+## version: 1.0.36
+
+- Added [(model)] two way data binding to sm-select 
+
 ## version: 1.0.35
 
 - Removed need for classes 'ui list' and 'ui menu' on sm-list and sm-menu
