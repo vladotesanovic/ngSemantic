@@ -15,15 +15,15 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     </div>
 </div>
 <div class="main ui container">
-    <h4 class="ui header">Demo login</h4>
+    <h4 class="ui header">Login</h4>
     
     <form class="ui form" [formGroup]="form">
 	<sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
 	<div class="field">
-	    <sm-input label="Name" [control]="form.controls.nameControl" placeholder="Enter name..."></sm-input>
+	    <sm-input label="Name" icon="user" class="left" [control]="form.controls.nameControl" placeholder="Enter name..."></sm-input>
 	</div>
 	<div class="field">
-	    <sm-input label="E-mail" [control]="form.controls.emailControl" placeholder="Enter e-mail..."></sm-input>
+	    <sm-input label="E-mail" icon="mail" class="left" [control]="form.controls.emailControl" placeholder="Enter e-mail..."></sm-input>
 	</div>
 	<div class="field">
 	    <sm-checkbox label="I agree to the Terms and Conditions" [control]="form.controls.agreeControl"></sm-checkbox>
@@ -47,7 +47,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 &lt;/form>
 </sm-codeblock>
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-<h4 class="ui header">Demo feedback</h4>
+<h4 class="ui header">Feedback</h4>
 <form class="ui form" [formGroup]="formFeedback">
     <div class="field">
         <sm-input label="Name" [control]="formFeedback.controls.nameControl" placeholder="Enter name..."></sm-input>

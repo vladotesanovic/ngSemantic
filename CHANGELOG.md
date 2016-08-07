@@ -1,3 +1,7 @@
+## version: 1.0.37
+
+- sm-input now can exists without form.
+
 ## version: 1.0.36
 
 - Added [(model)] two way data binding to sm-select 

@@ -1,4 +1,7 @@
-import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
+import {
+    Component, Input, ChangeDetectionStrategy, Output, ViewContainerRef,
+    EventEmitter, OnInit
+} from "@angular/core";
 import { REACTIVE_FORM_DIRECTIVES, FormControl } from "@angular/forms";
 
 /**
@@ -7,18 +10,38 @@ import { REACTIVE_FORM_DIRECTIVES, FormControl } from "@angular/forms";
  * @link http://semantic-ui.com/elements/input.html
  */
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
   directives: [REACTIVE_FORM_DIRECTIVES],
   selector: "sm-input",
-  template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty) }">
-  <label *ngIf="label">{{label}}</label>
-  <input type="text" [formControl]="control" placeholder="{{placeholder}}">
+  template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty && isInsideForm) }">
+  <label *ngIf="label && isInsideForm">{{label}}</label>
+  <div class="ui input {{class}}" [ngClass]="{'icon': icon, 'error': (!control.valid && control.dirty &&!isInsideForm)}">
+  <label *ngIf="label && !isInsideForm" class="ui label">{{label}}</label>
+  <input [type]="type" [formControl]="control" (keyup)="modelChange.emit(input.value)" #input placeholder="{{placeholder}}">
+  <i *ngIf="icon" class="{{icon}} icon"></i>
+</div>
 </div>`
 })
-export class SemanticInputComponent {
-  @Input() control: FormControl;
+export class SemanticInputComponent implements OnInit {
   @Input() label: string;
+  @Input() class: string;
+  @Input() icon: string;
+  @Input() type: string = "text";
   @Input() placeholder: string;
+  @Input() control: FormControl = new FormControl();
+  @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
+
+  private isInsideForm: boolean = false;
+
+  constructor(public viewRef: ViewContainerRef) {}
+
+  ngOnInit() {
+    // if input field is inside form
+    if (typeof jQuery !== "undefined") {
+      if (jQuery(this.viewRef.element.nativeElement).parents("form").length) {
+        this.isInsideForm = true;
+      }
+    }
+  }
 }
 
 /**

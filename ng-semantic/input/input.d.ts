@@ -1,8 +1,17 @@
+import { ViewContainerRef, EventEmitter, OnInit } from "@angular/core";
 import { FormControl } from "@angular/forms";
-export declare class SemanticInputComponent {
-    control: FormControl;
+export declare class SemanticInputComponent implements OnInit {
+    viewRef: ViewContainerRef;
     label: string;
+    class: string;
+    icon: string;
+    type: string;
     placeholder: string;
+    control: FormControl;
+    modelChange: EventEmitter<string | number>;
+    private isInsideForm;
+    constructor(viewRef: ViewContainerRef);
+    ngOnInit(): void;
 }
 export declare class SemanticCheckboxComponent {
     control: FormControl;

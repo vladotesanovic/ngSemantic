@@ -1,6 +1,6 @@
 import { ElementRef, Renderer } from "@angular/core";
 export declare class SemanticMessageComponent {
-    private renderer;
+    renderer: Renderer;
     icon: string;
     class: string;
     message: ElementRef;

@@ -29,7 +29,7 @@ export class SemanticMessageComponent {
   @Input() class: string;
   @ViewChild("message") message: ElementRef;
 
-  constructor(private renderer: Renderer) {}
+  constructor(public renderer: Renderer) {}
 
   close() {
     this.renderer.detachView([this.message.nativeElement]);

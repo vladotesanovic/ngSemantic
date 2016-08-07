@@ -19,6 +19,7 @@ import { FormComponent } from "./components/elements/form";
 import { SidebarComponent } from "./components/elements/sidebar";
 import { DimmerComponent } from "./components/elements/dimmer";
 import { ProgressComponent } from "./components/elements/progress";
+import { InputComponent } from "./components/elements/input";
 import { FlagComponent } from "./components/elements/flag";
 import { AccordionComponent } from "./components/elements/accordion";
 import { RatingComponent } from "./components/elements/rating";
@@ -34,6 +35,7 @@ const routes: RouterConfig = [
     { component: <Type>AccordionComponent, path: "elements/accordion" },
     { component: <Type>ListComponent, path: "elements/list" },
     { component: <Type>FormComponent, path: "elements/form" },
+    { component: <Type>InputComponent, path: "elements/input" },
     { component: <Type>CardComponent, path: "elements/card" },
     { component: <Type>DropdownComponent, path: "elements/dropdown" },
     { component: <Type>SelectComponent, path: "elements/select" },
