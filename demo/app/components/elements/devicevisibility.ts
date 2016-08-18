@@ -1,9 +1,6 @@
-import { Component, Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-devicevisibility",
     template: `
     <div class="ui masthead vertical segment">
@@ -86,7 +83,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     
     &lt;sm-menu class="menu right secondary icon" smDeviceVisibility="mobile only">
     
-        &lt;a sm-item icon="sidebar big" (click)="mobileSidebar.show({transition: 'overlay'})">&lt;/a>
+        &lt;a sm-item icon="sidebar big" (click)="mobileSidebar.show(&#123;transition: 'overlay'&#125;)">&lt;/a>
         
         &lt;sm-sidebar class="right vertical inverted sidebar labeled menu icon red" #mobileSidebar>
             &lt;a class="item">
@@ -106,37 +103,37 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <h4 class="ui header">CSS requirement <i class="icon warning red"></i> </h4>
 <p>Copy this into your custom css stylesheet: </p>
 <sm-codeblock smPrismjs="css">
-@media only screen and (max-width: 767px) {
-    .mobile { display: inherit !important; }
-}
+@media only screen and (max-width: 767px) &#123;
+    .mobile &#123; display: inherit !important; &#125;
+&#125;
 
-@media only screen and (min-width: 768px) and (max-width:991px) {
-    .tablet { display: inherit !important; }
-}
+@media only screen and (min-width: 768px) and (max-width:991px) &#123;
+    .tablet &#123; display: inherit !important; &#125;
+&#125;
 
-@media only screen and (min-width: 992px) {
-    .computer { display: inherit !important; }
-}
+@media only screen and (min-width: 992px) &#123;
+    .computer &#123; display: inherit !important; &#125;
+&#125;
 
-@media only screen and (min-width: 768px) {
-    .mobile { display: none; }
-    .mobile.only { display: none !important; }
-}
+@media only screen and (min-width: 768px) &#123;
+    .mobile &#123; display: none; &#125;
+    .mobile.only &#123; display: none !important; &#125;
+&#125;
 
-@media only screen and (min-width: 992px)  {
-    .tablet { display: none;  }
-    .tablet.only { display: none !important; }
-}
+@media only screen and (min-width: 992px)  &#123;
+    .tablet &#123; display: none;  &#125;
+    .tablet.only &#123; display: none !important; &#125;
+&#125;
 
-@media only screen and (max-width: 767px) {
-    .tablet { display: none;  }
-    .tablet.only { display: none !important; }
-}
+@media only screen and (max-width: 767px) &#123;
+    .tablet &#123; display: none;  &#125;
+    .tablet.only &#123; display: none !important; &#125;
+&#125;
 
-@media only screen and (max-width: 992px) {
-    .computer { display: none;  }
-    .computer.only { display: none !important; }
-}
+@media only screen and (max-width: 992px) &#123;
+    .computer &#123; display: none;  &#125;
+    .computer.only &#123; display: none !important; &#125;
+&#125;
 </sm-codeblock>
     </div>
     `

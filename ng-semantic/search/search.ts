@@ -1,12 +1,11 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, AfterViewInit } from "@angular/core";
-import { REACTIVE_FORM_DIRECTIVES, FormControl } from "@angular/forms";
-import "rxjs/add/operator/distinct";
+import { FormControl } from "@angular/forms";
 import "rxjs/add/operator/debounceTime";
-import { Observable } from "rxjs/Rx";
+import "rxjs/add/operator/distinctUntilChanged";
+
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    directives: [REACTIVE_FORM_DIRECTIVES],
     selector: "sm-search",
     template: `<div class="ui search" [ngClass]="{'loading': loading}">
  <div class="ui icon input {{class}} ">

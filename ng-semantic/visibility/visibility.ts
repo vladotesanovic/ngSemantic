@@ -1,5 +1,4 @@
-import { Directive, ViewContainerRef, Input, OnInit, Output, EventEmitter, Component } from "@angular/core";
-import { isBlank } from "@angular/compiler/src/facade/lang";
+import { Directive, ViewContainerRef, Input, OnInit, Output, EventEmitter } from "@angular/core";
 
 declare var jQuery: any;
 

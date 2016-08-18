@@ -11,12 +11,12 @@
 ## Live demo
 <a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
-##  Angular 2 QuickStart ( rc.4 ) with ngSemantic
+##  Angular 2 QuickStart ( rc.5 ) with ngSemantic
 https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
 
 ## Important!
 <ul>
-   <li>Angular 2 version: rc.4</li>
+   <li>Angular 2 version: rc.5</li>
    <li>Semantic UI version: 2.2.1</li>
 </ul>
 
@@ -28,10 +28,10 @@ npm install ng-semantic --save
 Semantic UI ( minified versions of css and js ) must be loaded in index.html
 
 ```html
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.1/semantic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
 ```
 
 ## Angular CLI configuration
@@ -67,12 +67,22 @@ const packages: any = {
 Then you can use in a component as follows:
 
 ```javascript
+// Module
+import { NgModule } from "@angular/core";
+import { NgSemanticModule } from "ng-semantic";
+
+@NgModule({
+    bootstrap:    [ AppComponent ],
+    declarations: [ AppComponent ],
+    imports:      [ BrowserModule, NgSemanticModule ]
+})
+export class AppModule {}
+
+// Component
 import {Component} from '@angular/core';
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
 
 @Component({
 selector: 'demo-cmp',
-directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
 template: `
  <sm-segment class="raised">
     Hello

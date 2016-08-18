@@ -1,5 +1,4 @@
 import { Component, Input, ViewChild, ChangeDetectionStrategy, AfterViewInit, ElementRef, EventEmitter, Output } from "@angular/core";
-import {} from "events";
 
 declare var jQuery: any;
 

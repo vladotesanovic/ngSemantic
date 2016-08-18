@@ -7,6 +7,7 @@ export declare class SemanticInputComponent implements OnInit {
     icon: string;
     type: string;
     placeholder: string;
+    model: {};
     control: FormControl;
     modelChange: EventEmitter<string | number>;
     private isInsideForm;

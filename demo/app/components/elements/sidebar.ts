@@ -1,9 +1,6 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector : "sm-page-sidebar",
     template : `
 	<div class="ui masthead vertical segment">
@@ -42,13 +39,13 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 &lt;sm-button class="positive" (click)="invertedSidebar.show({{ '{' }}transition: 'overlay'{{ '}' }})">Lunch left sidebar&lt;/sm-button>
 &lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>        
     &lt;a class="item">
-        <i class="home icon"></i> Home
+        &lt;i class="home icon">&lt;/i> Home
     &lt;/a>
     &lt;a class="item">
-        <i class="block layout icon"></i> Topics
+        &lt;i class="block layout icon">&lt;/i> Topics
     &lt;/a>
     &lt;a class="item">
-        <i class="smile icon"></i> Friends
+        &lt;i class="smile icon">&lt;/i> Friends
     &lt;/a>
 &lt;/sm-sidebar>
     </sm-codeblock>
@@ -60,11 +57,11 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 &lt;sm-button class="positive" (click)="bottomSidebar.show({{ '{' }}transition: 'overlay'{{ '}' }})">Lunch left sidebar&lt;/sm-button>
 &lt;sm-sidebar class="bottom inverted nine item labeled icon sidebar menu" #bottomSidebar> 
    &lt;a class="item">
-        <i class="home icon"></i>
+        &lt;i class="home icon">&lt;/i>
         Home
    &lt;/a>
    &lt;a class="item">
-        <i class="block layout icon"></i>
+        &lt;i class="block layout icon">&lt;/i>
         Topics
    &lt;/a>
 &lt;/sm-sidebar>

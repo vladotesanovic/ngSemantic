@@ -1,11 +1,7 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { FormControl, Validators } from "@angular/forms";
-
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
+import { FormControl } from "@angular/forms";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-checkbox",
     template: `
 	<div class="ui masthead vertical segment">

@@ -1,11 +1,8 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
 
 import { MessageService } from "../../services/message";
 
 @Component({
-  directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
   providers: [MessageService],
   selector: "sm-page-message",
   template: `
@@ -39,12 +36,12 @@ import { MessageService } from "../../services/message";
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo</h4>
     <p>Once created, message will expire for 5 seconds.</p>
-    <sm-message *ngFor="let message of messages" class="{{message.type}}" [icon]="message.icon">
+    <sm-message *ngFor="let message of messages" class="{{message?.type}}" [icon]="message?.icon">
         <message-header>
-            {{message.text}} header
+            {{message?.text}} header
         </message-header>
         <message-content>
-            {{message.text}}
+            {{message?.text}}
         </message-content>
     </sm-message>
 
@@ -66,12 +63,12 @@ import { MessageService } from "../../services/message";
 
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
-&lt;sm-message *ngFor="let message of messages" class="{{message.type}}" [icon]="message.icon">
+&lt;sm-message *ngFor="let message of messages" class="{{message?.type}}" [icon]="message.icon">
     &lt;message-header>
-        {{message.text}} header
+        {{'{'}}{{'{'}}message?.text{{'}'}}{{'}'}} header
     &lt;/message-header>
     &lt;message-content>
-        {{message.text}}
+        {{'{'}}{{'{'}}message?.text{{'}'}}{{'}'}}
     &lt;/message-content>
 &lt;/sm-message>
 </sm-codeblock>

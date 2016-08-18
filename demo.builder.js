@@ -6,7 +6,7 @@ builder.loadConfig('systemjs.config.js')
         var outputFile = './demo/vendor/bundle.min.js';
         return builder.buildStatic('app', outputFile, {
             minify: true,
-            mangle: true,
+            mangle: false,
             rollup: true
         });
     })

@@ -1,13 +1,12 @@
 import {
     Component, Input, AfterViewInit, ViewChild, ElementRef, Output, EventEmitter, ChangeDetectionStrategy
 } from "@angular/core";
-import { FormControl, REACTIVE_FORM_DIRECTIVES } from "@angular/forms";
+import { FormControl } from "@angular/forms";
 
 declare var jQuery: any;
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    directives: [REACTIVE_FORM_DIRECTIVES],
     selector: "sm-select",
     template: `<div class="field" [ngClass]="{error: (!control?.valid && control?.touched) }">
   <label *ngIf="label">{{label}}</label>
