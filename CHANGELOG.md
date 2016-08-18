@@ -1,3 +1,7 @@
+## version: 1.1.1
+
+- Update to RC.5, ng-semantic now use NgSemanticModule for bootstrapping.
+
 ## version: 1.0.37
 
 - sm-input now can exists without form.
