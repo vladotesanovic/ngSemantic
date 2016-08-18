@@ -24,7 +24,7 @@ declare var jQuery: any;
         <sm-modal selector="modal" title="Simple modal" class="">
             You activated it trough context menu!
         </sm-modal>
-        
+
         <sm-contextmenu [position]="menuPosition" [items]="menuItems"></sm-contextmenu>
     </div>
     `
