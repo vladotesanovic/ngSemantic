@@ -1,10 +1,7 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
-import { REACTIVE_FORM_DIRECTIVES, Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms";
+import { Component } from "@angular/core";
+import { Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, REACTIVE_FORM_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-accordion",
     template: `
     <div class="ui masthead vertical segment">
@@ -41,7 +38,7 @@ import { REACTIVE_FORM_DIRECTIVES, Validators, FormControl, FormBuilder, FormGro
         </sm-accordion>
         <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
-&lt;sm-accordion [options]="{ exclusive: true, on: "mouseenter" }">
+&lt;sm-accordion [options]="{{'{'}} exclusive: true, on: "mouseenter" {{'}'}}">
     &lt;sm-accordion-item>
         &lt;accordion-title>What is a dog?&lt;/accordion-title>
         &lt;accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,

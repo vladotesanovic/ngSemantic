@@ -1,12 +1,9 @@
 import { Component, Type, Renderer, ElementRef, ViewChild, AfterViewInit } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
-import { ContextMenuService, IContextMenu } from "../../services/contextmenu";
+import { IContextMenu } from "../../services/contextmenu";
 
 declare var jQuery: any;
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-contextmenu",
     styles: [`.full { height: 500px; border: 1px dashed gray }`],
     template: `
@@ -27,7 +24,7 @@ declare var jQuery: any;
         <sm-modal selector="modal" title="Simple modal" class="">
             You activated it trough context menu!
         </sm-modal>
-        
+
         <sm-contextmenu [position]="menuPosition" [items]="menuItems"></sm-contextmenu>
     </div>
     `

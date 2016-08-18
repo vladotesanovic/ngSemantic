@@ -1,8 +1,8 @@
 import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
-import { FormBuilder, FormGroup, FormControl, Validators } from "@angular/forms";
+
 /**
  * Implementation of Card collection
- * 
+ *
  * @link http://semantic-ui.com/views/card.html
  */
 @Component({

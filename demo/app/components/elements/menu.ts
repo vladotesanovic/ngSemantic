@@ -1,11 +1,6 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { ROUTER_DIRECTIVES } from "@angular/router";
-
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, ROUTER_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-menu-card",
     template: `
 	<div class="ui masthead vertical segment">
@@ -45,7 +40,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Angular2" class="inverted teal" logo="/assets/images/semantic.png">
-    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}&lt;/a>
+    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{'{'}}{{'{'}}item?.title{{'}'}}{{'}'}}&lt;/a>
 
     &lt;sm-menu class="menu right secondary">
         &lt;a sm-item href="#/elements/menu" 
@@ -83,7 +78,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Vertical" class="ui menu vertical">
-    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}&lt;/a>
+    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{'{'}}{{'{'}}item?.title{{'}'}}{{'}'}}&lt;/a>
 &lt;/sm-menu>
 </sm-codeblock>
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
@@ -95,7 +90,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Secondary" class="secondary">
-    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}&lt;/a>
+    &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{'{'}}{{'{'}}item?.title{{'}'}}{{'}'}}&lt;/a>
 &lt;/sm-menu>
 </sm-codeblock>
 </div>

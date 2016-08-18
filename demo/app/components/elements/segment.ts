@@ -1,10 +1,7 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
+import { Component } from "@angular/core";
 import { DataServices } from "../../services/data";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     providers: [DataServices],
     selector : "sm-page-segment",
     template : `

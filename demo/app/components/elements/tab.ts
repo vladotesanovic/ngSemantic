@@ -1,9 +1,6 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector : "sm-page-tab",
     template : `
 	<div class="ui masthead vertical segment">
@@ -54,8 +51,8 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <h4 class="ui header">Code</h4>
     <sm-codeblock smPrismjs="html">
 &lt;sm-tabs>
-    &lt;sm-tab *ngFor="let a of [{title: 'Hello', active: false}, {title: 'About', active: true}]"
-    [title]="a.title" [active]="a.active" >{ {a.title} } | additional text.
+    &lt;sm-tab *ngFor="let a of [{{ '{' }}title: 'Hello', active: false{{ '}' }}, {{ '{' }}title: 'About', active: true{{ '}' }}]"
+    [title]="a.title" [active]="a.active" >{{ '{' }}{{ '{' }}a.title{{ '}' }}{{ '}' }} | additional text.
     &lt;/sm-tab>
 &lt;/sm-tabs>
     </sm-codeblock>

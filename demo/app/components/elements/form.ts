@@ -1,10 +1,7 @@
-import { Component , Type } from "@angular/core";
-import { REACTIVE_FORM_DIRECTIVES, Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
+import { Validators, FormBuilder, FormGroup } from "@angular/forms";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, REACTIVE_FORM_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-form",
     template: `
 	<div class="ui masthead vertical segment">

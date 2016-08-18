@@ -1,9 +1,6 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector : "sm-page-popup",
     template : `
 	<div class="ui masthead vertical segment">
@@ -38,7 +35,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     
     <h4 class="ui header">Code</h4>
         <sm-codeblock smPrismjs="html">
-&lt;button class="ui button green" (click)="myPopup.show($event, {position: 'right center'})">Click me&lt;/button>
+&lt;button class="ui button green" (click)="myPopup.show($event, {{ '{' }}position: 'right center'{{ '}' }})">Click me&lt;/button>
 &lt;<sm-popup></sm-popup> #myPopup>
     &lt;sm-card class="card">
         &lt;card-title> Kristy &lt;/card-title>

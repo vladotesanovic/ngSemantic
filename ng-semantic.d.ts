@@ -24,3 +24,5 @@ export * from "./ng-semantic/dimmer/dimmer";
 export * from "./ng-semantic/accordion/accordion";
 export declare let SEMANTIC_COMPONENTS: Array<any>;
 export declare let SEMANTIC_DIRECTIVES: Array<any>;
+export declare class NgSemanticModule {
+}

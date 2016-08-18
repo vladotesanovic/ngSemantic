@@ -1,10 +1,7 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
 import { FormControl, Validators } from "@angular/forms";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-select",
     template: `
 	<div class="ui masthead vertical segment">
@@ -44,12 +41,12 @@ import { FormControl, Validators } from "@angular/forms";
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-select
-    [options]="{direction: 'upward', transition: 'vertical flip'}"
+    [options]="{{'{'}}direction: 'upward', transition: 'vertical flip'{{'}'}}"
     [control]="selectControl"
     placeholder="Select multiple..." 
     class="fluid search multiple"
     (onChange)="onMultiple($event)">
-    &lt;option *ngFor="let city of cities">{{city}}&lt;/option>
+    &lt;option *ngFor="let city of cities">{{'{'}}{{'{'}}city{{'}'}}{{'}'}}&lt;/option>
 &lt;/sm-select>
 </sm-codeblock>
 
@@ -70,7 +67,7 @@ import { FormControl, Validators } from "@angular/forms";
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-select
-    [options]="{direction: 'upward'}" 
+    [options]="{{'{'}}direction: 'upward'{{'}'}}" 
     [(model)]="userModel.gender" placeholder="Select gender..." 
     class="fluid">
     &lt;option value="m">&lt;i class="icon male">&lt;/i> Male&lt;/option>

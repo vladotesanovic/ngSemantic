@@ -2,7 +2,7 @@ import {
     Component, Input, ChangeDetectionStrategy, Output, ViewContainerRef,
     EventEmitter, OnInit
 } from "@angular/core";
-import { REACTIVE_FORM_DIRECTIVES, FormControl } from "@angular/forms";
+import { FormControl } from "@angular/forms";
 
 /**
  * Implementation of Input element
@@ -10,7 +10,6 @@ import { REACTIVE_FORM_DIRECTIVES, FormControl } from "@angular/forms";
  * @link http://semantic-ui.com/elements/input.html
  */
 @Component({
-  directives: [REACTIVE_FORM_DIRECTIVES],
   selector: "sm-input",
   template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty && isInsideForm) }">
   <label *ngIf="label && isInsideForm">{{label}}</label>
@@ -27,6 +26,7 @@ export class SemanticInputComponent implements OnInit {
   @Input() icon: string;
   @Input() type: string = "text";
   @Input() placeholder: string;
+  @Input() model: {};
   @Input() control: FormControl = new FormControl();
   @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
 
@@ -51,7 +51,6 @@ export class SemanticInputComponent implements OnInit {
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  directives: [REACTIVE_FORM_DIRECTIVES],
   selector: "sm-checkbox",
   template: `<div class="field" [ngClass]="{error: (!control.value && control?.validator) }">
     <div class="ui {{classType}} checkbox">
@@ -88,7 +87,6 @@ export class SemanticCheckboxComponent {
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  directives: [REACTIVE_FORM_DIRECTIVES],
   selector: "sm-textarea",
   template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty) }">
     <label *ngIf="label">{{label}}</label>

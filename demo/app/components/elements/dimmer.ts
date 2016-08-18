@@ -1,9 +1,6 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector: "sm-page-dimmer",
     template: `
 	<div class="ui masthead vertical segment">
@@ -21,7 +18,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
             <h2 class="ui inverted icon header">
                 <i class="mail icon"></i>
                 Dimmer Message
-                <div class="sub header">With {opacity: .7, transition: 'slide up'}</div>
+                <div class="sub header">With {{ '{' }}opacity: .7, transition: 'slide up'{{ '}' }}</div>
             </h2>
         </div>
     </sm-dimmer>
@@ -38,7 +35,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         &lt;/h2>
     &lt;/div>
 &lt;/sm-dimmer>
-&lt;sm-button (click)="dimmer.show({opacity: .7, transition: 'slide up'})" class="primary">Page dimmer&lt;/sm-button>
+&lt;sm-button (click)="dimmer.show({{ '{' }}opacity: .7, transition: 'slide up'{{ '}' }})" class="primary">Page dimmer&lt;/sm-button>
 </sm-codeblock>
 </div>
 `

@@ -1,9 +1,6 @@
-import { Component , Type } from "@angular/core";
-import { SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES } from "ng-semantic";
-import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
+import { Component } from "@angular/core";
 
 @Component({
-    directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES, <Type>CodeblockComponent, <Type>PrismJsDirective],
     selector : "sm-page-modal",
     template : `
 	<div class="ui masthead vertical segment">
@@ -56,7 +53,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         </modal-actions>
     </sm-modal>
     <sm-codeblock smPrismjs="html">
-&lt;button class="ui button primary" (click)="myModalNormal.show({inverted: true})">Click me&lt;/button>
+&lt;button class="ui button primary" (click)="myModalNormal.show({{ '{' }}inverted: true{{ '}' }})">Click me&lt;/button>
 &lt;sm-modal title="Hello from Modal" class="" icon="home" #myModalNormal>
     &lt;modal-content>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
