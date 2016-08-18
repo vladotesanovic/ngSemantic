@@ -21,7 +21,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-dropdown title="Cities" class="pointing floating labeled icon button">
-    &lt;sm-item *ngFor="let item of cities">{ {item} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of cities">{{item}}&lt;/sm-item>
 &lt;/sm-dropdown>
 </sm-codeblock>
 
@@ -85,8 +85,8 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <sm-codeblock smPrismjs="html">
 &lt;sm-menu title="Angular2" class="inverted pink massive">
     &lt;a sm-item href="#/elements/menu" icon="home">Home&lt;/a>
-    &lt;sm-dropdown class="pointing link" title="Cities" [options]="{on: 'hover'}">
-        &lt;sm-item *ngFor="let item of cities">{ {item} }&lt;/sm-item>
+    &lt;sm-dropdown class="pointing link" title="Cities" [options]="{{ '{' }}on: 'hover'{{ '}' }}">
+        &lt;sm-item *ngFor="let item of cities">{{item}}&lt;/sm-item>
     &lt;/sm-dropdown>
 &lt;/sm-menu>
 </sm-codeblock>
@@ -104,7 +104,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 &lt;sm-menu title="ngSemantic" class="vertical">
     &lt;a sm-item href="#/elements/menu" icon="home">Home&lt;/a>
     &lt;sm-dropdown class="left pointing link" title="Cities">
-        &lt;sm-item *ngFor="let item of cities">{ {item} }&lt;/sm-item>
+        &lt;sm-item *ngFor="let item of cities">{{ '{' }}item{{ '}' }}&lt;/sm-item>
     &lt;/sm-dropdown>
     &lt;a sm-item href="#/elements/accordion">Accordion&lt;/a>
     &lt;a sm-item href="#/elements/sidebar">Sidebar&lt;/a>

@@ -38,7 +38,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     
     <h4 class="ui header">Code</h4>
         <sm-codeblock smPrismjs="html">
-&lt;button class="ui button green" (click)="myPopup.show($event, {position: 'right center'})">Click me&lt;/button>
+&lt;button class="ui button green" (click)="myPopup.show($event, {{ '{' }}position: 'right center'{{ '}' }})">Click me&lt;/button>
 &lt;<sm-popup></sm-popup> #myPopup>
     &lt;sm-card class="card">
         &lt;card-title> Kristy &lt;/card-title>

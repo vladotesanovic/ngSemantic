@@ -39,7 +39,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 
     <h4 class="ui header">Code</h4>
         <sm-codeblock smPrismjs="html">
-&lt;sm-button class="positive" (click)="invertedSidebar.show({transition: 'overlay'})">Lunch left sidebar&lt;/sm-button>
+&lt;sm-button class="positive" (click)="invertedSidebar.show({{ '{' }}transition: 'overlay'{{ '}' }})">Lunch left sidebar&lt;/sm-button>
 &lt;sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>        
     &lt;a class="item">
         <i class="home icon"></i> Home
@@ -57,7 +57,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
     <sm-button class="" (click)="bottomSidebar.show({dimPage: false})">Lunch bottom sidebar</sm-button>
          <h4 class="ui header">Code</h4>
         <sm-codeblock smPrismjs="html">
-&lt;sm-button class="positive" (click)="bottomSidebar.show({transition: 'overlay'})">Lunch left sidebar&lt;/sm-button>
+&lt;sm-button class="positive" (click)="bottomSidebar.show({{ '{' }}transition: 'overlay'{{ '}' }})">Lunch left sidebar&lt;/sm-button>
 &lt;sm-sidebar class="bottom inverted nine item labeled icon sidebar menu" #bottomSidebar> 
    &lt;a class="item">
         <i class="home icon"></i>

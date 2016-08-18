@@ -1,6 +1,4 @@
-import { provideRouter, RouterConfig } from "@angular/router";
-import { Type } from "@angular/core";
-import { LocationStrategy, HashLocationStrategy } from "@angular/common";
+import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./components/home/home";
 import { ContextmenuComponent } from "./components/elements/contextmenu";
@@ -28,35 +26,32 @@ import { CheckboxComponent } from "./components/elements/checkbox";
 import { SearchComponent } from "./components/elements/search";
 import { DeviceVisibilityComponent } from "./components/elements/devicevisibility";
 
-const routes: RouterConfig = [
-    { component: <Type>HomeComponent, path: "" },
-    { component: <Type>LoaderComponent, path: "elements/loader" },
-    { component: <Type>ContextmenuComponent, path: "elements/contextmenu" },
-    { component: <Type>AccordionComponent, path: "elements/accordion" },
-    { component: <Type>ListComponent, path: "elements/list" },
-    { component: <Type>FormComponent, path: "elements/form" },
-    { component: <Type>InputComponent, path: "elements/input" },
-    { component: <Type>CardComponent, path: "elements/card" },
-    { component: <Type>DropdownComponent, path: "elements/dropdown" },
-    { component: <Type>SelectComponent, path: "elements/select" },
-    { component: <Type>CheckboxComponent, path: "elements/checkbox" },
-    { component: <Type>SegmentComponent, path: "elements/segment" },
-    { component: <Type>SearchComponent, path: "elements/search" },
-    { component: <Type>MenuComponent, path: "elements/menu" },
-    { component: <Type>MessageComponent, path: "elements/message" },
-    { component: <Type>DimmerComponent, path: "elements/dimmer" },
-    { component: <Type>RatingComponent, path: "elements/rating" },
-    { component: <Type>ProgressComponent, path: "elements/progress" },
-    { component: <Type>FlagComponent, path: "elements/flag" },
-    { component: <Type>ModalComponent, path: "elements/modal" },
-    { component: <Type>PopupComponent, path: "elements/popup" },
-    { component: <Type>SidebarComponent, path: "elements/sidebar" },
-    { component: <Type>DeviceVisibilityComponent, path: "elements/devicevisibility" },
-    { component: <Type>TabComponent, path: "elements/tab" },
-    { component: <Type>ButtonComponent, path: "elements/button" },
+const routes: Routes = [
+    { component: HomeComponent, path: "" },
+    { component: LoaderComponent, path: "elements/loader" },
+    { component: ContextmenuComponent, path: "elements/contextmenu" },
+    { component: AccordionComponent, path: "elements/accordion" },
+    { component: ListComponent, path: "elements/list" },
+    { component: FormComponent, path: "elements/form" },
+    { component: InputComponent, path: "elements/input" },
+    { component: CardComponent, path: "elements/card" },
+    { component: DropdownComponent, path: "elements/dropdown" },
+    { component: SelectComponent, path: "elements/select" },
+    { component: CheckboxComponent, path: "elements/checkbox" },
+    { component: SegmentComponent, path: "elements/segment" },
+    { component: SearchComponent, path: "elements/search" },
+    { component: MenuComponent, path: "elements/menu" },
+    { component: MessageComponent, path: "elements/message" },
+    { component: DimmerComponent, path: "elements/dimmer" },
+    { component: RatingComponent, path: "elements/rating" },
+    { component: ProgressComponent, path: "elements/progress" },
+    { component: FlagComponent, path: "elements/flag" },
+    { component: ModalComponent, path: "elements/modal" },
+    { component: PopupComponent, path: "elements/popup" },
+    { component: SidebarComponent, path: "elements/sidebar" },
+    { component: DeviceVisibilityComponent, path: "elements/devicevisibility" },
+    { component: TabComponent, path: "elements/tab" },
+    { component: ButtonComponent, path: "elements/button" },
 ];
 
-export const APP_ROUTER_PROVIDERS = [
-    provideRouter(routes),
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
-];
+export const routing = RouterModule.forRoot(routes, { useHash: true });

@@ -66,12 +66,12 @@ import { MessageService } from "../../services/message";
 
     <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
-&lt;sm-message *ngFor="let message of messages" class="{ {message.type} }" [icon]="message.icon">
+&lt;sm-message *ngFor="let message of messages" class="{{message.type}}" [icon]="message.icon">
     &lt;message-header>
-        { {message.text} } header
+        {{message.text}} header
     &lt;/message-header>
     &lt;message-content>
-        { {message.text} }
+        {{message.text}}
     &lt;/message-content>
 &lt;/sm-message>
 </sm-codeblock>

@@ -24,7 +24,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-list>
-    &lt;sm-item *ngFor="let item of flatArray">{ {item} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of flatArray">{{item}}&lt;/sm-item>
 &lt;/sm-list>
 </sm-codeblock>
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
@@ -40,9 +40,9 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-list class="bulleted">
-    &lt;sm-item *ngFor="let item of flatArray">{ {item} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of flatArray">{{item}}&lt;/sm-item>
     &lt;sm-list>
-        &lt;sm-item *ngFor="let item of flatArray">{ {item} }&lt;/sm-item>
+        &lt;sm-item *ngFor="let item of flatArray">{{item}}&lt;/sm-item>
     &lt;/sm-list>
 &lt;/sm-list>
 </sm-codeblock>
@@ -56,7 +56,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-list class="bulleted relaxed">
-    &lt;sm-item *ngFor="let item of flatArray">{ {item} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of flatArray">{{item}}&lt;/sm-item>
 &lt;/sm-list>
 </sm-codeblock>
 
@@ -68,7 +68,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <h4 class="ui header">Code</h4>
             <sm-codeblock smPrismjs="html">
 &lt;sm-list class="ordered">
-    &lt;sm-item *ngFor="let item of flatArray">{ {item} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of flatArray">{{item}}&lt;/sm-item>
 &lt;/sm-list>
 </sm-codeblock>
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
@@ -79,7 +79,7 @@ import { CodeblockComponent, PrismJsDirective } from "../../prismjs/prismjs";
         <h4 class="ui header">Code</h4>
             <sm-codeblock smPrismjs="html">
 &lt;sm-list class="divided">
-    &lt;sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{ {item.date} }&lt;/sm-item>
+    &lt;sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item.date}}&lt;/sm-item>
 &lt;/sm-list>
 </sm-codeblock>
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
