@@ -10,13 +10,5 @@ enableProdMode();
 })
 export class AppComponent implements AfterViewInit {
 
-	ngAfterViewInit() {
-		const _resize = (): any => {
-			jQuery("#page .article").css("height", jQuery(window).height() + "px");
-		};
-		_resize();
-		window.onresize = (): any => {
-			_resize();
-		};
-	}
+	ngAfterViewInit() {}
 }
