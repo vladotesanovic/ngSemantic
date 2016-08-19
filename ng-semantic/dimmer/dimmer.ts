@@ -14,6 +14,11 @@ declare var jQuery: any;
 export class SemanticDimmerComponent {
     @ViewChild("dimmer") dimmer: ElementRef;
 
+    /**
+     * Show dimmer element
+     *
+     * @param options
+     */
     show(options?: {}) {
         jQuery(this.dimmer.nativeElement)
             .dimmer(options || {})
