@@ -35,18 +35,51 @@ import { DeviceVisibilityComponent } from "./components/elements/devicevisibilit
 import { routing } from "./routes";
 import { PrismJsDirective } from "./prismjs/prismjs.directive";
 import { CodeblockComponent } from "./prismjs/codeblock.component";
+import { FetchJsonPipe, SearchArrayPipe } from "./pipes/array";
 
 @NgModule({
-    bootstrap:    [ AppComponent ],
-    declarations: [ AppComponent, HomeComponent, ButtonComponent,
-        CodeblockComponent, PrismJsDirective, FlagComponent, SegmentComponent,
-        ListComponent, LoaderComponent, MenuComponent, FormComponent,
-        InputComponent, SelectComponent, MessageComponent, CardComponent,
-        AccordionComponent, CheckboxComponent, DimmerComponent,
-        DropdownComponent, ModalComponent, RatingComponent,
-        SearchComponent, SidebarComponent, PopupComponent,
-        ProgressComponent, TabComponent, ContextmenuComponent,
-        DeviceVisibilityComponent],
-    imports:      [ BrowserModule, HttpModule, ReactiveFormsModule, FormsModule, routing, NgSemanticModule ]
+    bootstrap:    [
+        AppComponent
+    ],
+    declarations: [
+        AppComponent,
+        SearchArrayPipe,
+        FetchJsonPipe,
+        HomeComponent,
+        ButtonComponent,
+        CodeblockComponent,
+        PrismJsDirective,
+        FlagComponent,
+        SegmentComponent,
+        ListComponent,
+        LoaderComponent,
+        MenuComponent,
+        FormComponent,
+        InputComponent,
+        SelectComponent,
+        MessageComponent,
+        CardComponent,
+        AccordionComponent,
+        CheckboxComponent,
+        DimmerComponent,
+        DropdownComponent,
+        ModalComponent,
+        RatingComponent,
+        SearchComponent,
+        SidebarComponent,
+        PopupComponent,
+        ProgressComponent,
+        TabComponent,
+        ContextmenuComponent,
+        DeviceVisibilityComponent
+    ],
+    imports: [
+        BrowserModule,
+        HttpModule,
+        ReactiveFormsModule,
+        FormsModule,
+        routing,
+        NgSemanticModule
+    ]
 })
 export class AppModule {}

@@ -1,44 +1,40 @@
 import { Pipe, PipeTransform } from "@angular/core";
+import { Http } from "@angular/http";
 
-/**
- * Filter trough array in Angular2
- *
- * Implementation:
- *
- *  Filter source:
- *  <input type="text" [(ng-model)]="search" placeholder="Search list...">
- *
- *  For-Each
- *  <a class="item" *ng-for="var item of items | arrayFilter: search"> {{item}}</a>
- */
 @Pipe({
-	name: "smArrayFilter"
+	name: "smFetch",
+	pure: false
 })
-export class ArrayFilterPipe implements PipeTransform {
-	private _tmp: Array<string>;
+export class FetchJsonPipe  implements PipeTransform {
+	private fetchedJson: any = null;
+	private prevUrl = "";
 
-	transform(array: Array<string>, text: any): Array<string> {
-		if (typeof text === "object" && typeof text[0] === "undefined") {
-			return array;
+	constructor(private _http: Http) {}
+
+	transform(url: string): any {
+
+		if (url !== this.prevUrl) {
+			this.prevUrl = url;
+			this.fetchedJson = null;
+
+			this._http.get(url)
+				.map(result => result.json())
+				.subscribe( result => this.fetchedJson = result );
 		}
 
-		this._tmp = new Array<string>();
-		// 1 mean that array is flat
-		// 2 mean that we deal with array of objects
-		if (text.length === 1) {
-			array.map(item => {
-				if (item.toLowerCase().search(text.toString().toLowerCase()) >= 0) {
-					this._tmp.push(item);
-				}
-			});
-		} else {
-			array.map(item => {
-				if (item[text[0]].toLowerCase().search(text[1].toString().toLowerCase()) >= 0) {
-					this._tmp.push(item);
-				}
-			});
+		return this.fetchedJson;
+	}
+}
+
+@Pipe({
+	name: "smArraySearch"
+})
+export class SearchArrayPipe implements PipeTransform {
+	transform(list: Array<{}>, search: string): Array<{}> {
+		if (!list || !search) {
+			return list;
 		}
 
-		return this._tmp;
+		return list.filter((item: { name: string}) => !!item.name.toLowerCase().match(new RegExp(search.toLowerCase())));
 	}
 }

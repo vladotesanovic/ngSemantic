@@ -3,7 +3,9 @@ import { FormControl } from "@angular/forms";
 import "rxjs/add/operator/debounceTime";
 import "rxjs/add/operator/distinctUntilChanged";
 
-
+/**
+ * <sm-search placeholder="Search..." (onSearch)="element.innerText = $event" ></sm-search>
+ */
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-search",

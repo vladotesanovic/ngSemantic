@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { DataServices } from "../../services/data";
+import "rxjs/add/operator/filter";
 
 @Component({
     providers: [DataServices],
@@ -17,7 +18,6 @@ import { DataServices } from "../../services/data";
         <sm-list class="">
             <sm-item *ngFor="let item of flatArray | async">{{item}}</sm-item>
         </sm-list>
-
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-list>
@@ -81,30 +81,40 @@ import { DataServices } from "../../services/data";
     &lt;/sm-item>
 &lt;/sm-list>
 </sm-codeblock>
-        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-        <h4 class="ui header">Avatar horizontal</h4>
-        <sm-list class="horizontal">
-            <a sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item?.date}}</a>
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+    <h4 class="ui header">Avatar horizontal</h4>
+    <sm-list class="horizontal">
+        <a sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item?.date}}</a>
+    </sm-list>
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+    
+    <h4 class="ui header">Avatar horizontal ordered</h4>
+    <sm-list class="horizontal ordered">
+        <a sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item?.date}}</a>
+    </sm-list>
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+    
+    <h4 class="ui header">Avatar animated</h4>
+    <sm-list class="animated">
+        <a sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item?.date}}</a>
+    </sm-list>
+ 
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+    <h4 class="ui header">Search and list</h4>
+    <sm-segment>
+        <sm-input icon="search" [(model)]="searchString" class="fluid" placeholder="Search..."></sm-input>
+        <div class="ui divider"></div>
+        <sm-list class="animated divided relaxed">
+            <a sm-item *ngFor="let item of ('https://jsonplaceholder.typicode.com/users' | smFetch | smArraySearch:searchString)" 
+            [header]="item?.name">{{item?.email}}</a>
         </sm-list>
-        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-
-        <h4 class="ui header">Avatar horizontal ordered</h4>
-        <sm-list class="horizontal ordered">
-            <a sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item?.date}}</a>
-        </sm-list>
-        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-
-        <h4 class="ui header">Avatar animated</h4>
-        <sm-list class="animated">
-            <a sm-item *ngFor="let item of usersArray | async" [image]="item.avatar" [header]="item.user">{{item?.date}}</a>
-        </sm-list>
-    </div>
-    `
+    </sm-segment>
+</div>`
 })
-
 export class ListComponent {
     flatArray: any;
     usersArray: any;
+    searchString: string;
 
     constructor(public ds: DataServices) {
         this.flatArray = ds.array("flat");

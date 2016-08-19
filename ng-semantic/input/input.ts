@@ -8,6 +8,9 @@ import { FormControl } from "@angular/forms";
  * Implementation of Input element
  *
  * @link http://semantic-ui.com/elements/input.html
+ *
+ * @example
+ * <sm-input icon="dollar" type="number" [(model)]="model" class="right fluid" placeholder="Enter a sum..."></sm-input>
  */
 @Component({
   selector: "sm-input",
