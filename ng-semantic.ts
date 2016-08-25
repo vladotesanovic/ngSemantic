@@ -20,6 +20,7 @@ import { SemanticFlagComponent } from "./ng-semantic/flag/flag";
 import { SemanticContextMenuComponent } from "./ng-semantic/contextmenu/contextmenu";
 import { SemanticProgressComponent } from "./ng-semantic/progress/progress";
 import { SemanticDimmerComponent } from "./ng-semantic/dimmer/dimmer";
+import { SemanticTransitionComponent } from "./ng-semantic/transition/transition";
 import { SemanticAccordionComponent, SemanticAccordionItemComponent } from "./ng-semantic/accordion/accordion";
 import { SemanticRatingComponent } from "./ng-semantic/rating/rating";
 
@@ -46,6 +47,7 @@ export *  from "./ng-semantic/tab/tab";
 export *  from "./ng-semantic/flag/flag";
 export *  from "./ng-semantic/progress/progress";
 export *  from "./ng-semantic/dimmer/dimmer";
+export *  from "./ng-semantic/transition/transition";
 export *  from "./ng-semantic/accordion/accordion";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
@@ -59,6 +61,7 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 	SemanticMessageComponent,
 	SemanticSegmentComponent,
 	SemanticDimmerComponent,
+	SemanticTransitionComponent,
 	SemanticPopupComponent,
 	SemanticDropdownComponent,
 	SemanticListComponent,
