@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, ViewChild, ElementRef, OnInit } from "@angular/core";
+import { Component, ChangeDetectionStrategy, ViewChild, ElementRef } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -11,7 +11,7 @@ declare var jQuery: any;
     </div>
     `
 })
-export class SemanticShapeComponent implements OnInit {
+export class SemanticShapeComponent {
     @ViewChild("shape") shape: ElementRef;
 
     /**
