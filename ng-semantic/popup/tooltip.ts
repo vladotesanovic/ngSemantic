@@ -8,6 +8,7 @@ declare var jQuery: any;
  * @link http://semantic-ui.com/modules/popup.html
  */
 @Directive({
+	moduleId: module.id,
     selector: "[smDirTooltip]"
 })
 export class SMTooltipDirective implements OnInit {

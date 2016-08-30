@@ -7,6 +7,7 @@ import "rxjs/add/operator/distinctUntilChanged";
  * <sm-search placeholder="Search..." (onSearch)="element.innerText = $event" ></sm-search>
  */
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-search",
     template: `<div class="ui search" [ngClass]="{'loading': loading}">

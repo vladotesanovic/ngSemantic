@@ -30,6 +30,7 @@ jQuery.fn.fixSidebar = function() {
  * @link semantic-ui.com/modules/sidebar.html
  */
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-sidebar",
     template: `<div class="ui sidebar {{class}}" #sidebar>

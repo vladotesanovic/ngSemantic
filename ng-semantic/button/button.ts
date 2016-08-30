@@ -6,6 +6,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
  * @link http://semantic-ui.com/elements/button.html
  */
 @Component({
+  moduleId: module.id,
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-button",
   template: `<button [ngClass]="{icon: icon}" [attr.disabled]="disabled ? true : null" class="ui {{class}} button">

@@ -13,6 +13,7 @@ import { FormControl } from "@angular/forms";
  * <sm-input icon="dollar" type="number" [(model)]="model" class="right fluid" placeholder="Enter a sum..."></sm-input>
  */
 @Component({
+  moduleId: module.id,
   selector: "sm-input",
   template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty && isInsideForm) }">
   <label *ngIf="label && isInsideForm">{{label}}</label>

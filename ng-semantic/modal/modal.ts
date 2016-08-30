@@ -8,6 +8,7 @@ declare var jQuery: any;
  * This component is triggered by SMModalDirective.
  */
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-modal",
     template: `<div class="ui modal {{class}}" #modal>

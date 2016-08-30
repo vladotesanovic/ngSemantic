@@ -3,6 +3,7 @@ import { Component, ChangeDetectionStrategy, ViewChild, ElementRef } from "@angu
 declare var jQuery: any;
 
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-dimmer",
     template: `<div class="ui page dimmer" #dimmer>

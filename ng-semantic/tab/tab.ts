@@ -5,6 +5,7 @@ import {
 declare var jQuery: any;
 
 @Component({
+  moduleId: module.id,
   selector: "sm-tab",
   template: `
 <div #tab>

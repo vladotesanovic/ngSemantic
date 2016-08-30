@@ -9,6 +9,7 @@ import {
  * @link http://semantic-ui.com/collections/message.html
  */
 @Component({
+  moduleId: module.id,
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   selector: "sm-message",
