@@ -22,7 +22,10 @@ import { SemanticProgressComponent } from "./ng-semantic/progress/progress";
 import { SemanticDimmerComponent } from "./ng-semantic/dimmer/dimmer";
 import { SemanticTransitionComponent } from "./ng-semantic/transition/transition";
 import { SemanticShapeComponent } from "./ng-semantic/shape/shape";
-import { SemanticAccordionComponent, SemanticAccordionItemComponent } from "./ng-semantic/accordion/accordion";
+import {
+	SemanticAccordionComponent, SemanticAccordionItemComponent,
+	SMAccordionDirective
+} from "./ng-semantic/accordion/accordion";
 import { SemanticRatingComponent } from "./ng-semantic/rating/rating";
 
 export * from "./ng-semantic/menu/menu";
@@ -87,7 +90,8 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 export let SEMANTIC_DIRECTIVES: Array<any> = [
 	SMTooltipDirective,
 	SMVisibilityDirective,
-	SMDeviceVisibilityDirective
+	SMDeviceVisibilityDirective,
+	SMAccordionDirective
 ];
 
 import { NgModule } from "@angular/core";

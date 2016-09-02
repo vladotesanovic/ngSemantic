@@ -10,7 +10,7 @@ declare var jQuery: any;
 @Directive({
     selector: "[smDirAccordion]"
 })
-class SMAccordionDirective implements OnInit {
+export class SMAccordionDirective implements OnInit {
 
     @Input() smDirAccordion: string;
 
@@ -23,7 +23,6 @@ class SMAccordionDirective implements OnInit {
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    directives: [<Type>SMAccordionDirective],
     selector: "sm-accordion",
     styles: [`sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }`],
     template: `
