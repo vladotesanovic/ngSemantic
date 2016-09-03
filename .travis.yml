@@ -1,5 +1,5 @@
-before_script:
-  - npm install typescript@1.8.10 -g
-  - npm install tslint@3.10.2 -g
-  - npm install typings -g
-script: tsc
+language: node_js
+node_js:
+  - "6"
+  - "5"
+script: npm run tsc
