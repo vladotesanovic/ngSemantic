@@ -1,4 +1,4 @@
-import { NgModule }      from "@angular/core";
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA}      from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -80,6 +80,10 @@ import { FetchJsonPipe, SearchArrayPipe } from "./pipes/array";
         FormsModule,
         routing,
         NgSemanticModule
-    ]
+    ],
+    // does not validate the schema :
+    // this plunker explains the problematic http://plnkr.co/edit/ye5NGXW6ZnyY4E0q5hBK?p=info
+    // this line also ensures backward compatibility and needs to be implemented by the user of the NgSemanticModule module
+    schemas:   [ CUSTOM_ELEMENTS_SCHEMA ],
 })
 export class AppModule {}
