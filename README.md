@@ -16,7 +16,7 @@ https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
 
 ## Important!
 <ul>
-   <li>Angular 2 version: rc.5</li>
+   <li>Angular 2 version: rc.6</li>
    <li>Semantic UI version: 2.2.1</li>
 </ul>
 
