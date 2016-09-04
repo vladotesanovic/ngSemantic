@@ -11,7 +11,6 @@
     var map = {
         'app': 'demo/app', // 'dist',
 
-
         // angular bundles
         '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
         '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
@@ -26,9 +25,7 @@
         'rxjs': 'npm:rxjs',
         'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
         'ng-semantic': './',
-        'Prism': 'demo/vendor/prismjs',
-
-
+        'Prism': 'demo/vendor/prismjs'
     };
 
     var packages = {
