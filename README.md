@@ -12,8 +12,11 @@
 ## Live demo
 <a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
-##  Angular 2 QuickStart ( rc.6 ) with ngSemantic
+####  Angular 2 QuickStart ( rc.6 ) with ngSemantic
 https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
+
+####  Angular 2 CLI with ngSemantic
+https://github.com/vladotesanovic/angular2-cli-webpack
 
 ## Important!
 <ul>
@@ -35,31 +38,34 @@ Semantic UI ( minified versions of css and js ) must be loaded in index.html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
 ```
 
-## Angular CLI configuration
+## Angular CLI configuration ( Webpack )
 
-First add `ng-semantic` to the `vendorNPMFiles` array in angular-cli-build.js as follows:
-```javascript
+Install `ng-semantic` and `jQuery`
+```bash
+npm install ng-semantic --save
 
-vendorNPMFiles: [
-  // other packages here
-  'ng-semantic/**/*',
-]
-
+npm install jquery --save
 ```
 
-Then configure it in `src/system-config.ts` as follows:
 
+Add `semantic.min.css`, `semantic.min.js`, `jquery` to the `angular-cli.json` as follows:
 ```javascript
 
-/** Map relative paths to URLS. */
-const map: any = {
-  'ng-semantic': 'vendor/ng-semantic'
-};
+...
 
-/** User packages configuration. */
-const packages: any = {
-  'ng-semantic': {main: 'ng-semantic.js', defaultExtension: 'js'}
-}
+"apps": [{
+  ... 
+  "styles": [
+      "styles.css",
+      "../path/to/semantic.min.css" // 
+  ],
+  "scripts": [
+      "../node_modules/jquery/dist/jquery.min.js",
+      "../path/to/semantic.min.js"
+  ],
+  ...
+}]
+
 
 ```
 
