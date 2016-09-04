@@ -1,6 +1,6 @@
 {
   "name": "ng-semantic",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "./ng-semantic.js",
   "description": "Angular2 building blocks based on Semantic UI",
   "scripts": {
