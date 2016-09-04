@@ -1,6 +1,5 @@
 import {
-    Component, QueryList, AfterViewInit, ElementRef, Input, ContentChildren, ViewChild, AfterContentChecked,
-    AfterViewChecked
+    Component, QueryList, AfterViewInit, ElementRef, Input, ContentChildren, ViewChild
 } from "@angular/core";
 
 declare var jQuery: any;
@@ -35,7 +34,7 @@ export class SemanticTabComponent implements AfterViewInit {
 <ng-content></ng-content>
 `
 })
-export class SemanticTabsComponent implements AfterViewInit, AfterViewChecked {
+export class SemanticTabsComponent implements AfterViewInit {
   @ContentChildren(SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
   @ViewChild("menu") menu: ElementRef;
 
