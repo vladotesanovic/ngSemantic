@@ -1,5 +1,6 @@
 import {
-    Component, QueryList, AfterViewInit, ElementRef, Input, Type, ContentChildren, ViewChild
+    Component, QueryList, AfterViewInit, ElementRef, Input, ContentChildren, ViewChild, AfterContentChecked,
+    AfterViewChecked
 } from "@angular/core";
 
 declare var jQuery: any;
@@ -29,22 +30,34 @@ export class SemanticTabComponent implements AfterViewInit {
 @Component({
   selector: "sm-tabs",
   template: `<div class="ui top attached tabular menu" #menu>
-  <a class="item" [ngClass]="{'active': tab.active}" *ngFor="let tab of tabs; let i = index" [attr.data-tab]="i">{{tab.title}}</a>
+  <a class="item" [ngClass]="{'active': tab.active}" *ngFor="let tab of tabs; let i = index" [attr.data-tab]="'tab-' + i">{{tab.title}}</a>
 </div>
 <ng-content></ng-content>
 `
 })
-export class SemanticTabsComponent implements AfterViewInit {
-  @ContentChildren(<Type<any>>SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
+export class SemanticTabsComponent implements AfterViewInit, AfterViewChecked {
+  @ContentChildren(SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
   @ViewChild("menu") menu: ElementRef;
 
   constructor(public elementRef: ElementRef) {}
 
   ngAfterViewInit() {
 
+    // init tabs
+    this.init();
+
+    // if new tabs are added, re-init
+    this.tabs
+        .changes
+        .debounceTime(100)
+        .subscribe(() => this.init());
+  }
+
+  init() {
+
     this.tabs
         .map((cmp: SemanticTabComponent, index: number) => {
-          cmp.tabEl.nativeElement.parentElement.setAttribute("data-tab", index.toString());
+          cmp.tabEl.nativeElement.parentElement.setAttribute("data-tab", "tab-" + index.toString());
         });
 
     jQuery(this.menu.nativeElement.getElementsByClassName("item")).tab({

@@ -12,6 +12,8 @@ import { Component } from "@angular/core";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Demo</h4>
+    <sm-button (click)="change()">Reveal hidden tab</sm-button>
+    <div class="ui divider"></div>
 <sm-tabs>
   <sm-tab title="Hello" [active]="true">Lorem ipsum dolor sit amet, 
   consectetur adipiscing elit. 
@@ -21,6 +23,7 @@ import { Component } from "@angular/core";
   Integer sit amet dignissim tortor. 
   Donec non ultrices augue. Aenean posuere et justo ut tempor. Fusce sagittis viverra euismod.
 </sm-tab>
+  <sm-tab title="Test" *ngIf="ifTrue">Hidden tab</sm-tab>
   <sm-tab title="About">Suspendisse vehicula, lorem in maximus vehicula, 
   massa leo viverra purus, ac blandit nulla orci eget eros. Integer at est dapibus, molestie justo non, accumsan est. 
   In dictum consequat pharetra. 
@@ -59,4 +62,10 @@ import { Component } from "@angular/core";
 </div>
 `
 })
-export class TabComponent {}
+export class TabComponent {
+    ifTrue: boolean = false;
+
+    change() {
+        this.ifTrue = !this.ifTrue;
+    }
+}
