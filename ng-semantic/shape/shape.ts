@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, ViewChild, ElementRef } from "@angular/core";
+import { Component, ChangeDetectionStrategy, ViewChild, ElementRef, Input } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -6,7 +6,7 @@ declare var jQuery: any;
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-shape",
     template: `
-    <div #shape class="ui text shape">
+    <div #shape class="ui shape">
         <ng-content></ng-content>
     </div>
     `
@@ -17,11 +17,11 @@ export class SemanticShapeComponent {
     /**
      * Show shape element
      *
-     * @param options
+     * @param args
      */
-    show(options?: {}) {
+    show(...args: string[]) {
         jQuery(this.shape.nativeElement)
-            .shape(options || {})
+            .shape(...args)
     }
 
 }
