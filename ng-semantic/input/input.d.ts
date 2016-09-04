@@ -13,6 +13,7 @@ export declare class SemanticInputComponent implements OnInit {
     private isInsideForm;
     constructor(viewRef: ViewContainerRef);
     ngOnInit(): void;
+    inForm(el: Node, classname: string): boolean;
 }
 export declare class SemanticCheckboxComponent {
     control: FormControl;

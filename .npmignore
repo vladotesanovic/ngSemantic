@@ -13,3 +13,5 @@ demo.builder.js
 index.html
 dev.config.js
 index.dev.html
+systemjs.config.js
+.travis.yml

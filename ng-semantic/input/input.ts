@@ -39,10 +39,20 @@ export class SemanticInputComponent implements OnInit {
 
   ngOnInit() {
     // if input field is inside form
-    if (typeof jQuery !== "undefined") {
-      if (jQuery(this.viewRef.element.nativeElement).parents("form").length) {
-        this.isInsideForm = true;
+    if (this.inForm(this.viewRef.element.nativeElement, "form")) {
+      this.isInsideForm = true;
+    }
+  }
+
+  inForm(el: Node, classname: string): boolean {
+    if (el.parentNode) {
+      if (el.parentNode.nodeName.toLowerCase() === classname.toLowerCase()) {
+        return !!el.parentNode;
+      } else {
+        return this.inForm(el.parentNode, classname);
       }
+    } else {
+      return false;
     }
   }
 }

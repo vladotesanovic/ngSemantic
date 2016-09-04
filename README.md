@@ -126,6 +126,7 @@ npm start
   - sm-textarea
   - sm-progress
   - sm-card
+  - sm-shape
   - sm-tabs & sm-tab
   - sm-list
   - sm-item
