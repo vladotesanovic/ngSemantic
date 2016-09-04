@@ -21,7 +21,7 @@ export class SemanticTransitionComponent {
      */
     show(options?: {}) {
         jQuery(this.transition.nativeElement)
-            .transition(options || {})
+            .transition(options || {});
     }
 
 }

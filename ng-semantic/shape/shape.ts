@@ -1,4 +1,7 @@
-import { Component, ChangeDetectionStrategy, ViewChild, ElementRef, Input } from "@angular/core";
+import {
+    Component, ChangeDetectionStrategy, ViewChild, ElementRef, Input, Output, EventEmitter,
+    AfterViewInit
+} from "@angular/core";
 
 declare var jQuery: any;
 
@@ -6,13 +9,25 @@ declare var jQuery: any;
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-shape",
     template: `
-    <div #shape class="ui shape">
+    <div #shape class="ui shape {{class}}">
         <ng-content></ng-content>
     </div>
     `
 })
-export class SemanticShapeComponent {
+export class SemanticShapeComponent implements AfterViewInit {
+    @Input() class: string;
+    @Input() options: {} = {};
+    @Output() beforeChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @Output() onChange: EventEmitter<boolean> = new EventEmitter<boolean>();
     @ViewChild("shape") shape: ElementRef;
+
+    ngAfterViewInit() {
+
+        Object.assign(this.options, {
+            beforeChange: (): void => this.beforeChange.emit(true),
+            onChange: (): void  => this.onChange.emit(true)
+        });
+    }
 
     /**
      * Show shape element
@@ -20,8 +35,11 @@ export class SemanticShapeComponent {
      * @param args
      */
     show(...args: string[]) {
+
+
         jQuery(this.shape.nativeElement)
-            .shape(...args)
+            .shape(this.options)
+            .shape(args.join(","));
     }
 
 }

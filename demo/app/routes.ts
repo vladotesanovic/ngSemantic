@@ -25,6 +25,7 @@ import { SelectComponent } from "./components/elements/select";
 import { CheckboxComponent } from "./components/elements/checkbox";
 import { SearchComponent } from "./components/elements/search";
 import { DeviceVisibilityComponent } from "./components/elements/devicevisibility";
+import { ShapeComponent } from "./components/elements/shape";
 
 const routes: Routes = [
     { component: HomeComponent, path: "" },
@@ -46,6 +47,7 @@ const routes: Routes = [
     { component: ModalComponent, path: "elements/modal" },
     { component: RatingComponent, path: "elements/rating" },
     { component: SearchComponent, path: "elements/search" },
+    { component: ShapeComponent, path: "elements/shape" },
     { component: SidebarComponent, path: "elements/sidebar" },
     { component: PopupComponent, path: "elements/popup" },
     { component: ProgressComponent, path: "elements/progress" },

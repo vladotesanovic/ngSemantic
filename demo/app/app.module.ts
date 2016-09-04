@@ -36,6 +36,7 @@ import { routing } from "./routes";
 import { PrismJsDirective } from "./prismjs/prismjs.directive";
 import { CodeblockComponent } from "./prismjs/codeblock.component";
 import { FetchJsonPipe, SearchArrayPipe } from "./pipes/array";
+import { ShapeComponent } from "./components/elements/shape";
 
 @NgModule({
     bootstrap:    [
@@ -55,6 +56,7 @@ import { FetchJsonPipe, SearchArrayPipe } from "./pipes/array";
         LoaderComponent,
         MenuComponent,
         FormComponent,
+        ShapeComponent,
         InputComponent,
         SelectComponent,
         MessageComponent,

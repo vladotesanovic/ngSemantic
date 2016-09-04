@@ -1,3 +1,8 @@
+## version: 1.1.2
+
+- Update to RC.6.
+- sm-shape is added, but it is still under construction
+
 ## version: 1.1.1
 
 - Update to RC.5, ng-semantic now use NgSemanticModule for bootstrapping.
