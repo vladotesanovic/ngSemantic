@@ -13,8 +13,7 @@
     "start": "tsc && concurrently \"tsc -w\" \"npm run tsc:w\" \"lite-server -c dev.config.js\" ",
     "prepublish": "npm run demo:lint",
     "library:bundle": "tsc && rm -rf bundles && node library.builder.js",
-    "demo:bundle": "tsc -p './demo' && node demo.builder.js",
-    "postinstall": "npm run typings"
+    "demo:bundle": "tsc -p './demo' && node demo.builder.js"
   },
   "repository": {
     "type": "git",
