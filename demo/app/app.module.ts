@@ -37,6 +37,7 @@ import { PrismJsDirective } from "./prismjs/prismjs.directive";
 import { CodeblockComponent } from "./prismjs/codeblock.component";
 import { FetchJsonPipe, SearchArrayPipe } from "./pipes/array";
 import { ShapeComponent } from "./components/elements/shape";
+import { TransitionComponent } from "./components/elements/transition";
 
 @NgModule({
     bootstrap:    [
@@ -58,6 +59,7 @@ import { ShapeComponent } from "./components/elements/shape";
         FormComponent,
         ShapeComponent,
         InputComponent,
+        TransitionComponent,
         SelectComponent,
         MessageComponent,
         CardComponent,

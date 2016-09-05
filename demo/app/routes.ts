@@ -23,6 +23,7 @@ import { AccordionComponent } from "./components/elements/accordion";
 import { RatingComponent } from "./components/elements/rating";
 import { SelectComponent } from "./components/elements/select";
 import { CheckboxComponent } from "./components/elements/checkbox";
+import { TransitionComponent } from "./components/elements/transition";
 import { SearchComponent } from "./components/elements/search";
 import { DeviceVisibilityComponent } from "./components/elements/devicevisibility";
 import { ShapeComponent } from "./components/elements/shape";
@@ -46,6 +47,7 @@ const routes: Routes = [
     { component: DropdownComponent, path: "elements/dropdown" },
     { component: ModalComponent, path: "elements/modal" },
     { component: RatingComponent, path: "elements/rating" },
+    { component: TransitionComponent, path: "elements/transition" },
     { component: SearchComponent, path: "elements/search" },
     { component: ShapeComponent, path: "elements/shape" },
     { component: SidebarComponent, path: "elements/sidebar" },

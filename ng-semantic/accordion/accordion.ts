@@ -22,7 +22,7 @@ export class SemanticAccordionComponent implements AfterViewInit {
 
     ngAfterViewInit() {
 
-        const inAccordion: HTMLElement = this.inAccordion(this.accordion.nativeElement, "accordion");
+        const inAccordion: HTMLElement|boolean = this.inAccordion(this.accordion.nativeElement, "accordion");
 
         if (inAccordion) {
             this.accordion.nativeElement.classList.remove("ui");
@@ -32,13 +32,13 @@ export class SemanticAccordionComponent implements AfterViewInit {
         }
     }
 
-    inAccordion(el: HTMLDivElement, classname: string): boolean {
-        if (el.parentNode) {
+    inAccordion(el: any, className: string): HTMLElement|boolean {
 
-            if (el.parentNode.classList && el.parentNode.classList.contains(classname)) {
+        if (el.parentNode) {
+            if (el.parentNode.classList && el.parentNode.classList.contains(className)) {
                 return el.parentNode;
             } else {
-                return this.inAccordion(el.parentNode, classname);
+                return this.inAccordion(el.parentNode, className);
             }
         } else {
             return false;

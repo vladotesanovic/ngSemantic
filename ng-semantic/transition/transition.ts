@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, ViewChild, ElementRef } from "@angular/core";
+import { Component, ChangeDetectionStrategy, ViewChild, ElementRef, Input } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -17,11 +17,11 @@ export class SemanticTransitionComponent {
     /**
      * Show transition element
      *
-     * @param options
+     * @param animation
      */
-    show(options?: {}) {
+    show(animation?: string) {
         jQuery(this.transition.nativeElement)
-            .transition(options || {});
+            .transition(animation || "fade out");
     }
 
 }

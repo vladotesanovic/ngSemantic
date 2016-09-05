@@ -4,7 +4,7 @@ export declare class SemanticAccordionComponent implements AfterViewInit {
     options: string;
     accordion: ElementRef;
     ngAfterViewInit(): void;
-    inAccordion(el: HTMLDivElement, classname: string): boolean;
+    inAccordion(el: any, className: string): HTMLElement | boolean;
 }
 export declare class SemanticAccordionItemComponent {
     class: string;
