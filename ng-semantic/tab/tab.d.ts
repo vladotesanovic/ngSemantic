@@ -10,7 +10,10 @@ export declare class SemanticTabsComponent implements AfterViewInit {
     elementRef: ElementRef;
     tabs: QueryList<SemanticTabComponent>;
     menu: ElementRef;
+    options: {};
     constructor(elementRef: ElementRef);
     ngAfterViewInit(): void;
-    init(): void;
+    initItemsIndices(): void;
+    updateTabContentIndices(): void;
+    initTabs(): void;
 }

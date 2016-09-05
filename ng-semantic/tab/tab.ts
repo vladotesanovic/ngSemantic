@@ -1,6 +1,4 @@
-import {
-    Component, QueryList, AfterViewInit, ElementRef, Input, ContentChildren, ViewChild
-} from "@angular/core";
+import { Component, QueryList, AfterViewInit, ElementRef, Input, ContentChildren, ViewChild } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -26,42 +24,78 @@ export class SemanticTabComponent implements AfterViewInit {
   }
 }
 
+/**
+ * @TODO Implements events ( Output )
+ */
 @Component({
   selector: "sm-tabs",
   template: `<div class="ui top attached tabular menu" #menu>
-  <a class="item" [ngClass]="{'active': tab.active}" *ngFor="let tab of tabs; let i = index" [attr.data-tab]="'tab-' + i">{{tab.title}}</a>
+  <a class="item" [ngClass]="{'active': tab.active}" *ngFor="let tab of tabs">{{tab.title}}</a>
 </div>
 <ng-content></ng-content>
 `
 })
 export class SemanticTabsComponent implements AfterViewInit {
-  @ContentChildren(SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
-  @ViewChild("menu") menu: ElementRef;
+    @ContentChildren(SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
+    @ViewChild("menu") menu: ElementRef;
+    // @todo Write interface for options, from :
+    // http://semantic-ui.com/modules/tab.html#/settings
+    @Input("options") options: {} = {};
 
-  constructor(public elementRef: ElementRef) {}
+    constructor(public elementRef: ElementRef) {}
 
-  ngAfterViewInit() {
+    ngAfterViewInit() {
 
-    // init tabs
-    this.init();
+        // init tabs
+        this.initItemsIndices();
+        this.initTabs();
+        this.updateTabContentIndices();
 
-    // if new tabs are added, re-init
-    this.tabs
-        .changes
-        .debounceTime(100)
-        .subscribe(() => this.init());
-  }
+        // if new tabs are added, re-init
+        this.tabs
+          .changes
+          .debounceTime(100)
+          .subscribe(() => {
+            this.initItemsIndices();
+            this.updateTabContentIndices();
+          });
+    }
 
-  init() {
+    initItemsIndices() {
 
-    this.tabs
-        .map((cmp: SemanticTabComponent, index: number) => {
-          cmp.tabEl.nativeElement.parentElement.setAttribute("data-tab", "tab-" + index.toString());
+        Array
+            .from(this.menu.nativeElement.getElementsByClassName("item"))
+            .map((element: HTMLElement, index: number) => {
+                element.setAttribute("data-tab", `tab-${index}`);
+
+                // @todo This should be removed, but without this it does not work
+                jQuery(element).data("tab", `tab-${index}`);
+            });
+    }
+
+    updateTabContentIndices() {
+
+        this.tabs
+            .map((cmp: SemanticTabComponent, index: number) => {
+              cmp.tabEl.nativeElement.parentElement.setAttribute("data-tab", `tab-${index.toString()}`);
+            });
+
+        this.initTabs();
+    }
+
+    initTabs() {
+
+        Object.assign(this.options, {
+            childrenOnly: true,
+            context: this.elementRef.nativeElement
         });
 
-    jQuery(this.menu.nativeElement.getElementsByClassName("item")).tab({
-      childrenOnly: true,
-      context: jQuery(this.elementRef.nativeElement)
-    });
-  }
+        const tab: { tab: Function } = jQuery(this.menu.nativeElement.getElementsByClassName("item"))
+            .tab(this.options);
+
+        // set first to be active if there is no active tabs
+        if (!this.menu.nativeElement.getElementsByClassName("item active").length) {
+           tab.tab("change tab", "tab-0");
+        }
+    }
 }
