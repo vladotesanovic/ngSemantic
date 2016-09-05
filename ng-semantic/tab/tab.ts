@@ -63,7 +63,7 @@ export class SemanticTabsComponent implements AfterViewInit {
   }
   
   initTabs() {
-    jQuery(this.menu.nativeElement).find(".item").tab({
+    jQuery(this.menu.nativeElement.getElementsByClassName("item")).tab({
       childrenOnly: true,
       context: jQuery(this.elementRef.nativeElement)
     });
@@ -72,11 +72,11 @@ export class SemanticTabsComponent implements AfterViewInit {
   updateTabContentIndices() {
     this.tabs
       .map((cmp: SemanticTabComponent, index: number) => {
-        jQuery(cmp.tabEl.nativeElement).parent().attr("data-tab", `tab-${index.toString()}`);
-        jQuery(cmp.tabEl.nativeElement).parent().data("tab", `tab-${index.toString()}`);
+        cmp.tabEl.nativeElement.parentElement.setAttribute("data-tab", `tab-${index.toString()}`);
+        jQuery(cmp.tabEl.nativeElement.parentElement).data("tab", `tab-${index.toString()}`);
       });
   
-    jQuery(this.menu.nativeElement).find(".item").tab({
+    jQuery(this.menu.nativeElement.getElementsByClassName("item")).tab({
       childrenOnly: true,
       context: jQuery(this.elementRef.nativeElement),
       "change tab": `tab-0`

@@ -1,4 +1,4 @@
-import { QueryList, AfterViewInit, ElementRef } from "@angular/core";
+import { QueryList, AfterViewInit, ElementRef } from '@angular/core';
 export declare class SemanticTabComponent implements AfterViewInit {
     tab: number;
     title: string;
@@ -12,5 +12,7 @@ export declare class SemanticTabsComponent implements AfterViewInit {
     menu: ElementRef;
     constructor(elementRef: ElementRef);
     ngAfterViewInit(): void;
-    init(): void;
+    initItemsIndices(): void;
+    initTabs(): void;
+    updateTabContentIndices(): void;
 }
