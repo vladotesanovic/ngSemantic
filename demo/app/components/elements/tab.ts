@@ -59,6 +59,25 @@ import { Component } from "@angular/core";
     &lt;/sm-tab>
 &lt;/sm-tabs>
     </sm-codeblock>
+    
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Options</h4>
+<table class="ui celled striped table">
+  <tbody>
+    <tr>
+        <td colspan="2">Options</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> [options]
+      </td>
+      <td>Semantic UI options object for Tab element: 
+      <a href="http://semantic-ui.com/modules/tab.html#/settings"
+       target="_blank"><i class="icon external"></i></a>
+       </td>
+    </tr>
+  </tbody>
+</table>
 </div>
 `
 })
