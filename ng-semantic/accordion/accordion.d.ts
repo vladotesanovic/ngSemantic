@@ -1,13 +1,10 @@
-import { ElementRef, OnInit } from "@angular/core";
-export declare class SMAccordionDirective implements OnInit {
-    element: ElementRef;
-    smDirAccordion: string;
-    constructor(element: ElementRef);
-    ngOnInit(): void;
-}
-export declare class SemanticAccordionComponent {
+import { ElementRef, AfterViewInit } from "@angular/core";
+export declare class SemanticAccordionComponent implements AfterViewInit {
     class: string;
     options: string;
+    accordion: ElementRef;
+    ngAfterViewInit(): void;
+    inAccordion(el: HTMLDivElement, classname: string): boolean;
 }
 export declare class SemanticAccordionItemComponent {
     class: string;

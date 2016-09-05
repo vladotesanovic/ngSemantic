@@ -1,4 +1,5 @@
 demo
+*.ts
 !*.d.ts
 server.js
 Procfile

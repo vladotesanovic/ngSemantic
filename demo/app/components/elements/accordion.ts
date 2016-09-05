@@ -56,90 +56,115 @@ import { Validators, FormControl, FormBuilder, FormGroup } from "@angular/forms"
     &lt;/sm-accordion-item>
 &lt;/sm-accordion>
 </sm-codeblock>
-        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-         <h4 class="ui header">Demo styled</h4>
-         <sm-accordion class="styled">
-            <sm-accordion-item>
-                <accordion-title>What is a dog?</accordion-title>
-                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                it can be found as a welcome guest in many households across the world.</accordion-content>
-            </sm-accordion-item>
-            <sm-accordion-item>
-                <accordion-title>What kinds of dogs are there?</accordion-title>
-                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                it can be found as a welcome guest in many households across the world.</accordion-content>
-            </sm-accordion-item>
-            <sm-accordion-item>
-                <accordion-title>How do you acquire a dog?</accordion-title>
-                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                it can be found as a welcome guest in many households across the world.</accordion-content>
-            </sm-accordion-item>
-        </sm-accordion>
-        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-        <h4 class="ui header">Demo fluid ( second is active by default)</h4>
-        <sm-accordion class="styled fluid">
-            <sm-accordion-item>
-                <accordion-title>What is a dog?</accordion-title>
-                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                it can be found as a welcome guest in many households across the world.</accordion-content>
-            </sm-accordion-item>
-            <sm-accordion-item>
-                <accordion-title>What kinds of dogs are there?</accordion-title>
-                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                it can be found as a welcome guest in many households across the world.</accordion-content>
-            </sm-accordion-item>
-            <sm-accordion-item>
-                <accordion-title>How do you acquire a dog?</accordion-title>
-                <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                it can be found as a welcome guest in many households across the world.</accordion-content>
-            </sm-accordion-item>
-        </sm-accordion>
-        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-        <h4 class="ui header">Demo inverted</h4>
-        <sm-segment class="inverted teal">
-           <sm-accordion class="inverted">
+
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+ <h4 class="ui header">Demo styled</h4>
+ <sm-accordion class="styled">
+    <sm-accordion-item>
+        <accordion-title>What is a dog?</accordion-title>
+        <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+        it can be found as a welcome guest in many households across the world.</accordion-content>
+    </sm-accordion-item>
+    <sm-accordion-item>
+        <accordion-title>What kinds of dogs are there?</accordion-title>
+        <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+        it can be found as a welcome guest in many households across the world.</accordion-content>
+    </sm-accordion-item>
+    <sm-accordion-item>
+        <accordion-title>How do you acquire a dog?</accordion-title>
+        <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+        it can be found as a welcome guest in many households across the world.</accordion-content>
+    </sm-accordion-item>
+</sm-accordion>
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Demo fluid ( second is active by default)</h4>
+<sm-accordion class="styled fluid">
+    <sm-accordion-item>
+        <accordion-title>What is a dog?</accordion-title>
+        <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+        it can be found as a welcome guest in many households across the world.</accordion-content>
+    </sm-accordion-item>
+    <sm-accordion-item>
+        <accordion-title>What kinds of dogs are there?</accordion-title>
+        <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+        it can be found as a welcome guest in many households across the world.</accordion-content>
+    </sm-accordion-item>
+    <sm-accordion-item>
+        <accordion-title>How do you acquire a dog?</accordion-title>
+        <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+        it can be found as a welcome guest in many households across the world.</accordion-content>
+    </sm-accordion-item>
+</sm-accordion>
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Demo inverted</h4>
+<sm-segment class="inverted teal">
+   <sm-accordion class="inverted">
+        <sm-accordion-item>
+            <accordion-title>What is a dog?</accordion-title>
+            <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+            it can be found as a welcome guest in many households across the world.</accordion-content>
+        </sm-accordion-item>
+        <sm-accordion-item>
+            <accordion-title>What kinds of dogs are there?</accordion-title>
+            <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+            it can be found as a welcome guest in many households across the world.</accordion-content>
+        </sm-accordion-item>
+        <sm-accordion-item>
+            <accordion-title>How do you acquire a dog?</accordion-title>
+            <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
+            it can be found as a welcome guest in many households across the world.</accordion-content>
+        </sm-accordion-item>
+    </sm-accordion>
+</sm-segment>
+
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Demo nested</h4>
+
+<sm-accordion class="styled">
+    <sm-accordion-item>
+        <accordion-title>What is a dog?</accordion-title>
+        <accordion-content>
+            A dog is a type of domesticated animal. 
+
+            <sm-accordion class="styled">
                 <sm-accordion-item>
                     <accordion-title>What is a dog?</accordion-title>
-                    <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                    it can be found as a welcome guest in many households across the world.</accordion-content>
-                </sm-accordion-item>
-                <sm-accordion-item>
-                    <accordion-title>What kinds of dogs are there?</accordion-title>
-                    <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                    it can be found as a welcome guest in many households across the world.</accordion-content>
-                </sm-accordion-item>
-                <sm-accordion-item>
-                    <accordion-title>How do you acquire a dog?</accordion-title>
-                    <accordion-content>A dog is a type of domesticated animal. Known for its loyalty and faithfulness,
-                    it can be found as a welcome guest in many households across the world.</accordion-content>
+                    <accordion-content>
+                        A dog is a type of domesticated animal.
+                    </accordion-content>
                 </sm-accordion-item>
             </sm-accordion>
-        </sm-segment>
-        <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
-        <h4 class="ui header">Demo form</h4>
-        <sm-segment>
-            <form class="ui form" [formGroup]="form">
-                <div class="field">
-                    <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
-                </div>
-                <sm-accordion>
-                    <sm-accordion-item>   
-                        <accordion-title>Additional</accordion-title>
-                        <accordion-content>
-                            <div class="field">
-                                <sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
-                            </div>
-                            <div class="field">
-                                <sm-input label="Phone number" [control]="emailControl" placeholder="Enter phone number..."></sm-input>
-                            </div>
-                        </accordion-content>
-                    </sm-accordion-item>
-                </sm-accordion>
-                    <p></p>
-                    <sm-button class="primary">Save</sm-button>
-                </form>
-        </sm-segment>
-    </div>
+
+        </accordion-content>
+    </sm-accordion-item>
+</sm-accordion>
+
+
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Demo form</h4>
+<sm-segment>
+    <form class="ui form" [formGroup]="form">
+        <div class="field">
+            <sm-input label="Name" [control]="nameControl" placeholder="Enter name..."></sm-input>
+        </div>
+        <sm-accordion>
+            <sm-accordion-item>   
+                <accordion-title>Additional</accordion-title>
+                <accordion-content>
+                    <div class="field">
+                        <sm-input label="E-mail" [control]="emailControl" placeholder="Enter e-mail..."></sm-input>
+                    </div>
+                    <div class="field">
+                        <sm-input label="Phone number" [control]="emailControl" placeholder="Enter phone number..."></sm-input>
+                    </div>
+                </accordion-content>
+            </sm-accordion-item>
+        </sm-accordion>
+        <p></p>
+        <sm-button class="primary">Save</sm-button>
+    </form>
+</sm-segment>
+</div>
     `
 })
 

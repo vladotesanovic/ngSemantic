@@ -1,39 +1,49 @@
-import { Component, ChangeDetectionStrategy, Input, Directive, ElementRef, OnInit, Type } from "@angular/core";
+import {
+    Component, ChangeDetectionStrategy, Input, Directive, ElementRef, OnInit,
+    AfterViewInit, ViewChild
+} from "@angular/core";
 
 declare var jQuery: any;
-
-/**
- * Implementation of Semantic UI accordion
- *
- * @link http://semantic-ui.com/modules/accordion.html
- */
-@Directive({
-    selector: "[smDirAccordion]"
-})
-export class SMAccordionDirective implements OnInit {
-
-    @Input() smDirAccordion: string;
-
-    constructor(public element: ElementRef) {}
-
-    ngOnInit() {
-        jQuery(this.element.nativeElement).accordion(this.smDirAccordion || {});
-    }
-}
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-accordion",
     styles: [`sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }`],
     template: `
-<div class="ui accordion {{class}}" [smDirAccordion]="options">
+<div class="ui accordion {{class}}" #accordion>
     <ng-content></ng-content>
 </div>
 `
 })
-export class SemanticAccordionComponent {
+export class SemanticAccordionComponent implements AfterViewInit {
     @Input() class: string;
     @Input() options: string;
+    @ViewChild("accordion") accordion: ElementRef;
+
+    ngAfterViewInit() {
+
+        const inAccordion: HTMLElement = this.inAccordion(this.accordion.nativeElement, "accordion");
+
+        if (inAccordion) {
+            this.accordion.nativeElement.classList.remove("ui");
+            jQuery(inAccordion).accordion(this.options || {});
+        } else {
+            jQuery(this.accordion.nativeElement).accordion(this.options || {});
+        }
+    }
+
+    inAccordion(el: HTMLDivElement, classname: string): boolean {
+        if (el.parentNode) {
+
+            if (el.parentNode.classList && el.parentNode.classList.contains(classname)) {
+                return el.parentNode;
+            } else {
+                return this.inAccordion(el.parentNode, classname);
+            }
+        } else {
+            return false;
+        }
+    }
 }
 
 @Component({
