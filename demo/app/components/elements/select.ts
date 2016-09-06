@@ -76,6 +76,18 @@ import { FormControl, Validators } from "@angular/forms";
 </sm-codeblock>
 
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Async loading</h4>
+
+<sm-select 
+    [options]="{direction: 'upward'}"
+    [(model)]="selection" placeholder="Select gender..."
+    class="fluid">
+        <option *ngFor="let item of ('https://jsonplaceholder.typicode.com/users' | smFetch)" [value]="item?.name">
+        <i class="icon female"></i> {{item?.name}}</option>
+    </sm-select>
+{{selection}}
+
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Options</h4>
 <table class="ui celled striped table">
   <tbody>
@@ -143,6 +155,7 @@ export class SelectComponent {
         gender: "m",
         name: "John Doe"
     };
+    selection: string = "";
     cities: Array<string> = ["New York", "Belgrade", "Stockholm", "Sarajevo"];
 
     onMultiple(data: Array<string>): void {

@@ -85,7 +85,7 @@ export class SemanticTabsComponent implements AfterViewInit {
 
     initTabs() {
 
-        Object.assign(this.options, {
+        this.options = Object.assign(this.options, {
             childrenOnly: true,
             context: this.elementRef.nativeElement
         });
