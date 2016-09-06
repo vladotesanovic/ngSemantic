@@ -25,7 +25,7 @@ export class SemanticPopupComponent {
         if (!this.visible) {
 
             this.visible = true;
-            this.element = element.target;
+            this.element = <Element>element.target;
 
             const options: {} = Object.assign({
                 closable: true,

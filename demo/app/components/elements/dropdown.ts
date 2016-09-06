@@ -12,7 +12,7 @@ import { Component } from "@angular/core";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Dropdown</h4>
-<sm-dropdown title="Cities" class="pointing floating labeled icon button">
+<sm-dropdown title="Cities" class="pointing floating labeled icon button" (onChange)="onChange($event)">
     <sm-item *ngFor="let item of cities">{{item}}</sm-item>
 </sm-dropdown>
 <h4 class="ui header">Code</h4>
@@ -113,6 +113,9 @@ export class DropdownComponent {
     multipleData = [];
     cities: Array<string> = ["New York", "Belgrade", "Stockholm", "Sarajevo"];
 
+    onChange(data: {}) {
+        console.log(data);
+    }
     onMultiple(data: Array<string>): void {
         this.multipleData = data;
     }
