@@ -58,14 +58,14 @@ import { Component } from "@angular/core";
     
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Demo pointing</h4>
-    <sm-menu title="" class="three item pointing">
+    <sm-menu class="three item pointing">
         <a sm-item *ngFor="let item of ['Editorials', 'Reviews', 'Upcoming Events']; let i = index" 
         [ngClass]="{'active': i == 1}" >{{item}}</a>
     </sm-menu>
     
     <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
     <h4 class="ui header">Labeled fluid icon menu</h4>
-    <sm-menu title="Labeled Icon" class="fluid three item labeled icon inverted blue">
+    <sm-menu title="Labeled Icon" class="fluid four item labeled icon inverted blue">
         <a sm-item *ngFor="let item of labeledIcons" [icon]="item?.icon">{{item?.title}}</a>
     </sm-menu>    
     
@@ -93,6 +93,40 @@ import { Component } from "@angular/core";
     &lt;a sm-item *ngFor="let item of items" [icon]="item.icon">{{'{'}}{{'{'}}item?.title{{'}'}}{{'}'}}&lt;/a>
 &lt;/sm-menu>
 </sm-codeblock>
+
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Options</h4>
+<table class="ui celled striped table">
+  <tbody>
+    <tr><td colspan="2">Options</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> [logo]
+      </td>
+      <td>URL pointing to logo image.</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> [class]
+      </td>
+      <td>List of CSS classes associated with menu element.</td>
+    </tr>
+    
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> [logoClass]
+      </td>
+      <td>List of CSS classes that will be applied on logo.</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> [title]
+      </td>
+      <td>Menu title ( will appear if logo is not present ).</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 `
 })

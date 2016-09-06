@@ -11,7 +11,11 @@ import { Component, Input, ChangeDetectionStrategy, AfterViewInit, ViewChild, El
     selector: "sm-menu",
     template: `<div class="ui menu {{class}}" #innerElement>
 <a href="#/" *ngIf="logo" class="header item">
-    <img class="logo" alt="{{title}}" src="{{logo}}">
+    <img class="{{logoClass}}" alt="{{title}}" src="{{logo}}">
+</a>
+
+<a href="#/" *ngIf="title && !logo" class="header item">
+    {{title}}
 </a>
 
 <ng-content></ng-content>
@@ -21,6 +25,7 @@ import { Component, Input, ChangeDetectionStrategy, AfterViewInit, ViewChild, El
 export class SemanticMenuComponent implements AfterViewInit {
     @Input() logo: string;
     @Input() class: string;
+    @Input() logoClass: string = "logo";
     @Input() title: string;
     @ViewChild("innerElement") innerElement: ElementRef;
 
