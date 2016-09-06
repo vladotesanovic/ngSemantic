@@ -23,10 +23,10 @@ export class SemanticShapeComponent implements AfterViewInit {
 
     ngAfterViewInit() {
 
-        this.options = Object.assign(this.options, {
+        this.options = Object.assign({
             beforeChange: (): void => this.beforeChange.emit(true),
             onChange: (): void  => this.onChange.emit(true)
-        });
+        }, this.options);
     }
 
     /**

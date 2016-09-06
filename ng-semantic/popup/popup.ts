@@ -20,22 +20,27 @@ export class SemanticPopupComponent {
     private visible: boolean = false;
     private element: Element;
 
-    show(element: Event, data: { position?: string} = {}) {
+    show(element: Event, data: {} = {}) {
 
         if (!this.visible) {
 
             this.visible = true;
-            this.element = element.srcElement;
+            this.element = element.target;
 
-            jQuery(element.srcElement).popup({
+            const options: {} = Object.assign({
                 closable: true,
                 exclusive: true,
                 lastResort: true,
                 on: "click",
+                onHide: () => this.hide(),
                 popup: this.popup.nativeElement,
-                position : (data.hasOwnProperty("position")) ? data.position : "bottom center",
-                preserve: true
-            }).popup("toggle");
+                position : "bottom center",
+                preserve: true,
+            }, data);
+
+            jQuery(this.element)
+                .popup(options)
+                .popup("show");
         }
     }
 

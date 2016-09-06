@@ -20,8 +20,14 @@ import { Component } from "@angular/core";
 </sm-codeblock>
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
       
-<h4 class="ui header">Demo popup</h4>
-<button class="ui button green" (click)="myPopup.show($event, {position: 'right center'})">Click me</button>
+<h4 class="ui header">Hover</h4>
+<button class="ui button blue" (mouseenter)="myPopup.show($event,
+{position: 'right center', on: 'hover'})">Hover me</button>
+
+<h4 class="ui header">Click</h4>
+<button class="ui button green" (click)="myPopup.show($event,
+{position: 'right center'})">Click me</button>
+
 <sm-popup #myPopup>
 <sm-card class="card">
     <card-title> Kristy </card-title>
@@ -35,7 +41,11 @@ import { Component } from "@angular/core";
     
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
+&lt;button class="ui button blue" (click)="myPopup.show($event, 
+{{ '{' }}position: 'right center', on: 'hover'{{ '}' }})">Hover me&lt;/button>
+
 &lt;button class="ui button green" (click)="myPopup.show($event, {{ '{' }}position: 'right center'{{ '}' }})">Click me&lt;/button>
+
 &lt;sm-popup #myPopup>
     &lt;sm-card class="card">
         &lt;card-title> Kristy &lt;/card-title>
@@ -47,6 +57,30 @@ import { Component } from "@angular/core";
     &lt;/sm-card>
 &lt;/sm-popup>
 </sm-codeblock>   
+
+
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Options</h4>
+<table class="ui celled striped table">
+  <tbody>
+    <tr><td colspan="2">Methods</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> show($event, options)
+      </td>
+      <td>Semantic UI options object for Popup element: . 
+      <a href="http://semantic-ui.com/modules/popup.html#/settings"
+       target="_blank"><i class="icon external"></i> </a></td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> hide()
+      </td>
+      <td>Hide popup</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 `
 })

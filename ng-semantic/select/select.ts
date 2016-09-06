@@ -42,13 +42,13 @@ export class SemanticSelectComponent implements AfterViewInit {
             this.select.nativeElement.setAttribute("multiple", true);
         }
 
-        const options: {} = Object.assign(this.options, {
+        const options: {} = Object.assign({
             onChange: (value: string|number) => {
                 this.onChange.emit(value);
                 this.modelChange.emit(value);
             },
             onHide: () => this.control.markAsTouched()
-        });
+        }, this.options);
 
         jQuery(this.select.nativeElement)
             .dropdown(options);

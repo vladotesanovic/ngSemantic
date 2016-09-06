@@ -85,10 +85,10 @@ export class SemanticTabsComponent implements AfterViewInit {
 
     initTabs() {
 
-        this.options = Object.assign(this.options, {
+        this.options = Object.assign({
             childrenOnly: true,
             context: this.elementRef.nativeElement
-        });
+        }, this.options);
 
         const tab: { tab: Function } = jQuery(this.menu.nativeElement.getElementsByClassName("item"))
             .tab(this.options);
