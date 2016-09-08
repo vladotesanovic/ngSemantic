@@ -3,7 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-import { NgSemanticModule } from "ng-semantic";
+import { NgSemanticModule } from "../../src/index";
 
 import { AppComponent }  from "./components/app";
 import { HomeComponent } from "./components/home/home";

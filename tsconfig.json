@@ -9,10 +9,11 @@
         "inlineSourceMap": false,
         "removeComments": true,
         "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "outDir": "dist"
     },
     "files": [
-        "ng-semantic.ts",
+      "src/index.ts",
         "typings/index.d.ts"
     ]
 }

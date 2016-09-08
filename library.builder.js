@@ -1,6 +1,7 @@
 var path = require('path');
 var Builder = require('systemjs-builder');
-var bundleName = name = "ng-semantic";
+var entry = "dist/index";
+var bundleName = "ng-semantic";
 
 var builder = new Builder();
 var config = {
@@ -11,7 +12,8 @@ var config = {
     },
     map: {
         "typescript": './node_modules/typescript/lib/typescript.js',
-        "@angular": path.resolve('node_modules/@angular')
+        "@angular": path.resolve('node_modules/@angular'),
+        "rxjs": path.resolve('node_modules/rxjs')
     },
     paths: {
         '*': '*.js'
@@ -25,7 +27,7 @@ builder.config(config);
 
 // development
 builder
-    .bundle(bundleName, path.resolve(__dirname, 'bundles/', name + '.js'), { minify: false, mangle: false, rollup: false, sourceMaps: true })
+    .bundle(entry, path.resolve(__dirname, 'bundles/', bundleName + '.js'), { minify: false, mangle: false, rollup: false, sourceMaps: true })
     .then(function() {
         console.log('Build complete.');
     })
@@ -35,7 +37,7 @@ builder
 
 // production
 builder
-    .bundle(bundleName, path.resolve(__dirname, 'bundles/', name + '.min.js'), { minify: true, mangle: true, rollup: true, sourceMaps: false })
+    .bundle(entry, path.resolve(__dirname, 'bundles/', bundleName + '.min.js'), { minify: true, mangle: true, rollup: true, sourceMaps: false })
     .then(function() {
         console.log('Minified build complete.');
     })
