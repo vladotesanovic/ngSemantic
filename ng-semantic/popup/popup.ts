@@ -1,4 +1,4 @@
-import { ElementRef, Component, ViewChild } from "@angular/core";
+import { ElementRef, Component, ViewChild, Input } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -9,7 +9,7 @@ declare var jQuery: any;
  */
 @Component({
     selector: "sm-popup",
-    template: `<div class="ui popup very wide {{selector}}" #popup>
+    template: `<div class="ui popup very wide {{class}}" #popup>
     <div class="content">
         <ng-content></ng-content>
     </div>
@@ -17,6 +17,8 @@ declare var jQuery: any;
 })
 export class SemanticPopupComponent {
     @ViewChild("popup") popup: ElementRef;
+    @Input() class: string;
+
     private visible: boolean = false;
     private element: Element;
 
