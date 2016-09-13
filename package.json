@@ -1,18 +1,18 @@
 {
   "name": "ng-semantic",
   "version": "1.1.10",
-  "main": "./ng-semantic.js",
+  "main": "./index.js",
   "description": "Angular2 building blocks based on Semantic UI",
   "scripts": {
     "demo:lint": "tslint -c ./tslint.json 'demo/app/**/*.ts'",
-    "library:lint": "tslint -c ./tslint.json 'ng-semantic/**/*.ts'",
+    "library:lint": "tslint -c ./tslint.json 'src/**/*.ts'",
     "demo:server": "node server.js",
     "typings": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w -p './demo'",
     "start": "tsc && concurrently \"tsc -w\" \"npm run tsc:w\" \"lite-server -c dev.config.js\" ",
     "prepublish": "npm run demo:lint",
-    "library:bundle": "tsc && rm -rf bundles && node library.builder.js",
+    "library:bundle": "rm -rf dist bundles && tsc && node library.builder.js && cp package.json dist/",
     "demo:bundle": "tsc -p './demo' && node demo.builder.js"
   },
   "repository": {
@@ -35,7 +35,7 @@
   "typings": "./ng-semantic.d.ts",
   "homepage": "https://ng-semantic.herokuapp.com/",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@angular/common": "2.0.0-rc.6",
     "@angular/compiler": "2.0.0-rc.6",
     "@angular/core": "2.0.0-rc.6",
@@ -45,12 +45,14 @@
     "@angular/platform-browser-dynamic": "2.0.0-rc.6",
     "@angular/router": "3.0.0-rc.2",
     "@angular/upgrade": "2.0.0-rc.6",
-    "angular2-in-memory-web-api": "0.0.18",
-    "systemjs": "0.19.27",
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.3",
     "rxjs": "5.0.0-beta.11",
-    "zone.js": "0.6.17",
+    "zone.js": "0.6.17"
+  },
+  "devDependencies": {
+    "angular2-in-memory-web-api": "0.0.18",
+    "systemjs": "0.19.27",
     "concurrently": "^2.2.0",
     "lite-server": "^2.2.2",
     "systemjs-builder": "^0.15.26",

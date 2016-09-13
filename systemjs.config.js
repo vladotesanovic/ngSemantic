@@ -24,7 +24,7 @@
         // other libraries
         'rxjs': 'npm:rxjs',
         'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-        'ng-semantic': './',
+        'ng-semantic': './src/',
         'Prism': 'demo/vendor/prismjs'
     };
 
