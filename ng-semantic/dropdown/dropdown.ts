@@ -33,6 +33,11 @@ export class SemanticDropdownComponent implements AfterViewInit {
                     //this.onChange.emit(b[0].innerText);
                     // the right thing would be to emit the value
                     this.onChange.emit(b[0].value);
+                    // example using an array similar to the one used in demo menus
+                    // <sm-dropdown title="Select city" class="pointing floating labeled link icon" (onChange)="onChange($event)">
+                    //     <sm-item *ngFor="let c of countries" [value]="c.link" >{{c.title}}</sm-item>
+                    // </sm-dropdown>                    
+                    
                 }
             }
         }, this.options);
