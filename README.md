@@ -12,7 +12,7 @@
 ## Live demo
 <a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
-####  Angular 2 QuickStart ( rc.6 ) with ngSemantic
+####  Angular 2 QuickStart with ngSemantic
 https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
 
 ####  Angular 2 CLI with ngSemantic
@@ -20,8 +20,8 @@ https://github.com/vladotesanovic/angular2-cli-webpack
 
 ## Important!
 <ul>
-   <li>Angular 2 version: rc.6</li>
-   <li>Semantic UI version: 2.2.1</li>
+   <li>Angular 2 </li>
+   <li>Semantic UI version: 2.2.2</li>
 </ul>
 
 ## Installation
