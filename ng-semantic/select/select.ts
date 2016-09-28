@@ -10,7 +10,7 @@ declare var jQuery: any;
     selector: "sm-select",
     template: `<div class="field" [ngClass]="{error: (!control?.valid && control?.touched) }">
   <label *ngIf="label">{{label}}</label>
-<select [formControl]="control" class="ui {{class}} dropdown"  #select>
+<select [formControl]="control" class="ui {{class}} dropdown" {{disabled}} #select>
     <option value="">{{placeholder}}</option>
     <ng-content></ng-content>
 </select>
@@ -22,6 +22,7 @@ export class SemanticSelectComponent implements AfterViewInit {
     @Input() label: string;
     @Input() options: {} = {};
     @Input() placeholder: string;
+    @Input() disabled: string;
     @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
     @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
     @ViewChild("select") select: ElementRef;
