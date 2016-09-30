@@ -187,6 +187,6 @@ export class SelectComponent {
     cities: Array<string> = ["New York", "Belgrade", "Stockholm", "Sarajevo"];
 
     onMultiple(data: Array<string>): void {
-        this.multipleData = data
+        this.multipleData = data;
     }
 }

@@ -21,7 +21,6 @@ export class SemanticSelectComponent implements AfterViewInit {
     @Input() class: string;
     @Input() label: string;
     @Input() disabled: string;
-    @Input() required: string;
     @Input() options: {} = {};
     @Input() placeholder: string;
     @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
@@ -46,10 +45,6 @@ export class SemanticSelectComponent implements AfterViewInit {
 
         if (this.disabled) {
             this.select.nativeElement.setAttribute("disabled", this.disabled);
-        }
-
-        if (this.required) {
-            this.select.nativeElement.setAttribute("required", this.required);
         }
 
         const options: {} = Object.assign({
