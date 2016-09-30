@@ -32,7 +32,7 @@ import { FormControl, Validators } from "@angular/forms";
     <h4 class="ui header">Multiple</h4>
     <p><i>Wrapped in 'ui form' for validation.</i></p>
     <div class="ui form">
-    <sm-select [options]="{direction: 'upward', transition: 'vertical flip'}" [control]="multipleControl" placeholder="Select multiple..." 
+    <sm-select [options]="{direction: 'upward', transition: 'vertical flip'}" [control]="multipleControl" placeholder="Select multiple..."
     class="fluid search multiple" (onChange)="onMultiple($event)">
         <option *ngFor="let city of cities">{{city}}</option>
     </sm-select>
@@ -43,7 +43,7 @@ import { FormControl, Validators } from "@angular/forms";
 &lt;sm-select
     [options]="{{'{'}}direction: 'upward', transition: 'vertical flip'{{'}'}}"
     [control]="selectControl"
-    placeholder="Select multiple..." 
+    placeholder="Select multiple..."
     class="fluid search multiple"
     (onChange)="onMultiple($event)">
     &lt;option *ngFor="let city of cities">{{'{'}}{{'{'}}city{{'}'}}{{'}'}}&lt;/option>
@@ -54,7 +54,7 @@ import { FormControl, Validators } from "@angular/forms";
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">With two way data binding</h4>
 
-    <sm-select 
+    <sm-select
     [options]="{direction: 'upward'}"
     [(model)]="userModel.gender" placeholder="Select gender..."
     class="fluid">
@@ -67,8 +67,8 @@ import { FormControl, Validators } from "@angular/forms";
 <h4 class="ui header">Code</h4>
 <sm-codeblock smPrismjs="html">
 &lt;sm-select
-    [options]="{{'{'}}direction: 'upward'{{'}'}}" 
-    [(model)]="userModel.gender" placeholder="Select gender..." 
+    [options]="{{'{'}}direction: 'upward'{{'}'}}"
+    [(model)]="userModel.gender" placeholder="Select gender..."
     class="fluid">
     &lt;option value="m">&lt;i class="icon male">&lt;/i> Male&lt;/option>
     &lt;option value="f">&lt;i class="icon female">&lt;/i> Female&lt;/option>
@@ -78,7 +78,7 @@ import { FormControl, Validators } from "@angular/forms";
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Async loading</h4>
 
-<sm-select 
+<sm-select
     [options]="{direction: 'upward'}"
     [(model)]="selection" placeholder="Select gender..."
     class="fluid">
@@ -86,6 +86,30 @@ import { FormControl, Validators } from "@angular/forms";
         <i class="icon female"></i> {{item?.name}}</option>
     </sm-select>
 {{selection}}
+
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Disabled</h4>
+
+<sm-select
+    [(model)]="selectionDisabled"
+    [control]="selectionDisabledControl"
+    disabled="disabled"
+    placeholder="Select ..."
+    class="fluid">
+        <option *ngFor="let item of [1,2,3]" [value]="item">{{item}}</option>
+</sm-select>
+
+<h4 class="ui header">Code</h4>
+<sm-codeblock smPrismjs="html">
+&lt;sm-select
+    [(model)]="selectionDisabled"
+    [control]="selectionDisabledControl"
+    disabled="disabled"
+    placeholder="Select ..."
+    class="fluid">
+    &lt;option *ngFor="let item of [1,2,3]">{{'{'}}{{'{'}}item{{'}'}}{{'}'}}&lt;/option>
+&lt;/sm-select>
+</sm-codeblock>
 
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Options</h4>
@@ -122,7 +146,7 @@ import { FormControl, Validators } from "@angular/forms";
       <td>
         <i class="arrow circle down icon"></i> [options]
       </td>
-      <td>Semantic UI options object for Dropdown element: 
+      <td>Semantic UI options object for Dropdown element:
       <a href="http://semantic-ui.com/modules/dropdown.html#/settings"
        target="_blank"><i class="icon external"></i></a>
        </td>
@@ -156,9 +180,13 @@ export class SelectComponent {
         name: "John Doe"
     };
     selection: string = "";
+
+    selectionDisabled: string = "";
+    selectionDisabledControl: FormControl= new FormControl("", Validators.required);
+
     cities: Array<string> = ["New York", "Belgrade", "Stockholm", "Sarajevo"];
 
     onMultiple(data: Array<string>): void {
-        this.multipleData = data;
+        this.multipleData = data
     }
 }
