@@ -4,6 +4,8 @@ export declare class SemanticSelectComponent implements AfterViewInit {
     control: FormControl;
     class: string;
     label: string;
+    disabled: string;
+    required: string;
     options: {};
     placeholder: string;
     modelChange: EventEmitter<string | number>;
