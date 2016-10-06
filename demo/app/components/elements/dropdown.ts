@@ -30,7 +30,9 @@ import { Component } from "@angular/core";
       <div class="item">Hide Post</div>
 </sm-dropdown>
 <sm-codeblock smPrismjs="html">
-
+&lt;sm-dropdown class="pointing" icon="wrench">
+    &lt;sm-item *ngFor="let item of cities">{{'{'}}{{'{'}}item{{'}'}}{{'}'}}&lt;/sm-item>
+&lt;/sm-dropdown>
 </sm-codeblock>
 
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
