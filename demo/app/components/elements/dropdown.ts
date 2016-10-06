@@ -23,6 +23,17 @@ import { Component } from "@angular/core";
 </sm-codeblock>
 
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Icon</h4>
+<sm-dropdown class="pointing" icon="wrench">
+      <div class="item">Edit Post</div>
+      <div class="item">Remove Post</div>
+      <div class="item">Hide Post</div>
+</sm-dropdown>
+<sm-codeblock smPrismjs="html">
+
+</sm-codeblock>
+
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Button</h4>
 <div class="ui teal buttons">
   <div class="ui button">Save</div>
