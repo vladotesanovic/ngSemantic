@@ -9,6 +9,7 @@ declare var jQuery: any;
     selector: "sm-dropdown",
     template: `
     <div class="ui {{class}} dropdown item" #dropdown>
+    <i *ngIf="icon" class="{{icon}} icon"></i>
     <div *ngIf="title" class="text">{{title}}</div>
     <i class="dropdown icon"></i>
     <div class="menu">
@@ -20,6 +21,7 @@ declare var jQuery: any;
 export class SemanticDropdownComponent implements AfterViewInit {
     @Input() class: string;
     @Input() title: string;
+    @Input() icon: string;
     @Input() items: Array<{}>;
     @Input() options: {} = {};
     @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
