@@ -44,8 +44,8 @@ export class SemanticSelectComponent implements AfterViewInit {
 
         const options: {} = Object.assign({
             onChange: (value: string|number) => {
-                this.onChange.emit(value);
                 this.modelChange.emit(value);
+                this.onChange.emit(value);
             },
             onHide: () => this.control.markAsTouched()
         }, this.options);
