@@ -15,7 +15,6 @@ export class SemanticRatingComponent implements AfterViewInit, OnChanges {
     @ViewChild("rating") rating: ElementRef;
 
     ngAfterViewInit(): void {
-        console.log("right");
         jQuery(this.rating.nativeElement)
             .rating({
                 initialRating: this.initialRating || 0,
