@@ -18,7 +18,7 @@ import { FormControl } from "@angular/forms";
   <label *ngIf="label && isInsideForm">{{label}}</label>
   <div class="ui input {{class}}" [ngClass]="{'icon': icon, 'error': (!control.valid && control.dirty &&!isInsideForm)}">
   <label *ngIf="label && !isInsideForm" class="ui label">{{label}}</label>
-  <input [type]="type" [formControl]="control" (keyup)="modelChange.emit(input.value)" #input placeholder="{{placeholder}}">
+  <input [type]="type" [formControl]="control" [value]="model" (keyup)="modelChange.emit(input.value)" #input placeholder="{{placeholder}}">
   <i *ngIf="icon" class="{{icon}} icon"></i>
 </div>
 </div>`
