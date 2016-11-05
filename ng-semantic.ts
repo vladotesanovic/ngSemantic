@@ -2,7 +2,7 @@ import { SemanticMenuComponent } from "./ng-semantic/menu/menu";
 import { SemanticMessageComponent } from "./ng-semantic/message/message";
 import { SMTooltipDirective } from "./ng-semantic/popup/tooltip";
 import { SemanticPopupComponent } from "./ng-semantic/popup/popup";
-import { SemanticModalComponent } from "./ng-semantic/modal/modal";
+import { SemanticModalComponent, SMModalTagsDirective } from "./ng-semantic/modal/modal";
 import { SemanticSegmentComponent } from "./ng-semantic/segment/segment";
 import { SemanticListComponent } from "./ng-semantic/list/list";
 import { SemanticButtonComponent } from "./ng-semantic/button/button";
@@ -87,7 +87,9 @@ export let SEMANTIC_COMPONENTS: Array<any> = [
 export let SEMANTIC_DIRECTIVES: Array<any> = [
 	SMTooltipDirective,
 	SMVisibilityDirective,
-	SMDeviceVisibilityDirective
+	SMDeviceVisibilityDirective,
+	// directives with no functionality, simply declare tags
+	SMModalTagsDirective,
 ];
 
 import { NgModule } from "@angular/core";

@@ -7,3 +7,5 @@ export declare class SemanticModalComponent {
     show(data?: {}): void;
     hide(): void;
 }
+export declare class SMModalTagsDirective {
+}
