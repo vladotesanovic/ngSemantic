@@ -20,7 +20,7 @@
     "url": "https://github.com/vladotesanovic/ngSemantic"
   },
   "engines": {
-    "node": ">= 5.4.1 < 6"
+    "node": ">= 5.4.1 < 7"
   },
   "keywords": [
     "angular",
