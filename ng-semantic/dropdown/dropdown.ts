@@ -29,7 +29,7 @@ export class SemanticDropdownComponent implements AfterViewInit {
 
         const options: {} = Object.assign({
             onChange: (value: string|number, a: string|number, b: Array<HTMLElement>) => {
-                if (b.length) {
+                if (b != null && b.length) {
                     this.onChange.emit(b[0].innerText);
                 }
             }
