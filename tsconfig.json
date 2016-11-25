@@ -3,6 +3,7 @@
         "module": "commonjs",
         "target": "es5",
         "moduleResolution": "node",
+        "lib": [ "es2015", "dom" ],
         "noImplicitAny": true,
         "declaration": true,
         "inlineSources": false,
@@ -12,7 +13,6 @@
         "experimentalDecorators": true
     },
     "files": [
-        "ng-semantic.ts",
-        "typings/index.d.ts"
+        "ng-semantic.ts"
     ]
 }

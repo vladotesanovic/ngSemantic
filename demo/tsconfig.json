@@ -3,6 +3,7 @@
         "module": "system",
         "target": "es5",
         "moduleResolution": "node",
+        "lib": [ "es2015", "dom" ],
         "noImplicitAny": false,
         "inlineSources": true,
         "inlineSourceMap": true,
@@ -12,7 +13,6 @@
     },
     "files": [
         "./app/bootstrap.ts",
-        "./semantic.d.ts",
-        "../typings/index.d.ts"
+        "./semantic.d.ts"
     ]
 }

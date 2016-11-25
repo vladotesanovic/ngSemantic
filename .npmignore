@@ -5,7 +5,6 @@ server.js
 Procfile
 node_modules
 typings
-typings.json
 tslint.json
 tsconfig.json
 .idea

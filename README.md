@@ -2,6 +2,7 @@
 [![Dependency Status](https://david-dm.org/vladotesanovic/ngSemantic.svg)](https://david-dm.org/vladotesanovic/ngSemantic)
 [![Build Status](https://travis-ci.org/vladotesanovic/ngSemantic.svg?branch=master)](https://travis-ci.org/vladotesanovic/ngSemantic)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/ngsemantic)
 
 # Angular2 & Semantic UI
 <p align="center">
@@ -12,13 +13,6 @@
 ## Live demo
 <a href="https://ng-semantic.herokuapp.com" target="_blank">ng-semantic.herokuapp.com</a>
 
-####  Angular 2 QuickStart with ngSemantic
-https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
-
-####  Angular 2 CLI with ngSemantic
-https://github.com/vladotesanovic/angular2-cli-webpack
-
-## Important!
 <ul>
    <li>Angular 2 </li>
    <li>Semantic UI version: 2.2.2</li>
@@ -27,15 +21,6 @@ https://github.com/vladotesanovic/angular2-cli-webpack
 ## Installation
 ```bash
 npm install ng-semantic --save
-```
-
-Semantic UI ( minified versions of css and js ) must be loaded in index.html
-
-```html
-<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
 ```
 
 ## Angular CLI configuration ( Webpack )
@@ -98,8 +83,30 @@ template: `
 })
 export class DemoComponent {}
 ```
+## Custom configuration
 
-## Development
+Semantic UI ( minified versions of css and js ) must be loaded
+
+```html
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+```
+
+## Support / Donations
+
+You can support this project by donating on PayPal. If you have special needs or feature request, mail me.
+
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/ngsemantic)
+
+####  Angular 2 QuickStart with ngSemantic
+https://github.com/vladotesanovic/angular2-quickstart-ngsemantic
+
+####  Angular 2 CLI with ngSemantic
+https://github.com/vladotesanovic/angular2-cli-webpack
+
+### Development
 ```bash
 git clone https://github.com/vladotesanovic/ngSemantic.git
 cd ngSemantic
@@ -111,7 +118,7 @@ npm install && npm run typings
 npm start
 ```
 
-## Components
+### Components
 
   - sm-accordion
   - sm-button
