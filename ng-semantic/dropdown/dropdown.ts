@@ -9,17 +9,19 @@ declare var jQuery: any;
     selector: "sm-dropdown",
     template: `
     <div class="ui {{class}} dropdown item" #dropdown>
-    <div *ngIf="title" class="text">{{title}}</div>
-    <i class="dropdown icon"></i>
-    <div class="menu">
-        <ng-content></ng-content>
+        <i *ngIf="icon" class="{{icon}} icon"></i>
+        <div *ngIf="title" class="text">{{title}}</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <ng-content></ng-content>
+        </div>
     </div>
-  </div>
 `
 })
 export class SemanticDropdownComponent implements AfterViewInit {
     @Input() class: string;
     @Input() title: string;
+    @Input() icon: string;
     @Input() items: Array<{}>;
     @Input() options: {} = {};
     @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
