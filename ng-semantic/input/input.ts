@@ -75,7 +75,7 @@ export class SemanticInputComponent implements OnInit {
   </div>`
 })
 export class SemanticCheckboxComponent {
-  @Input() control: FormControl;
+  @Input() control: FormControl = new FormControl();
   @Input() label: string;
   @Input() disabled: boolean;
   @Input() value: string|number;
@@ -107,7 +107,7 @@ export class SemanticCheckboxComponent {
   </div>`
 })
 export class SemanticTextareaComponent {
-  @Input() control: FormControl;
+  @Input() control: FormControl = new FormControl();
   @Input() label: string;
   @Input() rows: string;
 }
