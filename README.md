@@ -25,11 +25,12 @@ npm install ng-semantic --save
 
 ## Angular CLI configuration ( Webpack )
 
-Install `ng-semantic` and `jQuery`
+Install `jQuery` with NPM
 ```bash
 npm install jquery --save
 ```
 
+Download<a href="https://github.com/Semantic-Org/Semantic-UI-CSS/archive/master.zip" target="_blank">Official Semantic UI bundle</a>
 
 Add `semantic.min.css`, `semantic.min.js`, `jquery` to the `angular-cli.json` as follows:
 ```javascript
