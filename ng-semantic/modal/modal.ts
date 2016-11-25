@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, Directive } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -40,4 +40,10 @@ export class SemanticModalComponent {
         jQuery(this.modal.nativeElement)
             .modal("hide");
     }
+}
+
+@Directive({selector: 'modal-content, modal-actions'})
+export class SMModalTagsDirective {
+  // No behavior
+  // The only purpose is to "declare" the tag in Angular2
 }
