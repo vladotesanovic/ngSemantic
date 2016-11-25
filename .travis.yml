@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "6"
   - "5"
-script: npm run typings && npm run tsc
+script: npm run tsc

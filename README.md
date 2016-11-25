@@ -2,7 +2,7 @@
 [![Dependency Status](https://david-dm.org/vladotesanovic/ngSemantic.svg)](https://david-dm.org/vladotesanovic/ngSemantic)
 [![Build Status](https://travis-ci.org/vladotesanovic/ngSemantic.svg?branch=master)](https://travis-ci.org/vladotesanovic/ngSemantic)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hyperium/hyper/master/LICENSE)
-[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/ngsemantic)
+[![Support via PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/ngsemantic)
 
 # Angular2 & Semantic UI
 <p align="center">
@@ -27,8 +27,6 @@ npm install ng-semantic --save
 
 Install `ng-semantic` and `jQuery`
 ```bash
-npm install ng-semantic --save
-
 npm install jquery --save
 ```
 
@@ -85,7 +83,7 @@ export class DemoComponent {}
 ```
 ## Custom configuration
 
-Semantic UI ( minified versions of css and js ) must be loaded
+Semantic UI ( minified versions of css and js ) must be loaded in index.html
 
 ```html
 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
@@ -96,7 +94,7 @@ Semantic UI ( minified versions of css and js ) must be loaded
 
 ## Support / Donations
 
-You can support this project by donating on PayPal. If you have special needs or feature request, mail me.
+If you’d like to support me developing this project you’re able to do so by donating on PayPal or if you have any special needs/ feature requests don’t hesitate to send me an email.
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/ngsemantic)
 
@@ -112,7 +110,7 @@ git clone https://github.com/vladotesanovic/ngSemantic.git
 cd ngSemantic
 
 # install dependencies
-npm install && npm run typings
+npm install
 
 # compile demo project
 npm start
