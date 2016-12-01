@@ -9,6 +9,6 @@ export declare class SemanticSearchComponent implements AfterViewInit {
     debounce: number;
     placeholder: string;
     onSearch: EventEmitter<string | number>;
-    searchControl: FormControl;
+    searchControl: FormControl = new FormControl();
     ngAfterViewInit(): void;
 }

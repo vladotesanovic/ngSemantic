@@ -20,6 +20,18 @@ export class SemanticSelectComponent implements AfterViewInit {
     @Input() control: FormControl = new FormControl();
     @Input() class: string;
     @Input() label: string;
+
+    @Input("disabled")
+    set disabled(data: boolean) {
+        setTimeout(() => {
+            if (data) {
+                jQuery(this.select.nativeElement.parentNode).addClass("disabled");
+            } else {
+                jQuery(this.select.nativeElement.parentNode).removeClass("disabled");
+            }
+        }, 1);
+    };
+
     @Input() options: {} = {};
     @Input() placeholder: string;
     @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
