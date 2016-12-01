@@ -6,6 +6,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
  * @link http://semantic-ui.com/elements/loader.html
  */
 @Component({
+  moduleId: module.id,
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-loader",
   template: `<div *ngIf="!complete" class="ui active dimmer {{class}}">

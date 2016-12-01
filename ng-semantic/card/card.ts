@@ -6,6 +6,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
  * @link http://semantic-ui.com/views/card.html
  */
 @Component({
+  moduleId: module.id,
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-card",
   template: `<div class="ui {{class}}">

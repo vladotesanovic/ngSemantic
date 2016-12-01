@@ -3,6 +3,7 @@ import { Component, QueryList, AfterViewInit, ElementRef, Input, ContentChildren
 declare var jQuery: any;
 
 @Component({
+  moduleId: module.id,
   selector: "sm-tab",
   template: `
 <div #tab>

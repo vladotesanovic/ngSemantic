@@ -3,6 +3,7 @@ import { Component, Input, ViewChild, ChangeDetectionStrategy, AfterViewInit, El
 declare var jQuery: any;
 
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-rating",
     template: `<div class="ui {{class}} rating" #rating></div>`

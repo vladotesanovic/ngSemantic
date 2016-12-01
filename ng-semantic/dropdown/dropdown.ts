@@ -5,6 +5,7 @@ import {
 declare var jQuery: any;
 
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-dropdown",
     template: `

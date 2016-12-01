@@ -6,6 +6,7 @@ import { FormControl } from "@angular/forms";
 declare var jQuery: any;
 
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-select",
     template: `<div class="field" [ngClass]="{error: (!control?.valid && control?.touched) }">

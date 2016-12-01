@@ -7,6 +7,7 @@ import { Component, Input, ChangeDetectionStrategy, AfterViewInit, ViewChild, El
  * @link http://semantic-ui.com/elements/icon.html
  */
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-menu",
     template: `<div class="ui menu {{class}}" #innerElement>

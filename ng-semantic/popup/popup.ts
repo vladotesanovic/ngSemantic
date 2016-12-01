@@ -8,6 +8,7 @@ declare var jQuery: any;
  * This component is triggered by UIPopupDirective.
  */
 @Component({
+    moduleId: module.id,
     selector: "sm-popup",
     template: `<div class="ui popup very wide {{class}}" #popup>
     <div class="content">

@@ -3,6 +3,7 @@ import { Component, ChangeDetectionStrategy, ViewChild, ElementRef, Input } from
 declare var jQuery: any;
 
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-transition",
     template: `

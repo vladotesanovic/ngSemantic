@@ -6,6 +6,7 @@ import { Component, Input, ChangeDetectionStrategy, HostListener } from "@angula
  * @link http://semantic-ui.com/modules/dropdown.html
  */
 @Component({
+    moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector: "sm-contextmenu",
     styles: [`.sm-contextmenu { position: fixed; z-index: 1000; }`],

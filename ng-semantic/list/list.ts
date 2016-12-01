@@ -6,6 +6,7 @@ import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, After
  * @link http://semantic-ui.com/elements/list.html
  */
 @Component({
+  moduleId: module.id,
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-list",
   template: `

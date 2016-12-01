@@ -6,6 +6,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
  * @link http://semantic-ui.com/elements/segment.html
  */
 @Component({
+	moduleId: module.id,
     changeDetection: ChangeDetectionStrategy.OnPush,
     selector : "sm-segment",
     template: `<div class="ui segment {{class}}">
