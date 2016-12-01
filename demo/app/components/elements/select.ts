@@ -76,6 +76,29 @@ import { FormControl, Validators } from "@angular/forms";
 </sm-codeblock>
 
 <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Disable Select</h4>
+
+<sm-select 
+    [options]="{direction: 'upward'}"
+    [(model)]="selection" placeholder="Select gender..."
+    [disabled]="selectDisabled"
+    class="fluid">
+        <option value="m"><i class="icon male"></i> Male</option>
+        <option value="f"><i class="icon female"></i> Female</option>
+</sm-select>
+<input type="checkbox" [(ngModel)]="selectDisabled">
+<sm-codeblock smPrismjs="html">
+    &lt;sm-select 
+    [options]="{{'{'}}direction: 'upward'{{'}'}}" 
+    [(model)]="selection" placeholder="Select gender..."
+    [disabled]="selectDisabled"
+    class="fluid">
+        &lt;option value="m">&lt;i class="icon male">&lt;/i> Male&lt;/option>
+        &lt;option value="f">&lt;i class="icon female">&lt;/i> Female&lt;/option>
+    &lt;/sm-select>
+</sm-codeblock>
+ 
+<div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
 <h4 class="ui header">Async loading</h4>
 
 <sm-select 
@@ -150,6 +173,7 @@ export class SelectComponent {
     selectControl: FormControl = new FormControl("");
     multipleControl: FormControl = new FormControl("", Validators.required);
     multipleData = [];
+    selectDisabled = true;
 
     userModel = {
         gender: "m",
