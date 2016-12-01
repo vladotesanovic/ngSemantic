@@ -8,7 +8,7 @@ export declare class SemanticInputComponent implements OnInit {
     type: string;
     placeholder: string;
     model: {};
-    control: FormControl;
+    control: FormControl = new FormControl();
     modelChange: EventEmitter<string | number>;
     private isInsideForm;
     constructor(viewRef: ViewContainerRef);
@@ -16,7 +16,7 @@ export declare class SemanticInputComponent implements OnInit {
     inForm(el: Node, classname: string): boolean;
 }
 export declare class SemanticCheckboxComponent {
-    control: FormControl;
+    control: FormControl = new FormControl();
     label: string;
     disabled: boolean;
     value: string | number;
@@ -26,7 +26,7 @@ export declare class SemanticCheckboxComponent {
     private classType;
 }
 export declare class SemanticTextareaComponent {
-    control: FormControl;
+    control: FormControl = new FormControl();
     label: string;
     rows: string;
 }
