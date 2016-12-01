@@ -12,3 +12,4 @@ demo.builder.js
 dev.config.js
 systemjs.config.js
 .travis.yml
+.editorconfig
