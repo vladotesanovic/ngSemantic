@@ -5,7 +5,7 @@
   "description": "Angular2 building blocks based on Semantic UI",
   "scripts": {
     "demo:lint": "tslint -c ./tslint.json 'demo/app/**/*.ts'",
-    "library:lint": "tslint -c ./tslint.json 'ng-semantic/**/*.ts'",
+    "library:lint": "tslint -c ./tslint.json 'src/**/*.ts'",
     "demo:server": "node server.js",
     "tsc": "tsc",
     "tsc:w": "tsc -w -p ./demo",
@@ -19,7 +19,7 @@
     "url": "https://github.com/vladotesanovic/ngSemantic"
   },
   "engines": {
-    "node": ">= 5.4.1 < 7"
+    "node": ">= 5.4.1"
   },
   "keywords": [
     "angular",

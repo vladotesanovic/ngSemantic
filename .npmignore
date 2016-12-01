@@ -4,14 +4,11 @@ demo
 server.js
 Procfile
 node_modules
-typings
 tslint.json
 tsconfig.json
 .idea
 library.builder.js
 demo.builder.js
-index.html
 dev.config.js
-index.dev.html
 systemjs.config.js
 .travis.yml

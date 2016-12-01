@@ -1,95 +1,98 @@
-import { SemanticMenuComponent } from "./ng-semantic/menu/menu";
-import { SemanticMessageComponent } from "./ng-semantic/message/message";
-import { SMTooltipDirective } from "./ng-semantic/popup/tooltip";
-import { SemanticPopupComponent } from "./ng-semantic/popup/popup";
-import { SemanticModalComponent, SMModalTagsDirective } from "./ng-semantic/modal/modal";
-import { SemanticSegmentComponent } from "./ng-semantic/segment/segment";
-import { SemanticListComponent } from "./ng-semantic/list/list";
-import { SemanticButtonComponent } from "./ng-semantic/button/button";
-import { SemanticItemComponent } from "./ng-semantic/item/item";
-import { SMVisibilityDirective, SMDeviceVisibilityDirective } from "./ng-semantic/visibility/visibility";
-import { SemanticDropdownComponent } from "./ng-semantic/dropdown/dropdown";
-import { SemanticSelectComponent } from "./ng-semantic/select/select";
-import { SemanticSearchComponent } from "./ng-semantic/search/search";
-import { SemanticLoaderComponent } from "./ng-semantic/loader/loader";
-import { SemanticCardComponent, SemanticCardsComponent } from "./ng-semantic/card/card";
-import { SemanticInputComponent, SemanticTextareaComponent, SemanticCheckboxComponent } from "./ng-semantic/input/input";
-import { SemanticSidebarComponent } from "./ng-semantic/sidebar/sidebar";
-import { SemanticTabsComponent, SemanticTabComponent } from "./ng-semantic/tab/tab";
-import { SemanticFlagComponent } from "./ng-semantic/flag/flag";
-import { SemanticContextMenuComponent } from "./ng-semantic/contextmenu/contextmenu";
-import { SemanticProgressComponent } from "./ng-semantic/progress/progress";
-import { SemanticDimmerComponent } from "./ng-semantic/dimmer/dimmer";
-import { SemanticTransitionComponent } from "./ng-semantic/transition/transition";
-import { SemanticShapeComponent } from "./ng-semantic/shape/shape";
-import { SemanticAccordionComponent, SemanticAccordionItemComponent } from "./ng-semantic/accordion/accordion";
-import { SemanticRatingComponent } from "./ng-semantic/rating/rating";
+import { SemanticMenuComponent } from "./src/menu/menu";
+import { SemanticMessageComponent } from "./src/message/message";
+import { SMTooltipDirective } from "./src/popup/tooltip";
+import { SemanticPopupComponent } from "./src/popup/popup";
+import { SemanticModalComponent, SMModalTagsDirective } from "./src/modal/modal";
+import { SemanticSegmentComponent } from "./src/segment/segment";
+import { SemanticListComponent } from "./src/list/list";
+import { SemanticButtonComponent } from "./src/button/button";
+import { SemanticItemComponent } from "./src/item/item";
+import { SMVisibilityDirective, SMDeviceVisibilityDirective } from "./src/visibility/visibility";
+import { SemanticDropdownComponent } from "./src/dropdown/dropdown";
+import { SemanticSelectComponent } from "./src/select/select";
+import { SemanticSearchComponent } from "./src/search/search";
+import { SemanticLoaderComponent } from "./src/loader/loader";
+import { SemanticCardComponent, SemanticCardsComponent } from "./src/card/card";
+import {
+ SemanticInputComponent,
+ SemanticTextareaComponent,
+ SemanticCheckboxComponent
+} from "./src/input/input";
+import { SemanticSidebarComponent } from "./src/sidebar/sidebar";
+import { SemanticTabsComponent, SemanticTabComponent } from "./src/tab/tab";
+import { SemanticFlagComponent } from "./src/flag/flag";
+import { SemanticContextMenuComponent } from "./src/contextmenu/contextmenu";
+import { SemanticProgressComponent } from "./src/progress/progress";
+import { SemanticDimmerComponent } from "./src/dimmer/dimmer";
+import { SemanticTransitionComponent } from "./src/transition/transition";
+import { SemanticShapeComponent } from "./src/shape/shape";
+import { SemanticAccordionComponent, SemanticAccordionItemComponent } from "./src/accordion/accordion";
+import { SemanticRatingComponent } from "./src/rating/rating";
 
-export * from "./ng-semantic/menu/menu";
-export * from "./ng-semantic/contextmenu/contextmenu";
-export *  from "./ng-semantic/message/message";
-export * from "./ng-semantic/popup/tooltip";
-export *  from "./ng-semantic/popup/popup";
-export *  from "./ng-semantic/visibility/visibility";
-export *  from "./ng-semantic/modal/modal";
-export *  from "./ng-semantic/segment/segment";
-export *  from "./ng-semantic/rating/rating";
-export *  from "./ng-semantic/list/list";
-export *  from "./ng-semantic/button/button";
-export *  from "./ng-semantic/search/search";
-export *  from "./ng-semantic/item/item";
-export *  from "./ng-semantic/dropdown/dropdown";
-export *  from "./ng-semantic/select/select";
-export *  from "./ng-semantic/loader/loader";
-export *  from "./ng-semantic/card/card";
-export *  from "./ng-semantic/input/input";
-export *  from "./ng-semantic/sidebar/sidebar";
-export *  from "./ng-semantic/tab/tab";
-export *  from "./ng-semantic/flag/flag";
-export *  from "./ng-semantic/progress/progress";
-export *  from "./ng-semantic/dimmer/dimmer";
-export *  from "./ng-semantic/transition/transition";
-export *  from "./ng-semantic/shape/shape";
-export *  from "./ng-semantic/accordion/accordion";
+export * from "./src/menu/menu";
+export * from "./src/contextmenu/contextmenu";
+export * from "./src/message/message";
+export * from "./src/popup/tooltip";
+export * from "./src/popup/popup";
+export * from "./src/visibility/visibility";
+export * from "./src/modal/modal";
+export * from "./src/segment/segment";
+export * from "./src/rating/rating";
+export * from "./src/list/list";
+export * from "./src/button/button";
+export * from "./src/search/search";
+export * from "./src/item/item";
+export * from "./src/dropdown/dropdown";
+export * from "./src/select/select";
+export * from "./src/loader/loader";
+export * from "./src/card/card";
+export * from "./src/input/input";
+export * from "./src/sidebar/sidebar";
+export * from "./src/tab/tab";
+export * from "./src/flag/flag";
+export * from "./src/progress/progress";
+export * from "./src/dimmer/dimmer";
+export * from "./src/transition/transition";
+export * from "./src/shape/shape";
+export * from "./src/accordion/accordion";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
-	SemanticCardComponent,
-	SemanticCardsComponent,
-	SemanticContextMenuComponent,
-	SemanticInputComponent,
-	SemanticTextareaComponent,
-	SemanticCheckboxComponent,
-	SemanticMenuComponent,
-	SemanticMessageComponent,
-	SemanticSegmentComponent,
-	SemanticDimmerComponent,
-	SemanticTransitionComponent,
-	SemanticShapeComponent,
-	SemanticPopupComponent,
-	SemanticDropdownComponent,
-	SemanticListComponent,
-	SemanticSelectComponent,
-	SemanticFlagComponent,
-	SemanticSearchComponent,
-	SemanticItemComponent,
-	SemanticSidebarComponent,
-	SemanticProgressComponent,
-	SemanticModalComponent,
-	SemanticTabsComponent,
-	SemanticTabComponent,
-	SemanticButtonComponent,
-	SemanticLoaderComponent,
-	SemanticAccordionComponent,
-	SemanticAccordionItemComponent,
-	SemanticRatingComponent
+ SemanticCardComponent,
+ SemanticCardsComponent,
+ SemanticContextMenuComponent,
+ SemanticInputComponent,
+ SemanticTextareaComponent,
+ SemanticCheckboxComponent,
+ SemanticMenuComponent,
+ SemanticMessageComponent,
+ SemanticSegmentComponent,
+ SemanticDimmerComponent,
+ SemanticTransitionComponent,
+ SemanticShapeComponent,
+ SemanticPopupComponent,
+ SemanticDropdownComponent,
+ SemanticListComponent,
+ SemanticSelectComponent,
+ SemanticFlagComponent,
+ SemanticSearchComponent,
+ SemanticItemComponent,
+ SemanticSidebarComponent,
+ SemanticProgressComponent,
+ SemanticModalComponent,
+ SemanticTabsComponent,
+ SemanticTabComponent,
+ SemanticButtonComponent,
+ SemanticLoaderComponent,
+ SemanticAccordionComponent,
+ SemanticAccordionItemComponent,
+ SemanticRatingComponent
 ];
 
 export let SEMANTIC_DIRECTIVES: Array<any> = [
-	SMTooltipDirective,
-	SMVisibilityDirective,
-	SMDeviceVisibilityDirective,
-	// directives with no functionality, simply declare tags
-	SMModalTagsDirective,
+ SMTooltipDirective,
+ SMVisibilityDirective,
+ SMDeviceVisibilityDirective,
+ SMModalTagsDirective, // directives with no functionality, simply declare tags
 ];
 
 import { NgModule } from "@angular/core";
@@ -97,8 +100,8 @@ import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
-	declarations: [ SEMANTIC_DIRECTIVES, SEMANTIC_COMPONENTS ],
-	exports:      [ SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES ],
-	imports:      [ CommonModule, FormsModule, ReactiveFormsModule ]
+ declarations: [ SEMANTIC_DIRECTIVES, SEMANTIC_COMPONENTS ],
+ exports: [ SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES ],
+ imports: [ CommonModule, FormsModule, ReactiveFormsModule ]
 })
-export class NgSemanticModule { }
+export class NgSemanticModule {}

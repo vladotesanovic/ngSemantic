@@ -1,9 +1,7 @@
 node_modules
-ng-semantic/**/*.js
+src/**/*.js
 /ng-semantic.js
 .idea
 demo/app/**/*.js
 npm-debug.log
 bundles
-typings
-demoRC5
