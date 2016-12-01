@@ -1,4 +1,4 @@
-import { ElementRef, Component, ViewChild, Input } from "@angular/core";
+import { ElementRef, Component, ViewChild, Input, ChangeDetectionStrategy } from "@angular/core";
 
 declare var jQuery: any;
 
@@ -8,6 +8,7 @@ declare var jQuery: any;
  * This component is triggered by UIPopupDirective.
  */
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-popup",
   template: `<div class="ui popup very wide {{class}}" #popup>
     <div class="content">

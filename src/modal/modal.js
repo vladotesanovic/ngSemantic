@@ -11,15 +11,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var SemanticModalComponent = (function () {
     function SemanticModalComponent() {
+        this.onModalShow = new core_1.EventEmitter();
+        this.onModalHide = new core_1.EventEmitter();
     }
     SemanticModalComponent.prototype.show = function (data) {
         jQuery(this.modal.nativeElement)
             .modal(data || {})
             .modal("toggle");
+        this.onModalShow.next(true);
     };
     SemanticModalComponent.prototype.hide = function () {
         jQuery(this.modal.nativeElement)
             .modal("hide");
+        this.onModalHide.emit(true);
+    };
+    SemanticModalComponent.prototype.ngOnDestroy = function () {
+        var parent = this.modal.nativeElement.parentElement;
+        parent.removeChild(this.modal.nativeElement);
     };
     return SemanticModalComponent;
 }());
@@ -39,6 +47,14 @@ __decorate([
     core_1.ViewChild("modal"),
     __metadata("design:type", core_1.ElementRef)
 ], SemanticModalComponent.prototype, "modal", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], SemanticModalComponent.prototype, "onModalShow", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], SemanticModalComponent.prototype, "onModalHide", void 0);
 SemanticModalComponent = __decorate([
     core_1.Component({
         changeDetection: core_1.ChangeDetectionStrategy.OnPush,

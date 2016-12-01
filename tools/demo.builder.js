@@ -1,9 +1,9 @@
 var SystemBuilder = require('systemjs-builder');
 var builder = new SystemBuilder();
 
-builder.loadConfig('systemjs.config.js')
+builder.loadConfig(__dirname + '/../systemjs.config.js')
     .then(function(){
-        var outputFile = './demo/vendor/bundle.min.js';
+        var outputFile = '../demo/vendor/bundle.min.js';
         return builder.buildStatic('app', outputFile, {
             minify: true,
             mangle: true,

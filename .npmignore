@@ -1,15 +1,12 @@
 demo
+tools
 *.ts
 !*.d.ts
-server.js
 Procfile
 node_modules
 tslint.json
 tsconfig.json
 .idea
-library.builder.js
-demo.builder.js
-dev.config.js
 systemjs.config.js
 .travis.yml
 .editorconfig

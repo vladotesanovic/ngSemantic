@@ -6,13 +6,13 @@
   "scripts": {
     "demo:lint": "tslint -c ./tslint.json 'demo/app/**/*.ts'",
     "library:lint": "tslint -c ./tslint.json 'src/**/*.ts'",
-    "demo:server": "node server.js",
+    "demo:server": "node tools/server.js",
     "tsc": "tsc",
     "tsc:w": "tsc -w -p ./demo",
-    "start": "tsc && concurrently \"tsc -w\" \"npm run tsc:w\" \"lite-server -c dev.config.js\" ",
+    "start": "tsc && concurrently \"tsc -w\" \"npm run tsc:w\" \"lite-server -c tools/dev.config.js\" ",
     "prepublish": "npm run demo:lint",
-    "library:bundle": "tsc && rm -rf bundles && node library.builder.js",
-    "demo:bundle": "tsc -p './demo' && node demo.builder.js"
+    "library:bundle": "tsc && rm -rf bundles && node tools/library.builder.js",
+    "demo:bundle": "tsc -p './demo' && node tools/demo.builder.js"
   },
   "repository": {
     "type": "git",

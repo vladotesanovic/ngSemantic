@@ -73,6 +73,49 @@ import { Component } from "@angular/core";
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </modal-content>
     </sm-modal>
+    
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+<h4 class="ui header">Options</h4>
+<table class="ui celled striped table">
+  <tbody>
+    <tr><td colspan="2">Options</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> [title]
+      </td>
+      <td>Title of modal window</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> [class]
+      </td>
+      <td>List of CSS classes associated with select element.</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle down icon"></i> [icon]
+      </td>
+      <td>Semantic UI icon name. <a href="http://semantic-ui.com/elements/icon.html"
+       target="_blank"><i class="icon external"></i> </a></td>
+    </tr>
+    <tr>
+        <td colspan="2">Events </td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle up icon"></i> (onModalShow)
+      </td>
+      <td>Is called after modal is shown.</td>
+    </tr>
+    <tr>
+      <td>
+        <i class="arrow circle up icon"></i> (onModalHide)
+      </td>
+      <td>Is called after modal is hidden.</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 `
 })

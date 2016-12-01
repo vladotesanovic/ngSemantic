@@ -1,4 +1,6 @@
-import { Directive, ViewContainerRef, Input, OnInit, Output, EventEmitter } from "@angular/core";
+import {
+  Directive, ViewContainerRef, Input, OnInit, Output, EventEmitter
+} from "@angular/core";
 
 declare var jQuery: any;
 

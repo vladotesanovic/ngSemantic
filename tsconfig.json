@@ -1,18 +1,24 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "moduleResolution": "node",
-        "lib": [ "es2015", "dom" ],
-        "noImplicitAny": true,
-        "declaration": true,
-        "inlineSources": false,
-        "inlineSourceMap": false,
-        "removeComments": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
-    },
-    "files": [
-        "ng-semantic.ts"
-    ]
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "noImplicitAny": true,
+    "declaration": true,
+    "inlineSources": false,
+    "inlineSourceMap": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "typeRoots": [
+    "./node_modules/@types"
+  ],
+  "files": [
+    "ng-semantic.ts"
+  ]
 }

@@ -24,17 +24,6 @@ var SemanticRatingComponent = (function () {
             }
         });
     };
-    SemanticRatingComponent.prototype.ngOnChanges = function (changes) {
-        var _this = this;
-        jQuery(this.rating.nativeElement)
-            .rating({
-            initialRating: changes["initialRating"].currentValue,
-            maxRating: this.maxRating || 5,
-            onRate: function (value) {
-                _this.onRate.emit(value);
-            }
-        });
-    };
     return SemanticRatingComponent;
 }());
 __decorate([

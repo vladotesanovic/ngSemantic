@@ -53,6 +53,7 @@ __decorate([
 ], SemanticPopupComponent.prototype, "class", void 0);
 SemanticPopupComponent = __decorate([
     core_1.Component({
+        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         selector: "sm-popup",
         template: "<div class=\"ui popup very wide {{class}}\" #popup>\n    <div class=\"content\">\n        <ng-content></ng-content>\n    </div>\n</div>"
     }),

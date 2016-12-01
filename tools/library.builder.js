@@ -4,7 +4,7 @@ var bundleName = name = "ng-semantic";
 
 var builder = new Builder();
 var config = {
-  baseURL: '.',
+  baseURL: './',
   transpiler: 'typescript',
   typescriptOptions: {
     module: 'cjs'
@@ -26,7 +26,7 @@ builder.config(config);
 
 // development
 builder
-  .bundle(bundleName, path.resolve(__dirname, 'bundles/', name + '.js'), {
+  .bundle(bundleName, path.resolve(__dirname, '../bundles/', name + '.js'), {
     minify: false,
     mangle: false,
     rollup: false,
@@ -41,7 +41,7 @@ builder
 
 // production
 builder
-  .bundle(bundleName, path.resolve(__dirname, 'bundles/', name + '.min.js'), {
+  .bundle(bundleName, path.resolve(__dirname, '../bundles/', name + '.min.js'), {
     minify: true,
     mangle: true,
     rollup: true,

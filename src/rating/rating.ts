@@ -6,9 +6,7 @@ import {
   AfterViewInit,
   ElementRef,
   EventEmitter,
-  Output,
-  SimpleChanges,
-  OnChanges
+  Output
 } from "@angular/core";
 
 declare var jQuery: any;
@@ -18,7 +16,7 @@ declare var jQuery: any;
   selector: "sm-rating",
   template: `<div class="ui {{class}} rating" #rating></div>`
 })
-export class SemanticRatingComponent implements AfterViewInit, OnChanges {
+export class SemanticRatingComponent implements AfterViewInit {
   @Input() class: string;
   @Input() initialRating: number;
   @Input() maxRating: number;
@@ -26,20 +24,10 @@ export class SemanticRatingComponent implements AfterViewInit, OnChanges {
   @ViewChild("rating") rating: ElementRef;
 
   ngAfterViewInit(): void {
+
     jQuery(this.rating.nativeElement)
       .rating({
         initialRating: this.initialRating || 0,
-        maxRating: this.maxRating || 5,
-        onRate: (value: number) => {
-          this.onRate.emit(value);
-        }
-      });
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    jQuery(this.rating.nativeElement)
-      .rating({
-        initialRating: changes["initialRating"].currentValue,
         maxRating: this.maxRating || 5,
         onRate: (value: number) => {
           this.onRate.emit(value);
