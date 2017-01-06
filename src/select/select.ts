@@ -42,7 +42,7 @@ export class SemanticSelectComponent implements AfterViewInit {
   set model(data: string|number) {
     if (data) {
       setTimeout(() => {
-        jQuery(this.select.nativeElement).dropdown("set selected", data);
+        jQuery(this.select.nativeElement).dropdown("set exactly", data);
       }, 1);
     }
   }
