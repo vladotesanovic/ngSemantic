@@ -39,7 +39,7 @@ var SemanticSelectComponent = (function () {
             var _this = this;
             if (data) {
                 setTimeout(function () {
-                    jQuery(_this.select.nativeElement).dropdown("set selected", data);
+                    jQuery(_this.select.nativeElement).dropdown("set exactly", data);
                 }, 1);
             }
         },
