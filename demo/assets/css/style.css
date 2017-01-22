@@ -43,6 +43,7 @@ textarea.code { resize: none !important; }
     margin: 0;
     width: inherit;
     overflow: hidden;
+    min-height: 100%;
     will-change: transform;
 }
 
