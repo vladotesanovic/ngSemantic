@@ -59,13 +59,14 @@ Then you can use in a component as follows:
 
 ```javascript
 // Module
-import { NgModule } from "@angular/core";
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { NgSemanticModule } from "ng-semantic";
 
 @NgModule({
     bootstrap:    [ AppComponent ],
     declarations: [ AppComponent ],
-    imports:      [ BrowserModule, NgSemanticModule ]
+    imports:      [ BrowserModule, NgSemanticModule ],
+    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule {}
 
