@@ -26,5 +26,10 @@ export * from "./src/shape/shape";
 export * from "./src/accordion/accordion";
 export declare let SEMANTIC_COMPONENTS: Array<any>;
 export declare let SEMANTIC_DIRECTIVES: Array<any>;
+
+import { NgModule } from "@angular/core";
+@NgModule({
+	declarations: [NgSemanticModule]
+})
 export declare class NgSemanticModule {
 }
