@@ -13,7 +13,7 @@ import { FormControl, Validators } from "@angular/forms";
 </div>
 <div class="main ui container">
     <h4 class="ui header">Normal</h4>
-    <sm-select [control]="selectControl" placeholder="Search..." class="fluid search">
+    <sm-select [control]="selectControl" placeholder="Search..." class="fluid search" (onSearchChange)="filterEvent()">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -184,5 +184,9 @@ export class SelectComponent {
 
     onMultiple(data: Array<string>): void {
         this.multipleData = data;
+    }
+
+    filterEvent(value: string): void {
+        console.log(value);
     }
 }

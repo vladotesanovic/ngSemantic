@@ -36,6 +36,7 @@ export class SemanticSelectComponent implements AfterViewInit {
   @Input() placeholder: string;
   @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
   @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
+  @Output() onSearchChange: EventEmitter<string> = new EventEmitter<string>();
   @ViewChild("select") select: ElementRef;
 
   @Input("model")
@@ -65,5 +66,14 @@ export class SemanticSelectComponent implements AfterViewInit {
 
     jQuery(this.select.nativeElement)
       .dropdown(options);
+
+    let searchInput = jQuery('input.search',this.select.nativeElement.parentElement);
+    if (searchInput && searchInput.length === 1) {
+      jQuery(searchInput[0]).on('keydown', event => {
+        setTimeout(() => {
+          this.onSearchChange.emit(event.target.value);
+        }, 1);
+      });
+    }
   }
 }
