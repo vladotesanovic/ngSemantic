@@ -10,7 +10,6 @@
     "forin": true,
     "indent": [true, "tab"],
     "label-position": true,
-    "label-undefined": true,
     "max-line-length": [true, 140],
     "member-ordering": [true,
         "public-before-private",
@@ -29,7 +28,6 @@
     "no-construct": true,
     "no-any": false,
     "no-debugger": true,
-    "no-duplicate-key": true,
     "no-duplicate-variable": true,
     "no-empty": true,
     "no-eval": true,
@@ -40,7 +38,6 @@
     "no-trailing-whitespace": true,
     "no-unused-expression": true,
     "no-unused-variable": false,
-    "no-unreachable": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "one-line": [true,
@@ -62,32 +59,8 @@
       "check-separator",
       "check-type"
     ],
-    // rules based on codelyzer/angular2 style guide
-    "directive-selector-name": [
-      true,
-      "camelCase"
-    ],
-    "component-selector-name": [
-      true,
-      "kebab-case"
-    ],
-    "directive-selector-type": [
-      true,
-      "attribute"
-    ],
-    "component-selector-type": [
-      true,
-      "element"
-    ],
-    "directive-selector-prefix": [
-      true,
-      "sm"
-    ],
-    // be as in bimeye
-    "component-selector-prefix": [
-      true,
-      "sm"
-    ],
+    "directive-selector": [true, "attribute", "camelCase"],
+    "component-selector": [true, "element", "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,

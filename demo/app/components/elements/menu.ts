@@ -137,29 +137,32 @@ export class MenuComponent {
 
     constructor() {
         this.items = [{
-            "title": "Home",
+            "icon": "home",
             "link": "Home",
-            "icon": "home"
+            "title": "Home"
         }, {
+                "link": "#/",
                 "title": "About Us",
-                "link": "#/"
+
             }, {
+                "link": "#/",
                 "title": "Contact",
-                "link": "#/"
+
             }];
 
         this.labeledIcons = [{
-            "title": "Games",
+            "icon": "gamepad",
             "link": "Home",
-            "icon": "gamepad"
+            "title": "Games"
         }, {
-                "title": "Chanel",
+                "icon": "video camera",
                 "link": "Chanel",
-                "icon": "video camera"
+                "title": "Chanel"
             }, {
-                "title": "Videos",
+
+                "icon": "video play",
                 "link": "Videos",
-                "icon": "video play"
+                "title": "Videos"
             }];
 
     }

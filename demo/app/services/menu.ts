@@ -4,7 +4,6 @@ import { ReplaySubject, Observable } from "rxjs/Rx";
 
 /**
  * Dummy service for retrieving menu in application.
- * 
  */
 @Injectable()
 export class MenuServices {
