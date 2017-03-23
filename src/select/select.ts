@@ -69,7 +69,7 @@ export class SemanticSelectComponent implements AfterViewInit {
 
     let searchInput = jQuery('input.search',this.select.nativeElement.parentElement);
     if (searchInput && searchInput.length === 1) {
-      jQuery(searchInput[0]).on('keydown', event => {
+      jQuery(searchInput[0]).on('keydown', (event: any) => {
         setTimeout(() => {
           this.onSearchChange.emit(event.target.value);
         }, 1);
