@@ -57,7 +57,7 @@
     "systemjs": "^0.19.27",
     "systemjs-builder": "^0.15.26",
     "tslint": "^3.14.0",
-    "typescript": "^2.0.2",
+    "typescript": "~2.0.3",
     "zone.js": "^0.6.23"
   }
 }
