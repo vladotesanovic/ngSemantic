@@ -9,6 +9,7 @@ export declare class SemanticSelectComponent implements AfterViewInit {
     placeholder: string;
     modelChange: EventEmitter<string | number>;
     onChange: EventEmitter<string | number>;
+    onSearchChange: EventEmitter<string>;
     select: ElementRef;
     model: string | number;
     private multiple;
