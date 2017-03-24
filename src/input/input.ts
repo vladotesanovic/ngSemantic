@@ -33,7 +33,7 @@ export class SemanticInputComponent implements OnInit {
   @Input() control: FormControl = new FormControl();
   @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
 
-  private isInsideForm: boolean = false;
+  isInsideForm: boolean = false;
 
   constructor(public viewRef: ViewContainerRef) {
   }
@@ -92,8 +92,8 @@ export class SemanticCheckboxComponent {
     }
   }
 
-  private inputType: string = "checkbox";
-  private classType = "checkbox";
+  inputType: string = "checkbox";
+  classType = "checkbox";
 }
 
 /**
