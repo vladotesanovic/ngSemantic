@@ -8,7 +8,11 @@ declare var jQuery: any;
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-dropdown",
   template: `
-    <div class="ui {{class}} dropdown" #dropdown>
+    <div
+      class="ui {{class}} dropdown"
+      (focus)="onFocus.next($event)"
+      (blur)="onBlur.next($event)"
+      #dropdown>
         <input type="hidden" name="{{name}}" #input>
         <i *ngIf="icon" class="{{icon}} icon"></i>
         <div *ngIf="title" class="default text">{{title}}</div>
@@ -28,6 +32,8 @@ export class SemanticDropdownComponent implements AfterViewInit {
   @Input() items: Array<{}>;
   @Input() options: {} = {};
   @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
+  @Output() onFocus: EventEmitter<FocusEvent> = new EventEmitter<FocusEvent>();
+  @Output() onBlur: EventEmitter<FocusEvent> = new EventEmitter<FocusEvent>();
   @ViewChild("dropdown") dropdown: ElementRef;
   @ViewChild("input") input: ElementRef;
 
