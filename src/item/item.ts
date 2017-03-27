@@ -8,6 +8,7 @@ import { Component, Input, ChangeDetectionStrategy, AfterViewInit, ViewChild, El
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "a[sm-item], sm-item",
+  host: {"[attr.data-value]": "value"},
   template: `<i *ngIf="icon" class="{{icon}} icon"></i>
 <img *ngIf="image" class="ui avatar image" src="{{image}}">
 <div class="content" #innerItemElement>
@@ -21,6 +22,7 @@ export class SemanticItemComponent implements AfterViewInit {
   @Input() icon: string;
   @Input() header: string;
   @Input() image: string;
+  @Input() value: string;
 
   @ViewChild("innerItemElement") innerItemElement: ElementRef;
 
