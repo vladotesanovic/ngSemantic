@@ -1,5 +1,5 @@
 {
-  "name": "eng-ng-semantic",
+  "name": "ng-semantic",
   "version": "1.1.13",
   "main": "./ng-semantic.js",
   "description": "Angular2 building blocks based on Semantic UI",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArturoRis/ngSemantic.git"
+    "url": "https://github.com/vladotesanovic/ngSemantic"
   },
   "engines": {
     "node": ">= 5.4.1 < 6"
@@ -28,9 +28,9 @@
     "semanticui",
     "semantic-ui"
   ],
-  "author": "Fabio Siliberto <fabio.siliberto@gmail.com>",
+  "author": "Vlado Tešanović",
   "bugs": {
-    "url": "https://github.com/ArturoRis/ngSemantic/issues"
+    "url": "https://github.com/vladotesanovic/ngSemantic/issues"
   },
   "typings": "./ng-semantic.d.ts",
   "homepage": "https://ng-semantic.herokuapp.com/",
