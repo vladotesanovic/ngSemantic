@@ -1,3 +1,4 @@
+import { FormControl } from '@angular/forms';
 import {
   Component, ChangeDetectionStrategy, Input, AfterViewInit, ViewChild, ElementRef, Output, EventEmitter
 } from "@angular/core";
@@ -13,7 +14,7 @@ declare var jQuery: any;
       (focus)="onFocus.next($event)"
       (blur)="onBlur.next($event)"
       #dropdown>
-        <input type="hidden" name="{{name}}" #input>
+        <input type="hidden" name="{{name}}" [formControl]="control" #input>
         <i *ngIf="icon" class="{{icon}} icon"></i>
         <div *ngIf="title" class="default text">{{title}}</div>
         <i class="{{arrowIcon}} icon"></i>
@@ -24,6 +25,7 @@ declare var jQuery: any;
 `
 })
 export class SemanticDropdownComponent implements AfterViewInit {
+  @Input() control: FormControl;
   @Input() class: string;
   @Input() title: string;
   @Input() icon: string;
@@ -45,8 +47,9 @@ export class SemanticDropdownComponent implements AfterViewInit {
       onChange: (value: string|number, a: string|number, b: Array<HTMLElement>) => {
         if (b != null && b.length) {
           this.value = parseInt(b[0].dataset.value);
-          this.valueChange.emit(this.value);
+          this.control.setValue(this.value);
           this.input.nativeElement.value = this.value;
+          this.valueChange.emit(this.value);
           this.onChange.emit(b[0].innerText);
         }
       }
