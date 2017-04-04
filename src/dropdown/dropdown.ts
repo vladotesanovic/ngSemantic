@@ -25,7 +25,7 @@ declare var jQuery: any;
 `
 })
 export class SemanticDropdownComponent implements AfterViewInit {
-  @Input() control: FormControl;
+  @Input() control: FormControl = new FormControl();
   @Input() class: string;
   @Input() title: string;
   @Input() icon: string;
@@ -47,7 +47,9 @@ export class SemanticDropdownComponent implements AfterViewInit {
       onChange: (value: string|number, a: string|number, b: Array<HTMLElement>) => {
         if (b != null && b.length) {
           this.value = parseInt(b[0].dataset.value);
-          this.control.setValue(this.value);
+          if (this.control) {
+            this.control.setValue(this.value);
+          }
           this.input.nativeElement.value = this.value;
           this.valueChange.emit(this.value);
           this.onChange.emit(b[0].innerText);
