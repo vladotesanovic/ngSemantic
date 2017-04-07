@@ -1,7 +1,14 @@
 import { FormControl } from '@angular/forms';
 import {
-  Component, ChangeDetectionStrategy, Input, AfterViewInit, ViewChild, ElementRef, Output, EventEmitter
-} from "@angular/core";
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    Component,
+    ElementRef,
+    EventEmitter,
+    Input,
+    Output,
+    ViewChild
+} from '@angular/core';
 
 declare var jQuery: any;
 
@@ -42,7 +49,6 @@ export class SemanticDropdownComponent implements AfterViewInit {
   @ViewChild("input") input: ElementRef;
 
   ngAfterViewInit(): void {
-
     const options: {} = Object.assign({
       onChange: (value: string|number, a: string|number, b: Array<HTMLElement>) => {
         if (b != null && b.length) {
@@ -57,5 +63,15 @@ export class SemanticDropdownComponent implements AfterViewInit {
 
     jQuery(this.dropdown.nativeElement)
       .dropdown(options);
+  }
+
+  select(items: any): void {
+    jQuery(this.dropdown.nativeElement)
+      .dropdown('set selected', items);
+  }
+
+  clear(): void {
+    jQuery(this.dropdown.nativeElement)
+      .dropdown('clear');
   }
 }
