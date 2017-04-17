@@ -71,6 +71,7 @@ export class SemanticDropdownComponent implements AfterViewInit {
   }
 
   clear(): void {
+    this.control.setValue(null);
     jQuery(this.dropdown.nativeElement)
       .dropdown('clear');
   }
