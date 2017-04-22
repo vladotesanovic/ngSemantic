@@ -16,10 +16,10 @@ export class SemanticTabComponent implements AfterViewInit {
   @ViewChild("tab") tabEl: ElementRef;
 
   ngAfterViewInit() {
-    this.tabEl.nativeElement.parentElement.classList.add("ui", "tab", "bottom", "attached", "segment");
+    jQuery(this.tabEl.nativeElement).parent().addClass("ui tab bottom attached segment");
 
     if (this.active) {
-      this.tabEl.nativeElement.parentElement.classList.add("active");
+      jQuery(this.tabEl.nativeElement).parent().addClass("active");
     }
   }
 }
