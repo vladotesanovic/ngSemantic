@@ -7,34 +7,41 @@ declare var jQuery: any;
  *
  * @link http://semantic-ui.com/modules/accordion.html
  */
-@Directive({
-    selector: "[smDirAccordion]"
-})
-class SMAccordionDirective implements OnInit {
+// @Directive({
+//     selector: "[smDirAccordion]"
+// })
+// class SMAccordionDirective implements OnInit {
+//
+//     @Input() smDirAccordion: string;
+//
+//     constructor(public element: ElementRef) {}
+//
+//     ngOnInit() {
+//         jQuery(this.element.nativeElement).accordion(this.smDirAccordion || {});
+//     }
+// }
 
-    @Input() smDirAccordion: string;
-
-    constructor(public element: ElementRef) {}
-
-    ngOnInit() {
-        jQuery(this.element.nativeElement).accordion(this.smDirAccordion || {});
-    }
-}
-
+// TODO REINSTATE [smDirAccordion]="options"
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    directives: [<Type>SMAccordionDirective],
+    // directives: [<Type>SMAccordionDirective],
     selector: "sm-accordion",
     styles: [`sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }`],
     template: `
-<div class="ui accordion {{class}}" [smDirAccordion]="options">
+<div class="ui accordion {{class}}">
     <ng-content></ng-content>
 </div>
 `
 })
-export class SemanticAccordionComponent {
+export class SemanticAccordionComponent implements OnInit{
     @Input() class: string;
     @Input() options: string;
+
+    constructor(public element: ElementRef) {}
+
+    ngOnInit() {
+        jQuery(this.element.nativeElement).accordion(this.options || {});
+    }
 }
 
 @Component({

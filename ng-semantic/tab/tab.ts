@@ -25,9 +25,8 @@ export class SemanticTabComponent implements AfterViewInit {
     }
   }
 }
-
+//directives: [<Type>SemanticTabComponent],
 @Component({
-  directives: [<Type>SemanticTabComponent],
   selector: "sm-tabs",
   template: `<div class="ui top attached tabular menu" #menu>
   <a class="item" [ngClass]="{'active': tab.active}" *ngFor="let tab of tabs; let i = index" [attr.data-tab]="i">{{tab.title}}</a>
@@ -36,7 +35,7 @@ export class SemanticTabComponent implements AfterViewInit {
 `
 })
 export class SemanticTabsComponent implements AfterViewInit {
-  @ContentChildren(<Type>SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
+  @ContentChildren(SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
   @ViewChild("menu") menu: ElementRef;
 
   constructor(public elementRef: ElementRef) {}

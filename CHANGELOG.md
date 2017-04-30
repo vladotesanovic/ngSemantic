@@ -1,3 +1,9 @@
+## version: 1.2
+- Fixed ngSemantic is not a module by using [@borisfeldmann](https://github.com/borisfeldmann) [solution](https://github.com/vladotesanovic/ngSemantic/issues/149#issuecomment-278855643)
+- Updated dependencies to more up to date angular
+- Fixed errors due to new angular version like dependencies on Tab and Accordion
+	- Zone.js in demo
+
 ## version: 1.1.1
 
 - Update to RC.5, ng-semantic now use NgSemanticModule for bootstrapping.
@@ -8,7 +14,7 @@
 
 ## version: 1.0.36
 
-- Added [(model)] two way data binding to sm-select 
+- Added [(model)] two way data binding to sm-select
 
 ## version: 1.0.35
 

@@ -13,7 +13,11 @@ import { SemanticSelectComponent } from "./ng-semantic/select/select";
 import { SemanticSearchComponent } from "./ng-semantic/search/search";
 import { SemanticLoaderComponent } from "./ng-semantic/loader/loader";
 import { SemanticCardComponent, SemanticCardsComponent } from "./ng-semantic/card/card";
-import { SemanticInputComponent, SemanticTextareaComponent, SemanticCheckboxComponent } from "./ng-semantic/input/input";
+import {
+  SemanticInputComponent,
+  SemanticTextareaComponent,
+  SemanticCheckboxComponent
+} from "./ng-semantic/input/input";
 import { SemanticSidebarComponent } from "./ng-semantic/sidebar/sidebar";
 import { SemanticTabsComponent, SemanticTabComponent } from "./ng-semantic/tab/tab";
 import { SemanticFlagComponent } from "./ng-semantic/flag/flag";
@@ -53,50 +57,51 @@ export *  from "./ng-semantic/shape/shape";
 export *  from "./ng-semantic/accordion/accordion";
 
 export let SEMANTIC_COMPONENTS: Array<any> = [
-	SemanticCardComponent,
-	SemanticCardsComponent,
-	SemanticContextMenuComponent,
-	SemanticInputComponent,
-	SemanticTextareaComponent,
-	SemanticCheckboxComponent,
-	SemanticMenuComponent,
-	SemanticMessageComponent,
-	SemanticSegmentComponent,
-	SemanticDimmerComponent,
-	SemanticTransitionComponent,
-	SemanticShapeComponent,
-	SemanticPopupComponent,
-	SemanticDropdownComponent,
-	SemanticListComponent,
-	SemanticSelectComponent,
-	SemanticFlagComponent,
-	SemanticSearchComponent,
-	SemanticItemComponent,
-	SemanticSidebarComponent,
-	SemanticProgressComponent,
-	SemanticModalComponent,
-	SemanticTabsComponent,
-	SemanticTabComponent,
-	SemanticButtonComponent,
-	SemanticLoaderComponent,
-	SemanticAccordionComponent,
-	SemanticAccordionItemComponent,
-	SemanticRatingComponent
+  SemanticCardComponent,
+  SemanticCardsComponent,
+  SemanticContextMenuComponent,
+  SemanticInputComponent,
+  SemanticTextareaComponent,
+  SemanticCheckboxComponent,
+  SemanticMenuComponent,
+  SemanticMessageComponent,
+  SemanticSegmentComponent,
+  SemanticDimmerComponent,
+  SemanticTransitionComponent,
+  SemanticShapeComponent,
+  SemanticPopupComponent,
+  SemanticDropdownComponent,
+  SemanticListComponent,
+  SemanticSelectComponent,
+  SemanticFlagComponent,
+  SemanticSearchComponent,
+  SemanticItemComponent,
+  SemanticSidebarComponent,
+  SemanticProgressComponent,
+  SemanticModalComponent,
+  SemanticTabsComponent,
+  SemanticTabComponent,
+  SemanticButtonComponent,
+  SemanticLoaderComponent,
+  SemanticAccordionComponent,
+  SemanticAccordionItemComponent,
+  SemanticRatingComponent
 ];
 
 export let SEMANTIC_DIRECTIVES: Array<any> = [
-	SMTooltipDirective,
-	SMVisibilityDirective,
-	SMDeviceVisibilityDirective
+  SMTooltipDirective,
+  SMVisibilityDirective,
+  SMDeviceVisibilityDirective
 ];
 
-import { NgModule } from "@angular/core";
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
-	declarations: [ SEMANTIC_DIRECTIVES, SEMANTIC_COMPONENTS ],
-	exports:      [ SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES ],
-	imports:      [ CommonModule, FormsModule, ReactiveFormsModule ]
+  declarations: [SEMANTIC_DIRECTIVES, SEMANTIC_COMPONENTS],
+  exports: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule]
 })
-export class NgSemanticModule { }
+export class NgSemanticModule {
+}
