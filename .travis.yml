@@ -3,6 +3,5 @@ node_js:
   - '6.9.2'
 
 before_script:
-  - npm install -g angular-cli
   - npm install
 script: tsc
