@@ -3,5 +3,6 @@ node_js:
   - '6.9.2'
 
 before_script:
+  - npm install typings -g
   - npm install
 script: tsc
