@@ -3,6 +3,7 @@
 - Updated dependencies to more up to date angular
 - Fixed errors due to new angular version like dependencies on Tab and Accordion
 	- Zone.js in demo
+	- Removed Directive in Accordion, instead using the Accordion Component to initiate Jquery and input options
 
 ## version: 1.1.1
 
