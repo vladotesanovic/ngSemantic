@@ -6,4 +6,5 @@ demo/app/**/*.js
 npm-debug.log
 bundles
 typings
+typyings/!index.d.ts
 demoRC5

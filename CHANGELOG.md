@@ -1,3 +1,5 @@
+## 2.1 Added typings/index.d.ts to avoid Travis errors
+
 ## version: 1.2
 - Fixed ngSemantic is not a module by using [@borisfeldmann](https://github.com/borisfeldmann) [solution](https://github.com/vladotesanovic/ngSemantic/issues/149#issuecomment-278855643)
 - Updated dependencies to more up to date angular
