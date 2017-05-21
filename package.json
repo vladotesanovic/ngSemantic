@@ -1,5 +1,5 @@
 {
-  "name": "ng-semantic",
+  "name": "ng4-semantic",
   "version": "1.1.13",
   "main": "./ng-semantic.js",
   "description": "Angular2 building blocks based on Semantic UI",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vladotesanovic/ngSemantic"
+    "url": "https://github.com/paramah/ngSemantic"
   },
   "engines": {
     "node": ">= 5.4.1"
@@ -24,12 +24,20 @@
   "keywords": [
     "angular",
     "angular2",
+    "angular4",
     "semanticui",
     "semantic-ui"
   ],
   "author": "Vlado Tešanović",
+  "contributors": [
+    { 
+      "name" : "Aleksander Cynarski",
+      "email" : "npm@cynarski.pl",
+      "url" : "http://cynarski.pl/"
+    }
+  ],
   "bugs": {
-    "url": "https://github.com/vladotesanovic/ngSemantic/issues"
+    "url": "https://github.com/paramah/ngSemantic/issues"
   },
   "typings": "./ng-semantic.d.ts",
   "homepage": "https://ng-semantic.herokuapp.com/",
