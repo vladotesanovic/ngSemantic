@@ -24,6 +24,18 @@ export class SemanticDropdownComponent implements AfterViewInit {
   @Input() icon: string;
   @Input() items: Array<{}>;
   @Input() options: {} = {};
+
+  @Input("disabled")
+  set disabled(data: boolean) {
+    setTimeout(() => {
+      if (data) {
+        jQuery(this.dropdown.nativeElement).addClass("disabled");
+      } else {
+        jQuery(this.dropdown.nativeElement).removeClass("disabled");
+      }
+    }, 1);
+  };
+
   @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
   @ViewChild("dropdown") dropdown: ElementRef;
 
