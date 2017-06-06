@@ -1,6 +1,7 @@
-import { AfterViewInit, ElementRef, EventEmitter } from "@angular/core";
+import { AfterViewInit, ElementRef, EventEmitter, OnDestroy } from "@angular/core";
 import { FormControl } from "@angular/forms";
-export declare class SemanticSelectComponent implements AfterViewInit {
+export declare class SemanticSelectComponent implements AfterViewInit, OnDestroy {
+    private controlSubscription;
     control: FormControl;
     class: string;
     label: string;
@@ -13,4 +14,5 @@ export declare class SemanticSelectComponent implements AfterViewInit {
     model: string | number;
     private multiple;
     ngAfterViewInit(): void;
+    ngOnDestroy(): void;
 }

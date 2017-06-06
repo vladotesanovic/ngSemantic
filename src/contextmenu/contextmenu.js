@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticContextMenuComponent = (function () {
     function SemanticContextMenuComponent() {
@@ -50,7 +51,6 @@ SemanticContextMenuComponent = __decorate([
         selector: "sm-contextmenu",
         styles: [".sm-contextmenu { position: fixed; z-index: 1000; }"],
         template: "<div \n[style.left.px]=\"_position?.x\" [style.top.px]=\"_position?.y\"\n[ngClass]=\"{'active visible': show}\" class=\"ui dropdown sm-contextmenu\">\n <div \n [ngClass]=\"{'visible animating slide down in': show, 'hidden': !show}\"  class=\"ui menu transition\">\n <a (click)=\"menu.action()\" *ngFor=\"let menu of items\" class=\"item\">\n <i class=\"{{menu.icon}} icon\"></i>\n {{menu.title}}\n </a>\n </div>\n </div>\n"
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], SemanticContextMenuComponent);
 exports.SemanticContextMenuComponent = SemanticContextMenuComponent;

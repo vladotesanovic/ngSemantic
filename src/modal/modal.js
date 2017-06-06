@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticModalComponent = (function () {
     function SemanticModalComponent() {
@@ -60,8 +61,7 @@ SemanticModalComponent = __decorate([
         changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         selector: "sm-modal",
         template: "<div class=\"ui modal {{class}}\" #modal>\n    <i class=\"close icon\"></i>\n    <div [ngClass]=\"{'icon': icon}\" class=\"ui header\">\n        <i *ngIf=\"icon\" class=\"icon {{icon}}\"></i>\n        {{title}}\n    </div>\n    <div class=\"content\">\n        <ng-content select=\"modal-content\"></ng-content>\n    </div>\n    <div class=\"actions\">\n        <ng-content select=\"modal-actions\"></ng-content>\n    </div>\n</div>"
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], SemanticModalComponent);
 exports.SemanticModalComponent = SemanticModalComponent;
 var SMModalTagsDirective = (function () {
@@ -70,7 +70,6 @@ var SMModalTagsDirective = (function () {
     return SMModalTagsDirective;
 }());
 SMModalTagsDirective = __decorate([
-    core_1.Directive({ selector: 'modal-content, modal-actions' }),
-    __metadata("design:paramtypes", [])
+    core_1.Directive({ selector: 'modal-content, modal-actions' })
 ], SMModalTagsDirective);
 exports.SMModalTagsDirective = SMModalTagsDirective;

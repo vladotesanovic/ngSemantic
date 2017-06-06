@@ -59,11 +59,12 @@ export class SemanticSelectComponent implements AfterViewInit,OnDestroy {
     
     if (typeof this.control !== 'undefined'){
       this.controlSubscription = this.control.valueChanges.subscribe((data)=>{
-         if (data) {
-           setTimeout(() => {
-             jQuery(this.select.nativeElement).dropdown("set selected", data);
-           }, 1);
-         } 
+            if(!data){
+                jQuery(this.select.nativeElement).dropdown("set text", this.placeholder);
+            }
+            setTimeout(function () {
+                jQuery(this.select.nativeElement).dropdown("set selected", data);
+            }, 1);
       });
     }
 
