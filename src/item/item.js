@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticItemComponent = (function () {
     function SemanticItemComponent() {
@@ -38,7 +39,6 @@ SemanticItemComponent = __decorate([
         changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         selector: "a[sm-item], sm-item",
         template: "<i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n<img *ngIf=\"image\" class=\"ui avatar image\" src=\"{{image}}\">\n<div class=\"content\" #innerItemElement>\n  <div *ngIf=\"header\" class=\"header\">\n    {{header}}\n  </div>\n  <ng-content></ng-content>\n</div>"
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], SemanticItemComponent);
 exports.SemanticItemComponent = SemanticItemComponent;

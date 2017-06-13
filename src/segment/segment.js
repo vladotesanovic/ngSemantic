@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticSegmentComponent = (function () {
     function SemanticSegmentComponent() {
@@ -23,7 +24,6 @@ SemanticSegmentComponent = __decorate([
         changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         selector: "sm-segment",
         template: "<div class=\"ui segment {{class}}\">\n  <p><ng-content></ng-content></p>\n</div>"
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], SemanticSegmentComponent);
 exports.SemanticSegmentComponent = SemanticSegmentComponent;

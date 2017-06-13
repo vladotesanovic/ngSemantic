@@ -1,7 +1,8 @@
 import {
-  Component, Input, AfterViewInit, ViewChild, ElementRef, Output, EventEmitter, ChangeDetectionStrategy
+  Component, Input, AfterViewInit, ViewChild, ElementRef, Output, EventEmitter, ChangeDetectionStrategy, OnDestroy
 } from "@angular/core";
 import { FormControl } from "@angular/forms";
+import { Subscription } from "rxjs/Subscription";
 
 declare var jQuery: any;
 
@@ -16,7 +17,8 @@ declare var jQuery: any;
 </select>
 </div>`
 })
-export class SemanticSelectComponent implements AfterViewInit {
+export class SemanticSelectComponent implements AfterViewInit,OnDestroy {
+  private controlSubscription:Subscription;
   @Input() control: FormControl = new FormControl();
   @Input() class: string;
   @Input() label: string;
@@ -49,10 +51,26 @@ export class SemanticSelectComponent implements AfterViewInit {
 
   private multiple: boolean = false;
 
+  reselect(){
+    jQuery(this.select.nativeElement).dropdown("set selected", this.control.value);
+  }
+
   ngAfterViewInit(): void {
 
     if (typeof this.class === "string" && this.class.search("multiple") >= 0) {
       this.select.nativeElement.setAttribute("multiple", true);
+    }
+    
+    if (typeof this.control !== 'undefined'){
+      this.controlSubscription = this.control.valueChanges.subscribe((data)=>{
+            if(!data){
+                jQuery(this.select.nativeElement).dropdown("set text", this.placeholder);
+            }
+            const __this = this;
+            setTimeout(function () {
+                jQuery(__this.select.nativeElement).dropdown("set selected", data);
+            }, 1);
+      });
     }
 
     const options: {} = Object.assign({
@@ -65,5 +83,11 @@ export class SemanticSelectComponent implements AfterViewInit {
 
     jQuery(this.select.nativeElement)
       .dropdown(options);
+  }
+  
+  ngOnDestroy(){
+    if(this.controlSubscription){
+      this.controlSubscription.unsubscribe();
+    }
   }
 }

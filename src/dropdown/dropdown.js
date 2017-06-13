@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticDropdownComponent = (function () {
     function SemanticDropdownComponent() {
@@ -61,7 +62,6 @@ SemanticDropdownComponent = __decorate([
         changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         selector: "sm-dropdown",
         template: "\n    <div class=\"ui {{class}} dropdown item\" #dropdown>\n        <i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n        <div *ngIf=\"title\" class=\"text\">{{title}}</div>\n        <i class=\"dropdown icon\"></i>\n        <div class=\"menu\">\n            <ng-content></ng-content>\n        </div>\n    </div>\n"
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], SemanticDropdownComponent);
 exports.SemanticDropdownComponent = SemanticDropdownComponent;

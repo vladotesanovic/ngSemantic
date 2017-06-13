@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticShapeComponent = (function () {
     function SemanticShapeComponent() {
@@ -25,7 +26,7 @@ var SemanticShapeComponent = (function () {
     SemanticShapeComponent.prototype.show = function () {
         var args = [];
         for (var _i = 0; _i < arguments.length; _i++) {
-            args[_i - 0] = arguments[_i];
+            args[_i] = arguments[_i];
         }
         jQuery(this.shape.nativeElement)
             .shape(this.options)
@@ -58,7 +59,6 @@ SemanticShapeComponent = __decorate([
         changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         selector: "sm-shape",
         template: "\n    <div #shape class=\"ui shape {{class}}\">\n        <ng-content></ng-content>\n    </div>\n    "
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], SemanticShapeComponent);
 exports.SemanticShapeComponent = SemanticShapeComponent;

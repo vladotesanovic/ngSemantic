@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticAccordionComponent = (function () {
     function SemanticAccordionComponent() {
@@ -55,8 +56,7 @@ SemanticAccordionComponent = __decorate([
         selector: "sm-accordion",
         styles: ["sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }"],
         template: "\n<div class=\"ui accordion {{class}}\" #accordion>\n    <ng-content></ng-content>\n</div>\n"
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], SemanticAccordionComponent);
 exports.SemanticAccordionComponent = SemanticAccordionComponent;
 var SemanticAccordionItemComponent = (function () {
@@ -73,7 +73,6 @@ SemanticAccordionItemComponent = __decorate([
         changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         selector: "sm-accordion-item",
         template: "\n<div class=\"{{class}} title\">\n    <i class=\"dropdown icon\"></i>\n    <ng-content select=\"accordion-title\"></ng-content>\n</div>\n<div class=\"{{class}} content\">\n    <ng-content select=\"accordion-content\"></ng-content>\n</div>\n"
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], SemanticAccordionItemComponent);
 exports.SemanticAccordionItemComponent = SemanticAccordionItemComponent;

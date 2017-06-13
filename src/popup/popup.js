@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticPopupComponent = (function () {
     function SemanticPopupComponent() {
@@ -56,7 +57,6 @@ SemanticPopupComponent = __decorate([
         changeDetection: core_1.ChangeDetectionStrategy.OnPush,
         selector: "sm-popup",
         template: "<div class=\"ui popup very wide {{class}}\" #popup>\n    <div class=\"content\">\n        <ng-content></ng-content>\n    </div>\n</div>"
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], SemanticPopupComponent);
 exports.SemanticPopupComponent = SemanticPopupComponent;
