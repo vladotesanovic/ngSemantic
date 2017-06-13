@@ -51,6 +51,10 @@ export class SemanticSelectComponent implements AfterViewInit,OnDestroy {
 
   private multiple: boolean = false;
 
+  reselect(){
+    jQuery(this.select.nativeElement).dropdown("set selected", this.control.value);
+  }
+
   ngAfterViewInit(): void {
 
     if (typeof this.class === "string" && this.class.search("multiple") >= 0) {
@@ -62,8 +66,9 @@ export class SemanticSelectComponent implements AfterViewInit,OnDestroy {
             if(!data){
                 jQuery(this.select.nativeElement).dropdown("set text", this.placeholder);
             }
+            const __this = this;
             setTimeout(function () {
-                jQuery(this.select.nativeElement).dropdown("set selected", data);
+                jQuery(__this.select.nativeElement).dropdown("set selected", data);
             }, 1);
       });
     }
