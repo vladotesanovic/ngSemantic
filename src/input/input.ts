@@ -92,7 +92,7 @@ export class SemanticCheckboxComponent {
     }
   }
 
-  private inputType: string = "checkbox";
+  public inputType: string = "checkbox";
   public classType = "checkbox";
 }
 
