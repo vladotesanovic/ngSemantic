@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "",
+    "module": "commonjs",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "ng-semantic": [
+        "../lib"
+      ]
+    },
+    "types": [
+      "jquery"
+    ]
+  },
+  "exclude": [
+    "main-aot.ts"
+  ]
+}

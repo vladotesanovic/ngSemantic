@@ -1,0 +1,70 @@
+<div class="full height">
+  <div class="toc">
+    <div class="ui vertical inverted sticky menu" #leftSidebar style="width: 250px !important; left: 0px; top: 0px;">
+      <div class="item">
+        <a class="ui mini images" href="/">
+          <img class="ui image" src="assets/images/angular.png">
+          <img class="ui image" src="assets/images/semantic.png">
+        </a>
+        <b class="logo">ngSemantic</b>
+      </div>
+      <a class="item" href="#/">
+        <b>Getting Started</b>
+      </a>
+      <div class="item">
+        <div class="active  header">Elements</div>
+        <div class="menu">
+          <a class="item" [routerLink]="['/elements/button']" routerLinkActive="active">Button</a>
+          <a class="item" [routerLink]="['/elements/flag']" routerLinkActive="active">Flag</a>
+          <a class="item" [routerLink]="['/elements/loader']" routerLinkActive="active">Loader</a>
+          <a class="item" [routerLink]="['/elements/list']" routerLinkActive="active">List</a>
+          <a class="item" [routerLink]="['/elements/segment']" routerLinkActive="active">Segment</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="active  header">Collections</div>
+        <div class="menu">
+          <a class="item" [routerLink]="['/elements/menu']" routerLinkActive="active">Menu</a>
+          <a class="item" [routerLink]="['/elements/form']" routerLinkActive="active">Form</a>
+          <a class="item" [routerLink]="['/elements/input']" routerLinkActive="active">Input</a>
+          <a class="item" [routerLink]="['/elements/select']" routerLinkActive="active">Select</a>
+          <a class="item" [routerLink]="['/elements/message']" routerLinkActive="active">Message</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="active  header">Views</div>
+        <div class="menu">
+          <a class="item" [routerLink]="['/elements/card']" routerLinkActive="active">Card</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="active  header">Modules</div>
+        <div class="menu">
+          <a class="item" [routerLink]="['/elements/accordion']" routerLinkActive="active">Accordion</a>
+          <a class="item" [routerLink]="['/elements/checkbox']" routerLinkActive="active">Checkbox</a>
+          <a class="item" [routerLink]="['/elements/dimmer']" routerLinkActive="active">Dimmer</a>
+          <a class="item" [routerLink]="['/elements/dropdown']" routerLinkActive="active">Dropdown</a>
+          <a class="item" [routerLink]="['/elements/modal']" routerLinkActive="active">Modal</a>
+          <a class="item" [routerLink]="['/elements/rating']" routerLinkActive="active">Rating</a>
+          <a class="item" [routerLink]="['/elements/shape']" routerLinkActive="active">Shape</a>
+          <a class="item" [routerLink]="['/elements/search']" routerLinkActive="active">Search</a>
+          <a class="item" [routerLink]="['/elements/sidebar']" routerLinkActive="active">Sidebar</a>
+          <a class="item" [routerLink]="['/elements/popup']" routerLinkActive="active">Popup &amp; Tooltip</a>
+          <a class="item" [routerLink]="['/elements/progress']" routerLinkActive="active">Progress</a>
+          <a class="item" [routerLink]="['/elements/tab']" routerLinkActive="active">Tab</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="active  header">Extra</div>
+        <div class="menu">
+          <a class="item" [routerLink]="['/elements/transition']" routerLinkActive="active">Transition</a>
+          <a class="item" [routerLink]="['/elements/contextmenu']" routerLinkActive="active">Contextmenu</a>
+          <a class="item" [routerLink]="['/elements/devicevisibility']" routerLinkActive="active">Device visibility</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="article">
+    <router-outlet></router-outlet>
+  </div>
+</div>

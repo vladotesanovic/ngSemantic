@@ -1,0 +1,11 @@
+[{
+	"title" : "Home",
+	"link" : "#/",
+	"icon" : "home"
+}, {
+	"title" : "About Us",
+	"link" : "#/"
+}, {
+	"title" : "Contact",
+	"link" : "#/"
+}]
