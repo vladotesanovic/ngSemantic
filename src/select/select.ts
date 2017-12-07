@@ -40,11 +40,13 @@ export class SemanticSelectComponent implements AfterViewInit {
 
   @Input("model")
   set model(data: string|number) {
-    if (data) {
-      setTimeout(() => {
-        jQuery(this.select.nativeElement).dropdown("set selected", data);
+    setTimeout(() => {
+        if (data) {
+          jQuery(this.select.nativeElement).dropdown("set selected", data);
+        } else {
+          jQuery(this.select.nativeElement).dropdown('clear');
+        }
       }, 1);
-    }
   }
 
   private multiple: boolean = false;
