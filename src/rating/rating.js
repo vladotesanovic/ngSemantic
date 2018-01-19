@@ -24,34 +24,34 @@ var SemanticRatingComponent = (function () {
             }
         });
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticRatingComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], SemanticRatingComponent.prototype, "initialRating", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], SemanticRatingComponent.prototype, "maxRating", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], SemanticRatingComponent.prototype, "onRate", void 0);
+    __decorate([
+        core_1.ViewChild("rating"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticRatingComponent.prototype, "rating", void 0);
+    SemanticRatingComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-rating",
+            template: "<div class=\"ui {{class}} rating\" #rating></div>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticRatingComponent);
     return SemanticRatingComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticRatingComponent.prototype, "class", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Number)
-], SemanticRatingComponent.prototype, "initialRating", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Number)
-], SemanticRatingComponent.prototype, "maxRating", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], SemanticRatingComponent.prototype, "onRate", void 0);
-__decorate([
-    core_1.ViewChild("rating"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticRatingComponent.prototype, "rating", void 0);
-SemanticRatingComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-rating",
-        template: "<div class=\"ui {{class}} rating\" #rating></div>"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticRatingComponent);
 exports.SemanticRatingComponent = SemanticRatingComponent;

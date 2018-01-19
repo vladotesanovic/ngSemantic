@@ -21,6 +21,7 @@ export declare class SemanticCheckboxComponent {
     disabled: boolean;
     value: string | number;
     name: string;
+    checked: boolean;
     type: string;
     private inputType;
     private classType;

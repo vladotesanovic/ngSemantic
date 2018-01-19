@@ -41,22 +41,22 @@ var SemanticPopupComponent = (function () {
                 .popup("hide");
         }
     };
+    __decorate([
+        core_1.ViewChild("popup"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticPopupComponent.prototype, "popup", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticPopupComponent.prototype, "class", void 0);
+    SemanticPopupComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-popup",
+            template: "<div class=\"ui popup very wide {{class}}\" #popup>\n    <div class=\"content\">\n        <ng-content></ng-content>\n    </div>\n</div>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticPopupComponent);
     return SemanticPopupComponent;
 }());
-__decorate([
-    core_1.ViewChild("popup"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticPopupComponent.prototype, "popup", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticPopupComponent.prototype, "class", void 0);
-SemanticPopupComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-popup",
-        template: "<div class=\"ui popup very wide {{class}}\" #popup>\n    <div class=\"content\">\n        <ng-content></ng-content>\n    </div>\n</div>"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticPopupComponent);
 exports.SemanticPopupComponent = SemanticPopupComponent;

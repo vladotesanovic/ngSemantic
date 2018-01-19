@@ -55,9 +55,10 @@ export class SemanticModalComponent implements OnDestroy {
     parent.removeChild(this.modal.nativeElement);
   }
 }
-
-@Directive({ selector: 'modal-content, modal-actions' })
+/* tslint:disable */
+@Directive({ selector: "modal-content, modal-actions" })
 export class SMModalTagsDirective {
-  // No behavior
-  // The only purpose is to "declare" the tag in Angular2
+/* tslint:enable */
+  // no behavior
+  // the only purpose is to "declare" the tag in Angular2
 }

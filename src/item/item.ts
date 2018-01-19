@@ -7,7 +7,9 @@ import { Component, Input, ChangeDetectionStrategy, AfterViewInit, ViewChild, El
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
+  /* tslint:disable */
   selector: "a[sm-item], sm-item",
+  /* tslint:enable */
   template: `<i *ngIf="icon" class="{{icon}} icon"></i>
 <img *ngIf="image" class="ui avatar image" src="{{image}}">
 <div class="content" #innerItemElement>

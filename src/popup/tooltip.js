@@ -17,20 +17,20 @@ var SMTooltipDirective = (function () {
         this.element.element.nativeElement.setAttribute("data-position", this.smDirPosition || "top center");
         this.element.element.nativeElement.setAttribute("data-tooltip", this.smDirTooltip);
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SMTooltipDirective.prototype, "smDirTooltip", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SMTooltipDirective.prototype, "smDirPosition", void 0);
+    SMTooltipDirective = __decorate([
+        core_1.Directive({
+            selector: "[smDirTooltip]"
+        }), 
+        __metadata('design:paramtypes', [core_1.ViewContainerRef])
+    ], SMTooltipDirective);
     return SMTooltipDirective;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SMTooltipDirective.prototype, "smDirTooltip", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SMTooltipDirective.prototype, "smDirPosition", void 0);
-SMTooltipDirective = __decorate([
-    core_1.Directive({
-        selector: "[smDirTooltip]"
-    }),
-    __metadata("design:paramtypes", [core_1.ViewContainerRef])
-], SMTooltipDirective);
 exports.SMTooltipDirective = SMTooltipDirective;

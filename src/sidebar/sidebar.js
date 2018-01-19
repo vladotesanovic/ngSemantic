@@ -40,22 +40,22 @@ var SemanticSidebarComponent = (function () {
     SemanticSidebarComponent.prototype.ngOnDestroy = function () {
         this.renderer.detachView([this.sidebar.nativeElement]);
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticSidebarComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.ViewChild("sidebar"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticSidebarComponent.prototype, "sidebar", void 0);
+    SemanticSidebarComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-sidebar",
+            template: "<div class=\"ui sidebar {{class}}\" #sidebar>\n<ng-content></ng-content>\n</div>"
+        }), 
+        __metadata('design:paramtypes', [core_1.Renderer])
+    ], SemanticSidebarComponent);
     return SemanticSidebarComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticSidebarComponent.prototype, "class", void 0);
-__decorate([
-    core_1.ViewChild("sidebar"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticSidebarComponent.prototype, "sidebar", void 0);
-SemanticSidebarComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-sidebar",
-        template: "<div class=\"ui sidebar {{class}}\" #sidebar>\n<ng-content></ng-content>\n</div>"
-    }),
-    __metadata("design:paramtypes", [core_1.Renderer])
-], SemanticSidebarComponent);
 exports.SemanticSidebarComponent = SemanticSidebarComponent;
