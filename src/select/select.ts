@@ -17,6 +17,7 @@ declare var jQuery: any;
 </div>`
 })
 export class SemanticSelectComponent implements AfterViewInit {
+
   @Input() control: FormControl = new FormControl();
   @Input() class: string;
   @Input() label: string;
@@ -34,12 +35,12 @@ export class SemanticSelectComponent implements AfterViewInit {
 
   @Input() options: {} = {};
   @Input() placeholder: string;
-  @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
-  @Output() onChange: EventEmitter<string|number> = new EventEmitter<string|number>();
+  @Output() modelChange: EventEmitter<string | number> = new EventEmitter<string | number>();
+  @Output() onChange: EventEmitter<string | number> = new EventEmitter<string | number>();
   @ViewChild("select") select: ElementRef;
 
   @Input("model")
-  set model(data: string|number) {
+  set model(data: string | number) {
     if (data) {
       setTimeout(() => {
         jQuery(this.select.nativeElement).dropdown("set selected", data);
@@ -50,17 +51,19 @@ export class SemanticSelectComponent implements AfterViewInit {
   private multiple: boolean = false;
 
   ngAfterViewInit(): void {
-
     if (typeof this.class === "string" && this.class.search("multiple") >= 0) {
       this.select.nativeElement.setAttribute("multiple", true);
     }
 
     const options: {} = Object.assign({
-      onChange: (value: string|number) => {
+      onChange: (value: string | number) => {
         this.modelChange.emit(value);
         this.onChange.emit(value);
       },
-      onHide: () => this.control.markAsTouched()
+      onHide: () => {
+        this.control.markAsTouched();
+        this.control.setErrors({ 'required': true });
+      }
     }, this.options);
 
     jQuery(this.select.nativeElement)
