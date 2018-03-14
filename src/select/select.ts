@@ -62,7 +62,9 @@ export class SemanticSelectComponent implements AfterViewInit {
       },
       onHide: () => {
         this.control.markAsTouched();
-        this.control.setErrors({ 'required': true });
+        if (this.select.nativeElement.value === "") {
+          this.control.setErrors({ 'required': true });
+        }
       }
     }, this.options);
 
