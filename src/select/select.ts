@@ -8,7 +8,7 @@ declare var jQuery: any;
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: "sm-select",
-  template: `<div class="field" [ngClass]="{error: (!control?.valid && control?.touched) }">
+  template: `<div class="ui field" [ngClass]="{error: (!control?.pristine && control?.invalid), 'required': required}">
   <label *ngIf="label">{{label}}</label>
 <select [formControl]="control" class="ui {{class}} dropdown"  #select>
     <option value="">{{placeholder}}</option>
@@ -35,6 +35,7 @@ export class SemanticSelectComponent implements AfterViewInit {
 
   @Input() options: {} = {};
   @Input() placeholder: string;
+  @Input() required: string;
   @Output() modelChange: EventEmitter<string | number> = new EventEmitter<string | number>();
   @Output() onChange: EventEmitter<string | number> = new EventEmitter<string | number>();
   @ViewChild("select") select: ElementRef;
@@ -54,9 +55,10 @@ export class SemanticSelectComponent implements AfterViewInit {
     if (typeof this.class === "string" && this.class.search("multiple") >= 0) {
       this.select.nativeElement.setAttribute("multiple", true);
     }
-
+    this.control.setErrors({ 'required': true });
     const options: {} = Object.assign({
       onChange: (value: string | number) => {
+        this.control.markAsTouched();
         this.modelChange.emit(value);
         this.onChange.emit(value);
       },
@@ -64,6 +66,8 @@ export class SemanticSelectComponent implements AfterViewInit {
         this.control.markAsTouched();
         if (this.select.nativeElement.value === "") {
           this.control.setErrors({ 'required': true });
+        } else {
+          this.control.setErrors(null);
         }
       }
     }, this.options);
