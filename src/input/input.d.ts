@@ -10,7 +10,7 @@ export declare class SemanticInputComponent implements OnInit {
     model: {};
     control: FormControl;
     modelChange: EventEmitter<string | number>;
-    private isInsideForm;
+    public isInsideForm;
     constructor(viewRef: ViewContainerRef);
     ngOnInit(): void;
     inForm(el: Node, classname: string): boolean;
