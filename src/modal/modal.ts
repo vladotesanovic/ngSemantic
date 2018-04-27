@@ -42,7 +42,7 @@ export class SemanticModalComponent implements OnDestroy {
 
   constructor(private location: PlatformLocation) {
     location.onPopState(() => {
-      if (this.show) {
+      if (this.isShown) {
         this.hide();
       }
     });
