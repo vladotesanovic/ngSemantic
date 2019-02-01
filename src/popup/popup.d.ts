@@ -1,4 +1,4 @@
-import { ElementRef } from "@angular/core";
+import { ElementRef } from '@angular/core';
 export declare class SemanticPopupComponent {
     popup: ElementRef;
     class: string;

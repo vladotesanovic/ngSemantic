@@ -1,7 +1,7 @@
 import {
   Component, Input, ChangeDetectionStrategy, ViewEncapsulation, ViewChild, ElementRef,
   Renderer
-} from "@angular/core";
+} from '@angular/core';
 
 /**
  * Implementation of Message collection
@@ -11,7 +11,7 @@ import {
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
-  selector: "sm-message",
+  selector: 'sm-message',
   styles: [`sm-message { display: block; margin: 1em 0; } message-header {display: block}`],
   template: `<div class="ui message {{class}}" [ngClass]="{'icon': icon}" #message>
 <i class="close icon" (click)="close()"></i>
@@ -27,7 +27,7 @@ import {
 export class SemanticMessageComponent {
   @Input() icon: string;
   @Input() class: string;
-  @ViewChild("message") message: ElementRef;
+  @ViewChild('message') message: ElementRef;
 
   constructor(public renderer: Renderer) {
   }

@@ -8,12 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 jQuery.fn.fixSidebar = function () {
     var allModules = jQuery(this);
     allModules
         .each(function () {
-        var selector = { pusher: ".pusher" }, module = jQuery(this), context = jQuery("body");
+        var selector = { pusher: '.pusher' }, module = jQuery(this), context = jQuery('body');
         if (module.nextAll(selector.pusher).length === 0) {
             module.detach().prependTo(context);
         }
@@ -27,11 +28,11 @@ var SemanticSidebarComponent = (function () {
     SemanticSidebarComponent.prototype.show = function (options) {
         jQuery(this.sidebar.nativeElement)
             .sidebar(options || {})
-            .sidebar("toggle");
+            .sidebar('toggle');
     };
     SemanticSidebarComponent.prototype.hide = function () {
         jQuery(this.sidebar.nativeElement)
-            .sidebar("hide");
+            .sidebar('hide');
     };
     SemanticSidebarComponent.prototype.ngOnInit = function () {
         jQuery(this.sidebar.nativeElement)
@@ -41,20 +42,20 @@ var SemanticSidebarComponent = (function () {
         this.renderer.detachView([this.sidebar.nativeElement]);
     };
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
+        core_1.Input(),
+        __metadata("design:type", String)
     ], SemanticSidebarComponent.prototype, "class", void 0);
     __decorate([
-        core_1.ViewChild("sidebar"), 
-        __metadata('design:type', core_1.ElementRef)
+        core_1.ViewChild('sidebar'),
+        __metadata("design:type", core_1.ElementRef)
     ], SemanticSidebarComponent.prototype, "sidebar", void 0);
     SemanticSidebarComponent = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-sidebar",
+            selector: 'sm-sidebar',
             template: "<div class=\"ui sidebar {{class}}\" #sidebar>\n<ng-content></ng-content>\n</div>"
-        }), 
-        __metadata('design:paramtypes', [core_1.Renderer])
+        }),
+        __metadata("design:paramtypes", [core_1.Renderer])
     ], SemanticSidebarComponent);
     return SemanticSidebarComponent;
 }());

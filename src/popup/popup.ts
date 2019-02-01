@@ -1,4 +1,4 @@
-import { ElementRef, Component, ViewChild, Input, ChangeDetectionStrategy } from "@angular/core";
+import { ElementRef, Component, ViewChild, Input, ChangeDetectionStrategy } from '@angular/core';
 
 declare var jQuery: any;
 
@@ -9,7 +9,7 @@ declare var jQuery: any;
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-popup",
+  selector: 'sm-popup',
   template: `<div class="ui popup very wide {{class}}" #popup>
     <div class="content">
         <ng-content></ng-content>
@@ -17,7 +17,7 @@ declare var jQuery: any;
 </div>`
 })
 export class SemanticPopupComponent {
-  @ViewChild("popup") popup: ElementRef;
+  @ViewChild('popup') popup: ElementRef;
   @Input() class: string;
 
   private visible: boolean = false;
@@ -34,16 +34,16 @@ export class SemanticPopupComponent {
         closable: true,
         exclusive: true,
         lastResort: true,
-        on: "click",
+        on: 'click',
         onHide: () => this.hide(),
         popup: this.popup.nativeElement,
-        position: "bottom center",
+        position: 'bottom center',
         preserve: true,
       }, data);
 
       jQuery(this.element)
         .popup(options)
-        .popup("show");
+        .popup('show');
     }
   }
 
@@ -53,7 +53,7 @@ export class SemanticPopupComponent {
       this.visible = false;
 
       jQuery(this.element)
-        .popup("hide");
+        .popup('hide');
     }
   }
 }

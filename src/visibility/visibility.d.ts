@@ -1,4 +1,4 @@
-import { ViewContainerRef, OnInit, EventEmitter } from "@angular/core";
+import { ViewContainerRef, OnInit, EventEmitter } from '@angular/core';
 export declare class SMVisibilityDirective implements OnInit {
     element: ViewContainerRef;
     smDirVisibility: {};

@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, AfterViewInit } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 /**
  * Implementation of List collection
@@ -7,7 +7,7 @@ import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, After
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-list",
+  selector: 'sm-list',
   template: `
 <div class="ui list {{class}}" #innerElement>
 <ng-content></ng-content>
@@ -16,12 +16,12 @@ import { Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, After
 })
 export class SemanticListComponent implements AfterViewInit {
   @Input() class: string;
-  @ViewChild("innerElement") innerElement: ElementRef;
+  @ViewChild('innerElement') innerElement: ElementRef;
 
   ngAfterViewInit() {
 
     Array.from(this.innerElement.nativeElement.childNodes)
-      .filter((element: Element) => element.nodeName === "SM-LIST")
-      .map((element: Element) => element.firstElementChild.classList.remove("ui"));
+      .filter((element: Element) => element.nodeName === 'SM-LIST')
+      .map((element: Element) => element.firstElementChild.classList.remove('ui'));
   }
 }

@@ -1,6 +1,6 @@
 import {
   Directive, ViewContainerRef, Input, OnInit, Output, EventEmitter
-} from "@angular/core";
+} from '@angular/core';
 
 declare var jQuery: any;
 
@@ -10,7 +10,7 @@ declare var jQuery: any;
  * @link http://semantic-ui.com/behaviors/visibility.html
  */
 @Directive({
-  selector: "[smDirVisibility]"
+  selector: '[smDirVisibility]'
 })
 export class SMVisibilityDirective implements OnInit {
 
@@ -41,7 +41,7 @@ export class SMVisibilityDirective implements OnInit {
  * @link http://semantic-ui.com/collections/grid.html#device-visibility
  */
 @Directive({
-  selector: "[smDeviceVisibility]"
+  selector: '[smDeviceVisibility]'
 })
 export class SMDeviceVisibilityDirective implements OnInit {
 
@@ -51,6 +51,6 @@ export class SMDeviceVisibilityDirective implements OnInit {
   }
 
   ngOnInit(): void {
-    this.element.element.nativeElement.classList.add(...this.smDeviceVisibility.split(" "));
+    this.element.element.nativeElement.classList.add(...this.smDeviceVisibility.split(' '));
   }
 }

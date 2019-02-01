@@ -7,13 +7,13 @@ import {
   ElementRef,
   EventEmitter,
   Output
-} from "@angular/core";
+} from '@angular/core';
 
 declare var jQuery: any;
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-rating",
+  selector: 'sm-rating',
   template: `<div class="ui {{class}} rating" #rating></div>`
 })
 export class SemanticRatingComponent implements AfterViewInit {
@@ -21,7 +21,7 @@ export class SemanticRatingComponent implements AfterViewInit {
   @Input() initialRating: number;
   @Input() maxRating: number;
   @Output() onRate: EventEmitter<number> = new EventEmitter<number>();
-  @ViewChild("rating") rating: ElementRef;
+  @ViewChild('rating') rating: ElementRef;
 
   ngAfterViewInit(): void {
 

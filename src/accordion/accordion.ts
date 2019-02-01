@@ -1,13 +1,12 @@
 import {
-  Component, ChangeDetectionStrategy, Input, Directive, ElementRef, OnInit,
-  AfterViewInit, ViewChild
-} from "@angular/core";
+  Component, ChangeDetectionStrategy, Input, ElementRef, AfterViewInit, ViewChild
+} from '@angular/core';
 
 declare var jQuery: any;
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-accordion",
+  selector: 'sm-accordion',
   styles: [`sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }`],
   template: `
 <div class="ui accordion {{class}}" #accordion>
@@ -18,14 +17,14 @@ declare var jQuery: any;
 export class SemanticAccordionComponent implements AfterViewInit {
   @Input() class: string;
   @Input() options: string;
-  @ViewChild("accordion") accordion: ElementRef;
+  @ViewChild('accordion') accordion: ElementRef;
 
   ngAfterViewInit() {
 
-    const inAccordion: HTMLElement|boolean = this.inAccordion(this.accordion.nativeElement, "accordion");
+    const inAccordion: HTMLElement|boolean = this.inAccordion(this.accordion.nativeElement, 'accordion');
 
     if (inAccordion) {
-      this.accordion.nativeElement.classList.remove("ui");
+      this.accordion.nativeElement.classList.remove('ui');
       jQuery(inAccordion).accordion(this.options || {});
     } else {
       jQuery(this.accordion.nativeElement).accordion(this.options || {});
@@ -48,14 +47,14 @@ export class SemanticAccordionComponent implements AfterViewInit {
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-accordion-item",
+  selector: 'sm-accordion-item',
   template: `
-<div class="{{class}} title">
-    <i class="dropdown icon"></i>
-    <ng-content select="accordion-title"></ng-content>
+<div class='{{class}} title'>
+    <i class='dropdown icon'></i>
+    <ng-content select='accordion-title'></ng-content>
 </div>
-<div class="{{class}} content">
-    <ng-content select="accordion-content"></ng-content>
+<div class='{{class}} content'>
+    <ng-content select='accordion-content'></ng-content>
 </div>
 `
 })

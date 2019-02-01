@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 /**
  * Implementation of Card collection
@@ -7,7 +7,7 @@ import { Component, Input, ChangeDetectionStrategy } from "@angular/core";
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-card",
+  selector: 'sm-card',
   template: `<div class="ui {{class}}">
 <div class="image" *ngIf="image">
     <img src="{{image}}">
@@ -39,8 +39,8 @@ export class SemanticCardComponent {
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-cards",
-  template: `<div class="ui cards {{class}}"><ng-content></ng-content></div>`
+  selector: 'sm-cards',
+  template: `<div class='ui cards {{class}}'><ng-content></ng-content></div>`
 })
 export class SemanticCardsComponent {
   @Input() class: string;

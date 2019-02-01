@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticDimmerComponent = (function () {
     function SemanticDimmerComponent() {
@@ -15,19 +16,18 @@ var SemanticDimmerComponent = (function () {
     SemanticDimmerComponent.prototype.show = function (options) {
         jQuery(this.dimmer.nativeElement)
             .dimmer(options || {})
-            .dimmer("toggle");
+            .dimmer('toggle');
     };
     __decorate([
-        core_1.ViewChild("dimmer"), 
-        __metadata('design:type', core_1.ElementRef)
+        core_1.ViewChild('dimmer'),
+        __metadata("design:type", core_1.ElementRef)
     ], SemanticDimmerComponent.prototype, "dimmer", void 0);
     SemanticDimmerComponent = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: "sm-dimmer",
+            selector: 'sm-dimmer',
             template: "<div class=\"ui page dimmer\" #dimmer>\n  <div class=\"content\">\n    <ng-content></ng-content>\n  </div>\n</div>"
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], SemanticDimmerComponent);
     return SemanticDimmerComponent;
 }());

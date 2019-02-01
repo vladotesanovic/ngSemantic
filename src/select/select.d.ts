@@ -1,16 +1,17 @@
-import { AfterViewInit, ElementRef, EventEmitter } from "@angular/core";
-import { FormControl } from "@angular/forms";
+import { AfterViewInit, ElementRef, EventEmitter } from '@angular/core';
+import { FormControl } from '@angular/forms';
 export declare class SemanticSelectComponent implements AfterViewInit {
     control: FormControl;
     class: string;
     label: string;
-    disabled: boolean;
+    silentOnChange: boolean;
+    select: ElementRef;
     options: {};
     placeholder: string;
     modelChange: EventEmitter<string | number>;
     onChange: EventEmitter<string | number>;
-    select: ElementRef;
+    required: string;
+    disabled: boolean;
     model: string | number;
-    private multiple;
     ngAfterViewInit(): void;
 }

@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, HostListener } from "@angular/core";
+import {ChangeDetectionStrategy, Component, HostListener, Input} from '@angular/core';
 
 /**
  * Implementation of Dropdown module on right click
@@ -7,7 +7,7 @@ import { Component, Input, ChangeDetectionStrategy, HostListener } from "@angula
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-contextmenu",
+  selector: 'sm-contextmenu',
   styles: [`.sm-contextmenu { position: fixed; z-index: 1000; }`],
   template: `<div 
 [style.left.px]="_position?.x" [style.top.px]="_position?.y"
@@ -28,7 +28,7 @@ export class SemanticContextMenuComponent {
 
   @Input() items: Array<{}>;
 
-  @Input("position")
+  @Input('position')
   set position(data: { x: number, y: number }) {
     if (data) {
       this._position = data;
@@ -36,7 +36,7 @@ export class SemanticContextMenuComponent {
     }
   }
 
-  @HostListener("document:click")
+  @HostListener('document:click')
   public clickedOutside(): void {
     this.show = false;
   }

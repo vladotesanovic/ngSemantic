@@ -1,7 +1,7 @@
 import {
   Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, Directive, Output,
   EventEmitter, OnDestroy
-} from "@angular/core";
+} from '@angular/core';
 
 import { PlatformLocation } from '@angular/common';
 
@@ -15,7 +15,7 @@ declare var jQuery: any;
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-modal",
+  selector: 'sm-modal',
   template: `<div class="ui modal {{class}}" #modal>
     <i class="close icon"></i>
     <div [ngClass]="{'icon': icon}" class="ui header">
@@ -34,14 +34,14 @@ export class SemanticModalComponent implements OnDestroy {
   @Input() class: string;
   @Input() title: string;
   @Input() icon: string;
-  @ViewChild("modal") modal: ElementRef;
+  @ViewChild('modal') modal: ElementRef;
   @Output() onModalShow: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() onModalHide: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() isShown: boolean = false;
   @Output() isHidden: boolean = true;
 
   constructor(private location: PlatformLocation) {
-    location.onPopState(() => {
+    this.location.onPopState(() => {
       if (this.isShown) {
         this.hide();
       }
@@ -51,17 +51,15 @@ export class SemanticModalComponent implements OnDestroy {
   show(data?: {}) {
     jQuery(this.modal.nativeElement)
       .modal(data || {})
-      .modal("toggle");
-    this.isShown = true;
-    this.isHidden = false;
+      .modal('toggle');
+
     this.onModalShow.next(true);
   }
 
   hide() {
     jQuery(this.modal.nativeElement)
-      .modal("hide");
-    this.isShown = false;
-    this.isHidden = true;
+      .modal('hide');
+
     this.onModalHide.emit(true);
   }
 
@@ -73,7 +71,6 @@ export class SemanticModalComponent implements OnDestroy {
 /* tslint:disable */
 @Directive({ selector: "modal-content, modal-actions" })
 export class SMModalTagsDirective {
-  /* tslint:enable */
-  // no behavior
-  // the only purpose is to "declare" the tag in Angular2
+  // No behavior
+  // The only purpose is to 'declare' the tag in Angular2
 }

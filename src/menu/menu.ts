@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, AfterViewInit, ViewChild, ElementRef } from "@angular/core";
+import { Component, Input, ChangeDetectionStrategy, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 /**
  * Implementation of Menu component
@@ -8,7 +8,7 @@ import { Component, Input, ChangeDetectionStrategy, AfterViewInit, ViewChild, El
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-menu",
+  selector: 'sm-menu',
   template: `<div class="ui menu {{class}}" #innerElement>
 <a href="#/" *ngIf="logo" class="header item">
     <img class="{{logoClass}}" alt="{{title}}" src="{{logo}}">
@@ -25,13 +25,13 @@ import { Component, Input, ChangeDetectionStrategy, AfterViewInit, ViewChild, El
 export class SemanticMenuComponent implements AfterViewInit {
   @Input() logo: string;
   @Input() class: string;
-  @Input() logoClass: string = "logo";
+  @Input() logoClass: string = 'logo';
   @Input() title: string;
-  @ViewChild("innerElement") innerElement: ElementRef;
+  @ViewChild('innerElement') innerElement: ElementRef;
 
   ngAfterViewInit() {
     Array.from(this.innerElement.nativeElement.childNodes)
-      .filter((element: Element) => element.nodeName === "SM-MENU")
-      .map((element: Element) => element.firstElementChild.classList.remove("ui"));
+      .filter((element: Element) => element.nodeName === 'SM-MENU')
+      .map((element: Element) => element.firstElementChild.classList.remove('ui'));
   }
 }

@@ -1,6 +1,6 @@
-import { Directive, ViewContainerRef, Input, OnInit } from "@angular/core";
+import { Directive, ViewContainerRef, Input, OnInit } from '@angular/core';
 
-declare var jQuery: any;
+// declare var jQuery: any;
 
 /**
  * Implementation of Semantic UI popup
@@ -8,7 +8,7 @@ declare var jQuery: any;
  * @link http://semantic-ui.com/modules/popup.html
  */
 @Directive({
-  selector: "[smDirTooltip]"
+  selector: '[smDirTooltip]'
 })
 export class SMTooltipDirective implements OnInit {
 
@@ -19,7 +19,7 @@ export class SMTooltipDirective implements OnInit {
   }
 
   ngOnInit(): void {
-    this.element.element.nativeElement.setAttribute("data-position", this.smDirPosition || "top center");
-    this.element.element.nativeElement.setAttribute("data-tooltip", this.smDirTooltip);
+    this.element.element.nativeElement.setAttribute('data-position', this.smDirPosition || 'top center');
+    this.element.element.nativeElement.setAttribute('data-tooltip', this.smDirTooltip);
   }
 }

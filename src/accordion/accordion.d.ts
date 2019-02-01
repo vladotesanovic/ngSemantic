@@ -1,4 +1,4 @@
-import { ElementRef, AfterViewInit } from "@angular/core";
+import { ElementRef, AfterViewInit } from '@angular/core';
 export declare class SemanticAccordionComponent implements AfterViewInit {
     class: string;
     options: string;

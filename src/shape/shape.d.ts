@@ -1,4 +1,4 @@
-import { ElementRef, EventEmitter, AfterViewInit } from "@angular/core";
+import { ElementRef, EventEmitter, AfterViewInit } from '@angular/core';
 export declare class SemanticShapeComponent implements AfterViewInit {
     class: string;
     options: {};

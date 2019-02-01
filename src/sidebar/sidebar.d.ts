@@ -1,4 +1,4 @@
-import { ElementRef, OnInit, OnDestroy, Renderer } from "@angular/core";
+import { ElementRef, OnInit, OnDestroy, Renderer } from '@angular/core';
 export declare class SemanticSidebarComponent implements OnInit, OnDestroy {
     renderer: Renderer;
     class: string;

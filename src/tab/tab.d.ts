@@ -1,4 +1,4 @@
-import { QueryList, AfterViewInit, ElementRef } from "@angular/core";
+import { AfterViewInit, ElementRef, QueryList } from '@angular/core';
 export declare class SemanticTabComponent implements AfterViewInit {
     tab: number;
     title: string;

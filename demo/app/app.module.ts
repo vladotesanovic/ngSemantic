@@ -1,11 +1,11 @@
-import {NgModule, CUSTOM_ELEMENTS_SCHEMA}      from "@angular/core";
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { NgSemanticModule } from "ng-semantic";
 
-import { AppComponent }  from "./components/app";
+import { AppComponent } from "./components/app";
 import { HomeComponent } from "./components/home/home";
 import { ButtonComponent } from "./components/elements/button";
 import { FlagComponent } from "./components/elements/flag";
@@ -40,54 +40,54 @@ import { ShapeComponent } from "./components/elements/shape";
 import { TransitionComponent } from "./components/elements/transition";
 
 @NgModule({
-    bootstrap:    [
-        AppComponent
-    ],
-    declarations: [
-        AppComponent,
-        SearchArrayPipe,
-        FetchJsonPipe,
-        HomeComponent,
-        ButtonComponent,
-        CodeblockComponent,
-        PrismJsDirective,
-        FlagComponent,
-        SegmentComponent,
-        ListComponent,
-        LoaderComponent,
-        MenuComponent,
-        FormComponent,
-        ShapeComponent,
-        InputComponent,
-        TransitionComponent,
-        SelectComponent,
-        MessageComponent,
-        CardComponent,
-        AccordionComponent,
-        CheckboxComponent,
-        DimmerComponent,
-        DropdownComponent,
-        ModalComponent,
-        RatingComponent,
-        SearchComponent,
-        SidebarComponent,
-        PopupComponent,
-        ProgressComponent,
-        TabComponent,
-        ContextmenuComponent,
-        DeviceVisibilityComponent
-    ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        ReactiveFormsModule,
-        FormsModule,
-        routing,
-        NgSemanticModule
-    ],
-    // does not validate the schema :
-    // this plunker explains the problematic http://plnkr.co/edit/ye5NGXW6ZnyY4E0q5hBK?p=info
-    // this line also ensures backward compatibility and needs to be implemented by the user of the NgSemanticModule module
-    schemas:   [ CUSTOM_ELEMENTS_SCHEMA ],
+  bootstrap: [
+    AppComponent
+  ],
+  declarations: [
+    AppComponent,
+    SearchArrayPipe,
+    FetchJsonPipe,
+    HomeComponent,
+    ButtonComponent,
+    CodeblockComponent,
+    PrismJsDirective,
+    FlagComponent,
+    SegmentComponent,
+    ListComponent,
+    LoaderComponent,
+    MenuComponent,
+    FormComponent,
+    ShapeComponent,
+    InputComponent,
+    TransitionComponent,
+    SelectComponent,
+    MessageComponent,
+    CardComponent,
+    AccordionComponent,
+    CheckboxComponent,
+    DimmerComponent,
+    DropdownComponent,
+    ModalComponent,
+    RatingComponent,
+    SearchComponent,
+    SidebarComponent,
+    PopupComponent,
+    ProgressComponent,
+    TabComponent,
+    ContextmenuComponent,
+    DeviceVisibilityComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    routing,
+    NgSemanticModule
+  ],
+  // does not validate the schema :
+  // this plunker explains the problematic http://plnkr.co/edit/ye5NGXW6ZnyY4E0q5hBK?p=info
+  // this line also ensures backward compatibility and needs to be implemented by the user of the NgSemanticModule module
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule {}
+export class AppModule { }

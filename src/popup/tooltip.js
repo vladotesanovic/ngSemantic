@@ -8,28 +8,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SMTooltipDirective = (function () {
     function SMTooltipDirective(element) {
         this.element = element;
     }
     SMTooltipDirective.prototype.ngOnInit = function () {
-        this.element.element.nativeElement.setAttribute("data-position", this.smDirPosition || "top center");
-        this.element.element.nativeElement.setAttribute("data-tooltip", this.smDirTooltip);
+        this.element.element.nativeElement.setAttribute('data-position', this.smDirPosition || 'top center');
+        this.element.element.nativeElement.setAttribute('data-tooltip', this.smDirTooltip);
     };
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
+        core_1.Input(),
+        __metadata("design:type", String)
     ], SMTooltipDirective.prototype, "smDirTooltip", void 0);
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
+        core_1.Input(),
+        __metadata("design:type", String)
     ], SMTooltipDirective.prototype, "smDirPosition", void 0);
     SMTooltipDirective = __decorate([
         core_1.Directive({
-            selector: "[smDirTooltip]"
-        }), 
-        __metadata('design:paramtypes', [core_1.ViewContainerRef])
+            selector: '[smDirTooltip]'
+        }),
+        __metadata("design:paramtypes", [core_1.ViewContainerRef])
     ], SMTooltipDirective);
     return SMTooltipDirective;
 }());

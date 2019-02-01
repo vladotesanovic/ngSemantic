@@ -1,20 +1,20 @@
 import {
   Component, Input, ChangeDetectionStrategy, ViewChild, ElementRef, OnInit, OnDestroy, Renderer
-} from "@angular/core";
+} from '@angular/core';
 
 declare var jQuery: any;
 
 // because a of lot of shadow dom elements, we must create this fixSidebar
 // function, to move elements to proper location before sidebar run.
 jQuery.fn.fixSidebar = function () {
-  let allModules = jQuery(this);
+  const allModules = jQuery(this);
 
   allModules
     .each(function () {
-      let
-        selector = { pusher: ".pusher" },
+      const
+        selector = { pusher: '.pusher' },
         module = jQuery(this),
-        context = jQuery("body");
+        context = jQuery('body');
 
       if (module.nextAll(selector.pusher).length === 0) {
         module.detach().prependTo(context);
@@ -31,14 +31,14 @@ jQuery.fn.fixSidebar = function () {
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: "sm-sidebar",
+  selector: 'sm-sidebar',
   template: `<div class="ui sidebar {{class}}" #sidebar>
 <ng-content></ng-content>
 </div>`
 })
 export class SemanticSidebarComponent implements OnInit, OnDestroy {
   @Input() class: string;
-  @ViewChild("sidebar") sidebar: ElementRef;
+  @ViewChild('sidebar') sidebar: ElementRef;
 
   constructor(public renderer: Renderer) {
   }
@@ -46,12 +46,12 @@ export class SemanticSidebarComponent implements OnInit, OnDestroy {
   show(options?: {}) {
     jQuery(this.sidebar.nativeElement)
       .sidebar(options || {})
-      .sidebar("toggle");
+      .sidebar('toggle');
   }
 
   hide() {
     jQuery(this.sidebar.nativeElement)
-      .sidebar("hide");
+      .sidebar('hide');
   }
 
   ngOnInit(): void {
