@@ -8,30 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticListComponent = (function () {
     function SemanticListComponent() {
     }
     SemanticListComponent.prototype.ngAfterViewInit = function () {
         Array.from(this.innerElement.nativeElement.childNodes)
-            .filter(function (element) { return element.nodeName === 'SM-LIST'; })
-            .map(function (element) { return element.firstElementChild.classList.remove('ui'); });
+            .filter(function (element) { return element.nodeName === "SM-LIST"; })
+            .map(function (element) { return element.firstElementChild.classList.remove("ui"); });
     };
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticListComponent.prototype, "class", void 0);
     __decorate([
-        core_1.ViewChild('innerElement'),
-        __metadata("design:type", core_1.ElementRef)
+        core_1.ViewChild("innerElement"), 
+        __metadata('design:type', core_1.ElementRef)
     ], SemanticListComponent.prototype, "innerElement", void 0);
     SemanticListComponent = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: 'sm-list',
+            selector: "sm-list",
             template: "\n<div class=\"ui list {{class}}\" #innerElement>\n<ng-content></ng-content>\n</div>\n"
-        })
+        }), 
+        __metadata('design:paramtypes', [])
     ], SemanticListComponent);
     return SemanticListComponent;
 }());

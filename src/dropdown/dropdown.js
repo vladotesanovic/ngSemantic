@@ -8,28 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var forms_1 = require("@angular/forms");
 var core_1 = require("@angular/core");
 var SemanticDropdownComponent = (function () {
     function SemanticDropdownComponent() {
-        this.control = new forms_1.FormControl();
-        this.arrowIcon = 'dropdown';
         this.options = {};
-        this.valueChange = new core_1.EventEmitter();
         this.onChange = new core_1.EventEmitter();
-        this.onFocus = new core_1.EventEmitter();
-        this.onBlur = new core_1.EventEmitter();
     }
     SemanticDropdownComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
         var options = Object.assign({
             onChange: function (value, a, b) {
                 if (b != null && b.length) {
-                    _this.value = parseInt(b[0].dataset['value'], 10);
-                    _this.control.setValue(_this.value);
-                    _this.input.nativeElement.value = _this.value;
-                    _this.valueChange.emit(_this.value);
                     _this.onChange.emit(b[0].innerText);
                 }
             }
@@ -38,71 +27,40 @@ var SemanticDropdownComponent = (function () {
             .dropdown(options);
     };
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", forms_1.FormControl)
-    ], SemanticDropdownComponent.prototype, "control", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticDropdownComponent.prototype, "class", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticDropdownComponent.prototype, "title", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticDropdownComponent.prototype, "icon", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], SemanticDropdownComponent.prototype, "arrowIcon", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
-    ], SemanticDropdownComponent.prototype, "name", void 0);
-    __decorate([
-        core_1.Input(),
-        __metadata("design:type", Array)
+        core_1.Input(), 
+        __metadata('design:type', Array)
     ], SemanticDropdownComponent.prototype, "items", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
+        core_1.Input(), 
+        __metadata('design:type', Object)
     ], SemanticDropdownComponent.prototype, "options", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", Number)
-    ], SemanticDropdownComponent.prototype, "value", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], SemanticDropdownComponent.prototype, "valueChange", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
     ], SemanticDropdownComponent.prototype, "onChange", void 0);
     __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], SemanticDropdownComponent.prototype, "onFocus", void 0);
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
-    ], SemanticDropdownComponent.prototype, "onBlur", void 0);
-    __decorate([
-        core_1.ViewChild('dropdown'),
-        __metadata("design:type", core_1.ElementRef)
+        core_1.ViewChild("dropdown"), 
+        __metadata('design:type', core_1.ElementRef)
     ], SemanticDropdownComponent.prototype, "dropdown", void 0);
-    __decorate([
-        core_1.ViewChild('input'),
-        __metadata("design:type", core_1.ElementRef)
-    ], SemanticDropdownComponent.prototype, "input", void 0);
     SemanticDropdownComponent = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: 'sm-dropdown',
+            selector: "sm-dropdown",
             template: "\n    <div class=\"ui {{class}} dropdown item\" #dropdown>\n        <i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n        <div *ngIf=\"title\" class=\"text\">{{title}}</div>\n        <i class=\"dropdown icon\"></i>\n        <div class=\"menu\">\n            <ng-content></ng-content>\n        </div>\n    </div>\n"
-        })
+        }), 
+        __metadata('design:paramtypes', [])
     ], SemanticDropdownComponent);
     return SemanticDropdownComponent;
 }());

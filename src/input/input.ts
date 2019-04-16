@@ -1,8 +1,13 @@
 import {
-  Component, Input, ChangeDetectionStrategy, Output, ViewContainerRef,
-  EventEmitter, OnInit
-} from '@angular/core';
-import { FormControl } from '@angular/forms';
+  Component,
+  Input,
+  ChangeDetectionStrategy,
+  Output,
+  ViewContainerRef,
+  EventEmitter,
+  OnInit
+} from "@angular/core";
+import { FormControl } from "@angular/forms";
 
 /**
  * Implementation of Input element
@@ -10,10 +15,10 @@ import { FormControl } from '@angular/forms';
  * @link http://semantic-ui.com/elements/input.html
  *
  * @example
- * <sm-input icon='dollar' type='number' [(model)]='model' class='right fluid' placeholder='Enter a sum...'></sm-input>
+ * <sm-input icon="dollar" type="number" [(model)]="model" class="right fluid" placeholder="Enter a sum..."></sm-input>
  */
 @Component({
-  selector: 'sm-input',
+  selector: "sm-input",
   template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty && isInsideForm) }">
   <label *ngIf="label && isInsideForm">{{label}}</label>
   <div class="ui input {{class}}" [ngClass]="{'icon': icon, 'error': (!control.valid && control.dirty &&!isInsideForm)}">
@@ -27,7 +32,7 @@ export class SemanticInputComponent implements OnInit {
   @Input() label: string;
   @Input() class: string;
   @Input() icon: string;
-  @Input() type: string = 'text';
+  @Input() type: string = "text";
   @Input() placeholder: string;
   @Input() model: {};
   @Input() control: FormControl = new FormControl();
@@ -42,7 +47,7 @@ export class SemanticInputComponent implements OnInit {
 
   ngOnInit() {
     // if input field is inside form
-    if (this.inForm(this.viewRef.element.nativeElement, 'form')) {
+    if (this.inForm(this.viewRef.element.nativeElement, "form")) {
       this.isInsideForm = true;
     }
   }
@@ -67,7 +72,7 @@ export class SemanticInputComponent implements OnInit {
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'sm-checkbox',
+  selector: "sm-checkbox",
   template: `<div class="field" [ngClass]="{error: (!control.value && control?.validator) }">
     <div class="ui {{classType}} checkbox">
       <input type="checkbox"
@@ -85,18 +90,18 @@ export class SemanticCheckboxComponent {
   @Input() name: string;
   @Input() checked: boolean = false;
 
-  @Input('type')
+  @Input("type")
   set type(data: string) {
-    if (data && data !== 'checkbox') {
+    if (data && data !== "checkbox") {
       this.classType = data;
-      if (data === 'radio') {
+      if (data === "radio") {
         this.inputType = data;
       }
     }
   }
 
-  inputType: string = 'checkbox';
-  classType = 'checkbox';
+  public inputType: string = "checkbox";
+  public classType = "checkbox";
 }
 
 /**
@@ -106,7 +111,7 @@ export class SemanticCheckboxComponent {
  */
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'sm-textarea',
+  selector: "sm-textarea",
   template: `<div class="field" [ngClass]="{error: (!control.valid && control.dirty) }">
     <label *ngIf="label">{{label}}</label>
     <textarea rows="{{rows}}" [formControl]="control"></textarea>

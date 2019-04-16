@@ -1,10 +1,9 @@
-import {AfterViewInit, Component, ContentChildren, ElementRef, Input, QueryList, ViewChild} from '@angular/core';
-import {debounceTime} from 'rxjs/operators';
+import { Component, QueryList, AfterViewInit, ElementRef, Input, ContentChildren, ViewChild } from "@angular/core";
 
 declare var jQuery: any;
 
 @Component({
-  selector: 'sm-tab',
+  selector: "sm-tab",
   template: `
 <div #tab>
     <ng-content></ng-content>
@@ -14,13 +13,13 @@ export class SemanticTabComponent implements AfterViewInit {
   @Input() tab: number;
   @Input() title: string;
   @Input() active: boolean;
-  @ViewChild('tab') tabEl: ElementRef;
+  @ViewChild("tab") tabEl: ElementRef;
 
   ngAfterViewInit() {
-    jQuery(this.tabEl.nativeElement).parent().addClass('ui tab bottom attached segment');
+    this.tabEl.nativeElement.parentElement.classList.add("ui", "tab", "bottom", "attached", "segment");
 
     if (this.active) {
-      jQuery(this.tabEl.nativeElement).parent().addClass('active');
+      this.tabEl.nativeElement.parentElement.classList.add("active");
     }
   }
 }
@@ -29,7 +28,7 @@ export class SemanticTabComponent implements AfterViewInit {
  * @TODO Implements events ( Output )
  */
 @Component({
-  selector: 'sm-tabs',
+  selector: "sm-tabs",
   template: `<div class="ui top attached tabular menu" #menu>
   <a class="item" [ngClass]="{'active': tab.active}" *ngFor="let tab of tabs">{{tab.title}}</a>
 </div>
@@ -38,10 +37,10 @@ export class SemanticTabComponent implements AfterViewInit {
 })
 export class SemanticTabsComponent implements AfterViewInit {
   @ContentChildren(SemanticTabComponent) tabs: QueryList<SemanticTabComponent>;
-  @ViewChild('menu') menu: ElementRef;
+  @ViewChild("menu") menu: ElementRef;
   // @todo Write interface for options, from :
   // http://semantic-ui.com/modules/tab.html#/settings
-  @Input('options') options: {} = {};
+  @Input("options") options: {} = {};
 
   constructor(public elementRef: ElementRef) {
   }
@@ -55,7 +54,8 @@ export class SemanticTabsComponent implements AfterViewInit {
 
     // if new tabs are added, re-init
     this.tabs
-      .changes.pipe(debounceTime(100))
+      .changes
+      .debounceTime(100)
       .subscribe(() => {
         this.initItemsIndices();
         this.updateTabContentIndices();
@@ -65,12 +65,12 @@ export class SemanticTabsComponent implements AfterViewInit {
   initItemsIndices() {
 
     Array
-      .from(this.menu.nativeElement.getElementsByClassName('item'))
+      .from(this.menu.nativeElement.getElementsByClassName("item"))
       .map((element: HTMLElement, index: number) => {
-        element.setAttribute('data-tab', `tab-${index}`);
+        element.setAttribute("data-tab", `tab-${index}`);
 
         // @todo This should be removed, but without this it does not work
-        jQuery(element).data('tab', `tab-${index}`);
+        jQuery(element).data("tab", `tab-${index}`);
       });
   }
 
@@ -78,7 +78,7 @@ export class SemanticTabsComponent implements AfterViewInit {
 
     this.tabs
       .map((cmp: SemanticTabComponent, index: number) => {
-        cmp.tabEl.nativeElement.parentElement.setAttribute('data-tab', `tab-${index.toString()}`);
+        cmp.tabEl.nativeElement.parentElement.setAttribute("data-tab", `tab-${index.toString()}`);
       });
 
     this.initTabs();
@@ -91,12 +91,12 @@ export class SemanticTabsComponent implements AfterViewInit {
       context: this.elementRef.nativeElement
     }, this.options);
 
-    const tab: { tab: Function } = jQuery(this.menu.nativeElement.getElementsByClassName('item'))
+    const tab: { tab: Function } = jQuery(this.menu.nativeElement.getElementsByClassName("item"))
       .tab(this.options);
 
     // set first to be active if there is no active tabs
-    if(!this.menu.nativeElement.getElementsByClassName('item active').length) {
-      tab.tab('change tab', 'tab-0');
+    if (!this.menu.nativeElement.getElementsByClassName("item active").length) {
+      tab.tab("change tab", "tab-0");
     }
   }
 }

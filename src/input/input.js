@@ -8,19 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var SemanticInputComponent = (function () {
     function SemanticInputComponent(viewRef) {
         this.viewRef = viewRef;
-        this.type = 'text';
+        this.type = "text";
         this.control = new forms_1.FormControl();
         this.modelChange = new core_1.EventEmitter();
         this.isInsideForm = false;
     }
     SemanticInputComponent.prototype.ngOnInit = function () {
-        if (this.inForm(this.viewRef.element.nativeElement, 'form')) {
+        if (this.inForm(this.viewRef.element.nativeElement, "form")) {
             this.isInsideForm = true;
         }
     };
@@ -38,43 +37,43 @@ var SemanticInputComponent = (function () {
         }
     };
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticInputComponent.prototype, "label", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticInputComponent.prototype, "class", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticInputComponent.prototype, "icon", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticInputComponent.prototype, "type", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticInputComponent.prototype, "placeholder", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
+        core_1.Input(), 
+        __metadata('design:type', Object)
     ], SemanticInputComponent.prototype, "model", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", forms_1.FormControl)
+        core_1.Input(), 
+        __metadata('design:type', forms_1.FormControl)
     ], SemanticInputComponent.prototype, "control", void 0);
     __decorate([
-        core_1.Output(),
-        __metadata("design:type", core_1.EventEmitter)
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
     ], SemanticInputComponent.prototype, "modelChange", void 0);
     SemanticInputComponent = __decorate([
         core_1.Component({
-            selector: 'sm-input',
+            selector: "sm-input",
             template: "<div class=\"field\" [ngClass]=\"{error: (!control.valid && control.dirty && isInsideForm) }\">\n  <label *ngIf=\"label && isInsideForm\">{{label}}</label>\n  <div class=\"ui input {{class}}\" [ngClass]=\"{'icon': icon, 'error': (!control.valid && control.dirty &&!isInsideForm)}\">\n  <label *ngIf=\"label && !isInsideForm\" class=\"ui label\">{{label}}</label>\n  <input [type]=\"type\" [formControl]=\"control\" (keyup)=\"modelChange.emit(input.value)\" #input placeholder=\"{{placeholder}}\">\n  <i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n</div>\n</div>"
-        }),
-        __metadata("design:paramtypes", [core_1.ViewContainerRef])
+        }), 
+        __metadata('design:paramtypes', [core_1.ViewContainerRef])
     ], SemanticInputComponent);
     return SemanticInputComponent;
 }());
@@ -83,14 +82,14 @@ var SemanticCheckboxComponent = (function () {
     function SemanticCheckboxComponent() {
         this.control = new forms_1.FormControl();
         this.checked = false;
-        this.inputType = 'checkbox';
-        this.classType = 'checkbox';
+        this.inputType = "checkbox";
+        this.classType = "checkbox";
     }
     Object.defineProperty(SemanticCheckboxComponent.prototype, "type", {
         set: function (data) {
-            if (data && data !== 'checkbox') {
+            if (data && data !== "checkbox") {
                 this.classType = data;
-                if (data === 'radio') {
+                if (data === "radio") {
                     this.inputType = data;
                 }
             }
@@ -99,40 +98,41 @@ var SemanticCheckboxComponent = (function () {
         configurable: true
     });
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", forms_1.FormControl)
+        core_1.Input(), 
+        __metadata('design:type', forms_1.FormControl)
     ], SemanticCheckboxComponent.prototype, "control", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticCheckboxComponent.prototype, "label", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
     ], SemanticCheckboxComponent.prototype, "disabled", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", Object)
+        core_1.Input(), 
+        __metadata('design:type', Object)
     ], SemanticCheckboxComponent.prototype, "value", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticCheckboxComponent.prototype, "name", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", Boolean)
+        core_1.Input(), 
+        __metadata('design:type', Boolean)
     ], SemanticCheckboxComponent.prototype, "checked", void 0);
     __decorate([
-        core_1.Input('type'),
-        __metadata("design:type", String),
-        __metadata("design:paramtypes", [String])
+        core_1.Input("type"), 
+        __metadata('design:type', String), 
+        __metadata('design:paramtypes', [String])
     ], SemanticCheckboxComponent.prototype, "type", null);
     SemanticCheckboxComponent = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: 'sm-checkbox',
+            selector: "sm-checkbox",
             template: "<div class=\"field\" [ngClass]=\"{error: (!control.value && control?.validator) }\">\n    <div class=\"ui {{classType}} checkbox\">\n      <input type=\"checkbox\"\n      [attr.value]=\"value\"\n      [attr.type]=\"inputType\" tabindex=\"0\" [attr.name]=\"name\" [formControl]=\"control\" [attr.disabled]=\"disabled\" [checked]=\"checked\" >\n      <label *ngIf=\"label\">{{label}}</label>\n    </div>\n  </div>"
-        })
+        }), 
+        __metadata('design:paramtypes', [])
     ], SemanticCheckboxComponent);
     return SemanticCheckboxComponent;
 }());
@@ -142,23 +142,24 @@ var SemanticTextareaComponent = (function () {
         this.control = new forms_1.FormControl();
     }
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", forms_1.FormControl)
+        core_1.Input(), 
+        __metadata('design:type', forms_1.FormControl)
     ], SemanticTextareaComponent.prototype, "control", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticTextareaComponent.prototype, "label", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticTextareaComponent.prototype, "rows", void 0);
     SemanticTextareaComponent = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: 'sm-textarea',
+            selector: "sm-textarea",
             template: "<div class=\"field\" [ngClass]=\"{error: (!control.valid && control.dirty) }\">\n    <label *ngIf=\"label\">{{label}}</label>\n    <textarea rows=\"{{rows}}\" [formControl]=\"control\"></textarea>\n  </div>"
-        })
+        }), 
+        __metadata('design:paramtypes', [])
     ], SemanticTextareaComponent);
     return SemanticTextareaComponent;
 }());

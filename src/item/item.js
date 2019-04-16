@@ -8,40 +8,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var SemanticItemComponent = (function () {
     function SemanticItemComponent() {
     }
     SemanticItemComponent.prototype.ngAfterViewInit = function () {
-        this.innerItemElement.nativeElement.parentElement.classList.add('item');
+        this.innerItemElement.nativeElement.parentElement.classList.add("item");
     };
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticItemComponent.prototype, "icon", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticItemComponent.prototype, "header", void 0);
     __decorate([
-        core_1.Input(),
-        __metadata("design:type", String)
+        core_1.Input(), 
+        __metadata('design:type', String)
     ], SemanticItemComponent.prototype, "image", void 0);
     __decorate([
-        core_1.HostBinding('attr.data-value'),
-        __metadata("design:type", String)
-    ], SemanticItemComponent.prototype, "value", void 0);
-    __decorate([
-        core_1.ViewChild('innerItemElement'),
-        __metadata("design:type", core_1.ElementRef)
+        core_1.ViewChild("innerItemElement"), 
+        __metadata('design:type', core_1.ElementRef)
     ], SemanticItemComponent.prototype, "innerItemElement", void 0);
     SemanticItemComponent = __decorate([
         core_1.Component({
             changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-            selector: 'a[sm-item], sm-item',
+            selector: "a[sm-item], sm-item",
             template: "<i *ngIf=\"icon\" class=\"{{icon}} icon\"></i>\n<img *ngIf=\"image\" class=\"ui avatar image\" src=\"{{image}}\">\n<div class=\"content\" #innerItemElement>\n  <div *ngIf=\"header\" class=\"header\">\n    {{header}}\n  </div>\n  <ng-content></ng-content>\n</div>"
-        })
+        }), 
+        __metadata('design:paramtypes', [])
     ], SemanticItemComponent);
     return SemanticItemComponent;
 }());

@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "sm-page-button",
-  template: `
+    selector: "sm-page-button",
+    template: `
     <div class="ui masthead vertical segment">
         <div class="ui container">
             <h1>Button</h1>
@@ -15,7 +15,7 @@ import { Component } from "@angular/core";
         <sm-button class="positive" (click)="clickMe($event)" icon="thumbs up">Click Me</sm-button>
         <h3>{{isClicked}}</h3>
         <p>
-            Available icons in Semantic UI:
+            Available icons in Semantic UI: 
             <a href="http://semantic-ui.com/elements/icon.html" target="_blank">http://semantic-ui.com/elements/icon.html</a>
         </p>
         <h4 class="ui header">Code</h4>
@@ -29,26 +29,26 @@ import { Component } from "@angular/core";
         <sm-button class="secondary" icon="">Secondary</sm-button>
         <sm-button class="negative" icon="">Negative</sm-button>
         <sm-button class="positive" icon="">Positive</sm-button>
-
+        
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">States</h4>
         <sm-button class="primary active" icon="">Active</sm-button>
         <sm-button class="primary loading" icon="">Loading</sm-button>
         <sm-button class="primary disabled" icon="">Disabled</sm-button>
-
+        
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Basic</h4>
         <sm-button class="basic" icon="">Basic</sm-button>
         <sm-button class="basic red" icon="">Red</sm-button>
         <sm-button class="basic" icon="save">With icon</sm-button>
-
+        
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Colored</h4>
         <sm-button class="purple" icon="building">Purple</sm-button>
         <sm-button class="red" icon="remove">Red</sm-button>
-        <sm-button class="orange" icon="warning">Orange</sm-button>
+        <sm-button class="orange" icon="warning">Orange</sm-button>        
         <sm-button class="violet" icon="announcement">Violet</sm-button>
-
+        
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Sizes</h4>
         <sm-button class="mini teal" icon="">Mini</sm-button>
@@ -59,7 +59,7 @@ import { Component } from "@angular/core";
         <sm-button class="big teal" icon="">Big</sm-button>
         <sm-button class="huge teal" icon="">Huge</sm-button>
         <sm-button class="massive teal" icon="">Massive</sm-button>
-
+        
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Social</h4>
         <sm-button class="facebook" icon="facebook">Facebook</sm-button>
@@ -68,39 +68,39 @@ import { Component } from "@angular/core";
         <sm-button class="instagram" icon="instagram">Instagram</sm-button>
         <sm-button class="linkedin" icon="linkedin">Linkedin</sm-button>
         <sm-button class="youtube" icon="youtube">Youtube</sm-button>
-
+        
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Icon only</h4>
         <sm-button class="" icon="play"></sm-button>
         <sm-button class="" icon="pause"></sm-button>
         <sm-button class="" icon="shuffle"></sm-button>
-
+        
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Icon only ( Circular )</h4>
         <sm-button class="circular" icon="edit"></sm-button>
         <sm-button class="circular basic" icon="add big"></sm-button>
         <sm-button class="circular basic purple" icon="female big"></sm-button>
         <sm-button class="circular brown" icon="male big"></sm-button>
-
+        
         <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
         <h4 class="ui header">Fluid button</h4>
         <sm-button class="fluid" icon="">Fluid ( full width ) button</sm-button>
-
+              
     </div>
     `
 })
 
 export class ButtonComponent {
 
-  isClicked: string = "You should click on button!";
+    isClicked: string = "You should click on button!";
 
-  clickMe(event: Event) {
+    clickMe(event: Event) {
 
-    (<HTMLButtonElement><unknown>event.srcElement).classList.add("loading");
+        event.srcElement.classList.add("loading");
 
-    setTimeout(() => {
-      (<HTMLButtonElement><unknown>event.srcElement).classList.remove("loading");
-      this.isClicked = "Excellent, it works!";
-    }, 2000);
-  }
+        setTimeout(() => {
+            event.srcElement.classList.remove("loading");
+            this.isClicked = "Excellent, it works!";
+        }, 2000);
+    }
 }

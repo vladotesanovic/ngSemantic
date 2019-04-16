@@ -13,7 +13,6 @@
     "inlineSourceMap": false,
     "removeComments": true,
     "emitDecoratorMetadata": true,
-    "noUnusedLocals": true,
     "experimentalDecorators": true
   },
   "typeRoots": [

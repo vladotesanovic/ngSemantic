@@ -1,5 +1,5 @@
-import { ViewContainerRef, EventEmitter, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { ViewContainerRef, EventEmitter, OnInit } from "@angular/core";
+import { FormControl } from "@angular/forms";
 export declare class SemanticInputComponent implements OnInit {
     viewRef: ViewContainerRef;
     label: string;
@@ -10,7 +10,7 @@ export declare class SemanticInputComponent implements OnInit {
     model: {};
     control: FormControl;
     modelChange: EventEmitter<string | number>;
-    isInsideForm: boolean;
+    public isInsideForm;
     constructor(viewRef: ViewContainerRef);
     ngOnInit(): void;
     inForm(el: Node, classname: string): boolean;
@@ -23,8 +23,8 @@ export declare class SemanticCheckboxComponent {
     name: string;
     checked: boolean;
     type: string;
-    inputType: string;
-    classType: string;
+    private inputType;
+    private classType;
 }
 export declare class SemanticTextareaComponent {
     control: FormControl;
