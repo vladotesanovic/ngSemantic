@@ -27,30 +27,30 @@ var SMVisibilityDirective = (function () {
             });
         }
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], SMVisibilityDirective.prototype, "smDirVisibility", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], SMVisibilityDirective.prototype, "onTopVisible", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], SMVisibilityDirective.prototype, "onTopPassed", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], SMVisibilityDirective.prototype, "onUpdate", void 0);
+    SMVisibilityDirective = __decorate([
+        core_1.Directive({
+            selector: "[smDirVisibility]"
+        }), 
+        __metadata('design:paramtypes', [core_1.ViewContainerRef])
+    ], SMVisibilityDirective);
     return SMVisibilityDirective;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], SMVisibilityDirective.prototype, "smDirVisibility", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], SMVisibilityDirective.prototype, "onTopVisible", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], SMVisibilityDirective.prototype, "onTopPassed", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], SMVisibilityDirective.prototype, "onUpdate", void 0);
-SMVisibilityDirective = __decorate([
-    core_1.Directive({
-        selector: "[smDirVisibility]"
-    }),
-    __metadata("design:paramtypes", [core_1.ViewContainerRef])
-], SMVisibilityDirective);
 exports.SMVisibilityDirective = SMVisibilityDirective;
 var SMDeviceVisibilityDirective = (function () {
     function SMDeviceVisibilityDirective(element) {
@@ -60,16 +60,16 @@ var SMDeviceVisibilityDirective = (function () {
         (_a = this.element.element.nativeElement.classList).add.apply(_a, this.smDeviceVisibility.split(" "));
         var _a;
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SMDeviceVisibilityDirective.prototype, "smDeviceVisibility", void 0);
+    SMDeviceVisibilityDirective = __decorate([
+        core_1.Directive({
+            selector: "[smDeviceVisibility]"
+        }), 
+        __metadata('design:paramtypes', [core_1.ViewContainerRef])
+    ], SMDeviceVisibilityDirective);
     return SMDeviceVisibilityDirective;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SMDeviceVisibilityDirective.prototype, "smDeviceVisibility", void 0);
-SMDeviceVisibilityDirective = __decorate([
-    core_1.Directive({
-        selector: "[smDeviceVisibility]"
-    }),
-    __metadata("design:paramtypes", [core_1.ViewContainerRef])
-], SMDeviceVisibilityDirective);
 exports.SMDeviceVisibilityDirective = SMDeviceVisibilityDirective;

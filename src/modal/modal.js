@@ -29,48 +29,48 @@ var SemanticModalComponent = (function () {
         var parent = this.modal.nativeElement.parentElement;
         parent.removeChild(this.modal.nativeElement);
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticModalComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticModalComponent.prototype, "title", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticModalComponent.prototype, "icon", void 0);
+    __decorate([
+        core_1.ViewChild("modal"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticModalComponent.prototype, "modal", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], SemanticModalComponent.prototype, "onModalShow", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], SemanticModalComponent.prototype, "onModalHide", void 0);
+    SemanticModalComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-modal",
+            template: "<div class=\"ui modal {{class}}\" #modal>\n    <i class=\"close icon\"></i>\n    <div [ngClass]=\"{'icon': icon}\" class=\"ui header\">\n        <i *ngIf=\"icon\" class=\"icon {{icon}}\"></i>\n        {{title}}\n    </div>\n    <div class=\"content\">\n        <ng-content select=\"modal-content\"></ng-content>\n    </div>\n    <div class=\"actions\">\n        <ng-content select=\"modal-actions\"></ng-content>\n    </div>\n</div>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticModalComponent);
     return SemanticModalComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticModalComponent.prototype, "class", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticModalComponent.prototype, "title", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticModalComponent.prototype, "icon", void 0);
-__decorate([
-    core_1.ViewChild("modal"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticModalComponent.prototype, "modal", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], SemanticModalComponent.prototype, "onModalShow", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], SemanticModalComponent.prototype, "onModalHide", void 0);
-SemanticModalComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-modal",
-        template: "<div class=\"ui modal {{class}}\" #modal>\n    <i class=\"close icon\"></i>\n    <div [ngClass]=\"{'icon': icon}\" class=\"ui header\">\n        <i *ngIf=\"icon\" class=\"icon {{icon}}\"></i>\n        {{title}}\n    </div>\n    <div class=\"content\">\n        <ng-content select=\"modal-content\"></ng-content>\n    </div>\n    <div class=\"actions\">\n        <ng-content select=\"modal-actions\"></ng-content>\n    </div>\n</div>"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticModalComponent);
 exports.SemanticModalComponent = SemanticModalComponent;
 var SMModalTagsDirective = (function () {
     function SMModalTagsDirective() {
     }
+    SMModalTagsDirective = __decorate([
+        core_1.Directive({ selector: "modal-content, modal-actions" }), 
+        __metadata('design:paramtypes', [])
+    ], SMModalTagsDirective);
     return SMModalTagsDirective;
 }());
-SMModalTagsDirective = __decorate([
-    core_1.Directive({ selector: 'modal-content, modal-actions' }),
-    __metadata("design:paramtypes", [])
-], SMModalTagsDirective);
 exports.SMModalTagsDirective = SMModalTagsDirective;

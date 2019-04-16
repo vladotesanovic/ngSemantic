@@ -18,34 +18,34 @@ var SemanticMenuComponent = (function () {
             .filter(function (element) { return element.nodeName === "SM-MENU"; })
             .map(function (element) { return element.firstElementChild.classList.remove("ui"); });
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticMenuComponent.prototype, "logo", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticMenuComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticMenuComponent.prototype, "logoClass", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticMenuComponent.prototype, "title", void 0);
+    __decorate([
+        core_1.ViewChild("innerElement"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticMenuComponent.prototype, "innerElement", void 0);
+    SemanticMenuComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-menu",
+            template: "<div class=\"ui menu {{class}}\" #innerElement>\n<a href=\"#/\" *ngIf=\"logo\" class=\"header item\">\n    <img class=\"{{logoClass}}\" alt=\"{{title}}\" src=\"{{logo}}\">\n</a>\n\n<a href=\"#/\" *ngIf=\"title && !logo\" class=\"header item\">\n    {{title}}\n</a>\n\n<ng-content></ng-content>\n</div>\n"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticMenuComponent);
     return SemanticMenuComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticMenuComponent.prototype, "logo", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticMenuComponent.prototype, "class", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticMenuComponent.prototype, "logoClass", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticMenuComponent.prototype, "title", void 0);
-__decorate([
-    core_1.ViewChild("innerElement"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticMenuComponent.prototype, "innerElement", void 0);
-SemanticMenuComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-menu",
-        template: "<div class=\"ui menu {{class}}\" #innerElement>\n<a href=\"#/\" *ngIf=\"logo\" class=\"header item\">\n    <img class=\"{{logoClass}}\" alt=\"{{title}}\" src=\"{{logo}}\">\n</a>\n\n<a href=\"#/\" *ngIf=\"title && !logo\" class=\"header item\">\n    {{title}}\n</a>\n\n<ng-content></ng-content>\n</div>\n"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticMenuComponent);
 exports.SemanticMenuComponent = SemanticMenuComponent;

@@ -16,18 +16,18 @@ var SemanticTransitionComponent = (function () {
         jQuery(this.transition.nativeElement)
             .transition(animation || "fade out");
     };
+    __decorate([
+        core_1.ViewChild("transition"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticTransitionComponent.prototype, "transition", void 0);
+    SemanticTransitionComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-transition",
+            template: "\n    <div #transition>\n        <ng-content></ng-content>\n    </div>\n    "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticTransitionComponent);
     return SemanticTransitionComponent;
 }());
-__decorate([
-    core_1.ViewChild("transition"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticTransitionComponent.prototype, "transition", void 0);
-SemanticTransitionComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-transition",
-        template: "\n    <div #transition>\n        <ng-content></ng-content>\n    </div>\n    "
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticTransitionComponent);
 exports.SemanticTransitionComponent = SemanticTransitionComponent;

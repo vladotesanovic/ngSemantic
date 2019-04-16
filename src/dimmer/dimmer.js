@@ -17,18 +17,18 @@ var SemanticDimmerComponent = (function () {
             .dimmer(options || {})
             .dimmer("toggle");
     };
+    __decorate([
+        core_1.ViewChild("dimmer"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticDimmerComponent.prototype, "dimmer", void 0);
+    SemanticDimmerComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-dimmer",
+            template: "<div class=\"ui page dimmer\" #dimmer>\n  <div class=\"content\">\n    <ng-content></ng-content>\n  </div>\n</div>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticDimmerComponent);
     return SemanticDimmerComponent;
 }());
-__decorate([
-    core_1.ViewChild("dimmer"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticDimmerComponent.prototype, "dimmer", void 0);
-SemanticDimmerComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-dimmer",
-        template: "<div class=\"ui page dimmer\" #dimmer>\n  <div class=\"content\">\n    <ng-content></ng-content>\n  </div>\n</div>"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticDimmerComponent);
 exports.SemanticDimmerComponent = SemanticDimmerComponent;

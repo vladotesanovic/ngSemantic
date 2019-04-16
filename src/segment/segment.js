@@ -12,18 +12,18 @@ var core_1 = require("@angular/core");
 var SemanticSegmentComponent = (function () {
     function SemanticSegmentComponent() {
     }
+    __decorate([
+        core_1.Input("class"), 
+        __metadata('design:type', String)
+    ], SemanticSegmentComponent.prototype, "class", void 0);
+    SemanticSegmentComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-segment",
+            template: "<div class=\"ui segment {{class}}\">\n  <p><ng-content></ng-content></p>\n</div>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticSegmentComponent);
     return SemanticSegmentComponent;
 }());
-__decorate([
-    core_1.Input("class"),
-    __metadata("design:type", String)
-], SemanticSegmentComponent.prototype, "class", void 0);
-SemanticSegmentComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-segment",
-        template: "<div class=\"ui segment {{class}}\">\n  <p><ng-content></ng-content></p>\n</div>"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticSegmentComponent);
 exports.SemanticSegmentComponent = SemanticSegmentComponent;

@@ -13,26 +13,26 @@ var SemanticLoaderComponent = (function () {
     function SemanticLoaderComponent() {
         this.complete = false;
     }
+    __decorate([
+        core_1.Input("class"), 
+        __metadata('design:type', String)
+    ], SemanticLoaderComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.Input("text"), 
+        __metadata('design:type', String)
+    ], SemanticLoaderComponent.prototype, "text", void 0);
+    __decorate([
+        core_1.Input("complete"), 
+        __metadata('design:type', Boolean)
+    ], SemanticLoaderComponent.prototype, "complete", void 0);
+    SemanticLoaderComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-loader",
+            template: "<div *ngIf=\"!complete\" class=\"ui active dimmer {{class}}\">\n    <div [ngClass]=\"{text: text}\" class=\"ui loader\">{{text}}</div>\n  </div>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticLoaderComponent);
     return SemanticLoaderComponent;
 }());
-__decorate([
-    core_1.Input("class"),
-    __metadata("design:type", String)
-], SemanticLoaderComponent.prototype, "class", void 0);
-__decorate([
-    core_1.Input("text"),
-    __metadata("design:type", String)
-], SemanticLoaderComponent.prototype, "text", void 0);
-__decorate([
-    core_1.Input("complete"),
-    __metadata("design:type", Boolean)
-], SemanticLoaderComponent.prototype, "complete", void 0);
-SemanticLoaderComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-loader",
-        template: "<div *ngIf=\"!complete\" class=\"ui active dimmer {{class}}\">\n    <div [ngClass]=\"{text: text}\" class=\"ui loader\">{{text}}</div>\n  </div>"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticLoaderComponent);
 exports.SemanticLoaderComponent = SemanticLoaderComponent;

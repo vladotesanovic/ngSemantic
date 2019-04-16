@@ -17,22 +17,22 @@ var SemanticListComponent = (function () {
             .filter(function (element) { return element.nodeName === "SM-LIST"; })
             .map(function (element) { return element.firstElementChild.classList.remove("ui"); });
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticListComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.ViewChild("innerElement"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticListComponent.prototype, "innerElement", void 0);
+    SemanticListComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-list",
+            template: "\n<div class=\"ui list {{class}}\" #innerElement>\n<ng-content></ng-content>\n</div>\n"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticListComponent);
     return SemanticListComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticListComponent.prototype, "class", void 0);
-__decorate([
-    core_1.ViewChild("innerElement"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticListComponent.prototype, "innerElement", void 0);
-SemanticListComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-list",
-        template: "\n<div class=\"ui list {{class}}\" #innerElement>\n<ng-content></ng-content>\n</div>\n"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticListComponent);
 exports.SemanticListComponent = SemanticListComponent;

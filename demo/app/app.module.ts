@@ -1,6 +1,6 @@
 import {NgModule, CUSTOM_ELEMENTS_SCHEMA}      from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-import { HttpModule } from "@angular/http";
+import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { NgSemanticModule } from "ng-semantic";
@@ -79,7 +79,7 @@ import { TransitionComponent } from "./components/elements/transition";
     ],
     imports: [
         BrowserModule,
-        HttpModule,
+        HttpClientModule,
         ReactiveFormsModule,
         FormsModule,
         routing,

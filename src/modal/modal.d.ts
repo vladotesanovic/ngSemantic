@@ -6,6 +6,8 @@ export declare class SemanticModalComponent implements OnDestroy {
     modal: ElementRef;
     onModalShow: EventEmitter<boolean>;
     onModalHide: EventEmitter<boolean>;
+    isShown: boolean;
+    isHidden: boolean;
     show(data?: {}): void;
     hide(): void;
     ngOnDestroy(): void;

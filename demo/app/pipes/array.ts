@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { Http } from "@angular/http";
+import { HttpClient } from "@angular/common/http";
 
 @Pipe({
 	name: "smFetch",
@@ -9,7 +9,7 @@ export class FetchJsonPipe  implements PipeTransform {
 	private fetchedJson: any = null;
 	private prevUrl = "";
 
-	constructor(private _http: Http) {}
+	constructor(private _http: HttpClient) {}
 
 	transform(url: string): any {
 

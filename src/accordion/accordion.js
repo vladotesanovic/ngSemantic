@@ -35,45 +35,45 @@ var SemanticAccordionComponent = (function () {
             return false;
         }
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticAccordionComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticAccordionComponent.prototype, "options", void 0);
+    __decorate([
+        core_1.ViewChild("accordion"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticAccordionComponent.prototype, "accordion", void 0);
+    SemanticAccordionComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-accordion",
+            styles: ["sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }"],
+            template: "\n<div class=\"ui accordion {{class}}\" #accordion>\n    <ng-content></ng-content>\n</div>\n"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticAccordionComponent);
     return SemanticAccordionComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticAccordionComponent.prototype, "class", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticAccordionComponent.prototype, "options", void 0);
-__decorate([
-    core_1.ViewChild("accordion"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticAccordionComponent.prototype, "accordion", void 0);
-SemanticAccordionComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-accordion",
-        styles: ["sm-accordion sm-accordion-item:first-child .title { border-top: none !important; }"],
-        template: "\n<div class=\"ui accordion {{class}}\" #accordion>\n    <ng-content></ng-content>\n</div>\n"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticAccordionComponent);
 exports.SemanticAccordionComponent = SemanticAccordionComponent;
 var SemanticAccordionItemComponent = (function () {
     function SemanticAccordionItemComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticAccordionItemComponent.prototype, "class", void 0);
+    SemanticAccordionItemComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-accordion-item",
+            template: "\n<div class=\"{{class}} title\">\n    <i class=\"dropdown icon\"></i>\n    <ng-content select=\"accordion-title\"></ng-content>\n</div>\n<div class=\"{{class}} content\">\n    <ng-content select=\"accordion-content\"></ng-content>\n</div>\n"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticAccordionItemComponent);
     return SemanticAccordionItemComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticAccordionItemComponent.prototype, "class", void 0);
-SemanticAccordionItemComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-accordion-item",
-        template: "\n<div class=\"{{class}} title\">\n    <i class=\"dropdown icon\"></i>\n    <ng-content select=\"accordion-title\"></ng-content>\n</div>\n<div class=\"{{class}} content\">\n    <ng-content select=\"accordion-content\"></ng-content>\n</div>\n"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticAccordionItemComponent);
 exports.SemanticAccordionItemComponent = SemanticAccordionItemComponent;

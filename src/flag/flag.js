@@ -12,18 +12,18 @@ var core_1 = require("@angular/core");
 var SemanticFlagComponent = (function () {
     function SemanticFlagComponent() {
     }
+    __decorate([
+        core_1.Input("flag"), 
+        __metadata('design:type', String)
+    ], SemanticFlagComponent.prototype, "flag", void 0);
+    SemanticFlagComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-flag",
+            template: "<i class=\"{{flag}} flag\"></i>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticFlagComponent);
     return SemanticFlagComponent;
 }());
-__decorate([
-    core_1.Input("flag"),
-    __metadata("design:type", String)
-], SemanticFlagComponent.prototype, "flag", void 0);
-SemanticFlagComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-flag",
-        template: "<i class=\"{{flag}} flag\"></i>"
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticFlagComponent);
 exports.SemanticFlagComponent = SemanticFlagComponent;

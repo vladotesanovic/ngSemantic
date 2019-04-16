@@ -31,34 +31,34 @@ var SemanticShapeComponent = (function () {
             .shape(this.options)
             .shape(args.join(","));
     };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SemanticShapeComponent.prototype, "class", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], SemanticShapeComponent.prototype, "options", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], SemanticShapeComponent.prototype, "beforeChange", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', core_1.EventEmitter)
+    ], SemanticShapeComponent.prototype, "onChange", void 0);
+    __decorate([
+        core_1.ViewChild("shape"), 
+        __metadata('design:type', core_1.ElementRef)
+    ], SemanticShapeComponent.prototype, "shape", void 0);
+    SemanticShapeComponent = __decorate([
+        core_1.Component({
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush,
+            selector: "sm-shape",
+            template: "\n    <div #shape class=\"ui shape {{class}}\">\n        <ng-content></ng-content>\n    </div>\n    "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], SemanticShapeComponent);
     return SemanticShapeComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], SemanticShapeComponent.prototype, "class", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], SemanticShapeComponent.prototype, "options", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], SemanticShapeComponent.prototype, "beforeChange", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", core_1.EventEmitter)
-], SemanticShapeComponent.prototype, "onChange", void 0);
-__decorate([
-    core_1.ViewChild("shape"),
-    __metadata("design:type", core_1.ElementRef)
-], SemanticShapeComponent.prototype, "shape", void 0);
-SemanticShapeComponent = __decorate([
-    core_1.Component({
-        changeDetection: core_1.ChangeDetectionStrategy.OnPush,
-        selector: "sm-shape",
-        template: "\n    <div #shape class=\"ui shape {{class}}\">\n        <ng-content></ng-content>\n    </div>\n    "
-    }),
-    __metadata("design:paramtypes", [])
-], SemanticShapeComponent);
 exports.SemanticShapeComponent = SemanticShapeComponent;

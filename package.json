@@ -44,7 +44,7 @@
     "@angular/platform-browser-dynamic": "^2.0.1",
     "@angular/router": "^3.0.0",
     "@angular/upgrade": "^2.0.1",
-    "@types/jasmine": "^2.5.36",
+    "@types/jasmine": "2.5.36",
     "@types/jquery": "^2.0.34",
     "@types/node": "^6.0.46",
     "angular2-in-memory-web-api": "0.0.20",

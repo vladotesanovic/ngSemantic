@@ -1,6 +1,11 @@
 import {
-  Component, Input, ChangeDetectionStrategy, Output, ViewContainerRef,
-  EventEmitter, OnInit
+  Component,
+  Input,
+  ChangeDetectionStrategy,
+  Output,
+  ViewContainerRef,
+  EventEmitter,
+  OnInit
 } from "@angular/core";
 import { FormControl } from "@angular/forms";
 
@@ -31,12 +36,14 @@ export class SemanticInputComponent implements OnInit {
   @Input() placeholder: string;
   @Input() model: {};
   @Input() control: FormControl = new FormControl();
-  @Output() modelChange: EventEmitter<string|number> = new EventEmitter<string|number>();
+  @Output()
+  modelChange: EventEmitter<string | number> = new EventEmitter<
+    string | number
+  >();
 
-  private isInsideForm: boolean = false;
+  public isInsideForm: boolean = false;
 
-  constructor(public viewRef: ViewContainerRef) {
-  }
+  constructor(public viewRef: ViewContainerRef) {}
 
   ngOnInit() {
     // if input field is inside form
@@ -68,9 +75,9 @@ export class SemanticInputComponent implements OnInit {
   selector: "sm-checkbox",
   template: `<div class="field" [ngClass]="{error: (!control.value && control?.validator) }">
     <div class="ui {{classType}} checkbox">
-      <input type="checkbox" 
+      <input type="checkbox"
       [attr.value]="value"
-      [attr.type]="inputType" tabindex="0" [attr.name]="name" [formControl]="control" [attr.disabled]="disabled">
+      [attr.type]="inputType" tabindex="0" [attr.name]="name" [formControl]="control" [attr.disabled]="disabled" [checked]="checked" >
       <label *ngIf="label">{{label}}</label>
     </div>
   </div>`
@@ -79,8 +86,9 @@ export class SemanticCheckboxComponent {
   @Input() control: FormControl = new FormControl();
   @Input() label: string;
   @Input() disabled: boolean;
-  @Input() value: string|number;
+  @Input() value: string | number;
   @Input() name: string;
+  @Input() checked: boolean = false;
 
   @Input("type")
   set type(data: string) {
@@ -92,8 +100,8 @@ export class SemanticCheckboxComponent {
     }
   }
 
-  private inputType: string = "checkbox";
-  private classType = "checkbox";
+  public inputType: string = "checkbox";
+  public classType = "checkbox";
 }
 
 /**
